@@ -60,6 +60,11 @@
 /upload_backup
 /upload_backup/*
 
+# packaging #
+###################
+/packaging
+/packaging/*
+
 # eclipse #
 ###################
 .project
