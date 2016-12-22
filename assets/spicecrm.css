@@ -1,0 +1,356 @@
+.spiceLoadingLogo{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: calc(40% - 320px);
+    left: calc(25% - 100px);
+    text-align: center;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.required {
+    float: left;
+    padding-right: 2px;
+    color: rgb(194, 57, 52);
+    font-weight: 700;
+}
+
+.slds-global-header_container {
+    z-index: 999;
+}
+
+.spiceLoginWindow {
+    background-color: #fdfdfd;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    margin-top: -90px;
+}
+
+.spiceLoginLogo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: calc(40% - 320px);
+    left: calc(50% - 100px);
+}
+
+.spiceLoginBox {
+    width: 50%;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #ddd;
+    top: calc(40% - 100px);
+    left: 25%;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.spiceLoaderBox {
+    width: 50%;
+    position: absolute;
+    top: calc(40% - 100px);
+    left: 25%;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.spiceLoaderBox > div {
+    position: relative;
+    margin: 8px 0px;
+}
+
+.spiceLoaderBox figure {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.spiceLoginBox .fieldLabel {
+    margin: 15px 0px 5px 0px;
+    font-size: 12px;
+}
+
+.spiceLoginBox input[type="text"], .spiceLoginBox input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff !important;
+    width: 100%;
+}
+
+.spiceLoginBox .loginButton {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #CA1B21;
+    padding: 10px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.spiceLoginFooter {
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+.spiceContent {
+    margin-top: 90px;
+}
+
+global-user-panel {
+    position: absolute;
+}
+
+.userProfilePanel {
+    position: fixed;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    right: 5px;
+    top: 60px;
+    z-index: 100;
+    background: #fff;
+    padding: 10px;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.16));
+    min-width: 350px;
+}
+
+.userProfilePanel .pointer {
+    z-index: 1;
+    width: calc(1.25rem + .0625rem);
+    height: calc(1.25rem + .0625rem);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top: 1px solid #d8dde6;
+    border-left: 1px solid #d8dde6;
+    background: #fff;
+    position: absolute;
+    top: -11px;
+    right: 16px;
+}
+
+.userProileAvatar {
+    position: absolute;
+}
+
+.userProfileContent {
+    margin-left: 50px;
+}
+
+.userProfileContent h1 {
+    font-size: 1rem;
+    color: rgb(22, 50, 92);
+}
+
+.userProfileLinks {
+    cursor: pointer;
+}
+
+.OptionsSeparator {
+    width: 370px;
+    background-color: #f7f9fb;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 10px -10px 10px -10px;
+    padding: 10px;
+}
+
+.OptionsElements > div {
+    padding: 5px 0px;
+}
+
+object-list td {
+    font-size: 13px !important;
+}
+
+global-recent-items td {
+    font-size: 13px !important;
+}
+
+.spiceRecordContainer {
+    display: flex;
+}
+
+.spiceMainContainer {
+    display: inline;
+    width: 70%;
+    margin: 15px;
+    min-width: 650px;
+}
+
+.spiceSidebarContainer {
+    display: inline;
+    width: 30%;
+    margin: 15px;
+    min-width:400px;
+}
+
+.spiceRelatedCard {
+    margin: 0 0 1rem 0;
+}
+
+.spicecrm-timeline-items-container{
+    margin-top: 1rem;
+}
+
+.spiceActivitiyTimelineHeader {
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    height: 2rem;
+}
+
+.spiceActivitiyTimelineHeader::before {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    left: 120px;
+    margin-top: -1px;
+    border-bottom: 1px dashed rgb(216, 221, 230);
+    content: ' ';
+}
+
+.spiceActivitiyTimelineHeader h2 {
+    padding-top: 0.25rem;
+    background-color: #fff;
+}
+
+.spiceActivitiyTimelineHeader .showmorebutton {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+object-activitiytimeline-add-container {
+    margin-bottom: 2rem;
+}
+
+global-docked-composer-overflow {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 1rem;
+    background-color: #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.spiceComposerOverflow {
+
+}
+
+.slds-card__body {
+    margin-bottom: 10px;
+}
+
+object-record-details-tab-row {
+    display: flex;
+}
+
+field-generic {
+    width: calc(50% - 10px);
+    margin: 0.5rem 5px;
+}
+
+object-record-details-tab-row-field {
+    margin: 0.5rem 5px;
+}
+object-record-details-tab-row-field .spicecrm-fieldbody {
+    border-bottom: 1px solid #ddd;
+    margin: 1rem 5px;
+}
+
+.spicecrm-fieldbody {
+}
+
+.spicecrm-fieldbody {
+    padding: 5px 0px;
+    min-height: 29px;
+}
+
+.spicecrm-recorddetail-buttons {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.spicecrm-recorddetails-tab {
+    transition: 0.5s;
+}
+
+.panelChevron {
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+    margin-top: 2px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(135deg);
+    float: left;
+    transition: 0.5s;
+}
+
+/* subpanel card tile sizes*/
+.spicecrm-card-size {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+    .spicecrm-card-size {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .spicecrm-card-size {
+        width: 33%;
+    }
+}
+
+.spicecrm-admin-main{
+    display: flex;
+    height: calc(100vh - 90px);
+}
+
+.spicecrm-admin-menu{
+    width: 200px;
+}
+.spicecrm-admin-content{
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 10px;
+}
+
+/* to keep the banne header of the deailt view when scrolling */
+.spicecrm-rolebanner, .slds-page-header[role="fixedbanner"]{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    border-bottom: none;
+}
+
+.spicecrm-bannerflex, .slds-page-header[role="detailrow"]{
+    padding-top: 68px;
+}
+
+/* filter panel */
+object-listview-filter-panel{
+    height:100%;
+    position: fixed;
+    right:0px;
+    z-index:90;
+    width: 320px;
+    transition: right 0.5s;
+}
+
+object-listview-filter-panel .slds-panel{
+    height:100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.40)
+}
