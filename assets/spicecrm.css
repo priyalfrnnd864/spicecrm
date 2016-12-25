@@ -257,7 +257,11 @@ object-record-details-tab-row {
 
 field-generic {
     width: calc(50% - 10px);
-    margin: 0.5rem 5px;
+    margin: 0.5rem 0px;
+}
+
+field-generic input{
+    margin: 5px 0px;
 }
 
 object-record-details-tab-row-field {
@@ -355,6 +359,7 @@ object-listview-filter-panel .slds-panel{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.40)
 }
 
+/*
 .spicecrm-listview-header{
     position: fixed;
     width: 100%;
@@ -365,4 +370,4 @@ object-listview-filter-panel .slds-panel{
     position: absolute;
     top: 186px;
 }
-}
+*/
