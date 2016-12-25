@@ -354,3 +354,15 @@ object-listview-filter-panel .slds-panel{
     height:100%;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.40)
 }
+
+.spicecrm-listview-header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.spicecrm-listview-list{
+    position: absolute;
+    top: 186px;
+}
+}
