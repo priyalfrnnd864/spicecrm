@@ -262,8 +262,16 @@ field-generic {
     margin: 0.5rem 0px;
 }
 
-field-generic input{
+field-generic input, field-enum select{
     margin: 5px 0px;
+}
+
+/* properly set the chevrons in the select field */
+.slds-select_container:before{
+    margin-top: 5px;
+}
+.slds-select_container:after{
+    margin-bottom: 5px;
 }
 
 .spicecrm-object-record-details-tab-row-field, object-record-details-tab-row-field {
