@@ -381,3 +381,8 @@ object-listview-filter-panel .slds-panel{
     top: 186px;
 }
 */
+
+
+global-navigation-item li.slds-dropdown-trigger{
+    display: flex;
+}
