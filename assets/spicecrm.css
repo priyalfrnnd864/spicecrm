@@ -386,3 +386,48 @@ object-listview-filter-panel .slds-panel{
 global-navigation-menu-item li.slds-dropdown-trigger,global-navigation-menu-more li.slds-dropdown-trigger{
     display: flex;
 }
+
+/* for the css loader http://cssload.net/en/spinners/4*/
+
+.cssload-container {
+    width: 100%;
+    height: 26px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.cssload-double-torus {
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    border: 2px double;
+    border-radius: 50%;
+    border-color: transparent rgba(0,0,0,0.9) rgba(0,0,0,0.9);
+    animation: cssload-spin 1410ms infinite linear;
+    -o-animation: cssload-spin 1410ms infinite linear;
+    -ms-animation: cssload-spin 1410ms infinite linear;
+    -webkit-animation: cssload-spin 1410ms infinite linear;
+    -moz-animation: cssload-spin 1410ms infinite linear;
+}
+
+
+
+@keyframes cssload-spin {
+    100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+    100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+    100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+    100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+    100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
