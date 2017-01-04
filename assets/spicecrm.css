@@ -387,6 +387,15 @@ global-navigation-menu-item li.slds-dropdown-trigger,global-navigation-menu-more
     display: flex;
 }
 
+.spicecrm-popup-buttoncontainer{
+    min-height: 2rem;
+    margin-top: 1rem;
+}
+
+.spicecrm-popup-buttoncontainer button {
+    float:right;
+}
+
 /* for the css loader http://cssload.net/en/spinners/4*/
 
 .cssload-container {
