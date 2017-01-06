@@ -22,12 +22,27 @@ input:-webkit-autofill {
     z-index: 999;
 }
 
-.spiceLoginWindow {
+global-login{
+    display: flex;
+}
+
+.spiceLoginWindow, .spiceLoginNews {
     background-color: #fdfdfd;
     width: 50%;
     height: 100vh;
     position: relative;
     margin-top: -90px;
+}
+
+.spiceLoginNews{
+    background-color: transparent;
+    padding: 30px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.spicecrm-newsfeed-item-header{
+    margin-left: -12px;
 }
 
 .spiceLoginLogo {
@@ -266,12 +281,18 @@ field-generic input, field-enum select{
     margin: 5px 0px;
 }
 
-/* properly set the chevrons in the select field */
+/* properly set the chevrons in the select field but not in the popover*/
 .slds-select_container:before{
     margin-top: 5px;
 }
 .slds-select_container:after{
     margin-bottom: 5px;
+}
+.slds-popover__body .slds-select_container:before{
+    margin-top: 0px;
+}
+.slds-popover__body .slds-select_container:after{
+    margin-bottom: 0px;
 }
 
 .spicecrm-object-record-details-tab-row-field, object-record-details-tab-row-field {
