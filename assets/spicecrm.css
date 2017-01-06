@@ -1,11 +1,55 @@
-.spiceLoadingLogo{
+.spiceLoadingLogo {
     width: 200px;
     height: 200px;
     position: absolute;
     top: calc(40% - 320px);
     left: calc(25% - 100px);
     text-align: center;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: 3000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotateY(0deg);
+    }
+    to {
+        -moz-transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -22,7 +66,7 @@ input:-webkit-autofill {
     z-index: 999;
 }
 
-global-login{
+global-login {
     display: flex;
 }
 
@@ -34,14 +78,14 @@ global-login{
     margin-top: -90px;
 }
 
-.spiceLoginNews{
+.spiceLoginNews {
     background-color: transparent;
     padding: 30px;
     height: 100vh;
     overflow-y: scroll;
 }
 
-.spicecrm-newsfeed-item-header{
+.spicecrm-newsfeed-item-header {
     margin-left: -12px;
 }
 
@@ -205,14 +249,14 @@ global-recent-items td {
     display: inline;
     width: 30%;
     margin: 15px;
-    min-width:400px;
+    min-width: 400px;
 }
 
 .spiceRelatedCard {
     margin: 0 0 1rem 0;
 }
 
-.spicecrm-timeline-items-container{
+.spicecrm-timeline-items-container {
     margin-top: 1rem;
 }
 
@@ -270,35 +314,37 @@ object-record-details-tab-row {
     display: flex;
 }
 
-
-
 field-generic {
     width: calc(50% - 10px);
     margin: 0.5rem 0px;
 }
 
-field-generic input, field-enum select{
+field-generic input, field-enum select {
     margin: 5px 0px;
 }
 
 /* properly set the chevrons in the select field but not in the popover*/
-.slds-select_container:before{
+.slds-select_container:before {
     margin-top: 5px;
 }
-.slds-select_container:after{
+
+.slds-select_container:after {
     margin-bottom: 5px;
 }
-.slds-popover__body .slds-select_container:before{
+
+.slds-popover__body .slds-select_container:before {
     margin-top: 0px;
 }
-.slds-popover__body .slds-select_container:after{
+
+.slds-popover__body .slds-select_container:after {
     margin-bottom: 0px;
 }
 
 .spicecrm-object-record-details-tab-row-field, object-record-details-tab-row-field {
     margin: 0.5rem 5px;
 }
-.spicecrm-object-record-details-tab-row-field  .spicecrm-fieldbody, object-record-details-tab-row-field .spicecrm-fieldbody {
+
+.spicecrm-object-record-details-tab-row-field .spicecrm-fieldbody, object-record-details-tab-row-field .spicecrm-fieldbody {
     border-bottom: 1px solid #ddd;
     margin: 1rem 5px;
 }
@@ -349,45 +395,46 @@ field-generic input, field-enum select{
     }
 }
 
-.spicecrm-admin-main{
+.spicecrm-admin-main {
     display: flex;
     height: calc(100vh - 90px);
 }
 
-.spicecrm-admin-menu{
+.spicecrm-admin-menu {
     width: 200px;
 }
-.spicecrm-admin-content{
+
+.spicecrm-admin-content {
     width: calc(100% - 200px);
     height: 100%;
     padding: 10px;
 }
 
 /* to keep the banne header of the deailt view when scrolling */
-.spicecrm-rolebanner, .slds-page-header[role="fixedbanner"]{
+.spicecrm-rolebanner, .slds-page-header[role="fixedbanner"] {
     position: fixed;
     width: 100%;
     z-index: 99;
     border-bottom: none;
 }
 
-.spicecrm-bannerflex, .slds-page-header[role="detailrow"]{
+.spicecrm-bannerflex, .slds-page-header[role="detailrow"] {
     padding-top: 68px;
 }
 
 /* filter panel */
-object-listview-filter-panel{
-    height:100%;
+object-listview-filter-panel {
+    height: 100%;
     position: fixed;
-    right:0px;
-    z-index:90;
+    right: 0px;
+    z-index: 90;
     width: 320px;
     transition: right 0.5s;
 }
 
-object-listview-filter-panel .slds-panel{
-    height:100%;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.40)
+object-listview-filter-panel .slds-panel {
+    height: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .40)
 }
 
 /*
@@ -403,18 +450,46 @@ object-listview-filter-panel .slds-panel{
 }
 */
 
-
-global-navigation-menu-item li.slds-dropdown-trigger,global-navigation-menu-more li.slds-dropdown-trigger{
+global-navigation-menu-item li.slds-dropdown-trigger, global-navigation-menu-more li.slds-dropdown-trigger {
     display: flex;
 }
 
-.spicecrm-popup-buttoncontainer{
+.spicecrm-popup-buttoncontainer {
     min-height: 2rem;
     margin-top: 1rem;
 }
 
 .spicecrm-popup-buttoncontainer button {
-    float:right;
+    float: right;
+}
+
+/* global search */
+.spicecrm-globalsearch-container {
+    display: flex;
+}
+
+.spicecrm-globalsearch-menu {
+    width: 250px;
+    border-right: 1px solid #d8dde6;
+    background-color: #f7f9fb;
+}
+
+.spicecrm-globalsearch-results {
+    width: calc(100% - 250px);
+    background-color: #f7f9fb;
+}
+
+div[global-search-item] td {
+    font-size: 13px !important;
+}
+
+div[global-search-item] {
+    margin-bottom: 1rem;
+}
+/* todo: get color codes right and with scss variables */
+div[global-search-item] div.slds-page-header{
+    border-top: 1px solid #d8dde6;
+    background-color: #fff;
 }
 
 /* for the css loader http://cssload.net/en/spinners/4*/
@@ -432,7 +507,7 @@ global-navigation-menu-item li.slds-dropdown-trigger,global-navigation-menu-more
     margin: 0 auto;
     border: 2px double;
     border-radius: 50%;
-    border-color: transparent rgba(0,0,0,0.9) rgba(0,0,0,0.9);
+    border-color: transparent rgba(0, 0, 0, 0.9) rgba(0, 0, 0, 0.9);
     animation: cssload-spin 1410ms infinite linear;
     -o-animation: cssload-spin 1410ms infinite linear;
     -ms-animation: cssload-spin 1410ms infinite linear;
@@ -440,24 +515,37 @@ global-navigation-menu-item li.slds-dropdown-trigger,global-navigation-menu-more
     -moz-animation: cssload-spin 1410ms infinite linear;
 }
 
-
-
 @keyframes cssload-spin {
-    100%{ transform: rotate(360deg); transform: rotate(360deg); }
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @-o-keyframes cssload-spin {
-    100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+    100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @-ms-keyframes cssload-spin {
-    100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+    100% {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @-webkit-keyframes cssload-spin {
-    100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 @-moz-keyframes cssload-spin {
-    100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
