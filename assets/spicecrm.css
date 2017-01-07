@@ -450,16 +450,21 @@ global-navigation-menu-item li.slds-dropdown-trigger, global-navigation-menu-mor
     width: calc(100% - 250px);
     background-color: #f7f9fb;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 tr[global-search-module-item] td {
     font-size: 13px !important;
 }
 
-div[global-search-module] {
+.spicecrm-globalsearch-results div[global-search-module] {
     margin-bottom: 1rem;
 }
+
+.spicecrm-globalsearch-results div[global-search-module]:last-child {
+    margin-bottom: 0px;
+}
+
 /* todo: get color codes right and with scss variables */
 div[global-search-module] div.slds-page-header{
     border-top: 1px solid #d8dde6;
