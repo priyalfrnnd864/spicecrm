@@ -6,50 +6,22 @@
     left: calc(25% - 100px);
     text-align: center;
 
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 3000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
 
-    -moz-animation-name: spin;
-    -moz-animation-duration: 3000ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-
-    animation-name: spin;
+}
+.spiceRotate{
+    animation-name: wag;
     animation-duration: 3000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    transform-origin: bottom;
 }
 
-@-moz-keyframes spin {
-    from {
-        -moz-transform: rotateY(0deg);
-    }
-    to {
-        -moz-transform: rotateY(360deg);
-    }
+@keyframes wag {
+    0% {transform: rotate(0deg);}
+    33% {transform: rotate(10deg)}
+    66% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
 }
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotateY(0deg);
-    }
-    to {
-        -webkit-transform: rotateY(360deg);
-    }
-}
-
-@keyframes spin {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
-
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -477,17 +449,19 @@ global-navigation-menu-item li.slds-dropdown-trigger, global-navigation-menu-mor
 .spicecrm-globalsearch-results {
     width: calc(100% - 250px);
     background-color: #f7f9fb;
+    height: 100%;
+    overflow-y: scroll;
 }
 
-div[global-search-item] td {
+tr[global-search-module-item] td {
     font-size: 13px !important;
 }
 
-div[global-search-item] {
+div[global-search-module] {
     margin-bottom: 1rem;
 }
 /* todo: get color codes right and with scss variables */
-div[global-search-item] div.slds-page-header{
+div[global-search-module] div.slds-page-header{
     border-top: 1px solid #d8dde6;
     background-color: #fff;
 }
@@ -548,4 +522,29 @@ div[global-search-item] div.slds-page-header{
         -moz-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+/* Color override */
+.slds-tabs--default__item.slds-active .slds-tabs--default__link{
+    border-color: #CA1B21;
+}
+.slds-tabs--default__link:focus,
+.slds-tabs--default__link:focus, .slds-tabs--default__link:hover{
+    border-color: #DE7779;
+}
+
+.slds-active .slds-tabs--scoped__link,
+.slds-button,
+.slds-navigation-list--vertical .slds-is-active
+{
+    color: #5B5B5B;
+}
+
+.slds-button.slds-button--brand,
+.slds-button.slds-button--icon-inverse{
+    color: #fff;
+}
+
+.slds-navigation-list--vertical .slds-is-active .slds-navigation-list--vertical__action{
+    border-left-color: #CA1B21;
 }
