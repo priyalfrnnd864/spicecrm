@@ -615,13 +615,21 @@ a, a:hover {
     color: #12737C;
 }
 
+.slds-button--brand{
+    background-color: #CA1B21;
+    border-color: #CA1B21;
+}
+.slds-button--brand:hover{
+    background-color: #7C0003;
+}
+
 .slds-tabs--default__item.slds-active .slds-tabs--default__link {
     border-color: #CA1B21;
 }
 
 .slds-tabs--default__link:focus,
 .slds-tabs--default__link:focus, .slds-tabs--default__link:hover {
-    border-color: #FD595D;
+    border-color: #CA1B21;
 }
 
 .slds-active .slds-tabs--scoped__link,
@@ -642,4 +650,23 @@ a, a:hover {
 .slds-radio--button [type=radio]:checked + .slds-radio--button__label:hover,
 .slds-radio--button [type=radio]:checked + .slds-radio--button__label {
     background-color: #CA1B1F;
+}
+
+/* for the progress indicator */
+.slds-tabs--path .slds-is-current,
+.slds-tabs--path .slds-is-current+.slds-is-incomplete:before{
+    background-color: #CA1B1F;
+}
+.slds-tabs--path .slds-is-current:hover,
+.slds-tabs--path .slds-is-current:hover+.slds-is-incomplete:before{
+    background-color: #7C0003;
+}
+
+.slds-tabs--path .slds-is-complete,
+.slds-tabs--path__item+.slds-is-complete:before, .slds-tabs--path__item+.slds-is-current:before{
+    background-color: #2D2D2D;
+}
+.slds-tabs--path .slds-is-complete:hover,
+.slds-tabs--path__item:hover+.slds-is-complete:before, .slds-tabs--path__item:hover+.slds-is-current:before{
+    background-color: #111;
 }
