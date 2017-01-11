@@ -475,10 +475,6 @@ tr[global-search-module-item] td {
     font-size: 13px !important;
 }
 
-.spicecrm-globalsearch-results div[global-search-module] {
-    margin-bottom: 1rem;
-}
-
 .spicecrm-globalsearch-results div[global-search-module]:last-child {
     margin-bottom: 0px;
 }
@@ -545,6 +541,12 @@ div[global-search-module] div.slds-page-header {
         -moz-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+/* for the coach spiceprocess */
+.spicecrm-processicon{
+    fill: #fff;
+    margin-top: 5px;
 }
 
 /* Color override */
@@ -615,6 +617,10 @@ a, a:hover {
     color: #12737C;
 }
 
+.slds-button:focus {
+    box-shadow: 0 0 3px #01464C;
+}
+
 .slds-button--brand{
     background-color: #CA1B21;
     border-color: #CA1B21;
@@ -652,6 +658,22 @@ a, a:hover {
     background-color: #CA1B1F;
 }
 
+/* forms */
+.slds-input:active, .slds-input:focus,
+.slds-select:active, .slds-select:focus,
+.slds-checkbox [type=checkbox]:focus+.slds-checkbox--faux, .slds-checkbox [type=checkbox]:focus+.slds-checkbox__label .slds-checkbox--faux, .slds-checkbox [type=checkbox]:focus~.slds-checkbox--faux
+{
+    border-color: #12737C;
+    box-shadow: 0 0 3px #01464C;
+}
+
+.slds-checkbox [type=checkbox]:checked+.slds-checkbox--faux:after,
+.slds-checkbox [type=checkbox]:checked+.slds-checkbox__label .slds-checkbox--faux:after,
+.slds-checkbox [type=checkbox]:checked~.slds-checkbox--faux:after{
+    border-bottom: 2px solid #CA1B1F;
+    border-left: 2px solid #CA1B1F;
+}
+
 /* for the progress indicator */
 .slds-tabs--path .slds-is-current,
 .slds-tabs--path .slds-is-current+.slds-is-incomplete:before{
@@ -663,10 +685,28 @@ a, a:hover {
 }
 
 .slds-tabs--path .slds-is-complete,
+.slds-tabs--path .slds-is-active+.slds-tabs--path__item.slds-is-current:before,
 .slds-tabs--path__item+.slds-is-complete:before, .slds-tabs--path__item+.slds-is-current:before{
     background-color: #2D2D2D;
 }
 .slds-tabs--path .slds-is-complete:hover,
+.slds-tabs--path .slds-is-active:hover+.slds-tabs--path__item.slds-is-current:before,
 .slds-tabs--path__item:hover+.slds-is-complete:before, .slds-tabs--path__item:hover+.slds-is-current:before{
     background-color: #111;
+}
+
+.slds-tabs--path .slds-is-incomplete .slds-tabs--path__link{
+    color: #bbb;
+}
+
+.slds-tabs--path .slds-is-incomplete:hover .slds-tabs--path__link{
+    color: #fff;
+}
+
+.slds-tabs--path .slds-is-incomplete.slds-is-active,
+.slds-tabs--path .slds-is-incomplete.slds-is-active+.slds-tabs--path__item:before{
+    background-color: #d8dde6;
+}
+.slds-tabs--path .slds-is-incomplete.slds-is-active .slds-tabs--path__link{
+    color: #111;
 }
