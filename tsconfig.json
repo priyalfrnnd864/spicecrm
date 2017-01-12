@@ -9,6 +9,8 @@
     "removeComments": false,
     "noImplicitAny": false,
     "removeComments": true
-    //"outFile": "./app/app_complete.js"
-  }
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
