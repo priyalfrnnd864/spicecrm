@@ -308,10 +308,6 @@ field-generic {
     margin: 0.5rem 0px;
 }
 
-field-generic input, field-enum select {
-    margin: 5px 0px;
-}
-
 /* properly set the chevrons in the select field but not in the popover*/
 .slds-select_container:before {
     margin-top: 5px;
