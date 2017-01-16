@@ -617,10 +617,32 @@ a, a:hover {
     box-shadow: 0 0 3px #01464C;
 }
 
+.slds-button--icon-border.slds-is-selected:focus,
+.slds-button--icon-border.slds-is-selected:active,
+.slds-button--icon-border.slds-is-selected,
+.slds-button--icon-border.slds-is-selected:hover,
 .slds-button--brand{
     background-color: #CA1B21;
     border-color: #CA1B21;
 }
+
+/* keep greyed out when button is disabled and we hover*/
+.slds-button[disabled]:hover{
+    color: #d8dde6;
+}
+
+.slds-button--icon-more:hover .slds-button__icon{
+    fill: #CA1B21;
+}
+
+.slds-button:focus, .slds-button:hover{
+    color: #CA1B21;
+}
+
+.slds-button--icon-border.slds-is-selected{
+    border: 1px solid #CA1B21;
+}
+
 .slds-button--brand:hover{
     background-color: #7C0003;
 }
