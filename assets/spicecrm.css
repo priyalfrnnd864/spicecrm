@@ -331,14 +331,14 @@ field-generic {
 
 .spicecrm-object-record-details-tab-row-field .spicecrm-fieldbody, object-record-details-tab-row-field .spicecrm-fieldbody {
     border-bottom: 1px solid #ddd;
-    margin: 1rem 5px;
+    /*margin: 1rem 5px;*/
 }
 
 .spicecrm-fieldbody {
 }
 
 .spicecrm-fieldbody {
-    padding: 5px 0px;
+    /*padding: 5px 0px*/;
     min-height: 29px;
 }
 
