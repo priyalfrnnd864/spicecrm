@@ -466,6 +466,8 @@ global-navigation-menu-item li.slds-dropdown-trigger, global-navigation-menu-mor
     overflow-y: auto;
 }
 
+table,
+.slds-table tr,
 tr.slds-hint-parent td,
 tr[global-search-module-item] td {
     font-size: 13px !important;
