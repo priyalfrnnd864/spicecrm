@@ -57,7 +57,7 @@ global-login {
 .spiceLoginWindow, .spiceLoginNews {
     background-color: #fdfdfd;
     width: 50%;
-    height: 100vh;
+    height: calc(100vh - 10px);
     position: relative;
     margin-top: -90px;
 }
@@ -65,7 +65,7 @@ global-login {
 .spiceLoginNews {
     background-color: transparent;
     padding: 30px;
-    height: 100vh;
+    height: calc(100vh - 10px);
     overflow-y: scroll;
 }
 
@@ -234,10 +234,6 @@ global-recent-items td {
     width: 30%;
     margin: 15px;
     min-width: 400px;
-}
-
-.spiceRelatedCard {
-    margin: 0 0 1rem 0;
 }
 
 div[object-related-card-tile] {
