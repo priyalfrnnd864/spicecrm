@@ -422,6 +422,20 @@ object-listview-filter-panel .slds-panel {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .40)
 }
 
+object-listview-aggregates-panel {
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    z-index: 90;
+    width: 320px;
+    transition: right 0.5s;
+}
+
+object-listview-aggregates-panel .slds-panel {
+    height: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .40)
+}
+
 /*
 .spicecrm-listview-header{
     position: fixed;
@@ -622,18 +636,13 @@ a, a:hover {
 .slds-button--icon-border.slds-is-selected:focus,
 .slds-button--icon-border.slds-is-selected:active,
 .slds-button--icon-border.slds-is-selected,
-.slds-button--icon-border.slds-is-selected:hover,
+.slds-button--icon-border.slds-is-selected:not([disabled]):hover,
 .slds-button--brand{
     background-color: #CA1B21;
     border-color: #CA1B21;
 }
 
-/* keep greyed out when button is disabled and we hover*/
-.slds-button[disabled]:hover{
-    color: #d8dde6;
-}
-
-.slds-button--icon-more:hover .slds-button__icon{
+.slds-button--icon-more:not([disabled]):hover .slds-button__icon{
     fill: #CA1B21;
 }
 
@@ -714,11 +723,11 @@ a, a:hover {
 .slds-tabs--path__item:hover+.slds-is-complete:before, .slds-tabs--path__item:hover+.slds-is-current:before{
     background-color: #111;
 }
-
+/*
 .slds-tabs--path .slds-is-incomplete .slds-tabs--path__link{
     color: #bbb;
 }
-
+*/
 .slds-tabs--path .slds-is-incomplete:hover .slds-tabs--path__link{
     color: #fff;
 }
