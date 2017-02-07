@@ -646,6 +646,10 @@ a, a:hover {
     color: #CA1B21;
 }
 
+.slds-button:focus svg, .slds-button:hover svg {
+    fill: #CA1B21;
+}
+
 .slds-button--icon-border.slds-is-selected{
     border: 1px solid #CA1B21;
 }
