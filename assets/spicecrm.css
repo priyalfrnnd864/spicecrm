@@ -764,3 +764,10 @@ a, a:hover {
 .slds-progress__item.slds-is-active .slds-progress__marker:focus {
     box-shadow: #fff 0 0 0 4px, 0 0 3px 4px #FD595D;
 }
+
+.slds-box--border.slds-has-error {
+    background-color: #fff;
+    border-color: #c23934;
+    box-shadow: #c23934 0 0 0 1px inset;
+    background-clip: padding-box;
+}
