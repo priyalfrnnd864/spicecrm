@@ -145,7 +145,7 @@ global-login {
 }
 
 .spiceContent {
-    margin-top: 95px;
+    margin-top: 90px;
 }
 
 global-user-panel {
@@ -633,7 +633,7 @@ a, a:hover {
 .slds-button--icon-border.slds-is-selected:active,
 .slds-button--icon-border.slds-is-selected,
 .slds-button--icon-border.slds-is-selected:not([disabled]):hover,
-.slds-button--brand{
+.slds-button--brand, .slds-button--brand:active, .slds-button--brand:focus{
     background-color: #CA1B21;
     border-color: #CA1B21;
 }
@@ -658,14 +658,13 @@ a, a:hover {
     background-color: #7C0003;
 }
 
-.slds-tabs--default__item.slds-active .slds-tabs--default__link {
-    border-color: #CA1B21;
+.slds-tabs--default__item.slds-active:after,
+.slds-tabs--default__item.slds-is-active:after,
+.slds-tabs--default__item:hover:after{
+    background-color: #CA1B21;
 }
 
-.slds-tabs--default__link:focus,
-.slds-tabs--default__link:focus, .slds-tabs--default__link:hover {
-    border-color: #CA1B21;
-}
+
 
 .slds-active .slds-tabs--scoped__link,
 .slds-button,
@@ -738,4 +737,30 @@ a, a:hover {
 }
 .slds-tabs--path .slds-is-incomplete.slds-is-active .slds-tabs--path__link{
     color: #111;
+}
+.slds-context-bar{
+    border-bottom: 3px solid #CA1B1F;
+}
+
+.slds-context-bar__item:not(.slds-no-hover):not(.slds-is-active):hover {
+    border-bottom: 3px solid #FD595D;
+}
+.slds-context-bar__item.slds-is-active:after, .slds-context-bar__item.slds-is-active:before{
+    background: #CA1B1F;
+}
+
+.slds-progress__item.slds-is-active .slds-progress__marker, .slds-progress__item.slds-is-completed .slds-progress__marker{
+    border-color: #CA1B1F;
+}
+
+.slds-progress__item.slds-is-active .slds-progress__marker:focus, .slds-progress__item.slds-is-active .slds-progress__marker:hover{
+    border-color: #CA1B1F;
+}
+
+.slds-progress-bar .slds-progress-bar__value{
+    background: #FD595D;
+}
+
+.slds-progress__item.slds-is-active .slds-progress__marker:focus {
+    box-shadow: #fff 0 0 0 4px, 0 0 3px 4px #FD595D;
 }
