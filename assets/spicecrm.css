@@ -642,11 +642,11 @@ a, a:hover {
     fill: #CA1B21;
 }
 
-.slds-button:focus, .slds-button:hover{
+.slds-button:not([disabled]):focus, .slds-button:not([disabled]):hover{
     color: #CA1B21;
 }
 
-.slds-button:focus svg, .slds-button:hover svg {
+.slds-button:not([disabled]):focus svg, .slds-button:not([disabled]):hover svg {
     fill: #CA1B21;
 }
 
@@ -654,8 +654,15 @@ a, a:hover {
     border: 1px solid #CA1B21;
 }
 
-.slds-button--brand:hover{
-    background-color: #7C0003;
+.slds-button--brand:not([disabled]):hover{
+    color: #FFF;
+    background-color: #CA1B21;
+    font-weight: bold;
+}
+
+
+.slds-button:focus {
+    box-shadow: 0 0 3px #01464C;
 }
 
 .slds-tabs--default__item.slds-active:after,
@@ -770,4 +777,8 @@ a, a:hover {
     border-color: #c23934;
     box-shadow: #c23934 0 0 0 1px inset;
     background-clip: padding-box;
+}
+
+.slds-radio [type=radio]:checked+.slds-radio--faux:after, .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio--faux:after, .slds-radio [type=radio]:checked~.slds-radio--faux:after{
+    background-color: #CA1B1F;
 }
