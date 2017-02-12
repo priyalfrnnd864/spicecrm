@@ -305,6 +305,7 @@ field-generic {
 }
 
 /* properly set the chevrons in the select field but not in the popover*/
+/*
 .slds-select_container:before {
     margin-top: 5px;
 }
@@ -320,7 +321,7 @@ field-generic {
 .slds-popover__body .slds-select_container:after {
     margin-bottom: 0px;
 }
-
+*/
 .spicecrm-object-record-details-tab-row-field, object-record-details-tab-row-field {
     margin: 0.5rem 5px;
 }
@@ -645,6 +646,9 @@ a, a:hover {
 .slds-button:not([disabled]):focus, .slds-button:not([disabled]):hover{
     color: #CA1B21;
 }
+.slds-button--brand:not([disabled]):focus, .slds-button--brand:not([disabled]):hover{
+    color: #FFF;
+}
 
 .slds-button:not([disabled]):focus svg, .slds-button:not([disabled]):hover svg {
     fill: #CA1B21;
@@ -781,4 +785,13 @@ a, a:hover {
 
 .slds-radio [type=radio]:checked+.slds-radio--faux:after, .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio--faux:after, .slds-radio [type=radio]:checked~.slds-radio--faux:after{
     background-color: #CA1B1F;
+}
+
+
+/*
+ generic classes
+ */
+.spice-h-full{
+    height:100%;
+    overflow-y: auto;
 }
