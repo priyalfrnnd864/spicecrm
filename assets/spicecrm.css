@@ -236,10 +236,6 @@ global-recent-items td {
     min-width: 400px;
 }
 
-div[object-related-card-tile] {
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
 
 .spicecrm-timeline-items-container {
     margin-top: 1rem;
@@ -687,6 +683,12 @@ a, a:hover {
 .slds-button.slds-button--icon-inverse {
     color: #fff;
 }
+
+/* special rule for the action container since the first child is an empty div
+object-action-container .slds-button-group .slds-button:nth-child(2) {
+    border-radius: .25rem 0 0 .25rem;
+}
+*/
 
 .slds-navigation-list--vertical .slds-is-active .slds-navigation-list--vertical__action {
     border-left-color: #CA1B21;
