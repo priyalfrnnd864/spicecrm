@@ -254,15 +254,15 @@ global-recent-items td {
     top: 50%;
     left: 120px;
     margin-top: -1px;
-    border-bottom: 1px dashed rgb(216, 221, 230);
+    border-bottom: 1px solid rgb(216, 221, 230);
     content: ' ';
 }
-
+/*
 .spiceActivitiyTimelineHeader h2 {
     padding-top: 0.25rem;
     background-color: #fff;
 }
-
+*/
 .spiceActivitiyTimelineHeader .showmorebutton {
     position: absolute;
     right: 0px;
