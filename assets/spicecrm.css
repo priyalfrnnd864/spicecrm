@@ -118,8 +118,6 @@ global-login {
 }
 
 .spiceLoginBox input[type="text"], .spiceLoginBox input[type="password"] {
-    padding: 10px;
-    border: 1px solid #ddd;
     border-radius: 3px;
     background-color: #fff !important;
     width: 100%;
