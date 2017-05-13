@@ -332,6 +332,11 @@ field-generic {
     min-height: 29px;
 }
 
+.spicecrm-fieldminheight {
+    /*padding: 5px 0px*/;
+    min-height: 34px;
+}
+
 .spicecrm-recorddetail-buttons {
     text-align: center;
     padding-bottom: 1rem;
