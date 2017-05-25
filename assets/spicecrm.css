@@ -549,6 +549,13 @@ div[global-search-module] div.slds-page-header {
     margin-top: 5px;
 }
 
+
+/* slds overrides */
+
+.slds-section__title-action-icon{
+    transition: 0.5s;
+}
+
 /* Color override */
 /* CSS - Cascading Style Sheet */
 /* Palette color codes */
@@ -788,6 +795,8 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     background-color: transparent;
 }
 
+
+
 /*
  generic classes
  */
@@ -795,3 +804,4 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     height:100%;
     overflow-y: auto;
 }
+
