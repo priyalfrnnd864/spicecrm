@@ -2,6 +2,11 @@ body, .x-body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+/* hide spin buttons in number fields */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    display: none;
+}
+
 .spiceLoadingLogo {
     width: 200px;
     height: 200px;
