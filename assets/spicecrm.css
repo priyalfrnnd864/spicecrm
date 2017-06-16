@@ -927,6 +927,10 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     background-color: transparent;
 }
 
+.slds-popover--tooltip, .slds-popover_tooltip{
+    background: #002D31;
+}
+
 /*
  generic classes
  */
