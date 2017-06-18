@@ -8,12 +8,12 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .spiceLoadingLogo {
-    width: 200px;
-    height: 200px;
-    position: absolute;
+    /*width: 200px;
+    height: 200px;*/
+    /*position: absolute;
     top: calc(40% - 320px);
     left: calc(25% - 100px);
-    text-align: center;
+    text-align: center;*/
 
 }
 
