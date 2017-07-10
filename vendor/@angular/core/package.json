@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/core@~4.2.3",
+        "raw": "@angular/core@~4.2.6",
         "scope": "@angular",
         "escapedName": "@angular%2fcore",
         "name": "@angular/core",
-        "rawSpec": "~4.2.3",
-        "spec": ">=4.2.3 <4.3.0",
+        "rawSpec": "~4.2.6",
+        "spec": ">=4.2.6 <4.3.0",
         "type": "range"
       },
-      "c:\\htdocs\\spicecrm_ui_pilot"
+      "C:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/core@>=4.2.3 <4.3.0",
-  "_id": "@angular/core@4.2.3",
+  "_from": "@angular/core@>=4.2.6 <4.3.0",
+  "_id": "@angular/core@4.2.6",
   "_inCache": true,
   "_location": "/@angular/core",
-  "_nodeVersion": "6.10.2",
+  "_nodeVersion": "6.9.5",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/core-4.2.3.tgz_1497631829059_0.6828953898511827"
+    "tmp": "tmp/core-4.2.6.tgz_1499490103100_0.06661377055570483"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "3.10.7",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/core@~4.2.3",
+    "raw": "@angular/core@~4.2.6",
     "scope": "@angular",
     "escapedName": "@angular%2fcore",
     "name": "@angular/core",
-    "rawSpec": "~4.2.3",
-    "spec": ">=4.2.3 <4.3.0",
+    "rawSpec": "~4.2.6",
+    "spec": ">=4.2.6 <4.3.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/core/-/core-4.2.3.tgz",
-  "_shasum": "ab7329c18d4fd305872b82718ffae3e76e4d4549",
+  "_resolved": "https://registry.npmjs.org/@angular/core/-/core-4.2.6.tgz",
+  "_shasum": "0c1c8ff0157f076f4a7c0b721ca1423f1bbe164e",
   "_shrinkwrap": null,
-  "_spec": "@angular/core@~4.2.3",
-  "_where": "c:\\htdocs\\spicecrm_ui_pilot",
+  "_spec": "@angular/core@~4.2.6",
+  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
   },
@@ -58,8 +58,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "ab7329c18d4fd305872b82718ffae3e76e4d4549",
-    "tarball": "https://registry.npmjs.org/@angular/core/-/core-4.2.3.tgz"
+    "shasum": "0c1c8ff0157f076f4a7c0b721ca1423f1bbe164e",
+    "tarball": "https://registry.npmjs.org/@angular/core/-/core-4.2.6.tgz"
   },
   "es2015": "./@angular/core.js",
   "homepage": "https://github.com/angular/angular#readme",
@@ -85,5 +85,5 @@
   },
   "scripts": {},
   "typings": "./core.d.ts",
-  "version": "4.2.3"
+  "version": "4.2.6"
 }

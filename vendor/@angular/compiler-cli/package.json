@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/compiler-cli@^4.2.3",
+        "raw": "@angular/compiler-cli@^4.2.6",
         "scope": "@angular",
         "escapedName": "@angular%2fcompiler-cli",
         "name": "@angular/compiler-cli",
-        "rawSpec": "^4.2.3",
-        "spec": ">=4.2.3 <5.0.0",
+        "rawSpec": "^4.2.6",
+        "spec": ">=4.2.6 <5.0.0",
         "type": "range"
       },
-      "c:\\htdocs\\spicecrm_ui_pilot"
+      "C:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/compiler-cli@>=4.2.3 <5.0.0",
-  "_id": "@angular/compiler-cli@4.2.3",
+  "_from": "@angular/compiler-cli@>=4.2.6 <5.0.0",
+  "_id": "@angular/compiler-cli@4.2.6",
   "_inCache": true,
   "_location": "/@angular/compiler-cli",
-  "_nodeVersion": "6.10.2",
+  "_nodeVersion": "6.9.5",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/compiler-cli-4.2.3.tgz_1497631826437_0.7077529584057629"
+    "tmp": "tmp/compiler-cli-4.2.6.tgz_1499490097470_0.1780908063519746"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "3.10.7",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/compiler-cli@^4.2.3",
+    "raw": "@angular/compiler-cli@^4.2.6",
     "scope": "@angular",
     "escapedName": "@angular%2fcompiler-cli",
     "name": "@angular/compiler-cli",
-    "rawSpec": "^4.2.3",
-    "spec": ">=4.2.3 <5.0.0",
+    "rawSpec": "^4.2.6",
+    "spec": ">=4.2.6 <5.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-4.2.3.tgz",
-  "_shasum": "33aa3fbf4d9879cc142a3ecce46996bec840c029",
+  "_resolved": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-4.2.6.tgz",
+  "_shasum": "8a21352299f3ebd1e3f17581054164566ca306be",
   "_shrinkwrap": null,
-  "_spec": "@angular/compiler-cli@^4.2.3",
-  "_where": "c:\\htdocs\\spicecrm_ui_pilot",
+  "_spec": "@angular/compiler-cli@^4.2.6",
+  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
   "bin": {
     "ngc": "./src/main.js",
     "ng-xi18n": "./src/extract_i18n.js"
@@ -65,7 +65,7 @@
     }
   ],
   "dependencies": {
-    "@angular/tsc-wrapped": "4.2.3",
+    "@angular/tsc-wrapped": "4.2.6",
     "minimist": "^1.2.0",
     "reflect-metadata": "^0.1.2"
   },
@@ -73,8 +73,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "33aa3fbf4d9879cc142a3ecce46996bec840c029",
-    "tarball": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-4.2.3.tgz"
+    "shasum": "8a21352299f3ebd1e3f17581054164566ca306be",
+    "tarball": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-4.2.6.tgz"
   },
   "homepage": "https://github.com/angular/angular/tree/master/packages/compiler-cli",
   "keywords": [
@@ -93,8 +93,8 @@
   "optionalDependencies": {},
   "peerDependencies": {
     "typescript": "^2.0.2",
-    "@angular/compiler": "4.2.3",
-    "@angular/core": "4.2.3"
+    "@angular/compiler": "4.2.6",
+    "@angular/core": "4.2.6"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -103,5 +103,5 @@
   },
   "scripts": {},
   "typings": "index.d.ts",
-  "version": "4.2.3"
+  "version": "4.2.6"
 }
