@@ -843,6 +843,15 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     border-left: 2px solid #CA1B1F;
 }
 
+.slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox--faux:focus, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox--faux:hover, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox--faux_container .slds-checkbox--faux:focus, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox--faux_container .slds-checkbox--faux:hover, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox_faux:focus, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox_faux:hover, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux:focus, .slds-checkbox--toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux:hover, .slds-checkbox--toggle [type=checkbox]:checked~.slds-checkbox--faux:focus, .slds-checkbox--toggle [type=checkbox]:checked~.slds-checkbox--faux:hover, .slds-checkbox--toggle [type=checkbox]:checked~.slds-checkbox_faux:focus, .slds-checkbox--toggle [type=checkbox]:checked~.slds-checkbox_faux:hover, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox--faux:focus, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox--faux:hover, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox--faux_container .slds-checkbox--faux:focus, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox--faux_container .slds-checkbox--faux:hover, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux:focus, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux:hover, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux:focus, .slds-checkbox_toggle [type=checkbox]:checked+.slds-checkbox_faux_container .slds-checkbox_faux:hover, .slds-checkbox_toggle [type=checkbox]:checked~.slds-checkbox--faux:focus, .slds-checkbox_toggle [type=checkbox]:checked~.slds-checkbox--faux:hover, .slds-checkbox_toggle [type=checkbox]:checked~.slds-checkbox_faux:focus, .slds-checkbox_toggle [type=checkbox]:checked~.slds-checkbox_faux:hover{
+    background-color: #CA1B1F;
+}
+
+.slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox--faux, .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox--faux_container .slds-checkbox--faux, .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox_faux, .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox_faux_container .slds-checkbox_faux, .slds-checkbox--toggle [type=checkbox]:checked ~ .slds-checkbox--faux, .slds-checkbox--toggle [type=checkbox]:checked ~ .slds-checkbox_faux, .slds-checkbox_toggle [type=checkbox]:checked + .slds-checkbox--faux, .slds-checkbox_toggle [type=checkbox]:checked + .slds-checkbox--faux_container .slds-checkbox--faux, .slds-checkbox_toggle [type=checkbox]:checked + .slds-checkbox_faux, .slds-checkbox_toggle [type=checkbox]:checked + .slds-checkbox_faux_container .slds-checkbox_faux, .slds-checkbox_toggle [type=checkbox]:checked ~ .slds-checkbox--faux, .slds-checkbox_toggle [type=checkbox]:checked ~ .slds-checkbox_faux {
+    border-color: #CA1B1F;
+    background-color: #CA1B1F;
+}
+
 /* for the progress indicator */
 .slds-tabs--path .slds-is-current,
 .slds-tabs--path .slds-is-current + .slds-is-incomplete:before {
@@ -927,7 +936,7 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     background-color: transparent;
 }
 
-.slds-popover--tooltip, .slds-popover_tooltip{
+.slds-popover--tooltip, .slds-popover_tooltip {
     background: #002D31;
 }
 
