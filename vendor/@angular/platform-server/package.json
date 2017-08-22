@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/platform-server@^4.2.6",
+        "raw": "@angular/platform-server@^4.3.5",
         "scope": "@angular",
         "escapedName": "@angular%2fplatform-server",
         "name": "@angular/platform-server",
-        "rawSpec": "^4.2.6",
-        "spec": ">=4.2.6 <5.0.0",
+        "rawSpec": "^4.3.5",
+        "spec": ">=4.3.5 <5.0.0",
         "type": "range"
       },
-      "C:\\htdocs\\spicecrm_ui_pilot"
+      "c:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/platform-server@>=4.2.6 <5.0.0",
-  "_id": "@angular/platform-server@4.2.6",
+  "_from": "@angular/platform-server@>=4.3.5 <5.0.0",
+  "_id": "@angular/platform-server@4.3.5",
   "_inCache": true,
   "_location": "/@angular/platform-server",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "6.10.2",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/platform-server-4.2.6.tgz_1499490115911_0.7597742923535407"
+    "tmp": "tmp/platform-server-4.3.5.tgz_1502908225834_0.5216260408051312"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.7",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/platform-server@^4.2.6",
+    "raw": "@angular/platform-server@^4.3.5",
     "scope": "@angular",
     "escapedName": "@angular%2fplatform-server",
     "name": "@angular/platform-server",
-    "rawSpec": "^4.2.6",
-    "spec": ">=4.2.6 <5.0.0",
+    "rawSpec": "^4.3.5",
+    "spec": ">=4.3.5 <5.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/platform-server/-/platform-server-4.2.6.tgz",
-  "_shasum": "66e03fd855486fe058e23d3786061d91462998db",
+  "_resolved": "https://registry.npmjs.org/@angular/platform-server/-/platform-server-4.3.5.tgz",
+  "_shasum": "59b99e40c55830b8c51302cd3466d0b82c9b5a91",
   "_shrinkwrap": null,
-  "_spec": "@angular/platform-server@^4.2.6",
-  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
+  "_spec": "@angular/platform-server@^4.3.5",
+  "_where": "c:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
   },
@@ -60,8 +60,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "66e03fd855486fe058e23d3786061d91462998db",
-    "tarball": "https://registry.npmjs.org/@angular/platform-server/-/platform-server-4.2.6.tgz"
+    "shasum": "59b99e40c55830b8c51302cd3466d0b82c9b5a91",
+    "tarball": "https://registry.npmjs.org/@angular/platform-server/-/platform-server-4.3.5.tgz"
   },
   "es2015": "./@angular/platform-server.js",
   "homepage": "https://github.com/angular/angular#readme",
@@ -77,11 +77,11 @@
   "name": "@angular/platform-server",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/animations": "4.2.6",
-    "@angular/core": "4.2.6",
-    "@angular/common": "4.2.6",
-    "@angular/compiler": "4.2.6",
-    "@angular/platform-browser": "4.2.6"
+    "@angular/animations": "4.3.5",
+    "@angular/core": "4.3.5",
+    "@angular/common": "4.3.5",
+    "@angular/compiler": "4.3.5",
+    "@angular/platform-browser": "4.3.5"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -90,5 +90,5 @@
   },
   "scripts": {},
   "typings": "./platform-server.d.ts",
-  "version": "4.2.6"
+  "version": "4.3.5"
 }

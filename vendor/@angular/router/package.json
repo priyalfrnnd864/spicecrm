@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/router@~4.2.6",
+        "raw": "@angular/router@~4.3.5",
         "scope": "@angular",
         "escapedName": "@angular%2frouter",
         "name": "@angular/router",
-        "rawSpec": "~4.2.6",
-        "spec": ">=4.2.6 <4.3.0",
+        "rawSpec": "~4.3.5",
+        "spec": ">=4.3.5 <4.4.0",
         "type": "range"
       },
-      "C:\\htdocs\\spicecrm_ui_pilot"
+      "c:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/router@>=4.2.6 <4.3.0",
-  "_id": "@angular/router@4.2.6",
+  "_from": "@angular/router@>=4.3.5 <4.4.0",
+  "_id": "@angular/router@4.3.5",
   "_inCache": true,
   "_location": "/@angular/router",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "6.10.2",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/router-4.2.6.tgz_1499490120254_0.9106950685381889"
+    "tmp": "tmp/router-4.3.5.tgz_1502908230488_0.20121382968500257"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.7",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/router@~4.2.6",
+    "raw": "@angular/router@~4.3.5",
     "scope": "@angular",
     "escapedName": "@angular%2frouter",
     "name": "@angular/router",
-    "rawSpec": "~4.2.6",
-    "spec": ">=4.2.6 <4.3.0",
+    "rawSpec": "~4.3.5",
+    "spec": ">=4.3.5 <4.4.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-4.2.6.tgz",
-  "_shasum": "a6919d9b61c45ffc15fbee593398e3fd532dab46",
+  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-4.3.5.tgz",
+  "_shasum": "188082747bc9b6974f9d4b3f5557b434645d23cd",
   "_shrinkwrap": null,
-  "_spec": "@angular/router@~4.2.6",
-  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
+  "_spec": "@angular/router@~4.3.5",
+  "_where": "c:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
   },
@@ -58,11 +58,11 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "a6919d9b61c45ffc15fbee593398e3fd532dab46",
-    "tarball": "https://registry.npmjs.org/@angular/router/-/router-4.2.6.tgz"
+    "shasum": "188082747bc9b6974f9d4b3f5557b434645d23cd",
+    "tarball": "https://registry.npmjs.org/@angular/router/-/router-4.3.5.tgz"
   },
   "es2015": "./@angular/router.js",
-  "homepage": "https://github.com/angular/angular/blob/master/modules/%40angular/router/README.md",
+  "homepage": "https://github.com/angular/angular/tree/master/packages/router",
   "keywords": [
     "angular",
     "router"
@@ -79,9 +79,9 @@
   "name": "@angular/router",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "4.2.6",
-    "@angular/common": "4.2.6",
-    "@angular/platform-browser": "4.2.6",
+    "@angular/core": "4.3.5",
+    "@angular/common": "4.3.5",
+    "@angular/platform-browser": "4.3.5",
     "rxjs": "^5.0.1"
   },
   "readme": "ERROR: No README data found!",
@@ -91,5 +91,5 @@
   },
   "scripts": {},
   "typings": "./router.d.ts",
-  "version": "4.2.6"
+  "version": "4.3.5"
 }

@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/forms@~4.2.6",
+        "raw": "@angular/forms@~4.3.5",
         "scope": "@angular",
         "escapedName": "@angular%2fforms",
         "name": "@angular/forms",
-        "rawSpec": "~4.2.6",
-        "spec": ">=4.2.6 <4.3.0",
+        "rawSpec": "~4.3.5",
+        "spec": ">=4.3.5 <4.4.0",
         "type": "range"
       },
-      "C:\\htdocs\\spicecrm_ui_pilot"
+      "c:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/forms@>=4.2.6 <4.3.0",
-  "_id": "@angular/forms@4.2.6",
+  "_from": "@angular/forms@>=4.3.5 <4.4.0",
+  "_id": "@angular/forms@4.3.5",
   "_inCache": true,
   "_location": "/@angular/forms",
-  "_nodeVersion": "6.9.5",
+  "_nodeVersion": "6.10.2",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/forms-4.2.6.tgz_1499490106520_0.9841246495489031"
+    "tmp": "tmp/forms-4.3.5.tgz_1502908215572_0.4505564805585891"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.7",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/forms@~4.2.6",
+    "raw": "@angular/forms@~4.3.5",
     "scope": "@angular",
     "escapedName": "@angular%2fforms",
     "name": "@angular/forms",
-    "rawSpec": "~4.2.6",
-    "spec": ">=4.2.6 <4.3.0",
+    "rawSpec": "~4.3.5",
+    "spec": ">=4.3.5 <4.4.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/forms/-/forms-4.2.6.tgz",
-  "_shasum": "9d32399608e4603bbf197417aa5b94e80a467eb0",
+  "_resolved": "https://registry.npmjs.org/@angular/forms/-/forms-4.3.5.tgz",
+  "_shasum": "519aad0ad82a1b87019937fa93fc147734737787",
   "_shrinkwrap": null,
-  "_spec": "@angular/forms@~4.2.6",
-  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
+  "_spec": "@angular/forms@~4.3.5",
+  "_where": "c:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
   },
@@ -58,8 +58,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "9d32399608e4603bbf197417aa5b94e80a467eb0",
-    "tarball": "https://registry.npmjs.org/@angular/forms/-/forms-4.2.6.tgz"
+    "shasum": "519aad0ad82a1b87019937fa93fc147734737787",
+    "tarball": "https://registry.npmjs.org/@angular/forms/-/forms-4.3.5.tgz"
   },
   "es2015": "./@angular/forms.js",
   "homepage": "https://github.com/angular/angular#readme",
@@ -75,9 +75,9 @@
   "name": "@angular/forms",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "4.2.6",
-    "@angular/common": "4.2.6",
-    "@angular/platform-browser": "4.2.6"
+    "@angular/core": "4.3.5",
+    "@angular/common": "4.3.5",
+    "@angular/platform-browser": "4.3.5"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -86,5 +86,5 @@
   },
   "scripts": {},
   "typings": "./forms.d.ts",
-  "version": "4.2.6"
+  "version": "4.3.5"
 }
