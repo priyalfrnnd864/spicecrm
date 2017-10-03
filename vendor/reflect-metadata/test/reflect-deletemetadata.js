@@ -1,6 +1,7 @@
+"use strict";
 // 4.1.10 Reflect.deleteMetadata ( metadataKey, target [, propertyKey] )
 // https://rbuckton.github.io/reflect-metadata/#reflect.deletemetadata
-"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 require("../Reflect");
 var chai_1 = require("chai");
 describe("Reflect.deleteMetadata", function () {
