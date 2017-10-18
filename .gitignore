@@ -51,7 +51,7 @@
 /custom/application
 /custom/application/*
 /custom/blowfish/*
-
+/custom/modules/*/Ext/*
 
 # Custom configuration should also be ignored.
 /config.php
