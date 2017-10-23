@@ -268,20 +268,6 @@ object-activitiytimeline-add-container {
     margin-bottom: 2rem;
 }
 
-global-docked-composer-overflow {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    padding: 1rem;
-    background-color: #ddd;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.spiceComposerOverflow {
-
-}
-
 .slds-card__body {
     margin-bottom: 10px;
 }
@@ -960,3 +946,6 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     overflow-y: auto;
 }
 
+.slds-docked-composer__header{
+    border-bottom-color: #CA1B1F;
+}
