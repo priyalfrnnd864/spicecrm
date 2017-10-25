@@ -480,7 +480,7 @@ div[global-search-module] div.slds-page-header {
 
 .cssload-container {
     width: 100%;
-    height: 26px;
+    /*height: 26px;*/
     text-align: center;
     margin: 10px 0px;
 }
