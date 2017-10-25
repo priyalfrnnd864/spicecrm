@@ -34,6 +34,11 @@
 /cache/xml/*
 /cache/upload/*
 
+/modules/SecurityGroups/*
+/custom/Extension/application/Ext/Language/*SecurityGroups*.php
+/custom/Extension/application/Ext/TableDictionary/securitygroups*.php
+/custom/Extension/application/Ext/Include/SecurityGroups.php
+
 # Ignore some files and directories from the custom directory.
 /custom/history
 /custom/history/*
@@ -46,6 +51,7 @@
 /custom/application
 /custom/application/*
 /custom/blowfish/*
+/custom/modules/*/Ext/*
 
 # Custom configuration should also be ignored.
 /config.php
