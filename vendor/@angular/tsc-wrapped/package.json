@@ -2,31 +2,31 @@
   "_args": [
     [
       {
-        "raw": "@angular/tsc-wrapped@4.3.5",
+        "raw": "@angular/tsc-wrapped@4.4.6",
         "scope": "@angular",
         "escapedName": "@angular%2ftsc-wrapped",
         "name": "@angular/tsc-wrapped",
-        "rawSpec": "4.3.5",
-        "spec": "4.3.5",
+        "rawSpec": "4.4.6",
+        "spec": "4.4.6",
         "type": "version"
       },
-      "c:\\htdocs\\spicecrm_ui_pilot\\node_modules\\@angular\\compiler-cli"
+      "C:\\htdocs\\spicecrm_ui_pilot\\node_modules\\@angular\\compiler-cli"
     ]
   ],
-  "_from": "@angular/tsc-wrapped@4.3.5",
-  "_id": "@angular/tsc-wrapped@4.3.5",
+  "_from": "@angular/tsc-wrapped@4.4.6",
+  "_id": "@angular/tsc-wrapped@4.4.6",
   "_inCache": true,
   "_location": "/@angular/tsc-wrapped",
-  "_nodeVersion": "6.10.2",
+  "_nodeVersion": "6.9.5",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/tsc-wrapped-4.3.5.tgz_1502908289556_0.40944677987135947"
+    "tmp": "tmp/tsc-wrapped-4.4.6.tgz_1508372327655_0.4704365525394678"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "4.6.1",
   "_phantomChildren": {
     "minimist": "1.2.0",
     "mkdirp": "0.5.1",
@@ -34,22 +34,22 @@
     "source-map-support": "0.4.8"
   },
   "_requested": {
-    "raw": "@angular/tsc-wrapped@4.3.5",
+    "raw": "@angular/tsc-wrapped@4.4.6",
     "scope": "@angular",
     "escapedName": "@angular%2ftsc-wrapped",
     "name": "@angular/tsc-wrapped",
-    "rawSpec": "4.3.5",
-    "spec": "4.3.5",
+    "rawSpec": "4.4.6",
+    "spec": "4.4.6",
     "type": "version"
   },
   "_requiredBy": [
     "/@angular/compiler-cli"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/tsc-wrapped/-/tsc-wrapped-4.3.5.tgz",
-  "_shasum": "95fdaa813cfc57262fc7ef5fea726d628aefabac",
+  "_resolved": "https://registry.npmjs.org/@angular/tsc-wrapped/-/tsc-wrapped-4.4.6.tgz",
+  "_shasum": "16787cbbf50bdc7e738123b19c32527f244e178d",
   "_shrinkwrap": null,
-  "_spec": "@angular/tsc-wrapped@4.3.5",
-  "_where": "c:\\htdocs\\spicecrm_ui_pilot\\node_modules\\@angular\\compiler-cli",
+  "_spec": "@angular/tsc-wrapped@4.4.6",
+  "_where": "C:\\htdocs\\spicecrm_ui_pilot\\node_modules\\@angular\\compiler-cli",
   "bugs": {
     "url": "https://github.com/angular/angular/issues"
   },
@@ -70,8 +70,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "95fdaa813cfc57262fc7ef5fea726d628aefabac",
-    "tarball": "https://registry.npmjs.org/@angular/tsc-wrapped/-/tsc-wrapped-4.3.5.tgz"
+    "shasum": "16787cbbf50bdc7e738123b19c32527f244e178d",
+    "tarball": "https://registry.npmjs.org/@angular/tsc-wrapped/-/tsc-wrapped-4.4.6.tgz"
   },
   "homepage": "https://github.com/angular/angular/blob/master/tools/@angular/tsc-wrapped",
   "license": "MIT",
@@ -92,5 +92,5 @@
     "url": "git+https://github.com/angular/angular.git"
   },
   "scripts": {},
-  "version": "4.3.5"
+  "version": "4.4.6"
 }
