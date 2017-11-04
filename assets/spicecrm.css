@@ -892,7 +892,7 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
 }
 
 .slds-context-bar__item:not(.slds-no-hover):not(.slds-is-active):hover {
-    border-bottom: 3px solid #FD595D;
+    /*border-bottom: 3px solid #FD595D;*/
 }
 
 .slds-context-bar__item.slds-is-active:after, .slds-context-bar__item.slds-is-active:before {
@@ -949,3 +949,11 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
 .slds-docked-composer__header{
     border-bottom-color: #CA1B1F;
 }
+
+.slds-context-bar__item.slds-is-active, .slds-context-bar__item:not(.slds-no-hover):hover {
+    background-color: rgba(155,155,155,.1);
+}
+.slds-context-bar__item.slds-is-active{
+    animation:spiceAnim 135ms cubic-bezier(.39,.575,.565,1) both
+}
+@keyframes spiceAnim{50%{background-color:#fff}100%{background-color:rgba(155,155,155,.1);}}
