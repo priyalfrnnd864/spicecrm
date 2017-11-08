@@ -992,3 +992,7 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
         background-color: rgba(155, 155, 155, .1);
     }
 }
+
+.slds-tabs--default__item.slds-active .slds-tabs--default__link:hover{
+    color: #111
+}
