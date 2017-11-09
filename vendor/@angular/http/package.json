@@ -2,48 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular/http@~4.4.6",
+        "raw": "@angular/http@~5.0.1",
         "scope": "@angular",
         "escapedName": "@angular%2fhttp",
         "name": "@angular/http",
-        "rawSpec": "~4.4.6",
-        "spec": ">=4.4.6 <4.5.0",
+        "rawSpec": "~5.0.1",
+        "spec": ">=5.0.1 <5.1.0",
         "type": "range"
       },
       "C:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/http@>=4.4.6 <4.5.0",
-  "_id": "@angular/http@4.4.6",
+  "_from": "@angular/http@>=5.0.1 <5.1.0",
+  "_id": "@angular/http@5.0.1",
   "_inCache": true,
   "_location": "/@angular/http",
   "_nodeVersion": "6.9.5",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/http-4.4.6.tgz_1508372357342_0.20307665155269206"
+    "tmp": "tmp/http-5.0.1.tgz_1510166580897_0.05722044687718153"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "4.6.1",
+  "_npmVersion": "3.10.10",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/http@~4.4.6",
+    "raw": "@angular/http@~5.0.1",
     "scope": "@angular",
     "escapedName": "@angular%2fhttp",
     "name": "@angular/http",
-    "rawSpec": "~4.4.6",
-    "spec": ">=4.4.6 <4.5.0",
+    "rawSpec": "~5.0.1",
+    "spec": ">=5.0.1 <5.1.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/http/-/http-4.4.6.tgz",
-  "_shasum": "0af680c6710bdc026d940e225cfd0f6a5c005d0c",
+  "_resolved": "https://registry.npmjs.org/@angular/http/-/http-5.0.1.tgz",
+  "_shasum": "350cbdf63cfac8939613d753ff071ed58a60561b",
   "_shrinkwrap": null,
-  "_spec": "@angular/http@~4.4.6",
+  "_spec": "@angular/http@~5.0.1",
   "_where": "C:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
@@ -58,10 +58,10 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "0af680c6710bdc026d940e225cfd0f6a5c005d0c",
-    "tarball": "https://registry.npmjs.org/@angular/http/-/http-4.4.6.tgz"
+    "shasum": "350cbdf63cfac8939613d753ff071ed58a60561b",
+    "tarball": "https://registry.npmjs.org/@angular/http/-/http-5.0.1.tgz"
   },
-  "es2015": "./@angular/http.js",
+  "es2015": "./esm2015/http.js",
   "homepage": "https://github.com/angular/angular#readme",
   "license": "MIT",
   "main": "./bundles/http.umd.js",
@@ -71,13 +71,13 @@
       "email": "angular-core+npm@google.com"
     }
   ],
-  "module": "./@angular/http.es5.js",
+  "module": "./esm5/http.js",
   "name": "@angular/http",
   "optionalDependencies": {},
   "peerDependencies": {
-    "rxjs": "^5.0.1",
-    "@angular/core": "4.4.6",
-    "@angular/platform-browser": "4.4.6"
+    "rxjs": "^5.5.0",
+    "@angular/core": "5.0.1",
+    "@angular/platform-browser": "5.0.1"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -86,5 +86,5 @@
   },
   "scripts": {},
   "typings": "./http.d.ts",
-  "version": "4.4.6"
+  "version": "5.0.1"
 }
