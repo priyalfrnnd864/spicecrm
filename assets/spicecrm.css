@@ -788,6 +788,10 @@ a, a:hover {
     fill: #CA1B21;
 }
 
+.slds-button--brand:not([disabled]):focus svg, .slds-button--brand:not([disabled]):hover svg {
+    fill: currentColor;
+}
+
 .slds-button--icon-border.slds-is-selected {
     border: 1px solid #CA1B21;
 }
