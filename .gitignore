@@ -38,6 +38,7 @@
 /custom/Extension/application/Ext/Language/*SecurityGroups*.php
 /custom/Extension/application/Ext/TableDictionary/securitygroups*.php
 /custom/Extension/application/Ext/Include/SecurityGroups.php
+/modules/SpiceUIGenerator/csv/*
 
 # Ignore some files and directories from the custom directory.
 /custom/history
