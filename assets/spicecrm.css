@@ -1007,3 +1007,7 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
 .slds-tabs--default__item.slds-active:after, .slds-tabs--default__item.slds-is-active:after, .slds-tabs_default__item.slds-active:after, .slds-tabs_default__item.slds-is-active:after{
     background-color: #CA1B1F;
 }
+
+.slds-progress__item.slds-is-completed .slds-progress__marker--icon, .slds-progress__item.slds-is-completed .slds-progress__marker_icon{
+    color: #CA1B1F;
+}
