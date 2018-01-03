@@ -1,6 +1,7 @@
+"use strict";
 // 4.1.5 Reflect.hasOwnMetadata ( metadataKey, target [, propertyKey] )
 // https://rbuckton.github.io/reflect-metadata/#reflect.hasownmetadata
-"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 require("../Reflect");
 var chai_1 = require("chai");
 describe("Reflect.hasOwnMetadata", function () {

@@ -1,6 +1,6 @@
 /**
- * @license Angular v4.3.5
+ * @license Angular v5.1.2
  * (c) 2010-2017 Google, Inc. https://angular.io/
  * License: MIT
  */ 
- export * from './upgrade/index'
+ export * from './upgrade/upgrade'

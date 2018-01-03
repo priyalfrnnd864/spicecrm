@@ -2,49 +2,49 @@
   "_args": [
     [
       {
-        "raw": "@angular/compiler@~4.3.5",
+        "raw": "@angular/compiler@~5.1.2",
         "scope": "@angular",
         "escapedName": "@angular%2fcompiler",
         "name": "@angular/compiler",
-        "rawSpec": "~4.3.5",
-        "spec": ">=4.3.5 <4.4.0",
+        "rawSpec": "~5.1.2",
+        "spec": ">=5.1.2 <5.2.0",
         "type": "range"
       },
-      "c:\\htdocs\\spicecrm_ui_pilot"
+      "C:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/compiler@>=4.3.5 <4.4.0",
-  "_id": "@angular/compiler@4.3.5",
+  "_from": "@angular/compiler@>=5.1.2 <5.2.0",
+  "_id": "@angular/compiler@5.1.2",
   "_inCache": true,
   "_location": "/@angular/compiler",
-  "_nodeVersion": "6.10.2",
+  "_nodeVersion": "8.9.2",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/compiler-4.3.5.tgz_1502908209285_0.3721774083096534"
+    "tmp": "tmp/compiler-5.1.2.tgz_1513805727026_0.40359443984925747"
   },
   "_npmUser": {
     "name": "angular",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.10.10",
+  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/compiler@~4.3.5",
+    "raw": "@angular/compiler@~5.1.2",
     "scope": "@angular",
     "escapedName": "@angular%2fcompiler",
     "name": "@angular/compiler",
-    "rawSpec": "~4.3.5",
-    "spec": ">=4.3.5 <4.4.0",
+    "rawSpec": "~5.1.2",
+    "spec": ">=5.1.2 <5.2.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-4.3.5.tgz",
-  "_shasum": "50d3c986657beff1fef4f6dd9a3fa58e24abd548",
+  "_resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-5.1.2.tgz",
+  "_shasum": "4dfd0dd7fab39a14a1a104097c2f6af470ddabdb",
   "_shrinkwrap": null,
-  "_spec": "@angular/compiler@~4.3.5",
-  "_where": "c:\\htdocs\\spicecrm_ui_pilot",
+  "_spec": "@angular/compiler@~5.1.2",
+  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
   },
@@ -58,10 +58,11 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "50d3c986657beff1fef4f6dd9a3fa58e24abd548",
-    "tarball": "https://registry.npmjs.org/@angular/compiler/-/compiler-4.3.5.tgz"
+    "integrity": "sha512-asTrlMWRe24EzejBwBFVSfq3ZbYI9Xr9NbNtkHK4DRHutDA1wn5PQE5lHuUTNW2B/dmm9pm+5JTVtcbue0nEug==",
+    "shasum": "4dfd0dd7fab39a14a1a104097c2f6af470ddabdb",
+    "tarball": "https://registry.npmjs.org/@angular/compiler/-/compiler-5.1.2.tgz"
   },
-  "es2015": "./@angular/compiler.js",
+  "es2015": "./esm2015/compiler.js",
   "homepage": "https://github.com/angular/angular#readme",
   "license": "MIT",
   "main": "./bundles/compiler.umd.js",
@@ -71,18 +72,14 @@
       "email": "angular-core+npm@google.com"
     }
   ],
-  "module": "./@angular/compiler.es5.js",
+  "module": "./esm5/compiler.js",
   "name": "@angular/compiler",
   "optionalDependencies": {},
-  "peerDependencies": {
-    "@angular/core": "4.3.5"
-  },
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
-  "scripts": {},
   "typings": "./compiler.d.ts",
-  "version": "4.3.5"
+  "version": "5.1.2"
 }

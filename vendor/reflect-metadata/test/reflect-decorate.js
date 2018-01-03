@@ -1,5 +1,6 @@
-// Reflect.decorate ( decorators, target [, propertyKey [, descriptor] ] )
 "use strict";
+// Reflect.decorate ( decorators, target [, propertyKey [, descriptor] ] )
+Object.defineProperty(exports, "__esModule", { value: true });
 require("../Reflect");
 var chai_1 = require("chai");
 describe("Reflect.decorate", function () {

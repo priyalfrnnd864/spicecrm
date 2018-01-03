@@ -17,6 +17,7 @@
     <script src="vendor/highcharts/highcharts.js"></script>
     <script src="vendor/highcharts/highcharts-more.js"></script>
     <script src="vendor/tinymce/tinymce.min.js"></script>
+    <script src="vendor/js-barcode/JsBarcode.all.min.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
         System.import('app').catch(function (err) {
@@ -29,10 +30,20 @@
     <div style="height: 100vh;" class="slds-align--absolute-center">
         <div>
             <div>
-                <img class="spiceRotate" src="./assets/images/login_logo.png"/>
+                <img src="./assets/images/login_logo.png"/>
             </div>
             <div class="slds-text-align_center slds-p-around--medium">
                 <span class="slds-p-top--medium">... preparing your experience ...</span>
+                <div class="loaderspinner">
+                    <svg class="bag" height="100" width="100">
+                        <circle  cx="50" cy="50" r="25" stroke="#CA1B1F" stroke-width="3" fill="none"></circle>
+                    </svg>
+                    <svg class="over" height="100" width="100">
+                        <circle  cx="50" cy="50" r="25" stroke="#ccc" stroke-width="3" fill="none" >
+                            <animate attributeType="CSS" attributeName="stroke-dasharray" from="1,254" to="157,07" dur="5s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
