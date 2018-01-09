@@ -188,7 +188,7 @@ class TCPDFBarcode {
 			$png = new Imagick();
 			$png->newImage($width, $height, 'none', 'png');
 			$bar = new imagickdraw();
-			$bar->setfillcolor($fgcol);
+			$bar->setFillColor($fgcol);
 		} else {
 			return false;
 		}
@@ -215,7 +215,7 @@ class TCPDFBarcode {
 		header('Expires: Sat, 26 Jul 1997 05:00:00 GMT'); // Date in the past
 		header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
 		if ($imagick) {
-			$png->drawimage($bar);
+			$png->drawImage($bar);
 			echo $png;
 		} else {
 			imagepng($png);

@@ -64,7 +64,7 @@ class PHPExcel_Shared_TimeZone
 	 * @return	 boolean						Success or failure
 	 */
 	public static function setTimeZone($timezone) {
-		if (self::_validateTimezone($timezone)) {
+		if (self::_validateTimeZone($timezone)) {
 			self::$_timezone = $timezone;
 			return TRUE;
 		}
@@ -116,7 +116,7 @@ class PHPExcel_Shared_TimeZone
 	 */
 	public static function getTimeZoneAdjustment($timezone, $timestamp) {
 		if ($timezone !== NULL) {
-			if (!self::_validateTimezone($timezone)) {
+			if (!self::_validateTimeZone($timezone)) {
 				throw new PHPExcel_Exception("Invalid timezone " . $timezone);
 			}
 		} else {
