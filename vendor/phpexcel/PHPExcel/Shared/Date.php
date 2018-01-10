@@ -143,7 +143,7 @@ class PHPExcel_Shared_Date
 		}
 
 		$timezoneAdjustment = ($adjustToTimezone) ?
-		    PHPExcel_Shared_TimeZone::getTimezoneAdjustment($timezone, $returnValue) :
+		    PHPExcel_Shared_TimeZone::getTimeZoneAdjustment($timezone, $returnValue) :
 		    0;
 
 		// Return
