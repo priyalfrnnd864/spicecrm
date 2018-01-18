@@ -3,3 +3,4 @@ node_modules
 .idea
 app/**/*.js.map
 app/**/*.js
+config.json
