@@ -4,3 +4,5 @@ node_modules
 app/**/*.js.map
 app/**/*.js
 config.json
+dist
+pkg
