@@ -1011,3 +1011,7 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
 .slds-progress__item.slds-is-completed .slds-progress__marker--icon, .slds-progress__item.slds-is-completed .slds-progress__marker_icon{
     color: #CA1B1F;
 }
+
+.slds-radio [type=radio]:checked+.slds-radio--faux:after, .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio--faux:after, .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio_faux:after, .slds-radio [type=radio]:checked+.slds-radio_faux:after, .slds-radio [type=radio]:checked~.slds-radio--faux:after, .slds-radio [type=radio]:checked~.slds-radio_faux:after{
+    background-color: #CA1B1F;
+}
