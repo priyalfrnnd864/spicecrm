@@ -2,48 +2,50 @@
   "_args": [
     [
       {
-        "raw": "@angular/platform-browser-dynamic@~5.1.2",
+        "raw": "@angular/platform-browser-dynamic@5.2.5",
         "scope": "@angular",
         "escapedName": "@angular%2fplatform-browser-dynamic",
         "name": "@angular/platform-browser-dynamic",
-        "rawSpec": "~5.1.2",
-        "spec": ">=5.1.2 <5.2.0",
-        "type": "range"
+        "rawSpec": "5.2.5",
+        "spec": "5.2.5",
+        "type": "version"
       },
       "C:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/platform-browser-dynamic@>=5.1.2 <5.2.0",
-  "_id": "@angular/platform-browser-dynamic@5.1.2",
+  "_from": "@angular/platform-browser-dynamic@5.2.5",
+  "_hasShrinkwrap": false,
+  "_id": "@angular/platform-browser-dynamic@5.2.5",
   "_inCache": true,
   "_location": "/@angular/platform-browser-dynamic",
   "_nodeVersion": "8.9.2",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/platform-browser-dynamic-5.1.2.tgz_1513805742512_0.5467905856203288"
+    "tmp": "tmp/platform-browser-dynamic_5.2.5_1518585884570_0.4097442105674931"
   },
   "_npmUser": {
     "name": "angular",
-    "email": "angular-core+npm@google.com"
+    "email": "devops+npm@angular.io"
   },
   "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/platform-browser-dynamic@~5.1.2",
+    "raw": "@angular/platform-browser-dynamic@5.2.5",
     "scope": "@angular",
     "escapedName": "@angular%2fplatform-browser-dynamic",
     "name": "@angular/platform-browser-dynamic",
-    "rawSpec": "~5.1.2",
-    "spec": ">=5.1.2 <5.2.0",
-    "type": "range"
+    "rawSpec": "5.2.5",
+    "spec": "5.2.5",
+    "type": "version"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.1.2.tgz",
-  "_shasum": "120d49ce16bcb91b8ac1c5e5c634fba592359ad7",
+  "_resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.5.tgz",
+  "_shasum": "b89df410bd953e2a6843325f9ac3c09a10eadaf0",
   "_shrinkwrap": null,
-  "_spec": "@angular/platform-browser-dynamic@~5.1.2",
+  "_spec": "@angular/platform-browser-dynamic@5.2.5",
   "_where": "C:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
@@ -58,9 +60,11 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "integrity": "sha512-LMMgG1RRngIMvU19+NFRUe2+2gKgzMpwddBVDondi71EqcfumD6NN343lNcHv5/5oWuJdaAx94A29qpAjyVt5Q==",
-    "shasum": "120d49ce16bcb91b8ac1c5e5c634fba592359ad7",
-    "tarball": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.1.2.tgz"
+    "integrity": "sha512-IMEe2qUTC3CA3KoswmJJs+O2Lkyd5GXgl5ULupqhhm/TOL2FLk00kwv8k3Epaf2d1wXcjK3BMG7aAwc6RLH7QA==",
+    "shasum": "b89df410bd953e2a6843325f9ac3c09a10eadaf0",
+    "tarball": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.5.tgz",
+    "fileCount": 42,
+    "unpackedSize": 492678
   },
   "es2015": "./esm2015/platform-browser-dynamic.js",
   "homepage": "https://github.com/angular/angular#readme",
@@ -69,17 +73,17 @@
   "maintainers": [
     {
       "name": "angular",
-      "email": "angular-core+npm@google.com"
+      "email": "devops+npm@angular.io"
     }
   ],
   "module": "./esm5/platform-browser-dynamic.js",
   "name": "@angular/platform-browser-dynamic",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "5.1.2",
-    "@angular/common": "5.1.2",
-    "@angular/compiler": "5.1.2",
-    "@angular/platform-browser": "5.1.2"
+    "@angular/core": "5.2.5",
+    "@angular/common": "5.2.5",
+    "@angular/compiler": "5.2.5",
+    "@angular/platform-browser": "5.2.5"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -87,5 +91,5 @@
     "url": "git+https://github.com/angular/angular.git"
   },
   "typings": "./platform-browser-dynamic.d.ts",
-  "version": "5.1.2"
+  "version": "5.2.5"
 }

@@ -2,48 +2,50 @@
   "_args": [
     [
       {
-        "raw": "@angular/animations@~5.1.2",
+        "raw": "@angular/animations@5.2.5",
         "scope": "@angular",
         "escapedName": "@angular%2fanimations",
         "name": "@angular/animations",
-        "rawSpec": "~5.1.2",
-        "spec": ">=5.1.2 <5.2.0",
-        "type": "range"
+        "rawSpec": "5.2.5",
+        "spec": "5.2.5",
+        "type": "version"
       },
       "C:\\htdocs\\spicecrm_ui_pilot"
     ]
   ],
-  "_from": "@angular/animations@>=5.1.2 <5.2.0",
-  "_id": "@angular/animations@5.1.2",
+  "_from": "@angular/animations@5.2.5",
+  "_hasShrinkwrap": false,
+  "_id": "@angular/animations@5.2.5",
   "_inCache": true,
   "_location": "/@angular/animations",
   "_nodeVersion": "8.9.2",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/animations-5.1.2.tgz_1513805720181_0.7331925900653005"
+    "tmp": "tmp/animations_5.2.5_1518585851719_0.7007574107041865"
   },
   "_npmUser": {
     "name": "angular",
-    "email": "angular-core+npm@google.com"
+    "email": "devops+npm@angular.io"
   },
   "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/animations@~5.1.2",
+    "raw": "@angular/animations@5.2.5",
     "scope": "@angular",
     "escapedName": "@angular%2fanimations",
     "name": "@angular/animations",
-    "rawSpec": "~5.1.2",
-    "spec": ">=5.1.2 <5.2.0",
-    "type": "range"
+    "rawSpec": "5.2.5",
+    "spec": "5.2.5",
+    "type": "version"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/animations/-/animations-5.1.2.tgz",
-  "_shasum": "464df9a9e30c7a8146118fdd9bff82cdfcf97d7e",
+  "_resolved": "https://registry.npmjs.org/@angular/animations/-/animations-5.2.5.tgz",
+  "_shasum": "3e72184321c4979305619c74902b8be92d76db70",
   "_shrinkwrap": null,
-  "_spec": "@angular/animations@~5.1.2",
+  "_spec": "@angular/animations@5.2.5",
   "_where": "C:\\htdocs\\spicecrm_ui_pilot",
   "author": {
     "name": "angular"
@@ -58,9 +60,11 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "integrity": "sha512-so2i0He4Fh5YuvujC68k2/Hzyy56/vZAUmLTXHE+9f4RatjqV68LISseFXqcS8bhVuT7AD2ZEbHnM7nWhgDaTg==",
-    "shasum": "464df9a9e30c7a8146118fdd9bff82cdfcf97d7e",
-    "tarball": "https://registry.npmjs.org/@angular/animations/-/animations-5.1.2.tgz"
+    "integrity": "sha512-70ElCmaeDxLQc2OkgYhJjXj4zjtdjI4K1D5ZZm/uSPLlUcqC6uf6skCXlhMawQoPbsL/SXE5xw2HlMgEbhUysw==",
+    "shasum": "3e72184321c4979305619c74902b8be92d76db70",
+    "tarball": "https://registry.npmjs.org/@angular/animations/-/animations-5.2.5.tgz",
+    "fileCount": 76,
+    "unpackedSize": 2934962
   },
   "es2015": "./esm2015/animations.js",
   "homepage": "https://github.com/angular/angular#readme",
@@ -69,14 +73,14 @@
   "maintainers": [
     {
       "name": "angular",
-      "email": "angular-core+npm@google.com"
+      "email": "devops+npm@angular.io"
     }
   ],
   "module": "./esm5/animations.js",
   "name": "@angular/animations",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "5.1.2"
+    "@angular/core": "5.2.5"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -84,5 +88,5 @@
     "url": "git+https://github.com/angular/angular.git"
   },
   "typings": "./animations.d.ts",
-  "version": "5.1.2"
+  "version": "5.2.5"
 }

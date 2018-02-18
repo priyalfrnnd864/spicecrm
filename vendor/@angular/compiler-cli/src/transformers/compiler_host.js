@@ -199,7 +199,12 @@ var TsCompilerAotCompilerTypeCheckHostAdapter = /** @class */ (function () {
             resourceName = "./" + resourceName;
         }
         var filePathWithNgResource = this.moduleNameToFileName(addNgResourceSuffix(resourceName), containingFile);
-        return filePathWithNgResource ? stripNgResourceSuffix(filePathWithNgResource) : null;
+        var result = filePathWithNgResource ? stripNgResourceSuffix(filePathWithNgResource) : null;
+        // Used under Bazel to report more specific error with remediation advice
+        if (!result && this.context.reportMissingResource) {
+            this.context.reportMissingResource(resourceName);
+        }
+        return result;
     };
     TsCompilerAotCompilerTypeCheckHostAdapter.prototype.toSummaryFileName = function (fileName, referringSrcFileName) {
         return this.fileNameToModuleName(fileName, referringSrcFileName);
@@ -431,6 +436,9 @@ var TsCompilerAotCompilerTypeCheckHostAdapter = /** @class */ (function () {
             throw compiler_1.syntaxError("Error: Resource file not found: " + filePath);
         }
         return assert(this.context.readFile(filePath));
+    };
+    TsCompilerAotCompilerTypeCheckHostAdapter.prototype.getOutputName = function (filePath) {
+        return path.relative(this.getCurrentDirectory(), filePath);
     };
     TsCompilerAotCompilerTypeCheckHostAdapter.prototype.hasBundleIndex = function (filePath) {
         var _this = this;
