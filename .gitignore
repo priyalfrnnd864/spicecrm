@@ -4,5 +4,6 @@ node_modules
 app/**/*.js.map
 app/**/*.js
 config.json
+/config/sites
 dist
 pkg
