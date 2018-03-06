@@ -1015,3 +1015,8 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
 .slds-radio [type=radio]:checked+.slds-radio--faux:after, .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio--faux:after, .slds-radio [type=radio]:checked+.slds-radio__label .slds-radio_faux:after, .slds-radio [type=radio]:checked+.slds-radio_faux:after, .slds-radio [type=radio]:checked~.slds-radio--faux:after, .slds-radio [type=radio]:checked~.slds-radio_faux:after{
     background-color: #CA1B1F;
 }
+
+.slds-theme--inverse, .slds-theme_inverse{
+    background-color: #CA1B1F;
+    border-color: #CA1B1F;
+}
