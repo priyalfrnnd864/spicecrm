@@ -878,7 +878,7 @@ var Reflect;
     function CreateMapPolyfill() {
         var cacheSentinel = {};
         var arraySentinel = [];
-        var MapIterator = /** @class */ (function () {
+        var MapIterator = (function () {
             function MapIterator(keys, values, selector) {
                 this._index = 0;
                 this._keys = keys;
@@ -921,7 +921,7 @@ var Reflect;
             };
             return MapIterator;
         }());
-        return /** @class */ (function () {
+        return (function () {
             function Map() {
                 this._keys = [];
                 this._values = [];
@@ -997,7 +997,7 @@ var Reflect;
     }
     // naive Set shim
     function CreateSetPolyfill() {
-        return /** @class */ (function () {
+        return (function () {
             function Set() {
                 this._map = new _Map();
             }
@@ -1023,7 +1023,7 @@ var Reflect;
         var UUID_SIZE = 16;
         var keys = HashMap.create();
         var rootKey = CreateUniqueKey();
-        return /** @class */ (function () {
+        return (function () {
             function WeakMap() {
                 this._key = CreateUniqueKey();
             }
