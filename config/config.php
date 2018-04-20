@@ -22,7 +22,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         switch (end($uri)) {
             case 'sites':
-                echo json_encode(configHandler::getSites());
+                echo json_encode( array( 'sites' => configHandler::getSites(), 'general' => configHandler::getGeneralConfig()));
                 break;
             case 'check':
                 $success = false;

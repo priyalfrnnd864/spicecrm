@@ -72,5 +72,12 @@ class configHandler
 
     }
 
+    static function getGeneralConfig() {
+        $generalConfig = (object)array();
+        $filepath = '../config/general/general.conf';
+        if ( is_file( $filepath ) and is_readable( $filepath ))
+            $generalConfig = json_decode( file_get_contents( $filepath ), true );
+        return $generalConfig;
+    }
 
 }
