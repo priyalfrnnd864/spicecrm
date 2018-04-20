@@ -132,6 +132,17 @@ global-login {
     padding: 10px;
 }
 
+.spiceLoaderProgressBar {
+    width: 80%;
+    position: absolute;
+    x-top: calc(40% - 100px);
+    left: 10%;
+}
+
+.spiceLoaderProgressBar .slds-progress-bar .slds-progress-bar__value {
+    background-color: #aaa;
+}
+
 .spiceLoaderBox > div {
     position: relative;
     margin: 8px 0px;
