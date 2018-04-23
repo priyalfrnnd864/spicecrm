@@ -1,4 +1,4 @@
-/*! Lightning Design System 2.5.0 */
+/*! Lightning Design System 2.5.2 */
 @charset "UTF-8";
 /*!
  * Copyright (c) 2015-present, Salesforce.com, Inc. - All rights reserved.
@@ -8079,7 +8079,7 @@ a.slds-button--inverse:focus {
   height: 3.125rem;
   background-image: linear-gradient(to bottom, rgba(250, 250, 249, 0) 60%, #fafaf9); }
 
-.slds-brand-band.slds-brand-band_cover {
+.slds-brand-band.slds-brand-band_cover:before {
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -9049,8 +9049,8 @@ a.slds-button--inverse:focus {
  * @summary Initializes a Einstein non-modal dialog
  *
  * @name einstein
- * @selector .slds-popover
- * @restrict [role="dialog"], [role="tooltip"]
+ * @selector .slds-popover_einstein
+ * @restrict .slds-popover
  * @variant
  */
 /**
