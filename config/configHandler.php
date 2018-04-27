@@ -63,6 +63,7 @@ class configHandler
             'backendUrl' => $siteDetails['backendUrl'] . '/KREST',
             'proxy' => $siteDetails['proxy'] == 1 ? true : false,
             'developerMode' => $siteDetails['developerMode'] == 1 ? true : false,
+            'loginProgressBar' => $siteDetails['loginProgressBar'] == 1 ? true : false,
             'autoLogout' => 0,
         )));
         fclose($confFile);
