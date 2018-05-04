@@ -6,7 +6,7 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 0.8125rem;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 h1,  h2,  h3,  h4,  h5,  h6 {
