@@ -946,7 +946,7 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
 
 .html-text i, .html-text em { font-style: italic; }
 
-.html-text p ul { margin: 0.75rem 0; }
+.html-text p, .html-text ul { margin: 0.75rem 0; }
 
 .html-text *:first-child { margin-top: 0; }
 .html-text *:last-child { margin-bottom: 0; }
