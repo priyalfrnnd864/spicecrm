@@ -169,10 +169,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
             ),
-            'PHPMD\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpmd/phpmd/src/main/php',
-            ),
         ),
         'M' => 
         array (
@@ -4454,9 +4450,11 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'SpiceBeanGuideCreator' => __DIR__ . '/../..' . '/include/SpiceBeanGuide/SpiceBeanGuideCreator.php',
         'SpiceBeanGuideRestHandler' => __DIR__ . '/../..' . '/include/SpiceBeanGuide/SpiceBeanGuideRestHandler.php',
         'SpiceCRM\\modules\\Mailboxes\\Attachment' => __DIR__ . '/../..' . '/modules/Mailboxes/Attachment.php',
+        'SpiceCRM\\modules\\Mailboxes\\IMAPHandler' => __DIR__ . '/../..' . '/modules/Mailboxes/IMAPHandler.php',
         'SpiceCRM\\modules\\Mailboxes\\IMAPSMTPHandler' => __DIR__ . '/../..' . '/modules/Mailboxes/IMAPSMTPHandler.php',
         'SpiceCRM\\modules\\Mailboxes\\IMAPStructure' => __DIR__ . '/../..' . '/modules/Mailboxes/IMAPStructure.php',
         'SpiceCRM\\modules\\Mailboxes\\MailgunHandler' => __DIR__ . '/../..' . '/modules/Mailboxes/MailgunHandler.php',
+        'SpiceCRM\\modules\\Mailboxes\\SMTPHandler' => __DIR__ . '/../..' . '/modules/Mailboxes/SMTPHandler.php',
         'SpiceCRM\\modules\\Mailboxes\\SendgridHandler' => __DIR__ . '/../..' . '/modules/Mailboxes/SendgridHandler.php',
         'SpiceCRM\\modules\\Mailboxes\\TransportHandler' => __DIR__ . '/../..' . '/modules/Mailboxes/TransportHandler.php',
         'SpiceFTSAggregates' => __DIR__ . '/../..' . '/include/SpiceFTSManager/SpiceFTSAggregates.php',
