@@ -87,121 +87,6 @@
         "homepage": "https://github.com/container-interop/container-interop"
     },
     {
-        "name": "doctrine/lexer",
-        "version": "v1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/lexer.git",
-            "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
-            "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2014-09-09T13:34:57+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\Common\\Lexer\\": "lib/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com"
-            },
-            {
-                "name": "Johannes Schmitt",
-                "email": "schmittjoh@gmail.com"
-            }
-        ],
-        "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "lexer",
-            "parser"
-        ]
-    },
-    {
-        "name": "egulias/email-validator",
-        "version": "2.1.3",
-        "version_normalized": "2.1.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/egulias/EmailValidator.git",
-            "reference": "1bec00a10039b823cc94eef4eddd47dcd3b2ca04"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/1bec00a10039b823cc94eef4eddd47dcd3b2ca04",
-            "reference": "1bec00a10039b823cc94eef4eddd47dcd3b2ca04",
-            "shasum": ""
-        },
-        "require": {
-            "doctrine/lexer": "^1.0.1",
-            "php": ">= 5.5"
-        },
-        "require-dev": {
-            "dominicsayers/isemail": "dev-master",
-            "phpunit/phpunit": "^4.8.35",
-            "satooshi/php-coveralls": "^1.0.1"
-        },
-        "suggest": {
-            "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
-        },
-        "time": "2017-11-15T23:40:40+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Egulias\\EmailValidator\\": "EmailValidator"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Eduardo Gulias Davis"
-            }
-        ],
-        "description": "A library for validating emails against several RFCs",
-        "homepage": "https://github.com/egulias/EmailValidator",
-        "keywords": [
-            "email",
-            "emailvalidation",
-            "emailvalidator",
-            "validation",
-            "validator"
-        ]
-    },
-    {
         "name": "guzzlehttp/psr7",
         "version": "1.4.2",
         "version_normalized": "1.4.2.0",
@@ -364,48 +249,6 @@
             "router",
             "routing"
         ]
-    },
-    {
-        "name": "pdepend/pdepend",
-        "version": "2.5.2",
-        "version_normalized": "2.5.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/pdepend/pdepend.git",
-            "reference": "9daf26d0368d4a12bed1cacae1a9f3a6f0adf239"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/pdepend/pdepend/zipball/9daf26d0368d4a12bed1cacae1a9f3a6f0adf239",
-            "reference": "9daf26d0368d4a12bed1cacae1a9f3a6f0adf239",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.7",
-            "symfony/config": "^2.3.0|^3|^4",
-            "symfony/dependency-injection": "^2.3.0|^3|^4",
-            "symfony/filesystem": "^2.3.0|^3|^4"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8|^5.7",
-            "squizlabs/php_codesniffer": "^2.0.0"
-        },
-        "time": "2017-12-13T13:21:38+00:00",
-        "bin": [
-            "src/bin/pdepend"
-        ],
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "PDepend\\": "src/main/php/PDepend"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "description": "Official version of pdepend to be handled with Composer"
     },
     {
         "name": "php-http/client-common",
@@ -888,74 +731,6 @@
         ]
     },
     {
-        "name": "phpmd/phpmd",
-        "version": "2.6.0",
-        "version_normalized": "2.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/phpmd/phpmd.git",
-            "reference": "4e9924b2c157a3eb64395460fcf56b31badc8374"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/phpmd/phpmd/zipball/4e9924b2c157a3eb64395460fcf56b31badc8374",
-            "reference": "4e9924b2c157a3eb64395460fcf56b31badc8374",
-            "shasum": ""
-        },
-        "require": {
-            "ext-xml": "*",
-            "pdepend/pdepend": "^2.5",
-            "php": ">=5.3.9"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.0",
-            "squizlabs/php_codesniffer": "^2.0"
-        },
-        "time": "2017-01-20T14:41:10+00:00",
-        "bin": [
-            "src/bin/phpmd"
-        ],
-        "type": "project",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "PHPMD\\": "src/main/php"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Manuel Pichler",
-                "email": "github@manuel-pichler.de",
-                "homepage": "https://github.com/manuelpichler",
-                "role": "Project Founder"
-            },
-            {
-                "name": "Other contributors",
-                "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
-                "role": "Contributors"
-            },
-            {
-                "name": "Marc Würth",
-                "email": "ravage@bluewin.ch",
-                "homepage": "https://github.com/ravage84",
-                "role": "Project Maintainer"
-            }
-        ],
-        "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
-        "homepage": "http://phpmd.org/",
-        "keywords": [
-            "mess detection",
-            "mess detector",
-            "pdepend",
-            "phpmd",
-            "pmd"
-        ]
-    },
-    {
         "name": "pimple/pimple",
         "version": "v3.2.3",
         "version_normalized": "3.2.3.0",
@@ -1289,32 +1064,31 @@
     },
     {
         "name": "swiftmailer/swiftmailer",
-        "version": "v6.0.2",
-        "version_normalized": "6.0.2.0",
+        "version": "v5.4.9",
+        "version_normalized": "5.4.9.0",
         "source": {
             "type": "git",
             "url": "https://github.com/swiftmailer/swiftmailer.git",
-            "reference": "412333372fb6c8ffb65496a2bbd7321af75733fc"
+            "reference": "7ffc1ea296ed14bf8260b6ef11b80208dbadba91"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/412333372fb6c8ffb65496a2bbd7321af75733fc",
-            "reference": "412333372fb6c8ffb65496a2bbd7321af75733fc",
+            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7ffc1ea296ed14bf8260b6ef11b80208dbadba91",
+            "reference": "7ffc1ea296ed14bf8260b6ef11b80208dbadba91",
             "shasum": ""
         },
         "require": {
-            "egulias/email-validator": "~2.0",
-            "php": ">=7.0.0"
+            "php": ">=5.3.3"
         },
         "require-dev": {
             "mockery/mockery": "~0.9.1",
-            "symfony/phpunit-bridge": "~3.3@dev"
+            "symfony/phpunit-bridge": "~3.2"
         },
-        "time": "2017-09-30T22:39:41+00:00",
+        "time": "2018-01-23T07:37:21+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "6.0-dev"
+                "dev-master": "5.4-dev"
             }
         },
         "installation-source": "dist",
@@ -1337,200 +1111,12 @@
             }
         ],
         "description": "Swiftmailer, free feature-rich PHP mailer",
-        "homepage": "http://swiftmailer.symfony.com",
+        "homepage": "https://swiftmailer.symfony.com",
         "keywords": [
             "email",
             "mail",
             "mailer"
         ]
-    },
-    {
-        "name": "symfony/config",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/config.git",
-            "reference": "7c19370ab04e9ac05b74a504198e165f5ccf6dd8"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/config/zipball/7c19370ab04e9ac05b74a504198e165f5ccf6dd8",
-            "reference": "7c19370ab04e9ac05b74a504198e165f5ccf6dd8",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^7.1.3",
-            "symfony/filesystem": "~3.4|~4.0"
-        },
-        "conflict": {
-            "symfony/finder": "<3.4"
-        },
-        "require-dev": {
-            "symfony/dependency-injection": "~3.4|~4.0",
-            "symfony/event-dispatcher": "~3.4|~4.0",
-            "symfony/finder": "~3.4|~4.0",
-            "symfony/yaml": "~3.4|~4.0"
-        },
-        "suggest": {
-            "symfony/yaml": "To use the yaml reference dumper"
-        },
-        "time": "2018-03-19T22:35:49+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Config\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Config Component",
-        "homepage": "https://symfony.com"
-    },
-    {
-        "name": "symfony/dependency-injection",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/dependency-injection.git",
-            "reference": "9f1cea656afc5512c6f5e58d61fcea12acee113e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/9f1cea656afc5512c6f5e58d61fcea12acee113e",
-            "reference": "9f1cea656afc5512c6f5e58d61fcea12acee113e",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^7.1.3",
-            "psr/container": "^1.0"
-        },
-        "conflict": {
-            "symfony/config": "<3.4",
-            "symfony/finder": "<3.4",
-            "symfony/proxy-manager-bridge": "<3.4",
-            "symfony/yaml": "<3.4"
-        },
-        "provide": {
-            "psr/container-implementation": "1.0"
-        },
-        "require-dev": {
-            "symfony/config": "~3.4|~4.0",
-            "symfony/expression-language": "~3.4|~4.0",
-            "symfony/yaml": "~3.4|~4.0"
-        },
-        "suggest": {
-            "symfony/config": "",
-            "symfony/expression-language": "For using expressions in service container configuration",
-            "symfony/finder": "For using double-star glob patterns or when GLOB_BRACE portability is required",
-            "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
-            "symfony/yaml": ""
-        },
-        "time": "2018-04-02T09:52:41+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\DependencyInjection\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony DependencyInjection Component",
-        "homepage": "https://symfony.com"
-    },
-    {
-        "name": "symfony/filesystem",
-        "version": "v4.0.7",
-        "version_normalized": "4.0.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/filesystem.git",
-            "reference": "5d2d655b2c72fc4d9bf7e9bf14f72a447b940f21"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/filesystem/zipball/5d2d655b2c72fc4d9bf7e9bf14f72a447b940f21",
-            "reference": "5d2d655b2c72fc4d9bf7e9bf14f72a447b940f21",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^7.1.3"
-        },
-        "time": "2018-02-22T10:50:29+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "4.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Filesystem\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Filesystem Component",
-        "homepage": "https://symfony.com"
     },
     {
         "name": "symfony/options-resolver",

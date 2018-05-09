@@ -26,9 +26,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'S' => 
         array (
             'Symfony\\Component\\OptionsResolver\\' => 34,
-            'Symfony\\Component\\Filesystem\\' => 29,
-            'Symfony\\Component\\DependencyInjection\\' => 38,
-            'Symfony\\Component\\Config\\' => 25,
             'SpiceCRM\\modules\\Mailboxes\\' => 27,
             'Slim\\' => 5,
             'SendGrid\\' => 9,
@@ -37,7 +34,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
-            'PDepend\\' => 8,
         ),
         'I' => 
         array (
@@ -61,10 +57,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             'FastRoute\\' => 10,
         ),
-        'E' => 
-        array (
-            'Egulias\\EmailValidator\\' => 23,
-        ),
         'C' => 
         array (
             'Clue\\StreamFilter\\' => 18,
@@ -79,18 +71,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'Symfony\\Component\\OptionsResolver\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/options-resolver',
-        ),
-        'Symfony\\Component\\Filesystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/filesystem',
-        ),
-        'Symfony\\Component\\DependencyInjection\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
-        ),
-        'Symfony\\Component\\Config\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/config',
         ),
         'SpiceCRM\\modules\\Mailboxes\\' => 
         array (
@@ -111,10 +91,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'PDepend\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pdepend/pdepend/src/main/php/PDepend',
         ),
         'Interop\\Container\\' => 
         array (
@@ -157,10 +133,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
-        'Egulias\\EmailValidator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
-        ),
         'Clue\\StreamFilter\\' => 
         array (
             0 => __DIR__ . '/..' . '/clue/stream-filter/src',
@@ -180,13 +152,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             'Mailgun' => 
             array (
                 0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
-            ),
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Common\\Lexer\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
         ),
     );
