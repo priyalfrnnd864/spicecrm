@@ -11,6 +11,7 @@ return array(
     'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
     'Symfony\\Component\\DependencyInjection\\' => array($vendorDir . '/symfony/dependency-injection'),
     'Symfony\\Component\\Config\\' => array($vendorDir . '/symfony/config'),
+    'SpiceCRM\\modules\\Mailboxes\\' => array($baseDir . '/modules/Mailboxes'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
     'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
