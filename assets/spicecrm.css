@@ -932,6 +932,11 @@ object-action-container .slds-button-group .slds-button:nth-child(2) {
     border-color: #CA1B1F;
 }
 
+
+.slds-button span{
+    text-transform: capitalize;
+}
+
 /* Style Definition for HTML fields */
 
 .html-text h1, .html-text h2, .html-text h3, .html-text h4, .html-text h5, .html-text h6 {
