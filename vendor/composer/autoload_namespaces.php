@@ -7,7 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
-    'PHPMD\\' => array($vendorDir . '/phpmd/phpmd/src/main/php'),
     'Mailgun' => array($vendorDir . '/mailgun/mailgun-php/src'),
-    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
 );
