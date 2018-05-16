@@ -175,10 +175,6 @@ global-recent-items td {
     min-width: 400px;
 }
 
-.spicecrm-timeline-items-container {
-    margin-top: 1rem;
-}
-
 .spiceActivitiyTimelineHeader::before {
     position: absolute;
     right: 0;
