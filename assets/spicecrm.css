@@ -683,6 +683,14 @@ a, a:focus, a:hover {
     fill: #CA1B21;
 }
 
+field-generic-display:hover .slds-button--icon{
+    color: #5B5B5B;
+}
+
+field-generic-display .slds-button--icon{
+    color: #eeeeee;
+}
+
 .slds-button:not([disabled]):focus, .slds-button:not([disabled]):hover {
     color: #CA1B21;
 }
