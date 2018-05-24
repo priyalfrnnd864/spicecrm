@@ -194,6 +194,7 @@ class Client implements HttpClient, HttpAsyncClient
         $options[CURLOPT_HEADER] = false;
         $options[CURLOPT_RETURNTRANSFER] = false;
         $options[CURLOPT_FOLLOWLOCATION] = false;
+        $options[CURLOPT_SSL_VERIFYPEER] = false;
 
         try {
             $options[CURLOPT_HTTP_VERSION]
