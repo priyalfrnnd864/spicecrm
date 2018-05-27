@@ -690,19 +690,19 @@ field-generic-display:hover .slds-button--icon{
 field-generic-display .slds-button--icon{
     color: #eeeeee;
 }
-
+/*
 .slds-button:not([disabled]):focus, .slds-button:not([disabled]):hover {
     color: #CA1B21;
 }
-
+*/
 .slds-button--brand:not([disabled]):focus, .slds-button--brand:not([disabled]):hover {
     color: #FFF;
 }
-
+/*
 .slds-button:not([disabled]):focus svg, .slds-button:not([disabled]):hover svg {
     fill: #CA1B21;
 }
-
+*/
 .slds-button--brand:not([disabled]):focus svg, .slds-button--brand:not([disabled]):hover svg {
     fill: currentColor;
 }
