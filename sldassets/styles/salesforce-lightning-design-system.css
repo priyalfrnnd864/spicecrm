@@ -1,4 +1,4 @@
-/*! Lightning Design System 2.5.2 */
+/*! Lightning Design System 2.6.1 */
 @charset "UTF-8";
 /*!
  * Copyright (c) 2015-present, Salesforce.com, Inc. - All rights reserved.
@@ -301,7 +301,7 @@ ul {
   list-style: none; }
 
 a {
-  color: #0070d2;
+  color: #006dcc;
   text-decoration: none;
   transition: color 0.1s linear; }
 
@@ -845,32 +845,13 @@ img {
   margin-left: 0.25rem; }
 
 /**
- * The base `.slds-button` looks like a plain text link. It removes all the
- * styling of the native button. It’s typically used to trigger a modal or
- * display a “like” link. All button variations are built by adding another
- * class to `.slds-button`.
- *
- * Add the `.slds-button_neutral` class to create a neutral button, which
- * has a white background and gray border.
- *
- * Use a neutral icon button is for buttons with an icon on the left or
- * right (not for stateful buttons). Add the `.slds-button_neutral` class
- * to `.slds-button`.
- *
- * The SVG inside receives the `.slds-button__icon` class. You can position
- * the icon on the right or the left using `.slds-button__icon_right` or
- * `.slds-button__icon_left` , which apply the correct amount of space
- * between the icon and the text.
- *
- * To create the brand button, add the `.slds-button_brand` class to
- * the `.slds-button` class.
- *
- * To create the destructive button, add the `.slds-button_destructive`
- * class to the `.slds-button` class.
- *
- * Use the inverse button on dark backgrounds. Add the `.slds-button_inverse`
- * class to the `.slds-button` class.
- *
+ * @selector .slds-button-space-left
+ * @deprecated
+ */
+.slds-button-space-left {
+  margin-left: 0.25rem; }
+
+/**
  * @summary This neutralizes all the base styles making it look like a text link
  *
  * @name base
@@ -1035,6 +1016,36 @@ a.slds-button--inverse:focus {
   color: white; }
 
 /**
+ * Creates the outlined button with the brand color
+ *
+ * @selector .slds-button_outline-brand
+ * @restrict .slds-button
+ * @modifier
+ * @group theme
+ */
+.slds-button_outline-brand {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #dddbda;
+  transition: border 0.15s linear;
+  border-color: #dddbda;
+  background-color: white;
+  border-color: #0070d2; }
+
+.slds-button_outline-brand:hover, .slds-button_outline-brand:focus {
+  background-color: #f4f6f9; }
+
+.slds-button_outline-brand:active {
+  background-color: #eef1f6; }
+
+.slds-button_outline-brand[disabled] {
+  background: #c9c7c5;
+  border-color: #c9c7c5;
+  color: white; }
+
+/**
  * Creates the inverse style for dark backgrounds
  *
  * @selector .slds-button_inverse
@@ -1188,13 +1199,6 @@ a.slds-button--inverse:focus {
   line-height: 1.75rem;
   min-height: 2rem; }
 
-/**
- * @selector .slds-button-space-left
- * @deprecated
- */
-.slds-button-space-left {
-  margin-left: 0.25rem; }
-
 .slds-button_hint,
 .slds-button--hint {
   color: #b0adab; }
@@ -1264,18 +1268,6 @@ a.slds-button--inverse:focus {
   margin-left: 0.5rem; }
 
 /**
- * The stateful button requires the `.slds-button--neutral` class in addition to the `.slds-button` class.
- *
- * The stateful inverse button works just like the stateful button. It requires the `.slds-button--inverse` class in addition to the `.slds-button` class.
- *
- * It uses the class `.slds-not-selected` in its initial state. When the user activates the button, use JavaScript to toggle the class to `.slds-is-selected`. The button contains three spans with classes that hide or show the content of the spans based on the class on the button. Each span contains text and a corresponding icon. The SVG will have the `.slds-button__icon--stateful` class as well as the `.slds-button__icon--left` class setting the icon on the left.
- *
- * Stateful icons can be toggled on and off and retain their state. Like stateful buttons, the initial state is `.slds-not-selected`, and JavaScript is used to toggle it to `.slds-is-selected` when activated.
- *
- * #### Accessibility
- *
- * For accessibility, include the attribute `aria-live="assertive"` on the button. The `aria-live="assertive"` attribute means the value of the `<span>` inside the button will be spoken whenever it changes.
- *
  * @summary Initiates a stateful button
  *
  * @name stateful
@@ -1733,7 +1725,8 @@ a.slds-button--inverse:focus {
 .slds-button--icon-container.slds-is-selected,
 .slds-button_icon-border.slds-is-selected,
 .slds-button--icon-border.slds-is-selected,
-.slds-button_icon-border-filled.slds-is-selected {
+.slds-button_icon-border-filled.slds-is-selected,
+.slds-button_icon-border-inverse.slds-is-selected {
   background-color: #0070d2;
   border-color: #0070d2;
   color: white; }
@@ -1750,7 +1743,10 @@ a.slds-button--inverse:focus {
 .slds-button--icon-border.slds-is-selected:active,
 .slds-button_icon-border-filled.slds-is-selected:link,
 .slds-button_icon-border-filled.slds-is-selected:visited,
-.slds-button_icon-border-filled.slds-is-selected:active {
+.slds-button_icon-border-filled.slds-is-selected:active,
+.slds-button_icon-border-inverse.slds-is-selected:link,
+.slds-button_icon-border-inverse.slds-is-selected:visited,
+.slds-button_icon-border-inverse.slds-is-selected:active {
   color: white; }
 
 .slds-button_icon-container.slds-is-selected:hover, .slds-button_icon-container.slds-is-selected:focus,
@@ -1761,7 +1757,9 @@ a.slds-button--inverse:focus {
 .slds-button--icon-border.slds-is-selected:hover,
 .slds-button--icon-border.slds-is-selected:focus,
 .slds-button_icon-border-filled.slds-is-selected:hover,
-.slds-button_icon-border-filled.slds-is-selected:focus {
+.slds-button_icon-border-filled.slds-is-selected:focus,
+.slds-button_icon-border-inverse.slds-is-selected:hover,
+.slds-button_icon-border-inverse.slds-is-selected:focus {
   background-color: #005fb2;
   border-color: #005fb2;
   color: white; }
@@ -1770,7 +1768,8 @@ a.slds-button--inverse:focus {
 .slds-button--icon-container.slds-is-selected:active,
 .slds-button_icon-border.slds-is-selected:active,
 .slds-button--icon-border.slds-is-selected:active,
-.slds-button_icon-border-filled.slds-is-selected:active {
+.slds-button_icon-border-filled.slds-is-selected:active,
+.slds-button_icon-border-inverse.slds-is-selected:active {
   background-color: #005fb2;
   border-color: #005fb2; }
 
@@ -1778,7 +1777,8 @@ a.slds-button--inverse:focus {
 .slds-button--icon-container.slds-is-selected .slds-button__icon,
 .slds-button_icon-border.slds-is-selected .slds-button__icon,
 .slds-button--icon-border.slds-is-selected .slds-button__icon,
-.slds-button_icon-border-filled.slds-is-selected .slds-button__icon {
+.slds-button_icon-border-filled.slds-is-selected .slds-button__icon,
+.slds-button_icon-border-inverse.slds-is-selected .slds-button__icon {
   fill: white; }
 
 .slds-button_icon-container.slds-is-selected:hover .slds-button__icon, .slds-button_icon-container.slds-is-selected:focus .slds-button__icon,
@@ -1789,7 +1789,9 @@ a.slds-button--inverse:focus {
 .slds-button--icon-border.slds-is-selected:hover .slds-button__icon,
 .slds-button--icon-border.slds-is-selected:focus .slds-button__icon,
 .slds-button_icon-border-filled.slds-is-selected:hover .slds-button__icon,
-.slds-button_icon-border-filled.slds-is-selected:focus .slds-button__icon {
+.slds-button_icon-border-filled.slds-is-selected:focus .slds-button__icon,
+.slds-button_icon-border-inverse.slds-is-selected:hover .slds-button__icon,
+.slds-button_icon-border-inverse.slds-is-selected:focus .slds-button__icon {
   fill: white; }
 
 /**
@@ -2451,6 +2453,9 @@ a.slds-button--inverse:focus {
 
 .slds-icon-action-clone {
   background-color: #6ca1e9; }
+
+.slds-icon-action-script {
+  background-color: #0070d2; }
 
 .slds-icon-action-delete {
   background-color: #e6717c; }
@@ -3386,6 +3391,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-answer-private {
   background-color: #f2cf5b; }
 
+.slds-icon-standard-retail-banking-console {
+  background-color: #00afa0; }
+
 .slds-icon-standard-channel-program-members {
   background-color: #0eb58a; }
 
@@ -3422,6 +3430,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-service-territory-location {
   background-color: #7e8be4; }
 
+.slds-icon-standard-read-receipts {
+  background-color: #4bc076; }
+
 .slds-icon-standard-maintenance-asset {
   background-color: #2a739e; }
 
@@ -3448,6 +3459,9 @@ a.slds-button--inverse:focus {
 
 .slds-icon-standard-feedback {
   background-color: #6da1ea; }
+
+.slds-icon-standard-action-list-component {
+  background-color: #5876a3; }
 
 .slds-icon-standard-opportunity-splits {
   background-color: #fcb95b; }
@@ -3508,6 +3522,9 @@ a.slds-button--inverse:focus {
 
 .slds-icon-standard-campaign-members {
   background-color: #f49756; }
+
+.slds-icon-standard-retail-banking {
+  background-color: #00d2be; }
 
 .slds-icon-standard-calibration {
   background-color: #47cfd2; }
@@ -3577,6 +3594,9 @@ a.slds-button--inverse:focus {
 
 .slds-icon-standard-account {
   background-color: #7f8de1; }
+
+.slds-icon-standard-wealth-management-console {
+  background-color: #00afa0; }
 
 .slds-icon-standard-task2 {
   background-color: #4bc076; }
@@ -3662,6 +3682,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-case-change-status {
   background-color: #f2cf5b; }
 
+.slds-icon-standard-insurance-console {
+  background-color: #00afa0; }
+
 .slds-icon-standard-contract {
   background-color: #6ec06e; }
 
@@ -3716,6 +3739,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-entity-milestone {
   background-color: #f49756; }
 
+.slds-icon-standard-wealth-management {
+  background-color: #00d2be; }
+
 .slds-icon-standard-customers {
   background-color: #0eb58a; }
 
@@ -3723,6 +3749,9 @@ a.slds-button--inverse:focus {
   background-color: #7e8be4; }
 
 .slds-icon-standard-maintenance-plan {
+  background-color: #2a739e; }
+
+.slds-icon-standard-data-integration-hub {
   background-color: #2a739e; }
 
 .slds-icon-standard-hierarchy {
@@ -3785,6 +3814,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-partner-fund-claim {
   background-color: #0eb58a; }
 
+.slds-icon-standard-individual {
+  background-color: #3c97dd; }
+
 .slds-icon-standard-custom-notification {
   background-color: #6bb7e4; }
 
@@ -3796,6 +3828,12 @@ a.slds-button--inverse:focus {
 
 .slds-icon-standard-event {
   background-color: #eb7092; }
+
+.slds-icon-standard-insurance {
+  background-color: #00d2be; }
+
+.slds-icon-standard-live-chat-visitor {
+  background-color: #f68960; }
 
 .slds-icon-standard-survey {
   background-color: #319fd6; }
@@ -3854,6 +3892,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-question-best {
   background-color: #f2cf5b; }
 
+.slds-icon-standard-knowledge {
+  background-color: #ec94ed; }
+
 .slds-icon-standard-lead-insights {
   background-color: #22b0e6; }
 
@@ -3872,6 +3913,9 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-call {
   background-color: #f2cf5b; }
 
+.slds-icon-standard-stage {
+  background-color: #ff9a3c; }
+
 .slds-icon-standard-product-request-line-item {
   background-color: #88c651; }
 
@@ -3887,8 +3931,14 @@ a.slds-button--inverse:focus {
 .slds-icon-standard-sossession {
   background-color: #54698d; }
 
+.slds-icon-standard-stage-collection {
+  background-color: #ff9a3c; }
+
 .slds-icon-standard-product-request {
   background-color: #88c651; }
+
+.slds-icon-standard-logging {
+  background-color: #00a1df; }
 
 .slds-icon-standard-assigned-resource {
   background-color: #45c173; }
@@ -3918,6 +3968,12 @@ a.slds-button--inverse:focus {
 [class*='slds-icon-custom-'].slds-icon {
   border-radius: 0.25rem; }
 
+/**
+ * @selector .slds-icon_xx-small
+ * @restrict .slds-icon
+ * @modifier
+ * @group size
+ */
 .slds-icon_xx-small,
 .slds-icon--xx-small {
   width: 0.875rem;
@@ -3998,6 +4054,8 @@ a.slds-button--inverse:focus {
 /**
  * @selector .slds-current-color
  * @restrict *
+ * @modifier
+ * @group color
  */
 .slds-current-color .slds-icon {
   fill: currentColor; }
@@ -4998,18 +5056,16 @@ a.slds-button--inverse:focus {
   left: 0;
   bottom: 0.25rem; }
 
+.slds-card_empty .slds-card__body,
+.slds-card--empty .slds-card__body {
+  text-align: center; }
+
 /**
-* The base card is used primarily on desktop within a &ldquo;wide&rdquo; column
-* or &ldquo;main content area&rdquo;, which uses two-thirds of the viewport.
-* In addition, the `.slds-card` class is used for layout purposes
-* when a card has an adjacent card, those proceeding the initial will provide margin
-* to give the cards spacing between each other.
-*
 * @summary Initializes card
 *
 * @name base
 * @selector .slds-card
-* @restrict article, div
+* @restrict article, div, section
 * @variant
 */
 .slds-card {
@@ -5021,10 +5077,22 @@ a.slds-button--inverse:focus {
   background-clip: padding-box;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   /**
+   * @summary Used to add padding to the left and right sides of a card's body content
+   *
+   * @selector .slds-card__body_inner
+   * @restrict .slds-card__body
+   */
+  /**
    * Initializes card header
    *
    * @selector .slds-card__header
    * @restrict .slds-card div
+   */
+  /**
+   * @summary Used to style the header title when it is a link
+   *
+   * @selector .slds-card__header-link
+   * @restrict .slds-card__header a
    */
   /**
    * Initializes card body
@@ -5066,9 +5134,13 @@ a.slds-button--inverse:focus {
   font-size: 0.8125rem;
   border-top: 1px solid #dddbda; }
 
-.slds-card .slds-card_empty .slds-card__body,
-.slds-card .slds-card--empty .slds-card__body {
-  text-align: center; }
+/**
+* @summary Actionable element within card footer
+* @selector .slds-card__footer-action
+* @restrict .slds-card__footer a
+*/
+.slds-card__footer-action {
+  display: block; }
 
 /**
  * Use class if card consumes any form of a tile
@@ -5082,7 +5154,11 @@ a.slds-button--inverse:focus {
 .slds-region__pinned-left .slds-card,
 .slds-region__pinned-left .slds-card-wrapper,
 .slds-region__pinned-left .slds-card_boundary,
-.slds-region__pinned-left .slds-tabs_card {
+.slds-region__pinned-left .slds-tabs_card,
+.slds-region__pinned-right .slds-card,
+.slds-region__pinned-right .slds-card-wrapper,
+.slds-region__pinned-right .slds-card_boundary,
+.slds-region__pinned-right .slds-tabs_card {
   border-radius: 0;
   border: 0;
   border-bottom: 1px solid #dddbda;
@@ -5091,9 +5167,21 @@ a.slds-button--inverse:focus {
 .slds-region__pinned-left .slds-card:last-child,
 .slds-region__pinned-left .slds-card-wrapper:last-child,
 .slds-region__pinned-left .slds-card_boundary:last-child,
-.slds-region__pinned-left .slds-tabs_card:last-child {
+.slds-region__pinned-left .slds-tabs_card:last-child,
+.slds-region__pinned-right .slds-card:last-child,
+.slds-region__pinned-right .slds-card-wrapper:last-child,
+.slds-region__pinned-right .slds-card_boundary:last-child,
+.slds-region__pinned-right .slds-tabs_card:last-child {
   border-bottom: 0; }
 
+/**
+ * @summary Used to combine several cards into a single card look
+ *
+ * @name wrapper
+ * @selector .slds-card-wrapper
+ * @restrict div
+ * @variant
+ */
 .slds-card-wrapper {
   padding: 1rem;
   background: white;
@@ -5125,6 +5213,17 @@ a.slds-button--inverse:focus {
   background: white;
   border: 0;
   box-shadow: none; }
+
+.slds-card,
+.slds-modal,
+.slds-tabs_default,
+.slds-tabs--default {
+  /**
+   * @summary Used to bring back the border on a card when needed
+   *
+   * @selector .slds-card_boundary
+   * @restrict .slds-card
+   */ }
 
 .slds-card .slds-card_boundary,
 .slds-modal .slds-card_boundary,
@@ -5278,7 +5377,7 @@ a.slds-button--inverse:focus {
  * @summary Used to style icons with a chat log
  *
  * @selector .slds-chat-icon
- * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container
+ * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container, .slds-chat-message__action .slds-icon_container
  */
 .slds-chat-icon {
   margin-right: 0.5rem; }
@@ -5323,6 +5422,7 @@ a.slds-button--inverse:focus {
  *
  * @selector .slds-chat-avatar__intials
  * @restrict .slds-chat-avatar .slds-avatar__initials
+ * @deprecated
  */
 .slds-chat-avatar__intials {
   background-color: #f2f2f3;
@@ -5360,7 +5460,9 @@ a.slds-button--inverse:focus {
 
 .slds-chat-message__text_inbound,
 .slds-chat-message__text_outbound,
-.slds-chat-message__text_outbound-agent {
+.slds-chat-message__text_outbound-agent,
+.slds-chat-message__text_unsupported-type,
+.slds-chat-message__text_delivery-failure {
   border-radius: 0.5rem 0.5rem 0;
   color: white;
   min-height: 2rem;
@@ -5404,16 +5506,57 @@ a.slds-button--inverse:focus {
   text-decoration: underline; }
 
 /**
- * @summary Used when sneak peak is enabled for customer messages
+ * @summary Used for an inbound message that is not a supported message type
  *
- * @selector .slds-chat-message__text_sneak-peak
+ * @selector .slds-chat-message__text_unsupported-type
  * @restrict .slds-chat-message__text
  * @modifier
  */
-.slds-chat-message__text_sneak-peak {
+.slds-chat-message__text_unsupported-type {
+  background-color: white;
+  border-radius: 0.5rem 0.5rem 0.5rem 0;
+  border: #ffb75d 1px solid;
+  color: #3e3e3c; }
+
+.slds-chat-message__text_unsupported-type .slds-chat-icon.slds-icon-utility-warning .slds-icon {
+  fill: #ffb75d; }
+
+/**
+ * @summary Used for an inbound message that fails to deliver
+ *
+ * @selector .slds-chat-message__text_delivery-failure
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_delivery-failure {
+  background-color: white;
+  border: #c23934 1px solid;
+  color: #3e3e3c; }
+
+.slds-chat-message__text_delivery-failure .slds-chat-message__text_delivery-failure-reason {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0.5rem 0;
+  margin: 0.5rem -0.5rem 0;
+  color: #c23934;
+  border-top: #c23934 1px solid; }
+
+.slds-chat-message__text_delivery-failure .slds-chat-icon.slds-icon-utility-error .slds-icon {
+  fill: #c23934; }
+
+/**
+ * @summary Used when sneak peek is enabled for customer messages
+ *
+ * @selector .slds-chat-message__text_sneak-peek
+ * @restrict .slds-chat-message__text
+ * @modifier
+ */
+.slds-chat-message__text_sneak-peak,
+.slds-chat-message__text_sneak-peek {
   font-style: italic; }
 
-.slds-chat-message__text_sneak-peak .slds-icon-typing {
+.slds-chat-message__text_sneak-peak .slds-icon-typing,
+.slds-chat-message__text_sneak-peek .slds-icon-typing {
   margin-right: 0.5rem; }
 
 /**
@@ -5426,6 +5569,22 @@ a.slds-button--inverse:focus {
   color: #706e6b;
   font-size: 0.75rem;
   margin: 0.125rem 0 0 0.5rem; }
+
+/**
+ * @summary Used to style chat message resend action
+ *
+ * @selector .slds-chat-message__action
+ * @restrict .slds-chat-message .slds-button
+ */
+.slds-chat-message__action {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  line-height: 1.25; }
+
+.slds-chat-message__action .slds-chat-icon.slds-icon-utility-redo .slds-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  fill: #006dcc; }
 
 /**
  * During any chat, certain events can occur which need to be displayed to the user
@@ -5564,7 +5723,7 @@ a.slds-button--inverse:focus {
    * Creates label styles for our form elements
    *
    * @selector .slds-form-element__label
-   * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, [class*='slds-checkbox'] span, [class*='slds-radio'] span, span
+   * @restrict .slds-form-element label, .slds-form-element span, .slds-form-element legend, .slds-form-element div, [class*='slds-checkbox'] span, [class*='slds-radio'] span
    */
   /**
    * Wrapper to any form display element
@@ -5616,6 +5775,51 @@ a.slds-button--inverse:focus {
 .slds-form-element_edit .slds-form-element__static, .slds-form-element--edit .slds-form-element__static {
   width: calc(100% - 1.5rem); }
 
+.slds-form-element_edit .slds-button_icon, .slds-form-element--edit .slds-button_icon {
+  vertical-align: bottom; }
+
+/**
+ * Fixed text that sits to the left or right of an input
+ *
+ * @selector .slds-form-element__addon
+ * @restrict .slds-form-element span
+ */
+.slds-form-element__addon {
+  display: inline-block;
+  margin: 0 0.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
+
+/**
+ * Read-only components are used to display immutable data within a form
+ *
+ * @summary Initializes read-only form element
+ *
+ * @selector .slds-form-element__static
+ * @restrict .slds-form-element span, .slds-form-element div
+ */
+.slds-form-element__static {
+  display: inline-block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  min-height: calc(1.875rem + 2px);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #2b2826;
+  /**
+   * Inline Edit on static form element
+   *
+   * @selector .slds-form-element__static_edit
+   * @restrict .slds-form-element__static
+   */ }
+
+.slds-form-element__static.slds-text-longform *:last-child {
+  margin-bottom: 0; }
+
+.slds-form-element__static--edit {
+  width: calc(100% - 1.5rem); }
+
 /**
  * Required Star
  *
@@ -5636,6 +5840,10 @@ a.slds-button--inverse:focus {
  */
 .slds-has-error .slds-form-element__help {
   color: #c23934; }
+
+.slds-input-has-icon .slds-input__icon {
+  /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
+  fill: #b0adab; }
 
 /**
  * @summary Initializes text input
@@ -5665,6 +5873,13 @@ a.slds-button--inverse:focus {
    *
    * @selector .slds-input_bare
    * @restrict .slds-input, input, textarea
+   * @modifier
+   */
+  /**
+   * @summary Modifier for number input with increment and decrement buttons
+   *
+   * @selector .slds-input_counter
+   * @restrict .slds-input, input
    * @modifier
    */
   /**
@@ -5718,6 +5933,20 @@ a.slds-button--inverse:focus {
   outline: 0;
   box-shadow: none; }
 
+.slds-input_counter {
+  text-align: center;
+  padding: 0 3rem; }
+
+.slds-input_counter[type='number'] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield; }
+
+.slds-input_counter::-webkit-outer-spin-button, .slds-input_counter::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0; }
+
 .slds-input_height, .slds-input--height {
   min-height: calc(1.875rem + (1px * 2)); }
 
@@ -5740,25 +5969,25 @@ a.slds-button--inverse:focus {
 .slds-input-has-icon {
   position: relative;
   /**
-   * Hook for .slds-input-has-icon
+   * @summary Hook for .slds-input-has-icon
    *
    * @selector .slds-input__icon
    * @restrict .slds-input-has-icon svg, .slds-input-has-icon button, .slds-input-has-icon span
    */
   /**
-   * Positions .slds-input__icon to the left of the text input
+   * @summary Positions .slds-input__icon to the left of the text input
    *
    * @selector .slds-input-has-icon_left
    * @restrict .slds-input-has-icon
    */
   /**
-   * Positions .slds-input__icon to the right of the text input
+   * @summary Positions .slds-input__icon to the right of the text input
    *
    * @selector .slds-input-has-icon_right
    * @restrict .slds-input-has-icon
    */
   /**
-   * Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
+   * @summary Positions .slds-input__icon_left to the left of the text input and .slds-input__icon_right to the right of the text input
    *
    * @selector .slds-input-has-icon_left-right
    * @restrict .slds-input-has-icon
@@ -5772,8 +6001,12 @@ a.slds-button--inverse:focus {
   margin-top: -0.4375rem;
   line-height: 1;
   border: 0;
+  z-index: 2;
   /* @Todo - we need to be sure this is deprecated since the color sems to be the correct gray I see in specs */
   fill: #b0adab; }
+
+.slds-input-has-icon .slds-input__icon:not(button) {
+  pointer-events: none; }
 
 .slds-input-has-icon_left .slds-input__icon, .slds-input-has-icon--left .slds-input__icon {
   left: 0.75rem; }
@@ -5797,13 +6030,13 @@ a.slds-button--inverse:focus {
 
 .slds-input-has-icon_left-right, .slds-input-has-icon--left-right {
   /**
-     * Hook for .slds-input-has-icon--left-right
+     * @summary Hook for .slds-input-has-icon--left-right
      *
      * @selector .slds-input__icon_left
      * @restrict .slds-input__icon
      */
   /**
-     * Hook for .slds-input-has-icon_left-right
+     * @summary Hook for .slds-input-has-icon_left-right
      *
      * @selector .slds-input__icon_right
      * @restrict .slds-input__icon
@@ -5826,8 +6059,13 @@ a.slds-button--inverse:focus {
 .slds-input-has-icon--left-right .slds-input--bare {
   padding: 0 2rem; }
 
+.slds-input-has-icon_group-right .slds-input,
+.slds-input-has-icon_group-right .slds-input_bare,
+.slds-input-has-icon_group-right .slds-input--bare {
+  padding-right: 3.25rem; }
+
 /**
- * Positions two items (icons and/or spinners) on one side or the other of the input
+ * @summary Positions two items (icons and/or spinners) on one side or the other of the input
  *
  * @selector .slds-input__icon-group
  * @restrict .slds-input-has-icon div
@@ -5838,7 +6076,7 @@ a.slds-button--inverse:focus {
   margin-top: -0.5rem; }
 
 /**
- * Positions the close icon and spinner on the right side of the input while searching
+ * @summary Positions the close icon and spinner on the right side of the input while searching
  *
  * @selector .slds-input__icon-group_right
  * @restrict .slds-input__icon-group
@@ -5865,47 +6103,11 @@ a.slds-button--inverse:focus {
   display: -ms-flexbox;
   display: flex; }
 
-/**
- * Fixed text that sits to the left or right of an input
- *
- * @selector .slds-form-element__addon
- * @restrict .slds-form-element span
- */
-.slds-form-element__addon {
-  display: inline-block;
-  margin: 0 0.5rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center; }
+.slds-input:required {
+  box-shadow: none; }
 
-/**
- * Read-only components are used to display immutable data within a form
- *
- * @summary Initializes read-only form element
- *
- * @selector .slds-form-element__static
- * @restrict .slds-form-element span, .slds-form-element div
- */
-.slds-form-element__static {
-  display: inline-block;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  min-height: calc(1.875rem + 2px);
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #2b2826;
-  /**
-   * Inline Edit on static form element
-   *
-   * @selector .slds-form-element__static_edit
-   * @restrict .slds-form-element__static
-   */ }
-
-.slds-form-element__static.slds-text-longform {
-  line-height: 1.5; }
-
-.slds-form-element__static--edit {
-  width: calc(100% - 1.5rem); }
+.slds-input:required:focus {
+  box-shadow: 0 0 3px #0070D2; }
 
 .slds-has-error .slds-input {
   background-color: white;
@@ -5919,6 +6121,28 @@ a.slds-button--inverse:focus {
 .slds-has-error .slds-input__icon {
   fill: #c23934;
   color: #c23934; }
+
+/**
+ * @summary Positions decrement button within counter input field
+ *
+ * @selector .slds-input__button_decrement
+ * @restrict button
+ */
+.slds-input__button_decrement {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.75rem; }
+
+/**
+ * @summary Positions increment button within counter input field
+ *
+ * @selector .slds-input__button_increment
+ * @restrict button
+ */
+.slds-input__button_increment {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.75rem; }
 
 /**
  * @summary Initialize textarea
@@ -6344,9 +6568,13 @@ a.slds-button--inverse:focus {
   -ms-flex-direction: column;
       flex-direction: column; }
 
+.slds-checkbox.slds-checkbox_stacked .slds-form-element__label {
+  margin-bottom: 0.25rem; }
+
 .slds-checkbox.slds-checkbox_stacked .slds-checkbox_faux {
   -ms-flex-order: 1;
-      order: 1; }
+      order: 1;
+  margin-bottom: 1px; }
 
 .slds-checkbox .slds-checkbox_faux,
 .slds-checkbox .slds-checkbox--faux {
@@ -6362,8 +6590,7 @@ a.slds-button--inverse:focus {
 
 .slds-checkbox .slds-form-element__label {
   display: inline;
-  vertical-align: middle;
-  font-size: 0.8125rem; }
+  vertical-align: middle; }
 
 .slds-checkbox [type="checkbox"] {
   width: 1px;
@@ -6954,7 +7181,7 @@ a.slds-button--inverse:focus {
   /**
    * Creates a custom styled checkbox
    *
-   * @selector .slds-checkbox_faux
+   * @selector .slds-checkbox_button .slds-checkbox_faux
    * @restrict .slds-checkbox__label span, .slds-checkbox_button__label span
    * @required
    */
@@ -7300,6 +7527,7 @@ a.slds-button--inverse:focus {
  *
  * @selector .slds-form_inline
  * @restrict .slds-form
+ * @modifier
  */
 .slds-form_inline .slds-form-element,
 .slds-form_inline .slds-form-element__label,
@@ -7331,6 +7559,23 @@ a.slds-button--inverse:focus {
     margin-bottom: 0; } }
 
 /**
+ * @summary Aligns the legend properly when there is an info tooltip
+ *
+ * @selector .slds-form-element__legend_has-tooltip
+ * @restrict .slds-form-element__legend
+ */
+.slds-form-element__legend_has-tooltip {
+  float: left; }
+
+.slds-form_compound .slds-form-element__control,
+.slds-form--compound .slds-form-element__control {
+  position: relative; }
+
+.slds-form_compound .slds-form-element__control + .slds-form-element__control,
+.slds-form--compound .slds-form-element__control + .slds-form-element__control {
+  padding-left: 0.5rem; }
+
+/**
  * @summary Creates a form that consists of multiple form groups
  *
  * @name compound
@@ -7350,15 +7595,8 @@ a.slds-button--inverse:focus {
 
 .slds-form_compound .slds-form-element__row .slds-form-element + .slds-form-element,
 .slds-form--compound .slds-form-element__row .slds-form-element + .slds-form-element {
-  margin-left: 0.5rem; }
-
-.slds-form_compound .slds-form-element__control,
-.slds-form--compound .slds-form-element__control {
-  position: relative; }
-
-.slds-form_compound .slds-form-element__control + .slds-form-element__control,
-.slds-form--compound .slds-form-element__control + .slds-form-element__control {
-  padding-left: 0.5rem; }
+  padding-left: 0.5rem;
+  margin-top: 0; }
 
 /**
  * The popover should be positioned with JavaScript.
@@ -8155,9 +8393,9 @@ a.slds-button--inverse:focus {
   background-color: white; }
 
 /**
- * @summary Initiates a panel
+ * @summary Panel component
  *
- * @name detail
+ * @name base
  * @selector .slds-panel
  * @restrict div
  * @variant
@@ -8188,6 +8426,110 @@ a.slds-button--inverse:focus {
 
 .slds-panel.slds-is-editing {
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16); }
+
+/**
+ * @summary Header element of a panel
+ * @selector .slds-panel__header
+ * @restrict .slds-panel div
+ */
+.slds-panel__header {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 0.75rem 3rem;
+  border-bottom: 1px solid #dddbda; }
+
+/**
+ * @summary Modifier that notifies panel header that something other than a title and close button exist
+ * @selector .slds-panel__header_custom
+ * @restrict .slds-panel__header
+ * @modifier
+ */
+.slds-panel__header_custom {
+  padding: 0.75rem 1rem; }
+
+/**
+ * @summary Close button of a panel
+ * @selector .slds-panel__close
+ * @restrict .slds-panel .slds-button
+ */
+.slds-panel__close {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  margin-top: -0.75rem; }
+
+/**
+ * @summary Body element of a panel
+ * @selector .slds-panel__body
+ * @restrict .slds-panel div
+ */
+.slds-panel__body {
+  padding: 1rem; }
+
+/**
+ * @summary Modifier that changes the display of a panel to dock to the viewport
+ * @selector .slds-panel_docked
+ * @restrict .slds-panel
+ * @modifier
+ */
+.slds-panel_docked {
+  position: relative;
+  min-width: 15rem;
+  height: 100%;
+  border-radius: 0;
+  display: none;
+  transition: transform 300ms ease;
+  /**
+   * @summary Title of the header panel
+   * @selector .slds-panel__header-title
+   * @restrict .slds-panel__header h2
+   */
+  /**
+   * @summary Toggles visibility of panel
+   * @selector .slds-is-open
+   * @restrict .slds-panel_docked
+   */ }
+
+.slds-panel_docked .slds-panel__header-title {
+  text-align: center;
+  width: 100%; }
+
+.slds-panel_docked.slds-is-open {
+  display: block; }
+
+/**
+ * @summary Modifier that changes the position of a panel to the left
+ * @selector .slds-panel_docked-left
+ * @restrict .slds-panel_docked
+ * @modifier
+ */
+.slds-panel_docked-left {
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.25);
+  /**
+   * @summary Modifier that informs the panel that it was invoked by a drill in link
+   * @selector .slds-is-directional
+   * @restrict .slds-panel_docked
+   * @modifier
+   */ }
+
+.slds-panel_docked-left.slds-is-directional .slds-panel__close {
+  left: 0.75rem;
+  right: auto; }
+
+/**
+ * @summary Modifier that changes the position of a panel to the right
+ * @selector .slds-panel_docked-right
+ * @restrict .slds-panel_docked
+ * @modifier
+ */
+.slds-panel_docked-right {
+  margin-left: auto;
+  box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.25); }
+
+.slds-panel_docked-right.slds-is-directional .slds-panel__close {
+  right: 0.75rem;
+  left: auto; }
 
 /**
  * @name filtering
@@ -8990,11 +9332,6 @@ a.slds-button--inverse:focus {
 .slds-popover--walkthrough .slds-popover__footer {
   border: 0; }
 
-.slds-popover_walkthrough .slds-popover__close,
-.slds-popover--walkthrough .slds-popover__close {
-  margin-top: 0.5rem;
-  margin-right: 0.5rem; }
-
 .slds-popover_walkthrough .slds-text-title,
 .slds-popover--walkthrough .slds-text-title {
   color: #d9dbdd; }
@@ -9050,9 +9387,96 @@ a.slds-button--inverse:focus {
  *
  * @name einstein
  * @selector .slds-popover_einstein
+ * @restrict [role="dialog"], [role="tooltip"]
+ * @variant
+ */
+/**
+ * Error popovers are used to notify the user of errors on the page
+ *
+ * If the elements within the error popover exceed 150px, use the `.slds-popover__body_scrollable`  modifier on the body element.
+ *
+ * In some cases, such as displaying a list of menu items, padding may not be necessary in the popover body. To remove the padding, add the `slds-p-around_none" utility class to the body element.
+ *
+ * @summary Initializes an error non-modal dialog
+ *
+ * @name error
+ * @selector .slds-popover_error
  * @restrict .slds-popover
  * @variant
  */
+.slds-popover_error .slds-popover__header {
+  background-color: #c23934;
+  color: white; }
+
+.slds-popover_error.slds-nubbin_top:before, .slds-popover_error.slds-nubbin--top:before, .slds-popover_error.slds-nubbin_top-left:before, .slds-popover_error.slds-nubbin--top-left:before, .slds-popover_error.slds-nubbin_top-right:before, .slds-popover_error.slds-nubbin--top-right:before, .slds-popover_error.slds-nubbin_left-top:before, .slds-popover_error.slds-nubbin--left-top:before, .slds-popover_error.slds-nubbin_right-top:before, .slds-popover_error.slds-nubbin--right-top:before {
+  background-color: #c23934; }
+
+.slds-popover_error,
+.slds-popover_warning {
+  /**
+   * @summary Applies scrollable styles for popovers
+   * @selector .slds-popover__body_scrollable
+   * @restrict .slds-popover_error .slds-popover__body, .slds-popover_warning .slds-popover__body
+   */ }
+
+.slds-popover_error .slds-popover__header,
+.slds-popover_warning .slds-popover__header {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
+
+.slds-popover_error .slds-popover__body_scrollable,
+.slds-popover_warning .slds-popover__body_scrollable {
+  max-height: 150px;
+  overflow-y: auto;
+  border-bottom: 1px solid #dddbda; }
+
+.slds-popover_error .slds-popover__body_scrollable + .slds-popover__footer,
+.slds-popover_warning .slds-popover__body_scrollable + .slds-popover__footer {
+  border-top: 0; }
+
+/**
+ * Warning popovers are used to warn the user about information on the page that deserves caution
+ *
+ * If the elements within the error popover exceed 150px, use the `.slds-popover__body_scrollable` modifier on the body element.
+ *
+ * In some cases, such as displaying a list of menu items, padding may not be necessary in the popover body. To remove the padding, add the `slds-p-around_none" utility class to the body element.
+ *
+ * @summary Initializes an warning non-modal dialog
+ *
+ * @name warning
+ * @selector .slds-popover_warning
+ * @restrict .slds-popover
+ * @variant
+ */
+.slds-popover_warning .slds-popover__header {
+  background-color: #ffb75d;
+  color: #2b2826; }
+
+.slds-popover_warning .slds-popover__header .slds-icon {
+  fill: currentColor; }
+
+.slds-popover_warning .slds-popover__close {
+  color: currentColor; }
+
+.slds-popover_warning .slds-popover__close:focus, .slds-popover_warning .slds-popover__close:hover {
+  color: #706e6b; }
+
+.slds-popover_warning.slds-nubbin_top:before, .slds-popover_warning.slds-nubbin--top:before, .slds-popover_warning.slds-nubbin_top-left:before, .slds-popover_warning.slds-nubbin--top-left:before, .slds-popover_warning.slds-nubbin_top-right:before, .slds-popover_warning.slds-nubbin--top-right:before, .slds-popover_warning.slds-nubbin_left-top:before, .slds-popover_warning.slds-nubbin--left-top:before, .slds-popover_warning.slds-nubbin_right-top:before, .slds-popover_warning.slds-nubbin--right-top:before {
+  background-color: #ffb75d; }
+
+.slds-tooltip {
+  position: relative;
+  border-radius: 0.25rem;
+  width: 20rem;
+  min-height: 2rem;
+  z-index: 6000;
+  background-color: #061c3f;
+  display: inline-block; }
+
+.slds-tooltip__body {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  color: white; }
+
 /**
  * The tooltip should be positioned with JavaScript.
  *
@@ -9120,19 +9544,102 @@ a.slds-button--inverse:focus {
   transform: translateX(-5%);
   will-change: transform; }
 
-.slds-tooltip {
-  position: relative;
-  border-radius: 0.25rem;
-  width: 20rem;
-  min-height: 2rem;
-  z-index: 6000;
-  background-color: #061c3f;
-  display: inline-block; }
+.slds-dropdown-trigger .slds-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s linear, visibility 0.1s linear; }
 
-.slds-tooltip__body {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
-  color: white; }
+.slds-dropdown-trigger:hover, .slds-dropdown-trigger:focus {
+  outline: 0; }
+
+.slds-dropdown-trigger:hover .slds-dropdown, .slds-dropdown-trigger:focus .slds-dropdown {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.1s linear, visibility 0.1s linear; }
+
+.slds-dropdown_nubbin-top, .slds-dropdown--nubbin-top {
+  margin-top: 0.5rem; }
+
+.slds-dropdown_nubbin-top:before, .slds-dropdown--nubbin-top:before {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  transform: rotate(45deg);
+  content: '';
+  background-color: white;
+  left: 50%;
+  top: -0.5rem;
+  margin-left: -0.5rem; }
+
+.slds-dropdown_nubbin-top:after, .slds-dropdown--nubbin-top:after {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  transform: rotate(45deg);
+  content: '';
+  background-color: white;
+  left: 50%;
+  top: -0.5rem;
+  margin-left: -0.5rem; }
+
+.slds-dropdown_nubbin-top:before, .slds-dropdown--nubbin-top:before {
+  background: white; }
+
+.slds-dropdown_nubbin-top:after, .slds-dropdown--nubbin-top:after {
+  background: white;
+  box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
+  z-index: -1; }
+
+.slds-dropdown_nubbin-top.slds-dropdown_left, .slds-dropdown_nubbin-top.slds-dropdown--left, .slds-dropdown--nubbin-top.slds-dropdown_left, .slds-dropdown--nubbin-top.slds-dropdown--left {
+  left: -1rem; }
+
+.slds-dropdown_nubbin-top.slds-dropdown_left:before, .slds-dropdown_nubbin-top.slds-dropdown_left:after, .slds-dropdown_nubbin-top.slds-dropdown--left:before, .slds-dropdown_nubbin-top.slds-dropdown--left:after, .slds-dropdown--nubbin-top.slds-dropdown_left:before, .slds-dropdown--nubbin-top.slds-dropdown_left:after, .slds-dropdown--nubbin-top.slds-dropdown--left:before, .slds-dropdown--nubbin-top.slds-dropdown--left:after {
+  left: 1.5rem;
+  margin-left: 0; }
+
+.slds-dropdown_nubbin-top.slds-dropdown_right, .slds-dropdown_nubbin-top.slds-dropdown--right, .slds-dropdown--nubbin-top.slds-dropdown_right, .slds-dropdown--nubbin-top.slds-dropdown--right {
+  right: -1rem; }
+
+.slds-dropdown_nubbin-top.slds-dropdown_right:before, .slds-dropdown_nubbin-top.slds-dropdown_right:after, .slds-dropdown_nubbin-top.slds-dropdown--right:before, .slds-dropdown_nubbin-top.slds-dropdown--right:after, .slds-dropdown--nubbin-top.slds-dropdown_right:before, .slds-dropdown--nubbin-top.slds-dropdown_right:after, .slds-dropdown--nubbin-top.slds-dropdown--right:before, .slds-dropdown--nubbin-top.slds-dropdown--right:after {
+  left: auto;
+  right: 1.5rem;
+  margin-left: 0; }
+
+.slds-dropdown__item .slds-has-icon {
+  position: relative; }
+
+.slds-dropdown__item .slds-has-icon_left > a,
+.slds-dropdown__item .slds-has-icon--left > a,
+.slds-dropdown__item .slds-has-icon_left > span,
+.slds-dropdown__item .slds-has-icon--left > span {
+  padding-left: 2rem; }
+
+.slds-dropdown__item .slds-has-icon_right > a,
+.slds-dropdown__item .slds-has-icon--right > a,
+.slds-dropdown__item .slds-has-icon_right > span,
+.slds-dropdown__item .slds-has-icon--right > span {
+  padding-right: 2rem; }
+
+.slds-dropdown__item .slds-has-icon_left-right > a,
+.slds-dropdown__item .slds-has-icon--left-right > a,
+.slds-dropdown__item .slds-has-icon_left-right > span,
+.slds-dropdown__item .slds-has-icon--left-right > span {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.slds-dropdown__item .slds-has-icon .slds-icon {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.5rem;
+  fill: #706e6b; }
+
+.slds-dropdown__item .slds-has-icon .slds-icon_left, .slds-dropdown__item .slds-has-icon .slds-icon--left {
+  left: 0.75rem; }
+
+.slds-dropdown__item .slds-has-icon .slds-icon_right, .slds-dropdown__item .slds-has-icon .slds-icon--right {
+  right: 0.75rem; }
 
 /**
  *
@@ -9163,19 +9670,6 @@ a.slds-button--inverse:focus {
 .slds-dropdown-trigger .slds-dropdown--bottom {
   top: auto; }
 
-.slds-dropdown-trigger .slds-dropdown {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.1s linear, visibility 0.1s linear; }
-
-.slds-dropdown-trigger:hover, .slds-dropdown-trigger:focus {
-  outline: 0; }
-
-.slds-dropdown-trigger:hover .slds-dropdown, .slds-dropdown-trigger:focus .slds-dropdown {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.1s linear, visibility 0.1s linear; }
-
 .slds-dropdown-trigger_hover .slds-dropdown, .slds-dropdown-trigger--hover .slds-dropdown {
   visibility: hidden;
   opacity: 0;
@@ -9198,7 +9692,9 @@ a.slds-button--inverse:focus {
      * @group visibility
      */ }
 
-.slds-dropdown-trigger_click .slds-dropdown, .slds-dropdown-trigger--click .slds-dropdown {
+.slds-dropdown-trigger_click .slds-dropdown,
+.slds-dropdown-trigger_click:hover .slds-dropdown, .slds-dropdown-trigger--click .slds-dropdown,
+.slds-dropdown-trigger--click:hover .slds-dropdown {
   display: none; }
 
 .slds-dropdown-trigger_click.slds-is-open .slds-dropdown, .slds-dropdown-trigger--click.slds-is-open .slds-dropdown {
@@ -9460,54 +9956,6 @@ a.slds-button--inverse:focus {
 .slds-dropdown[class*="slds-nubbin_bottom"], .slds-dropdown[class*="slds-nubbin--bottom"] {
   margin-bottom: 0.5rem; }
 
-.slds-dropdown_nubbin-top, .slds-dropdown--nubbin-top {
-  margin-top: 0.5rem; }
-
-.slds-dropdown_nubbin-top:before, .slds-dropdown--nubbin-top:before {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  transform: rotate(45deg);
-  content: '';
-  background-color: white;
-  left: 50%;
-  top: -0.5rem;
-  margin-left: -0.5rem; }
-
-.slds-dropdown_nubbin-top:after, .slds-dropdown--nubbin-top:after {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  transform: rotate(45deg);
-  content: '';
-  background-color: white;
-  left: 50%;
-  top: -0.5rem;
-  margin-left: -0.5rem; }
-
-.slds-dropdown_nubbin-top:before, .slds-dropdown--nubbin-top:before {
-  background: white; }
-
-.slds-dropdown_nubbin-top:after, .slds-dropdown--nubbin-top:after {
-  background: white;
-  box-shadow: -1px -1px 0 0 rgba(0, 0, 0, 0.16);
-  z-index: -1; }
-
-.slds-dropdown_nubbin-top.slds-dropdown_left, .slds-dropdown_nubbin-top.slds-dropdown--left, .slds-dropdown--nubbin-top.slds-dropdown_left, .slds-dropdown--nubbin-top.slds-dropdown--left {
-  left: -1rem; }
-
-.slds-dropdown_nubbin-top.slds-dropdown_left:before, .slds-dropdown_nubbin-top.slds-dropdown_left:after, .slds-dropdown_nubbin-top.slds-dropdown--left:before, .slds-dropdown_nubbin-top.slds-dropdown--left:after, .slds-dropdown--nubbin-top.slds-dropdown_left:before, .slds-dropdown--nubbin-top.slds-dropdown_left:after, .slds-dropdown--nubbin-top.slds-dropdown--left:before, .slds-dropdown--nubbin-top.slds-dropdown--left:after {
-  left: 1.5rem;
-  margin-left: 0; }
-
-.slds-dropdown_nubbin-top.slds-dropdown_right, .slds-dropdown_nubbin-top.slds-dropdown--right, .slds-dropdown--nubbin-top.slds-dropdown_right, .slds-dropdown--nubbin-top.slds-dropdown--right {
-  right: -1rem; }
-
-.slds-dropdown_nubbin-top.slds-dropdown_right:before, .slds-dropdown_nubbin-top.slds-dropdown_right:after, .slds-dropdown_nubbin-top.slds-dropdown--right:before, .slds-dropdown_nubbin-top.slds-dropdown--right:after, .slds-dropdown--nubbin-top.slds-dropdown_right:before, .slds-dropdown--nubbin-top.slds-dropdown_right:after, .slds-dropdown--nubbin-top.slds-dropdown--right:before, .slds-dropdown--nubbin-top.slds-dropdown--right:after {
-  left: auto;
-  right: 1.5rem;
-  margin-left: 0; }
-
 .slds-dropdown__header {
   padding: 0.5rem 0.75rem; }
 
@@ -9569,52 +10017,15 @@ a.slds-button--inverse:focus {
 .slds-dropdown__item.slds-has-notification .slds-indicator_unsaved {
   top: -0.375rem; }
 
-.slds-dropdown .slds-has-icon {
-  position: relative; }
-
-.slds-dropdown .slds-has-icon_left > a,
-.slds-dropdown .slds-has-icon--left > a,
-.slds-dropdown .slds-has-icon_left > span,
-.slds-dropdown .slds-has-icon--left > span {
-  padding-left: 2rem; }
-
-.slds-dropdown .slds-has-icon_right > a,
-.slds-dropdown .slds-has-icon--right > a,
-.slds-dropdown .slds-has-icon_right > span,
-.slds-dropdown .slds-has-icon--right > span {
-  padding-right: 2rem; }
-
-.slds-dropdown .slds-has-icon_left-right > a,
-.slds-dropdown .slds-has-icon--left-right > a,
-.slds-dropdown .slds-has-icon_left-right > span,
-.slds-dropdown .slds-has-icon--left-right > span {
-  padding-left: 2rem;
-  padding-right: 2rem; }
-
-.slds-dropdown .slds-has-icon .slds-icon {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 50%;
-  margin-top: -0.5rem;
-  fill: #706e6b; }
-
-.slds-dropdown .slds-has-icon .slds-icon_left, .slds-dropdown .slds-has-icon .slds-icon--left {
-  left: 0.75rem; }
-
-.slds-dropdown .slds-has-icon .slds-icon_right, .slds-dropdown .slds-has-icon .slds-icon--right {
-  right: 0.75rem; }
-
 .slds-dropdown_actions a,
 .slds-dropdown--actions a {
-  color: #0070d2; }
+  color: #006dcc; }
 
 /**
  * @name submenu
  * @summary
  * @selector .slds-has-submenu
  * @restrict .slds-dropdown__item
- * @variant
  * @release 2.5.0
  */
 .slds-has-submenu {
@@ -9894,10 +10305,34 @@ a.slds-button--inverse:focus {
    * @selector .slds-is-open
    * @restrict .slds-combobox
    * @modifier
+   */
+  /**
+   * @summary Apply when a combobox has a selection
+   * @selector .slds-has-selection
+   * @restrict .slds-combobox_container
+   */
+  /**
+   * @summary Icon only variant of a combobox
+   * @selector .slds-has-icon-only
+   * @restrict .slds-combobox_container
    */ }
 
 .slds-combobox_container.slds-is-open .slds-dropdown {
   display: block; }
+
+.slds-combobox_container.slds-has-selection .slds-combobox__input-value,
+.slds-combobox_container.slds-has-selection .slds-combobox__input-value:focus {
+  box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px #dddbda inset; }
+
+.slds-combobox_container.slds-has-icon-only .slds-combobox__input,
+.slds-combobox_container.slds-has-icon-only .slds-combobox__input:focus,
+.slds-combobox_container.slds-has-icon-only .slds-combobox__input.slds-has-focus {
+  width: 0;
+  pointer-events: auto; }
+
+.slds-combobox_container.slds-has-icon-only .slds-input__icon {
+  z-index: 2;
+  pointer-events: none; }
 
 /**
  * Container around form element with combobox input
@@ -9931,8 +10366,9 @@ a.slds-button--inverse:focus {
   font-size: inherit;
   font-weight: 400; }
 
-[role="combobox"] input[readonly]:focus {
-  border-color: #0070d2; }
+[role="combobox"] input[readonly]:focus, [role="combobox"] input[readonly].slds-has-focus {
+  border-color: #0070d2;
+  box-shadow: 0 0 3px #0070D2; }
 
 [role="combobox"] input[readonly][disabled] {
   background-color: #ecebea;
@@ -9992,6 +10428,11 @@ a.slds-button--inverse:focus {
   -ms-flex-align: center;
       align-items: center; }
 
+.slds-listbox_horizontal li,
+.slds-listbox--horizontal li {
+  display: -ms-flexbox;
+  display: flex; }
+
 .slds-listbox_horizontal li + li,
 .slds-listbox--horizontal li + li {
   padding-left: 0.125rem; }
@@ -10029,15 +10470,15 @@ a.slds-button--inverse:focus {
    * @modifier
    */
   /**
-   * Modifies the listbox option if it contains an plain object or string
-   *
-   * @selector .slds-listbox__option_plain
-   * @restrict .slds-listbox__option
-   */
-  /**
    * Modifies the listbox option if it contains an entity object
    *
    * @selector .slds-listbox__option_entity
+   * @restrict .slds-listbox__option
+   */
+  /**
+   * Modifies the listbox option if it contains an plain object or string
+   *
+   * @selector .slds-listbox__option_plain
    * @restrict .slds-listbox__option
    */
   /**
@@ -10061,12 +10502,6 @@ a.slds-button--inverse:focus {
   background-color: transparent;
   cursor: default; }
 
-.slds-listbox_vertical .slds-listbox__option_plain,
-.slds-listbox_vertical .slds-listbox__option--plain,
-.slds-listbox--vertical .slds-listbox__option_plain,
-.slds-listbox--vertical .slds-listbox__option--plain {
-  padding: 0.5rem 0.75rem; }
-
 .slds-listbox_vertical .slds-listbox__option_entity,
 .slds-listbox_vertical .slds-listbox__option--entity,
 .slds-listbox--vertical .slds-listbox__option_entity,
@@ -10078,6 +10513,21 @@ a.slds-button--inverse:focus {
 .slds-listbox--vertical .slds-listbox__option_entity .slds-media__figure,
 .slds-listbox--vertical .slds-listbox__option--entity .slds-media__figure {
   margin-right: 0.5rem; }
+
+.slds-listbox_vertical .slds-listbox__option_plain,
+.slds-listbox_vertical .slds-listbox__option--plain,
+.slds-listbox--vertical .slds-listbox__option_plain,
+.slds-listbox--vertical .slds-listbox__option--plain {
+  padding: 0.5rem 0.75rem; }
+
+.slds-listbox_vertical .slds-listbox__option_term,
+.slds-listbox--vertical .slds-listbox__option_term {
+  padding: 0.5rem 0.75rem; }
+
+.slds-listbox_vertical .slds-listbox__option_term .slds-media__figure,
+.slds-listbox--vertical .slds-listbox__option_term .slds-media__figure {
+  margin-left: 0.25rem;
+  margin-right: 0.75rem; }
 
 .slds-listbox_vertical .slds-listbox__option_has-meta .slds-media__figure,
 .slds-listbox_vertical .slds-listbox__option--has-meta .slds-media__figure,
@@ -10162,11 +10612,11 @@ a.slds-button--inverse:focus {
 /**
  * The metadata or secondary text of an entity listbox
  *
- * @selector .slds-listbox__option-meta_entity
+ * @selector .slds-listbox__option-meta
  * @restrict .slds-listbox__option span
  */
-.slds-listbox__option-meta_entity,
-.slds-listbox__option-meta--entity {
+.slds-listbox__option-meta,
+.slds-listbox__option-meta {
   display: block;
   margin-top: -0.25rem;
   color: #706e6b; }
@@ -10176,6 +10626,161 @@ a.slds-button--inverse:focus {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 0.125rem; }
+
+/**
+ * @summary Modifier that identifies the combobox as the object switcher, applies specific interactions for its context
+ * @selector .slds-combobox_object-switcher
+ * @restrict .slds-combobox-group div
+ */
+.slds-combobox_object-switcher {
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.slds-combobox_object-switcher .slds-combobox__input {
+  width: 7.5rem;
+  transition: width 80ms linear;
+  font-size: 0.75rem;
+  color: #706e6b; }
+
+.slds-combobox_object-switcher .slds-combobox__input:focus, .slds-combobox_object-switcher .slds-combobox__input.slds-has-focus {
+  width: 10rem; }
+
+.slds-combobox_object-switcher .slds-input__icon {
+  margin-top: -0.375rem; }
+
+.slds-combobox_object-switcher .slds-icon {
+  width: 0.75rem;
+  height: 0.75rem; }
+
+/**
+ * @summary Input field within a combobox
+ *
+ * @selector .slds-combobox__input
+ * @restrict .slds-combobox input
+ */
+.slds-combobox__input {
+  /**
+   * @summary Force focus state of the input
+   *
+   * @selector .slds-has-focus
+   * @restrict .slds-combobox__input
+   */ }
+
+.slds-combobox__input:focus, .slds-combobox__input.slds-has-focus {
+  border-color: #1589ee;
+  box-shadow: 0 0 3px #0070D2; }
+
+/**
+ * @summary Container for a combobox group
+ *
+ * @selector .slds-combobox-group
+ * @restrict div
+ */
+.slds-combobox-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  /**
+   * @summary Modifier that notifies the combobox group that a selection has been made
+   *
+   * @selector .slds-has-selection
+   * @restrict .slds-combobox-group, .slds-combobox_container
+   */ }
+
+.slds-combobox-group .slds-combobox_container {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+
+.slds-combobox-group .slds-combobox__input,
+.slds-combobox-group .slds-combobox_object-switcher__button {
+  border-radius: 0;
+  margin-left: -1px;
+  margin-right: -1px; }
+
+.slds-combobox-group .slds-combobox__input:focus, .slds-combobox-group .slds-combobox__input.slds-has-focus,
+.slds-combobox-group .slds-combobox_object-switcher__button:focus,
+.slds-combobox-group .slds-combobox_object-switcher__button.slds-has-focus {
+  position: relative;
+  z-index: 1; }
+
+.slds-combobox-group.slds-has-selection .slds-combobox-addon_start .slds-combobox__input {
+  border-bottom-left-radius: 0; }
+
+.slds-combobox-group.slds-has-selection .slds-combobox-addon_end .slds-combobox__input {
+  border-bottom-right-radius: 0; }
+
+.slds-combobox-group.slds-has-selection ~ .slds-listbox_selection-group {
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border: 1px solid #dddbda;
+  border-top: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  left: -1px; }
+
+.slds-combobox-group .slds-listbox_horizontal li + li {
+  padding: 0.125rem; }
+
+/**
+ * @summary The container of pill selections found inside of a combobox group
+ * @selector .slds-listbox_selection-group
+ * @restrict .slds-combobox-group ~ div, .slds-combobox_container ~ div
+ */
+.slds-listbox_selection-group {
+  padding: 0;
+  padding-right: 3.75rem;
+  height: calc(1.875rem + 1px);
+  overflow: hidden;
+  /**
+   * @summary Expanded state of a selection group
+   * @selector .slds-is-expanded
+   * @restrict .slds-listbox_selection-group
+   */
+  /**
+   * @summary Toggle button to show all of the pill selections
+   * @selector .slds-listbox-toggle
+   * @restrict .slds-listbox_selection-group > span
+   */ }
+
+.slds-listbox_selection-group.slds-is-expanded {
+  height: auto;
+  padding: 0; }
+
+.slds-listbox_selection-group .slds-listbox-item {
+  padding: 0.125rem;
+  line-height: 1; }
+
+.slds-listbox_selection-group .slds-listbox-toggle {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem; }
+
+.slds-listbox_selection-group .slds-listbox-toggle .slds-button {
+  line-height: 1; }
+
+/**
+ * @summary The first combobox in the combobox group
+ * @selector .slds-combobox-addon_start
+ * @restrict .slds-combobox-group div
+ */
+.slds-combobox-addon_start .slds-combobox__input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
+
+/**
+ * @summary The last combobox in the combobox group
+ * @selector .slds-combobox-addon_end
+ * @restrict .slds-combobox-group div
+ */
+.slds-combobox-addon_end .slds-combobox__input {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
 
 /**
  * If combo has a selection model that requires a listbox of pills to be displayed
@@ -10191,12 +10796,6 @@ a.slds-button--inverse:focus {
   background: white;
   border: 1px solid #dddbda;
   border-radius: 0.25rem;
-  /**
-   * Input field within a combobox
-   *
-   * @selector .slds-combobox__input
-   * @restrict .slds-combobox input
-   */
   /**
    * Modifier to the combobox when an SVG icon sits adjacent to the combobox form element
    *
@@ -10249,98 +10848,12 @@ a.slds-button--inverse:focus {
 
 .slds-has-inline-listbox [role="listbox"] {
   display: -ms-inline-flexbox;
-  display: inline-flex; }
+  display: inline-flex;
+  padding: 0; }
 
 .slds-has-inline-listbox .slds-combobox__input[value],
 .slds-has-inline-listbox .slds-combobox__input-value {
   box-shadow: 0 0 0 2px #fff inset, 0 0 0 3px #dddbda inset; }
-
-/**
- * A dueling picklist inherits styles from the listbox component
- * @summary Initializes a dueling picklist
- *
- * @name base
- * @selector .slds-dueling-list
- * @restrict div
- * @variant
- */
-.slds-dueling-list {
-  display: -ms-flexbox;
-  display: flex; }
-
-/**
- * @summary Handles the layout of the dueling picklist
- *
- * @selector .slds-dueling-list__column
- * @restrict .slds-dueling-list div
- */
-.slds-dueling-list__column {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-direction: column;
-      flex-direction: column; }
-
-.slds-dueling-list__column .slds-button {
-  margin: 0.25rem; }
-
-.slds-dueling-list__column .slds-button:first-of-type {
-  margin-top: 1.5rem; }
-
-/**
- * @summary Bounding visual container for listbox of options
- *
- * @selector .slds-dueling-list__options
- * @restrict .slds-dueling-list div
- */
-.slds-dueling-list__options,
-.slds-picklist__options {
-  border: 1px solid #dddbda;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0;
-  width: 15rem;
-  height: 15rem;
-  background-color: white;
-  overflow: auto;
-  /**
-   * @summary Selected/dragging state of a listbox option
-   * @selector .slds-is-grabbed
-   * @restrict .slds-dueling-list__options div
-   */
-  /**
-   * @summary Disabled state of a picklist option
-   * @selector .slds-is-disabled
-   * @restrict .slds-dueling-list__options
-   */ }
-
-.slds-dueling-list__options [aria-selected="true"],
-.slds-picklist__options [aria-selected="true"] {
-  background-color: #0070d2;
-  color: white; }
-
-.slds-dueling-list__options [aria-selected="true"]:hover, .slds-dueling-list__options [aria-selected="true"]:focus,
-.slds-picklist__options [aria-selected="true"]:hover,
-.slds-picklist__options [aria-selected="true"]:focus {
-  background: #005fb2;
-  color: white; }
-
-.slds-dueling-list__options.slds-is-disabled,
-.slds-picklist__options.slds-is-disabled {
-  background-color: #ecebea;
-  border-color: #c9c7c5;
-  color: #706e6b; }
-
-.slds-dueling-list__options.slds-is-disabled:hover,
-.slds-picklist__options.slds-is-disabled:hover {
-  cursor: not-allowed; }
-
-.slds-dueling-list__options.slds-is-disabled .slds-listbox__option:hover,
-.slds-picklist__options.slds-is-disabled .slds-listbox__option:hover {
-  cursor: not-allowed;
-  background-color: transparent; }
-
-.slds-dueling-list__options.slds-is-disabled .slds-listbox__option:focus,
-.slds-picklist__options.slds-is-disabled .slds-listbox__option:focus {
-  background-color: transparent; }
 
 .slds-picklist_draggable,
 .slds-picklist--draggable {
@@ -10375,6 +10888,120 @@ a.slds-button--inverse:focus {
 
 .slds-picklist__item[aria-selected="true"] {
   background-color: #ecebea; }
+
+/**
+ * A dueling picklist inherits styles from the listbox component
+ * @summary Initializes a dueling picklist
+ *
+ * @name base
+ * @selector .slds-dueling-list
+ * @restrict div
+ * @variant
+ */
+.slds-dueling-list {
+  display: -ms-flexbox;
+  display: flex; }
+
+/**
+ * @summary Handles the layout of the dueling picklist
+ *
+ * @selector .slds-dueling-list__column
+ * @restrict .slds-dueling-list div
+ */
+.slds-dueling-list__column {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.slds-dueling-list__column .slds-button {
+  margin: 0.25rem; }
+
+.slds-dueling-list__column .slds-button:first-of-type {
+  margin-top: 1.5rem; }
+
+/**
+ * @summary Changes the layout of the dueling picklist to be responsive
+ *
+ * @selector .slds-dueling-list__column_responsive
+ * @restrict .slds-dueling-list__column
+ */
+.slds-dueling-list__column_responsive {
+  -ms-flex: 0 1 15rem;
+      flex: 0 1 15rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  min-width: 6rem; }
+
+.slds-dueling-list__column_responsive .slds-dueling-list__options {
+  width: auto;
+  max-width: 15rem; }
+
+/**
+ * @summary Bounding visual container for listbox of options
+ *
+ * @selector .slds-dueling-list__options
+ * @restrict .slds-dueling-list div
+ */
+.slds-dueling-list__options,
+.slds-picklist__options {
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0;
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  overflow: auto;
+  /**
+   * @summary Selected/dragging state of a listbox option
+   * @selector .slds-is-selected
+   * @restrict .slds-dueling-list__options div
+   */
+  /**
+   * @summary grabbed state of a listbox option
+   * @selector .slds-is-grabbed
+   * @restrict .slds-dueling-list__options div
+   */
+  /**
+   * @summary Disabled state of a picklist option
+   * @selector .slds-is-disabled
+   * @restrict .slds-dueling-list__options
+   */ }
+
+.slds-dueling-list__options [aria-selected="true"],
+.slds-picklist__options [aria-selected="true"] {
+  background-color: #0070d2;
+  color: white; }
+
+.slds-dueling-list__options [aria-selected="true"]:hover, .slds-dueling-list__options [aria-selected="true"]:focus,
+.slds-picklist__options [aria-selected="true"]:hover,
+.slds-picklist__options [aria-selected="true"]:focus {
+  background: #005fb2;
+  color: white; }
+
+.slds-dueling-list__options .slds-is-grabbed,
+.slds-picklist__options .slds-is-grabbed {
+  transform: rotate(3deg); }
+
+.slds-dueling-list__options.slds-is-disabled,
+.slds-picklist__options.slds-is-disabled {
+  background-color: #ecebea;
+  border-color: #c9c7c5;
+  color: #706e6b; }
+
+.slds-dueling-list__options.slds-is-disabled:hover,
+.slds-picklist__options.slds-is-disabled:hover {
+  cursor: not-allowed; }
+
+.slds-dueling-list__options.slds-is-disabled .slds-listbox__option:hover,
+.slds-picklist__options.slds-is-disabled .slds-listbox__option:hover {
+  cursor: not-allowed;
+  background-color: transparent; }
+
+.slds-dueling-list__options.slds-is-disabled .slds-listbox__option:focus,
+.slds-picklist__options.slds-is-disabled .slds-listbox__option:focus {
+  background-color: transparent; }
 
 /**
  * @summary Initiates a datepicker component
@@ -10480,6 +11107,10 @@ a.slds-button--inverse:focus {
 .slds-datepicker__month {
   font-size: 0.75rem; }
 
+.slds-has-error .slds-datepicker__filter .slds-select {
+  border: 1px solid #dddbda;
+  box-shadow: none; }
+
 /**
  * @summary Indicates days that are in previous/next months
  *
@@ -10564,14 +11195,6 @@ a.slds-button--inverse:focus {
   transform: translateX(-0.5rem);
   z-index: -1; }
 
-/**
- * @summary Initializes a timepicker
- *
- * @name base
- * @selector .slds-timepicker
- * @restrict div
- * @variant
- */
 .slds-datepicker_time,
 .slds-datepicker--time {
   max-width: 12rem;
@@ -10592,6 +11215,37 @@ a.slds-button--inverse:focus {
   background: #f3f2f2;
   text-decoration: none;
   cursor: pointer; }
+
+/**
+ * @summary Initializes a timepicker
+ *
+ * @name base
+ * @selector .slds-timepicker
+ * @restrict div
+ * @variant
+ */
+.slds-docked-composer_overflow__pill,
+.slds-docked-composer--overflow__pill {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.75rem;
+  height: inherit;
+  white-space: nowrap;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
+
+.slds-docked-composer_overflow__pill:hover, .slds-docked-composer_overflow__pill:focus,
+.slds-docked-composer--overflow__pill:hover,
+.slds-docked-composer--overflow__pill:focus {
+  color: white;
+  text-decoration: none; }
+
+.slds-docked-composer_overflow__pill .slds-text-body_small,
+.slds-docked-composer_overflow__pill .slds-text-body--small,
+.slds-docked-composer--overflow__pill .slds-text-body_small,
+.slds-docked-composer--overflow__pill .slds-text-body--small {
+  color: white;
+  margin-left: 0.5rem; }
 
 /**
  * Intializes docked composer container window
@@ -10768,25 +11422,6 @@ a.slds-button--inverse:focus {
   white-space: nowrap;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
-
-.slds-docked-composer_overflow__pill, .slds-docked-composer--overflow__pill {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 0.75rem;
-  height: inherit;
-  white-space: nowrap;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem; }
-
-.slds-docked-composer_overflow__pill:hover, .slds-docked-composer_overflow__pill:focus, .slds-docked-composer--overflow__pill:hover, .slds-docked-composer--overflow__pill:focus {
-  color: white;
-  text-decoration: none; }
-
-.slds-docked-composer_overflow__pill .slds-text-body_small,
-.slds-docked-composer_overflow__pill .slds-text-body--small, .slds-docked-composer--overflow__pill .slds-text-body_small,
-.slds-docked-composer--overflow__pill .slds-text-body--small {
-  color: white;
-  margin-left: 0.5rem; }
 
 .slds-docked-composer-modal .slds-modal__content {
   border-radius: 0.25rem; }
@@ -11028,132 +11663,58 @@ a.slds-button--inverse:focus {
       flex-direction: column;
   overflow: auto; }
 
-/**
- * Container that fixes the global header to the top of the viewport,
- * contains global header element
- *
- * @name base
- * @selector .slds-global-header_container
- * @restrict header
- * @variant
- */
-.slds-global-header_container {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100; }
-
-.slds-global-header_container .slds-assistive-text_focus,
-.slds-global-header_container .slds-assistive-text--focus {
-  background: white;
-  top: 0; }
-
-/**
- * @selector .slds-global-header
- * @restrict .slds-global-header_container div
- */
 .slds-global-header {
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
-  padding: 0.5rem 0;
-  height: 3.125rem;
-  -ms-flex-align: center;
-      align-items: center;
   /**
-   * A region within the global header
-   *
-   * @selector .slds-global-header__item
-   * @restrict .slds-global-header div, .slds-global-header ul
-   */
+    * Button icons on the global header
+    *
+    * @selector .slds-global-header__button_icon
+    * @restrict .slds-global-header__item button
+    * @deprecated
+    */
   /**
-   * Region that contains the search input, handles sizing
-   *
-   * @selector .slds-global-header__item_search
-   * @restrict .slds-global-header__item:nth-child(2)
-   */
+    * Button icon specifically for global actions
+    *
+    * @selector .slds-global-header__button_icon-actions
+    * @restrict .slds-global-header__item button
+    * @deprecated
+    */
   /**
-   * Container of the global header logo
-   *
-   * @selector .slds-global-header__logo
-   * @restrict .slds-global-header__item div
-   * @required
-   */
+    * Button icon specifically for global actions
+    *
+    * @selector .slds-global-header__button_icon-favorites
+    * @restrict .slds-global-header__item button
+    * @deprecated
+    */
   /**
-   * Button icons on the global header
-   *
-   * @selector .slds-global-header__button_icon
-   * @restrict .slds-global-header__item button
-   * @required
-   */
-  /**
-   * Button icon specifically for global actions
-   *
-   * @selector .slds-global-header__button_icon-actions
-   * @restrict .slds-global-header__item button
-   * @required
-   */
-  /**
-   * Button icon specifically for global actions
-   *
-   * @selector .slds-global-header__button_icon-favorites
-   * @restrict .slds-global-header__item button
-   * @required
-   */
-  /**
-   * Deal with sizing for global header icons
-   *
-   * @selector .global-header__icon
-   * @restrict .slds-global-header__item svg
-   * @required
-   */ }
-
-.slds-global-header__item {
-  padding: 0 1rem; }
-
-.slds-global-header__item_search, .slds-global-header__item--search {
-  -ms-flex: 0 1 27.5rem;
-      flex: 0 1 27.5rem;
-  padding: 0; }
-
-.slds-global-header__item_search .slds-input, .slds-global-header__item--search .slds-input {
-  padding-left: 3rem; }
-
-.slds-global-header__item_search .slds-input__icon_left,
-.slds-global-header__item_search .slds-input__icon--left, .slds-global-header__item--search .slds-input__icon_left,
-.slds-global-header__item--search .slds-input__icon--left {
-  left: 1.25rem; }
-
-.slds-global-header__logo {
-  width: 12.5rem;
-  height: 2.5rem;
-  background-image: url("/assets/images/logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center; }
+    * Deal with sizing for global header icons
+    *
+    * @selector .global-header__icon
+    * @restrict .slds-global-header__item svg
+    * @deprecated
+    */ }
 
 .slds-global-header__button_icon, .slds-global-header__button--icon {
   margin: 0 0.25rem;
-  color: #a6a6a6; }
+  color: #919191; }
 
 .slds-global-header__button_icon .slds-icon, .slds-global-header__button--icon .slds-icon {
-  fill: #a6a6a6; }
+  fill: #919191; }
 
 .slds-global-header__button_icon:hover:not(:disabled), .slds-global-header__button_icon:focus, .slds-global-header__button--icon:hover:not(:disabled), .slds-global-header__button--icon:focus {
-  color: #969696; }
+  color: #818181; }
 
 .slds-global-header__button_icon:hover:not(:disabled) .slds-icon,
 .slds-global-header__button_icon:focus .slds-icon, .slds-global-header__button--icon:hover:not(:disabled) .slds-icon,
 .slds-global-header__button--icon:focus .slds-icon {
-  fill: #969696; }
+  fill: #818181; }
 
 .slds-global-header__button_icon-actions, .slds-global-header__button--icon-actions {
-  background: #a6a6a6;
+  background: #919191;
   border-radius: 0.25rem;
   color: white; }
 
 .slds-global-header__button_icon-actions:hover, .slds-global-header__button_icon-actions:focus, .slds-global-header__button--icon-actions:hover, .slds-global-header__button--icon-actions:focus {
-  background-color: #969696;
+  background-color: #818181;
   color: white; }
 
 .slds-global-header__button_icon-actions .slds-button__icon, .slds-global-header__button--icon-actions .slds-button__icon {
@@ -11163,26 +11724,26 @@ a.slds-button--inverse:focus {
 .slds-global-header__button_icon-favorites, .slds-global-header__button--icon-favorites {
   color: white;
   /**
-     * Selected state for favorites button
-     *
-     * @selector .slds-is-selected
-     * @restrict .slds-global-header__button_icon-favorites
-     * @modifier
-     * @group stateful
-     */
+      * Selected state for favorites button
+      *
+      * @selector .slds-is-selected
+      * @restrict .slds-global-header__button_icon-favorites
+      * @deprecated
+      * @group stateful
+      */
   /**
-     * Disabled state for favorites button
-     *
-     * @selector .slds-is-disabled
-     * @restrict .slds-global-header__button_icon-favorites
-     * @modifier
-     */ }
+      * Disabled state for favorites button
+      *
+      * @selector .slds-is-disabled
+      * @restrict .slds-global-header__button_icon-favorites
+      * @deprecated
+      */ }
 
 .slds-global-header__button_icon-favorites .slds-icon,
 .slds-global-header__button_icon-favorites .slds-button__icon, .slds-global-header__button--icon-favorites .slds-icon,
 .slds-global-header__button--icon-favorites .slds-button__icon {
   color: white;
-  stroke: #a6a6a6;
+  stroke: #919191;
   stroke-width: 2px;
   stroke-linejoin: round;
   stroke-linecap: round; }
@@ -11195,7 +11756,7 @@ a.slds-button--inverse:focus {
 .slds-global-header__button--icon-favorites:focus .slds-icon,
 .slds-global-header__button--icon-favorites:focus .slds-button__icon {
   color: white;
-  stroke: #969696; }
+  stroke: #818181; }
 
 .slds-global-header__button_icon-favorites.slds-is-selected .slds-icon,
 .slds-global-header__button_icon-favorites.slds-is-selected .slds-button__icon, .slds-global-header__button--icon-favorites.slds-is-selected .slds-icon,
@@ -11239,15 +11800,313 @@ a.slds-button--inverse:focus {
   height: 1.25rem; }
 
 /**
- * @summary Handles styling for notification item interactions
+ * Container that fixes the global header to the top of the viewport,
+ * contains global header element
  *
- * @name notifications
- * @selector .slds-global-header__notification
- * @restrict .slds-global-header_container li
+ * @name base
+ * @selector .slds-global-header_container
+ * @restrict header
  * @variant
  */
+.slds-global-header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100; }
+
+.slds-global-header_container .slds-assistive-text_focus,
+.slds-global-header_container .slds-assistive-text--focus {
+  top: 0;
+  color: #5e5e5e;
+  background: white; }
+
+/**
+ * @selector .slds-global-header
+ * @restrict .slds-global-header_container div
+ */
+.slds-global-header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+  padding: 0.5rem 0;
+  height: 3.125rem;
+  -ms-flex-align: center;
+      align-items: center;
+  /**
+   * A region within the global header
+   *
+   * @selector .slds-global-header__item
+   * @restrict .slds-global-header div, .slds-global-header ul
+   */
+  /**
+   * Region that contains the search input, handles sizing
+   *
+   * @selector .slds-global-header__item_search
+   * @restrict .slds-global-header__item:nth-child(2)
+   */
+  /**
+   * Primary combobox that contains the search input, handles sizing
+   *
+   * @selector .slds-global-search__form-element div
+   * @restrict .slds-global-header__item_search
+   */
+  /**
+   * Container of the global header logo
+   *
+   * @selector .slds-global-header__logo
+   * @restrict .slds-global-header__item div
+   * @required
+   */ }
+
+.slds-global-header__item {
+  padding: 0 1rem; }
+
+.slds-global-header__item_search, .slds-global-header__item--search {
+  -ms-flex: 0 1 33.5rem;
+      flex: 0 1 33.5rem;
+  min-width: 27.5rem;
+  padding: 0; }
+
+.slds-global-header .slds-global-search__form-element .slds-input {
+  padding-left: 3rem; }
+
+.slds-global-header .slds-global-search__form-element .slds-input__icon_left,
+.slds-global-header .slds-global-search__form-element .slds-input__icon--left {
+  left: 1.25rem; }
+
+.slds-global-header .slds-global-search__form-element .slds-icon {
+  fill: #b0adab; }
+
+.slds-global-header__logo {
+  width: 12.5rem;
+  height: 2.5rem;
+  background-image: url("/assets/images/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center; }
+
+/**
+ * @summary Global actions component wrapper
+ * @selector .slds-global-actions
+ * @restrict .slds-global-header ul
+ */
+.slds-global-actions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+/**
+ * @summary List item for each global action
+ * @selector .slds-global-actions__item
+ * @restrict .slds-global-actions li
+ */
+.slds-global-actions__item {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem; }
+
+.slds-global-actions__item .slds-button_icon {
+  color: #919191; }
+
+/**
+ * @summary The actionable button inside of a global actions list item
+ * @selector .slds-global-actions__item-action
+ * @restrict .slds-global-actions__item button
+ */
+.slds-global-actions__item-action {
+  transition: color 200ms linear; }
+
+.slds-global-actions__item-action:hover:not(:disabled), .slds-global-actions__item-action:focus {
+  color: #818181; }
+
+.slds-global-actions__item-action:active {
+  animation: click-icon 120ms cubic-bezier(1, 1.9, 0.94, 0.98); }
+
+.slds-global-actions__item-action:active:not(:disabled) {
+  color: #5e5e5e; }
+
+@keyframes click-icon {
+  25% {
+    transform: scale(0.94, 0.94); }
+  100% {
+    transform: scale(0.98, 0.98); } }
+
+/**
+ * @summary User profile action icon
+ * @selector .slds-global-actions__avatar
+ * @restrict .slds-global-actions__item-action
+ */
+.slds-global-actions__avatar {
+  box-shadow: #818181 0 0 0 0;
+  border-radius: 50%;
+  border: 0;
+  margin-left: 0.5rem;
+  transition: transform 80ms ease-out, box-shadow 0.1s linear; }
+
+.slds-global-actions__avatar:hover, .slds-global-actions__avatar:focus {
+  box-shadow: #818181 0 0 0 2px; }
+
+/**
+ * @summary Favorites action button group
+ * @selector .slds-global-actions__favorites
+ * @restrict .slds-global-actions__item div
+ */
+.slds-global-actions__favorites {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0.5rem; }
+
+/**
+ * @summary Star icon inside of favorites button group
+ * @selector .slds-global-actions__favorites-action
+ * @restrict .slds-global-actions__favorites button
+ */
+.slds-global-actions__favorites-action {
+  border-color: #919191; }
+
+.slds-global-actions__favorites-action:hover {
+  border-color: #5e5e5e; }
+
+.slds-global-actions__favorites-action .slds-button__icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 200ms ease-out; }
+
+.slds-global-actions__favorites-action:hover:not(:disabled) .slds-button__icon {
+  transform: scale(1.1, 1.1);
+  transform-origin: 60% 40%; }
+
+.slds-global-actions__favorites-action.slds-is-selected {
+  background-color: #005583;
+  border-color: #005583; }
+
+.slds-global-actions__favorites-action.slds-is-selected:hover, .slds-global-actions__favorites-action.slds-is-selected:focus {
+  background-color: #005583;
+  border-color: #005583; }
+
+.slds-global-actions__favorites-action.slds-is-selected .slds-button__icon {
+  animation: click-favorites-icon 600ms cubic-bezier(0.46, 0.32, 0, 0.98); }
+
+.slds-global-actions__favorites-action:disabled, .slds-global-actions__favorites-action.slds-is-disabled {
+  color: rgba(166, 166, 166, 0.25);
+  border-color: rgba(166, 166, 166, 0.25); }
+
+/**
+ * @summary More dropdown icon inside of favorites button group
+ * @selector .slds-global-actions__favorites-more
+ * @restrict .slds-global-actions__favorites button
+ */
+.slds-global-actions__favorites-more {
+  width: auto;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  border-color: #919191; }
+
+.slds-global-actions__favorites-more:hover {
+  border-color: #5e5e5e; }
+
+@keyframes click-favorites-icon {
+  25% {
+    transform: scale(0.85, 0.85) rotate(15deg); }
+  75% {
+    transform: scale(1.2, 1.2) rotate(0deg); }
+  100% {
+    transform: scale(1, 1) rotate(0deg); } }
+
+/**
+ * @summary Task action icon
+ * @selector .slds-global-actions__task
+ * @restrict .slds-global-actions__item-action
+ */
+.slds-global-actions__task {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #919191;
+  position: relative;
+  top: -1px; }
+
+.slds-global-actions__task:hover {
+  background: #818181; }
+
+.slds-global-actions__task:active {
+  background: #5e5e5e; }
+
+.slds-global-actions__task.slds-global-actions__item-action, .slds-global-actions__task.slds-global-actions__item-action:hover, .slds-global-actions__task.slds-global-actions__item-action:active {
+  color: #fff; }
+
+.slds-global-actions__task .slds-button__icon {
+  width: 1rem;
+  height: 1rem; }
+
+/**
+ * @summary Notification action icon
+ * @selector .slds-global-actions__notifications
+ * @restrict .slds-global-actions__item-action
+ */
+.slds-global-actions__notifications {
+  position: relative; }
+
+.slds-global-actions__notifications.slds-incoming-notification {
+  animation: bell 0.8s ease-in-out; }
+
+/**
+ * @summary Notification counter badge
+ * @selector .slds-notification-badge
+ * @restrict .slds-global-actions__item span
+ */
+.slds-notification-badge {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  background: #bf0201;
+  color: #fff;
+  border-radius: 15rem;
+  min-width: 1rem;
+  min-height: 1rem;
+  text-align: center;
+  font-size: 0.625rem;
+  padding: 0 0.125rem;
+  opacity: 0;
+  pointer-events: none; }
+
+.slds-notification-badge.slds-show-notification {
+  animation: ding 0.8s ease-out;
+  opacity: 1;
+  transition-delay: 0.5s;
+  transform-origin: 1.1875rem 0; }
+
+@keyframes ding {
+  75% {
+    transform: scale(0.5, 0.5); }
+  85% {
+    transform: scale(1.5, 1.5); }
+  100% {
+    transform: scale(1, 1); } }
+
+@keyframes bell {
+  45% {
+    transform: rotate(15deg); }
+  57% {
+    transform: rotate(-15deg); }
+  70% {
+    transform: rotate(7deg); }
+  77% {
+    transform: rotate(-5deg); } }
+
+/**
+ * @summary Handles styling for notification item interactions
+ */
 .slds-global-header__notification {
-  border-bottom: 1px solid #dddbda; }
+  border-bottom: 1px solid #dddbda;
+  padding: 0.25rem; }
 
 .slds-global-header__notification_unread, .slds-global-header__notification--unread {
   background-color: #ecebea; }
@@ -11685,6 +12544,163 @@ a.slds-button--inverse:focus {
   background: #f59331; }
 
 /**
+ * @summary Container that fixes the builder header to the top of the viewport, contains builder header element
+ *
+ * @name base
+ * @selector .slds-builder-header_container
+ * @restrict div
+ * @variant
+ */
+.slds-builder-header_container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100; }
+
+/**
+ * @summary Creates builder specific global header
+ * @selector .slds-builder-header
+ * @restrict .slds-builder-header_container header
+ */
+.slds-builder-header {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.125rem;
+  background: #16325c;
+  color: white; }
+
+/**
+ * @summary Direct child descendant item of the builder header
+ * @selector .slds-builder-header__item
+ * @restrict .slds-builder-header div, .slds-builder-header nav
+ */
+.slds-builder-header__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  white-space: nowrap; }
+
+.slds-builder-header__item + .slds-builder-header__item {
+  border-left: 1px solid currentColor; }
+
+/**
+ * @summary Label inside of a header item
+ * @selector .slds-builder-header__item-label
+ * @restrict .slds-builder-header__item span, .slds-builder-header__item div, .slds-builder-header__item h1
+ */
+.slds-builder-header__item-action,
+.slds-builder-header__item-label {
+  color: currentColor;
+  padding: 0 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  min-width: 0%;
+  height: 100%; }
+
+/**
+ * @summary Action or label inside of a header item
+ * @selector .slds-builder-header__item-action
+ * @restrict .slds-builder-header__item a, .slds-builder-header__item button
+ */
+.slds-builder-header__item-action {
+  transition: all 150ms linear; }
+
+.slds-builder-header__item-action:hover, .slds-builder-header__item-action:focus {
+  color: #b0adab;
+  text-decoration: none; }
+
+.slds-builder-header__item-action:focus {
+  text-decoration: underline;
+  box-shadow: none;
+  outline: none; }
+
+/**
+ * @summary Container around builder header's nav region
+ * @selector .slds-builder-header__nav
+ * @restrict .slds-builder-header nav
+ */
+.slds-builder-header__nav,
+.slds-builder-header__utilities {
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+
+/**
+ * @summary List containing navigation items of a builder header
+ * @selector .slds-builder-header__nav-list
+ * @restrict .slds-builder-header__nav ul
+ */
+.slds-builder-header__nav-list {
+  display: -ms-flexbox;
+  display: flex; }
+
+/**
+ * @summary Container around builder header's utiltity region containing the back and help links
+ * @selector .slds-builder-header__utilities
+ * @restrict .slds-builder-header div
+ */
+.slds-builder-header__utilities {
+  margin-left: auto; }
+
+/**
+ * @summary Items of the builder headers nav
+ * @selector .slds-builder-header__nav-item
+ * @restrict .slds-builder-header__nav li
+ */
+.slds-builder-header__nav-item,
+.slds-builder-header__utilities-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+
+.slds-builder-header__nav-item + .slds-builder-header__nav-item,
+.slds-builder-header__nav-item + .slds-builder-header__utilities-item,
+.slds-builder-header__utilities-item + .slds-builder-header__nav-item,
+.slds-builder-header__utilities-item + .slds-builder-header__utilities-item {
+  border-left: 1px solid currentColor; }
+
+/**
+ * @summary Builder header toolbar
+ * @selector .slds-builder-toolbar
+ * @restrict .slds-builder-header_container div
+ */
+.slds-builder-toolbar {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-bottom: 1px solid #dddbda; }
+
+/**
+ * @summary Region of Builder header toolbar that contains the document actions
+ * @selector .slds-builder-toolbar__actions
+ * @restrict .slds-builder-toolbar div
+ */
+.slds-builder-toolbar__actions {
+  margin-left: auto; }
+
+/**
+ * @summary Region containing button icon groups of Builder header toolbar
+ * @selector .slds-builder-toolbar__item-group
+ * @restrict .slds-builder-toolbar div
+ */
+.slds-builder-toolbar__item-group + .slds-builder-toolbar__item-group {
+  margin-left: 0.25rem; }
+
+/**
  * The discussion feed publisher is found at the top of a feed stream. It contains
  * basic and advanced publishing capibilities.
  *
@@ -11879,9 +12895,6 @@ a.slds-button--inverse:focus {
   .slds-feed__item {
     padding: 0.75rem 0; } }
 
-.slds-comment__content {
-  padding: 0.25rem 0; }
-
 .slds-comment__replies {
   padding-top: 1rem;
   margin-left: 3.75rem; }
@@ -11939,6 +12952,9 @@ a.slds-button--inverse:focus {
 
 .slds-attachments__item + .slds-attachments__item {
   margin-top: 1rem; }
+
+.slds-comment__content {
+  padding: 0.25rem 0; }
 
 /**
  * Container for feed item comments
@@ -12311,7 +13327,7 @@ a.slds-button--inverse:focus {
  */
 @media (min-width: 48em) {
   .slds-modal_medium .slds-modal__container {
-    width: 90%;
+    width: 70%;
     max-width: 75rem;
     min-width: 40rem; } }
 
@@ -12329,34 +13345,6 @@ a.slds-button--inverse:focus {
     width: 90%;
     max-width: none;
     min-width: 40rem; } }
-
-.slds-modal-backdrop {
-  transition-duration: 0.4s;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(43, 40, 38, 0.6);
-  z-index: 9000;
-  /**
-   * Allows the backdrop to be visible.
-   *
-   * @selector .slds-backdrop_open
-   * @restrict .slds-backdrop
-   * @notes Apply this class to a modal backdrop with JavaScript to make it visible.
-   * @modifier
-   * @required
-   */ }
-
-.slds-modal-backdrop_open, .slds-modal-backdrop--open {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.4s linear; }
 
 /**
  * Creates the shaded backdrop used behind the modal.
@@ -12551,7 +13539,6 @@ a.slds-button--inverse:focus {
  * @name base
  * @selector .slds-app-launcher
  * @restrict section
- * @support prototype
  * @variant
  */
 .slds-app-launcher {
@@ -12706,6 +13693,9 @@ a.slds-button--inverse:focus {
   text-align: center;
   cursor: pointer; }
 
+.slds-visual-picker + .slds-visual-picker {
+  margin-left: 1rem; }
+
 .slds-visual-picker:active .slds-visual-picker__figure {
   border: 1px solid #1589ee;
   box-shadow: 0 0 0 1px #1589ee inset; }
@@ -12746,6 +13736,9 @@ a.slds-button--inverse:focus {
 
 .slds-visual-picker input:checked ~ label .slds-visual-picker__figure {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16); }
+
+.slds-visual-picker input:focus ~ label .slds-visual-picker__body > *:first-child {
+  text-decoration: underline; }
 
 .slds-visual-picker input:checked ~ label .slds-is-not-selected {
   display: none; }
@@ -12879,6 +13872,35 @@ a.slds-button--inverse:focus {
   right: 0.625rem;
   width: 0.5rem;
   height: 0.5rem; }
+
+/**
+ * @summary Initializes a vertical visual picker component
+ *
+ * @name vertical
+ * @selector .slds-visual-picker_vertical
+ * @restrict .slds-visual-picker
+ * @variant
+ */
+.slds-visual-picker_vertical {
+  width: 25rem;
+  display: -ms-flexbox;
+  display: flex; }
+
+.slds-visual-picker_vertical .slds-visual-picker__figure {
+  text-align: left;
+  padding: 1rem;
+  height: 6rem; }
+
+.slds-visual-picker_vertical + .slds-visual-picker_vertical {
+  margin-left: 0;
+  margin-top: 1rem; }
+
+.slds-visual-picker_vertical .slds-visual-picker__figure,
+.slds-visual-picker_vertical .slds-visual-picker__body {
+  width: 25rem; }
+
+.slds-visual-picker_vertical input:focus ~ label .slds-visual-picker__text .slds-text-heading_medium {
+  text-decoration: underline; }
 
 /**
  * @summary Initializes pill
@@ -13600,13 +14622,6 @@ a.slds-button--inverse:focus {
   * @restrict .slds-path__item
   */
   /**
-  * @summary Creates the active stage of the sales path
-  *
-  * @selector .slds-is-active
-  * @restrict .slds-path__item
-  * @notes This class must be placed on the item programatically when the guidance section is activated
-  */
-  /**
    * @summary Creates success stage of the path
    *
    * @selector .slds-is-won
@@ -13618,6 +14633,13 @@ a.slds-button--inverse:focus {
    * @selector .slds-is-complete
    * @restrict .slds-path__item
    */
+  /**
+  * @summary Creates the active stage of the sales path
+  *
+  * @selector .slds-is-active
+  * @restrict .slds-path__item
+  * @notes This class must be placed on the item programatically when the guidance section is activated
+  */
   /**
    * @summary Creates the current stage of the path
    *
@@ -13640,21 +14662,6 @@ a.slds-button--inverse:focus {
 
 .slds-path__nav .slds-is-incomplete .slds-path__link {
   color: #3e3e3c; }
-
-.slds-path__nav .slds-is-active {
-  background-color: #061c3f; }
-
-.slds-path__nav .slds-is-active .slds-path__link {
-  color: white; }
-
-.slds-path__nav .slds-is-active:hover {
-  background-color: #061c3f; }
-
-.slds-path__nav .slds-is-active:hover + .slds-path__item:before {
-  background-color: #061c3f; }
-
-.slds-path__nav .slds-is-active + .slds-path__item:before {
-  background-color: #061c3f; }
 
 .slds-path__nav .slds-is-active .slds-path__title,
 .slds-path__nav .slds-is-active.slds-is-won .slds-path__title {
@@ -13687,6 +14694,34 @@ a.slds-button--inverse:focus {
 
 .slds-path__nav .slds-is-complete:hover .slds-path__link {
   color: white; }
+
+.slds-path__nav .slds-is-active,
+.slds-path__nav .slds-is-complete.slds-is-focused {
+  background-color: #061c3f; }
+
+.slds-path__nav .slds-is-active .slds-path__stage,
+.slds-path__nav .slds-is-complete.slds-is-focused .slds-path__stage {
+  transform: translateY(-50%) rotateX(-180deg); }
+
+.slds-path__nav .slds-is-active .slds-path__title,
+.slds-path__nav .slds-is-complete.slds-is-focused .slds-path__title {
+  transform: rotateX(0deg); }
+
+.slds-path__nav .slds-is-active .slds-path__link,
+.slds-path__nav .slds-is-complete.slds-is-focused .slds-path__link {
+  color: white; }
+
+.slds-path__nav .slds-is-active:hover,
+.slds-path__nav .slds-is-complete.slds-is-focused:hover {
+  background-color: #16325c; }
+
+.slds-path__nav .slds-is-active:hover + .slds-path__item:before,
+.slds-path__nav .slds-is-complete.slds-is-focused:hover + .slds-path__item:before {
+  background-color: #16325c; }
+
+.slds-path__nav .slds-is-active + .slds-path__item:before,
+.slds-path__nav .slds-is-complete.slds-is-focused + .slds-path__item:before {
+  background-color: #061c3f; }
 
 .slds-path__nav .slds-is-current {
   background-color: #0070d2; }
@@ -13866,7 +14901,8 @@ a.slds-button--inverse:focus {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 0.75rem;
-  border-radius: 15rem; }
+  border-radius: 15rem;
+  min-width: 13rem; }
 
 /**
  * @summary Actionable button that invokes a current stage of the path
@@ -14085,6 +15121,29 @@ a.slds-button--inverse:focus {
   background: #4bca81; }
 
 /**
+ * @summary Create a vertical progress bar
+ *
+ * @selector .slds-progress-bar_vertical
+ * @restrict .slds-progress-bar
+ * @modifier
+ */
+.slds-progress-bar_vertical {
+  height: 100%;
+  width: 0.5rem; }
+
+.slds-progress-bar_vertical.slds-progress-bar_x-small {
+  width: 0.125rem; }
+
+.slds-progress-bar_vertical.slds-progress-bar_small {
+  width: 0.25rem; }
+
+.slds-progress-bar_vertical.slds-progress-bar_medium {
+  width: 0.5rem; }
+
+.slds-progress-bar_vertical.slds-progress-bar_large {
+  width: 0.75rem; }
+
+/**
  * @name base
  * @selector .slds-progress
  * @restrict div
@@ -14222,7 +15281,7 @@ a.slds-button--inverse:focus {
  * Dot indicator for each step
  *
  * @selector .slds-progress__marker
- * @restrict .slds-progress ol li button
+ * @restrict .slds-progress ol li button, .slds-progress ol li div, .slds-progress ol li span
  * @required
  */
 .slds-progress__marker {
@@ -14244,6 +15303,112 @@ a.slds-button--inverse:focus {
 .slds-progress__marker_icon, .slds-progress__marker--icon {
   width: auto;
   height: auto; }
+
+/**
+ * @name vertical
+ * @selector .slds-progress_vertical
+ * @restrict .slds-progress
+ * @variant
+ */
+.slds-progress_vertical {
+  max-width: none;
+  /**
+   * @summary Support content in line with progress marker
+   *
+   * @selector .slds-progress__item_content
+   * @restrict .slds-progress__item div
+   */
+  /**
+   * @summary Add borders between progress items
+   *
+   * @selector .slds-progress__list-bordered
+   * @restrict .slds-progress__list
+   */
+  /**
+   * Turn completed stage checkmark green
+   *
+   * @selector .slds-progress__marker_icon-success
+   * @restrict .slds-progress__marker_icon
+   */ }
+
+.slds-progress_vertical .slds-progress__list {
+  display: block; }
+
+.slds-progress_vertical .slds-progress__item {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: left;
+      align-self: left;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0; }
+
+.slds-progress_vertical .slds-progress__item:before, .slds-progress_vertical .slds-progress__item:after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  width: 2px;
+  background-color: #dddbda; }
+
+.slds-progress_vertical .slds-progress__item:before {
+  top: 0;
+  bottom: 50%; }
+
+.slds-progress_vertical .slds-progress__item:after {
+  top: 50%;
+  bottom: 0; }
+
+.slds-progress_vertical .slds-progress__item:first-child:before, .slds-progress_vertical .slds-progress__item:last-child:after {
+  display: none; }
+
+.slds-progress_vertical .slds-progress__item.slds-is-completed:before, .slds-progress_vertical .slds-progress__item.slds-is-completed:after, .slds-progress_vertical .slds-progress__item.slds-is-active:before, .slds-progress_vertical .slds-progress__item.slds-has-error:before {
+  background-color: #5eb4ff; }
+
+.slds-progress_vertical .slds-progress__item_content {
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 0.75rem;
+  padding-bottom: 0.75rem; }
+
+.slds-progress_vertical .slds-progress__list-bordered .slds-progress__item:not(:last-child) .slds-progress__item_content {
+  border-bottom: 1px #dddbda solid; }
+
+.slds-progress_vertical .slds-progress__marker {
+  margin-right: 1rem;
+  min-width: 1rem;
+  z-index: 5; }
+
+.slds-progress_vertical .slds-progress__marker_icon {
+  border-right: 0;
+  border-left: 0; }
+
+.slds-progress_vertical .slds-progress__item.slds-is-completed .slds-progress__marker_icon {
+  margin-left: 1px; }
+
+.slds-progress_vertical .slds-progress__item.slds-is-completed .slds-progress__marker_icon svg {
+  fill: #5eb4ff; }
+
+.slds-progress_vertical .slds-progress__item.slds-is-completed .slds-progress__marker_icon-success svg {
+  fill: #4bca81; }
+
+.slds-progress_vertical .slds-progress__item.slds-has-error .slds-progress__marker_icon {
+  margin-left: 1px; }
+
+.slds-progress_vertical .slds-progress__item.slds-has-error .slds-progress__marker_icon svg {
+  fill: #c23934; }
+
+/**
+ * @summary Creates a green bar for the vertical variant
+ *
+ * @selector .slds-progress_success
+ * @restrict .slds-progress_vertical
+ */
+.slds-progress_success .slds-progress__item.slds-is-completed:before, .slds-progress_success .slds-progress__item.slds-is-completed:after, .slds-progress_success .slds-progress__item.slds-is-active:before, .slds-progress_success .slds-progress__item.slds-has-error:before {
+  opacity: 0.3;
+  background-color: #4bca81; }
 
 /**
  * @summary Progress Ring component
@@ -14356,6 +15521,32 @@ a.slds-button--inverse:focus {
   background: #4bca81; }
 
 /**
+ * @summary Larger ring size
+ *
+ * @selector .slds-progress-ring_large
+ * @restrict .slds-progress-ring
+ * @modifier
+ * @group size
+ */
+.slds-progress-ring_large {
+  height: 2rem;
+  width: 2rem; }
+
+.slds-progress-ring_large .slds-icon {
+  width: 1rem; }
+
+/**
+ * @summary Blue progress ring
+ *
+ * @selector .slds-progress-ring_active-step
+ * @restrict .slds-progress-ring
+ * @modifier
+ * @group color
+ */
+.slds-progress-ring_active-step .slds-progress-ring__path {
+  fill: #1589ee; }
+
+/**
  * The default rich text editor contains a minimal amount of text formatting capabilities.
  *
  * @name base
@@ -14414,13 +15605,11 @@ a.slds-button--inverse:focus {
  * @restrict .slds-rich-text-editor__toolbar div
  */
 .slds-rich-text-editor__select {
-  margin-right: 0.25rem; }
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem; }
 
 .slds-region_narrow .slds-combobox {
   max-width: 11rem; }
-
-.slds-region_narrow .slds-rich-text-editor__spacing-wrapper {
-  margin-bottom: 0.25rem; }
 
 /**
  * Focus state for rich text editor
@@ -14442,6 +15631,14 @@ a.slds-button--inverse:focus {
  */
 .slds-rich-text-editor.slds-has-error {
   border: 2px solid #c23934; }
+
+.slds-rich-text-editor.slds-has-error .slds-input {
+  box-shadow: none; }
+
+.slds-rich-text-editor.slds-has-error .slds-form-element__help {
+  background: white;
+  margin-top: 0;
+  border-radius: 0.25rem; }
 
 /**
  * Textarea for Rich Text Editor which is an editable div
@@ -14499,6 +15696,199 @@ a.slds-button--inverse:focus {
   height: 1px !important;
   overflow: hidden !important;
   clip: rect(0 0 0 0) !important; }
+
+.slds-rich-text-editor__textarea p,
+.slds-rich-text-editor__textarea ol,
+.slds-rich-text-editor__textarea ul,
+.slds-rich-text-editor__textarea pre,
+.slds-rich-text-editor__textarea blockquote,
+.slds-rich-text-editor__textarea h1,
+.slds-rich-text-editor__textarea h2,
+.slds-rich-text-editor__textarea h3,
+.slds-rich-text-editor__textarea h4,
+.slds-rich-text-editor__textarea h5,
+.slds-rich-text-editor__textarea h6 {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol,
+.slds-rich-text-editor__textarea ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 1.5em; }
+
+.slds-rich-text-editor__textarea ol > li {
+  list-style-type: none; }
+
+.slds-rich-text-editor__textarea ul > li {
+  list-style-type: none; }
+
+.slds-rich-text-editor__textarea ul > li:before {
+  content: '\2022';
+  vertical-align: middle;
+  display: inline-block;
+  line-height: normal; }
+
+.slds-rich-text-editor__textarea ul[data-checked="true"], .slds-rich-text-editor__textarea ul[data-checked="false"] {
+  pointer-events: none; }
+
+.slds-rich-text-editor__textarea ul[data-checked="true"] > li:before {
+  color: #777;
+  cursor: pointer;
+  pointer-events: all; }
+
+.slds-rich-text-editor__textarea ul[data-checked="false"] > li:before {
+  color: #777;
+  cursor: pointer;
+  pointer-events: all; }
+
+.slds-rich-text-editor__textarea ul[data-checked="true"] > li:before {
+  content: '\2611'; }
+
+.slds-rich-text-editor__textarea ul[data-checked="false"] > li:before {
+  content: '\2610'; }
+
+.slds-rich-text-editor__textarea li:before {
+  display: inline-block;
+  margin-right: 0.3em;
+  text-align: right;
+  white-space: nowrap;
+  width: 1.2em; }
+
+.slds-rich-text-editor__textarea li:not(.ql-direction-rtl):before {
+  margin-left: -1.5em; }
+
+.slds-rich-text-editor__textarea ol li,
+.slds-rich-text-editor__textarea ul li {
+  padding-left: 1.5em; }
+
+.slds-rich-text-editor__textarea ol li {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  counter-increment: list-num; }
+
+.slds-rich-text-editor__textarea ol li:before {
+  content: counter(list-num, decimal) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-1 {
+  counter-increment: list-1;
+  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-1:before {
+  content: counter(list-1, lower-alpha) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-2 {
+  counter-increment: list-2;
+  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-2:before {
+  content: counter(list-2, lower-roman) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-3 {
+  counter-increment: list-3;
+  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-3:before {
+  content: counter(list-3, decimal) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-4 {
+  counter-increment: list-4;
+  counter-reset: list-5 list-6 list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-4:before {
+  content: counter(list-4, lower-alpha) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-5 {
+  counter-increment: list-5;
+  counter-reset: list-6 list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-5:before {
+  content: counter(list-5, lower-roman) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-6 {
+  counter-increment: list-6;
+  counter-reset: list-7 list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-6:before {
+  content: counter(list-6, decimal) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-7 {
+  counter-increment: list-7;
+  counter-reset: list-8 list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-7:before {
+  content: counter(list-7, lower-alpha) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-8 {
+  counter-increment: list-8;
+  counter-reset: list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-8:before {
+  content: counter(list-8, lower-roman) ". "; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-9 {
+  counter-increment: list-9; }
+
+.slds-rich-text-editor__textarea ol li.ql-indent-9:before {
+  content: counter(list-9, decimal) ". "; }
+
+.slds-rich-text-editor__textarea ul li.ql-indent-1:before {
+  content: '\25e6'; }
+
+.slds-rich-text-editor__textarea ul li.ql-indent-2:before, .slds-rich-text-editor__textarea ul li.ql-indent-3:before, .slds-rich-text-editor__textarea ul li.ql-indent-4:before, .slds-rich-text-editor__textarea ul li.ql-indent-5:before, .slds-rich-text-editor__textarea ul li.ql-indent-6:before, .slds-rich-text-editor__textarea ul li.ql-indent-7:before, .slds-rich-text-editor__textarea ul li.ql-indent-8:before {
+  content: '\25aa'; }
+
+.slds-rich-text-editor__textarea li.ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 4.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 4.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 7.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 7.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 10.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 10.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 13.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 13.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 16.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 16.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 19.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 19.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 22.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 22.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 25.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 25.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 28.5em; }
+
+.slds-rich-text-editor__textarea li.ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 28.5em; }
 
 .slds-rich-text-editor__textarea,
 .slds-rich-text-editor__output {
@@ -14569,7 +15959,8 @@ a.slds-button--inverse:focus {
 
 .slds-rich-text-editor__textarea ul ul,
 .slds-rich-text-editor__output ul ul {
-  list-style: circle; }
+  list-style: circle;
+  margin-bottom: 0; }
 
 .slds-rich-text-editor__textarea ul ul ul,
 .slds-rich-text-editor__output ul ul ul {
@@ -14578,7 +15969,8 @@ a.slds-button--inverse:focus {
 .slds-rich-text-editor__textarea ul ol,
 .slds-rich-text-editor__output ul ol {
   margin-left: 1.5rem;
-  list-style: decimal; }
+  list-style: decimal;
+  margin-bottom: 0; }
 
 .slds-rich-text-editor__textarea ol,
 .slds-rich-text-editor__output ol {
@@ -14587,7 +15979,8 @@ a.slds-button--inverse:focus {
 
 .slds-rich-text-editor__textarea ol ol,
 .slds-rich-text-editor__output ol ol {
-  list-style: lower-alpha; }
+  list-style: lower-alpha;
+  margin-bottom: 0; }
 
 .slds-rich-text-editor__textarea ol ol ol,
 .slds-rich-text-editor__output ol ol ol {
@@ -14596,7 +15989,8 @@ a.slds-button--inverse:focus {
 .slds-rich-text-editor__textarea ol ul,
 .slds-rich-text-editor__output ol ul {
   margin-left: 1.5rem;
-  list-style: disc; }
+  list-style: disc;
+  margin-bottom: 0; }
 
 .slds-rich-text-editor__textarea dd,
 .slds-rich-text-editor__output dd {
@@ -14647,343 +16041,77 @@ a.slds-button--inverse:focus {
 .slds-rich-text-editor__output .serif {
   font-family: serif; }
 
-.slds-rich-text-editor__textarea p,
-.slds-rich-text-editor__textarea ol,
-.slds-rich-text-editor__textarea ul,
-.slds-rich-text-editor__textarea pre,
-.slds-rich-text-editor__textarea blockquote,
-.slds-rich-text-editor__textarea h1,
-.slds-rich-text-editor__textarea h2,
-.slds-rich-text-editor__textarea h3,
-.slds-rich-text-editor__textarea h4,
-.slds-rich-text-editor__textarea h5,
-.slds-rich-text-editor__textarea h6,
-.slds-rich-text-editor__output p,
-.slds-rich-text-editor__output ol,
-.slds-rich-text-editor__output ul,
-.slds-rich-text-editor__output pre,
-.slds-rich-text-editor__output blockquote,
-.slds-rich-text-editor__output h1,
-.slds-rich-text-editor__output h2,
-.slds-rich-text-editor__output h3,
-.slds-rich-text-editor__output h4,
-.slds-rich-text-editor__output h5,
-.slds-rich-text-editor__output h6 {
-  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol,
-.slds-rich-text-editor__textarea ul,
-.slds-rich-text-editor__output ol,
-.slds-rich-text-editor__output ul {
-  margin: 0;
-  padding: 0;
-  padding-left: 1.5em; }
-
-.slds-rich-text-editor__textarea ol > li,
-.slds-rich-text-editor__output ol > li {
-  list-style-type: none; }
-
-.slds-rich-text-editor__textarea ul > li,
-.slds-rich-text-editor__output ul > li {
-  list-style-type: none; }
-
-.slds-rich-text-editor__textarea ul > li:before,
-.slds-rich-text-editor__output ul > li:before {
-  content: '\2022';
-  font-size: 1.4em;
-  vertical-align: middle;
-  display: inline-block;
-  line-height: normal; }
-
-.slds-rich-text-editor__textarea ul[data-checked="true"], .slds-rich-text-editor__textarea ul[data-checked="false"],
-.slds-rich-text-editor__output ul[data-checked="true"],
-.slds-rich-text-editor__output ul[data-checked="false"] {
-  pointer-events: none; }
-
-.slds-rich-text-editor__textarea ul[data-checked="true"] > li:before,
-.slds-rich-text-editor__output ul[data-checked="true"] > li:before {
-  color: #777;
-  cursor: pointer;
-  pointer-events: all; }
-
-.slds-rich-text-editor__textarea ul[data-checked="false"] > li:before,
-.slds-rich-text-editor__output ul[data-checked="false"] > li:before {
-  color: #777;
-  cursor: pointer;
-  pointer-events: all; }
-
-.slds-rich-text-editor__textarea ul[data-checked="true"] > li:before,
-.slds-rich-text-editor__output ul[data-checked="true"] > li:before {
-  content: '\2611'; }
-
-.slds-rich-text-editor__textarea ul[data-checked="false"] > li:before,
-.slds-rich-text-editor__output ul[data-checked="false"] > li:before {
-  content: '\2610'; }
-
-.slds-rich-text-editor__textarea li:before,
-.slds-rich-text-editor__output li:before {
-  display: inline-block;
-  margin-right: 0.3em;
-  text-align: right;
-  white-space: nowrap;
-  width: 1.2em; }
-
-.slds-rich-text-editor__textarea li:not(.ql-direction-rtl):before,
-.slds-rich-text-editor__output li:not(.ql-direction-rtl):before {
-  margin-left: -1.5em; }
-
-.slds-rich-text-editor__textarea ol li,
-.slds-rich-text-editor__textarea ul li,
-.slds-rich-text-editor__output ol li,
-.slds-rich-text-editor__output ul li {
-  padding-left: 1.5em; }
-
-.slds-rich-text-editor__textarea ol li,
-.slds-rich-text-editor__output ol li {
-  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
-  counter-increment: list-num; }
-
-.slds-rich-text-editor__textarea ol li:before,
-.slds-rich-text-editor__output ol li:before {
-  content: counter(list-num, decimal) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-1,
-.slds-rich-text-editor__output ol li.ql-indent-1 {
-  counter-increment: list-1;
-  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-1:before,
-.slds-rich-text-editor__output ol li.ql-indent-1:before {
-  content: counter(list-1, lower-alpha) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-2,
-.slds-rich-text-editor__output ol li.ql-indent-2 {
-  counter-increment: list-2;
-  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-2:before,
-.slds-rich-text-editor__output ol li.ql-indent-2:before {
-  content: counter(list-2, lower-roman) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-3,
-.slds-rich-text-editor__output ol li.ql-indent-3 {
-  counter-increment: list-3;
-  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-3:before,
-.slds-rich-text-editor__output ol li.ql-indent-3:before {
-  content: counter(list-3, decimal) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-4,
-.slds-rich-text-editor__output ol li.ql-indent-4 {
-  counter-increment: list-4;
-  counter-reset: list-5 list-6 list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-4:before,
-.slds-rich-text-editor__output ol li.ql-indent-4:before {
-  content: counter(list-4, lower-alpha) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-5,
-.slds-rich-text-editor__output ol li.ql-indent-5 {
-  counter-increment: list-5;
-  counter-reset: list-6 list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-5:before,
-.slds-rich-text-editor__output ol li.ql-indent-5:before {
-  content: counter(list-5, lower-roman) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-6,
-.slds-rich-text-editor__output ol li.ql-indent-6 {
-  counter-increment: list-6;
-  counter-reset: list-7 list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-6:before,
-.slds-rich-text-editor__output ol li.ql-indent-6:before {
-  content: counter(list-6, decimal) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-7,
-.slds-rich-text-editor__output ol li.ql-indent-7 {
-  counter-increment: list-7;
-  counter-reset: list-8 list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-7:before,
-.slds-rich-text-editor__output ol li.ql-indent-7:before {
-  content: counter(list-7, lower-alpha) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-8,
-.slds-rich-text-editor__output ol li.ql-indent-8 {
-  counter-increment: list-8;
-  counter-reset: list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-8:before,
-.slds-rich-text-editor__output ol li.ql-indent-8:before {
-  content: counter(list-8, lower-roman) ". "; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-9,
-.slds-rich-text-editor__output ol li.ql-indent-9 {
-  counter-increment: list-9; }
-
-.slds-rich-text-editor__textarea ol li.ql-indent-9:before,
-.slds-rich-text-editor__output ol li.ql-indent-9:before {
-  content: counter(list-9, decimal) ". "; }
-
-.slds-rich-text-editor__textarea ul li.ql-indent-1:before,
-.slds-rich-text-editor__output ul li.ql-indent-1:before {
-  content: '\25e6'; }
-
-.slds-rich-text-editor__textarea ul li.ql-indent-2:before, .slds-rich-text-editor__textarea ul li.ql-indent-3:before, .slds-rich-text-editor__textarea ul li.ql-indent-4:before, .slds-rich-text-editor__textarea ul li.ql-indent-5:before, .slds-rich-text-editor__textarea ul li.ql-indent-6:before, .slds-rich-text-editor__textarea ul li.ql-indent-7:before, .slds-rich-text-editor__textarea ul li.ql-indent-8:before,
-.slds-rich-text-editor__output ul li.ql-indent-2:before,
-.slds-rich-text-editor__output ul li.ql-indent-3:before,
-.slds-rich-text-editor__output ul li.ql-indent-4:before,
-.slds-rich-text-editor__output ul li.ql-indent-5:before,
-.slds-rich-text-editor__output ul li.ql-indent-6:before,
-.slds-rich-text-editor__output ul li.ql-indent-7:before,
-.slds-rich-text-editor__output ul li.ql-indent-8:before {
-  content: '\25aa'; }
-
 .slds-rich-text-editor__textarea .ql-indent-1:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-1:not(.ql-direction-rtl) {
   padding-left: 3em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-1:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-1:not(.ql-direction-rtl) {
-  padding-left: 4.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-1.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-1.ql-direction-rtl.ql-align-right {
   padding-right: 3em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-1.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-1.ql-direction-rtl.ql-align-right {
-  padding-right: 4.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-2:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-2:not(.ql-direction-rtl) {
   padding-left: 6em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-2:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-2:not(.ql-direction-rtl) {
-  padding-left: 7.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-2.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-2.ql-direction-rtl.ql-align-right {
   padding-right: 6em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-2.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-2.ql-direction-rtl.ql-align-right {
-  padding-right: 7.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-3:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-3:not(.ql-direction-rtl) {
   padding-left: 9em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-3:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-3:not(.ql-direction-rtl) {
-  padding-left: 10.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-3.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-3.ql-direction-rtl.ql-align-right {
   padding-right: 9em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-3.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-3.ql-direction-rtl.ql-align-right {
-  padding-right: 10.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-4:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-4:not(.ql-direction-rtl) {
   padding-left: 12em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-4:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-4:not(.ql-direction-rtl) {
-  padding-left: 13.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-4.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-4.ql-direction-rtl.ql-align-right {
   padding-right: 12em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-4.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-4.ql-direction-rtl.ql-align-right {
-  padding-right: 13.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-5:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-5:not(.ql-direction-rtl) {
   padding-left: 15em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-5:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-5:not(.ql-direction-rtl) {
-  padding-left: 16.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-5.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-5.ql-direction-rtl.ql-align-right {
   padding-right: 15em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-5.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-5.ql-direction-rtl.ql-align-right {
-  padding-right: 16.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-6:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-6:not(.ql-direction-rtl) {
   padding-left: 18em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-6:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-6:not(.ql-direction-rtl) {
-  padding-left: 19.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-6.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-6.ql-direction-rtl.ql-align-right {
   padding-right: 18em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-6.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-6.ql-direction-rtl.ql-align-right {
-  padding-right: 19.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-7:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-7:not(.ql-direction-rtl) {
   padding-left: 21em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-7:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-7:not(.ql-direction-rtl) {
-  padding-left: 22.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-7.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-7.ql-direction-rtl.ql-align-right {
   padding-right: 21em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-7.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-7.ql-direction-rtl.ql-align-right {
-  padding-right: 22.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-8:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-8:not(.ql-direction-rtl) {
   padding-left: 24em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-8:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-8:not(.ql-direction-rtl) {
-  padding-left: 25.5em; }
 
 .slds-rich-text-editor__textarea .ql-indent-8.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-8.ql-direction-rtl.ql-align-right {
   padding-right: 24em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-8.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-8.ql-direction-rtl.ql-align-right {
-  padding-right: 25.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-9:not(.ql-direction-rtl),
 .slds-rich-text-editor__output .ql-indent-9:not(.ql-direction-rtl) {
   padding-left: 27em; }
 
-.slds-rich-text-editor__textarea li.ql-indent-9:not(.ql-direction-rtl),
-.slds-rich-text-editor__output li.ql-indent-9:not(.ql-direction-rtl) {
-  padding-left: 28.5em; }
-
 .slds-rich-text-editor__textarea .ql-indent-9.ql-direction-rtl.ql-align-right,
 .slds-rich-text-editor__output .ql-indent-9.ql-direction-rtl.ql-align-right {
   padding-right: 27em; }
-
-.slds-rich-text-editor__textarea li.ql-indent-9.ql-direction-rtl.ql-align-right,
-.slds-rich-text-editor__output li.ql-indent-9.ql-direction-rtl.ql-align-right {
-  padding-right: 28.5em; }
 
 .slds-spinner_container {
   position: absolute;
@@ -15020,7 +16148,16 @@ a.slds-button--inverse:focus {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 9051;
   transform: translate(-50%, -50%) rotate(90deg); }
+
+.slds-spinner_inline {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none; }
 
 .slds-spinner,
 .slds-spinner__dot-a,
@@ -15162,6 +16299,10 @@ a.slds-button--inverse:focus {
 .slds-spinner--xx-small {
   width: 0.5rem; }
 
+.slds-spinner_xx-small.slds-spinner_inline,
+.slds-spinner--xx-small.slds-spinner_inline {
+  height: 0.5rem; }
+
 .slds-spinner_xx-small.slds-spinner:before, .slds-spinner_xx-small.slds-spinner:after,
 .slds-spinner_xx-small .slds-spinner__dot-a:before,
 .slds-spinner_xx-small .slds-spinner__dot-b:before,
@@ -15227,6 +16368,10 @@ a.slds-button--inverse:focus {
 .slds-spinner_x-small,
 .slds-spinner--x-small {
   width: 1rem; }
+
+.slds-spinner_x-small.slds-spinner_inline,
+.slds-spinner--x-small.slds-spinner_inline {
+  height: 1rem; }
 
 .slds-spinner_x-small.slds-spinner:before, .slds-spinner_x-small.slds-spinner:after,
 .slds-spinner_x-small .slds-spinner__dot-a:before,
@@ -15294,6 +16439,10 @@ a.slds-button--inverse:focus {
 .slds-spinner--small {
   width: 1.25rem; }
 
+.slds-spinner_small.slds-spinner_inline,
+.slds-spinner--small.slds-spinner_inline {
+  height: 1.25rem; }
+
 .slds-spinner_small.slds-spinner:before, .slds-spinner_small.slds-spinner:after,
 .slds-spinner_small .slds-spinner__dot-a:before,
 .slds-spinner_small .slds-spinner__dot-b:before,
@@ -15360,6 +16509,10 @@ a.slds-button--inverse:focus {
 .slds-spinner--medium {
   width: 2rem; }
 
+.slds-spinner_medium.slds-spinner_inline,
+.slds-spinner--medium.slds-spinner_inline {
+  height: 2rem; }
+
 .slds-spinner_medium.slds-spinner:before, .slds-spinner_medium.slds-spinner:after,
 .slds-spinner_medium .slds-spinner__dot-a:before,
 .slds-spinner_medium .slds-spinner__dot-b:before,
@@ -15425,6 +16578,10 @@ a.slds-button--inverse:focus {
 .slds-spinner_large,
 .slds-spinner--large {
   width: 2.75rem; }
+
+.slds-spinner_large.slds-spinner_inline,
+.slds-spinner--large.slds-spinner_inline {
+  height: 2.75rem; }
 
 .slds-spinner_large.slds-spinner:before, .slds-spinner_large.slds-spinner:after,
 .slds-spinner_large .slds-spinner__dot-a:before,
@@ -15675,54 +16832,6 @@ a.slds-button--inverse:focus {
 .slds-tile--board .slds-has-alert {
   padding-right: 1.5rem; }
 
-/**
- * The default tab set style encapsulates everything that is underneath it
- * without enclosing it visually. Initialize a default tab set by applying the
- * `.slds-tab_default` class to the containing `<div>` around the tab list and
- * tab panels. The `<ul>` element also requires the class `.slds-tab_default__nav`
- * to prevent styles from bleeding into nested tabs.
- *
- * The overflow tab style is provided as a tab item type that acts as a menu
- * component and appears as a tab item. It could contain those tab items that
- * don't all fit in a horizontal orientation. Initialize a default tab set and
- * in the last tab item of the set, apply the additional classes `slds-dropdown-trigger`
- * and `.slds-tabs__item_overflow`. Include an `<a>` element to contain the
- * tab item label like the other tab items. After the `<a>` element, the
- * `.slds-dropdown` segment of a search overflow menu component is used. The
- * `slds-dropdown__list` element also then requires a `slds-dropdown_length-X`
- * class, where X is the number of items to show in it.
- *
- * @summary Initializes a default tablist
- *
- * @name base
- * @selector .slds-tabs_default
- * @restrict div
- * @variant
- */
-.slds-tabs_default,
-.slds-tabs--default {
-  display: block;
-  width: 100%;
-  background-color: white;
-  /**
-   * @summary Creates the container for the default tabs
-   * @selector .slds-tabs_default__nav
-   * @restrict .slds-tabs_default ul
-   */
-  /**
-   * @summary A tab item that has an overflow menu
-   * @selector .slds-tabs__item_overflow
-   * @restrict .slds-tabs_default__item
-   */ }
-
-.slds-tabs_default__nav,
-.slds-tabs--default__nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  border-bottom: 2px solid #dddbda; }
-
 @media (min-width: 48em) {
   .slds-tabs_default .slds-tabs__item + .slds-tabs__item,
   .slds-tabs--default .slds-tabs__item + .slds-tabs__item {
@@ -15772,6 +16881,38 @@ a.slds-button--inverse:focus {
 .slds-tabs--default > .slds-tabs__content {
   position: relative;
   padding: 1rem 0; }
+
+/**
+ * @summary Initializes a default tablist
+ *
+ * @name base
+ * @selector .slds-tabs_default
+ * @restrict div
+ * @variant
+ */
+.slds-tabs_default,
+.slds-tabs--default {
+  display: block;
+  width: 100%;
+  background-color: white;
+  /**
+   * @summary Creates the container for the default tabs
+   * @selector .slds-tabs_default__nav
+   * @restrict .slds-tabs_default ul
+   */
+  /**
+   * @summary A tab item that has an overflow menu
+   * @selector .slds-tabs__item_overflow
+   * @restrict .slds-tabs_default__item
+   */ }
+
+.slds-tabs_default__nav,
+.slds-tabs--default__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  border-bottom: 2px solid #dddbda; }
 
 .slds-tabs_default .slds-tabs__item_overflow,
 .slds-tabs_default .slds-tabs__item--overflow,
@@ -15945,40 +17086,79 @@ a.slds-button--inverse:focus {
   padding: 1rem 0; }
 
 /**
- * A scoped tabset style has a closed container with a defined border. Initialize
- * a scoped tab set by applying the `.slds-tab_scoped` class to the containing
- * `<div>` around the tab list and tab panels. The `<ul>` element also requires
- * the class `.slds-tab_scoped__nav` to prevent styles from bleeding into nested tabs.
+ * @summary Initializes a mobile drill-in tabset
  *
- * @summary Initializes scoped tabs
- *
- * @name base
- * @selector .slds-tabs_scoped
- * @restrict div
- * @required
+ * @name mobile
+ * @selector .slds-tabs_mobile
+ * @restrict ul
  * @variant
  */
-.slds-tabs_scoped,
-.slds-tabs--scoped {
-  display: block;
-  width: 100%;
-  /**
-   * Creates the container for the default tabs
-   *
-   * @selector .slds-tabs_scoped__nav
-   * @restrict .slds-tabs_scoped ul
-   * @required
-   */ }
-
-.slds-tabs_scoped__nav,
-.slds-tabs--scoped__nav {
+.slds-tabs_mobile {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: start;
-      align-items: flex-start;
-  background-color: #f3f2f2;
-  border: 1px solid #dddbda;
-  border-radius: 0.25rem 0.25rem 0 0; }
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+/**
+ * @summary Styles each list item as a single drill-in tab
+ * @selector .slds-tabs_mobile__item
+ * @restrict .slds-tabs_mobile li
+ */
+.slds-tabs_mobile__item {
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #dddbda;
+  height: 2.75rem;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.slds-tabs_mobile__item:active {
+  background-color: #f3f2f2; }
+
+.slds-tabs_mobile__item:last-child {
+  border-bottom: 1px solid #dddbda; }
+
+/**
+ * @summary Styles the tab title
+ * @selector .slds-tabs_mobile__title
+ * @restrict .slds-tabs_mobile div
+ */
+.slds-tabs_mobile__title {
+  width: 100%;
+  height: 100%;
+  color: #16325c;
+  font-size: 1rem;
+  padding: 0 1rem; }
+
+.slds-tabs_mobile__title .slds-button:focus {
+  box-shadow: none; }
+
+/**
+ * @summary Actionable button inside of tab that would
+ * drill into the tab content
+ *
+ * @selector slds-tabs_mobile__title-action
+ * @restrict slds-tabs_mobile__title button
+ * @required
+ */
+.slds-tabs_mobile__title-action {
+  width: 100%;
+  height: 100%;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.slds-tabs_mobile__title-action .slds-button__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.slds-tabs_mobile + .slds-tabs_mobile .slds-tabs_mobile__item:first-child {
+  border-top: 0; }
 
 .slds-tabs_scoped .slds-tabs__item,
 .slds-tabs--scoped .slds-tabs__item {
@@ -16025,7 +17205,7 @@ a.slds-button--inverse:focus {
 .slds-tabs_scoped .slds-tabs__item .slds-active > a,
 .slds-tabs--scoped .slds-tabs__item .slds-active > a {
   background-color: white;
-  color: #0070d2;
+  color: #006dcc;
   border-color: #dddbda; }
 
 .slds-tabs_scoped .slds-tabs__item .slds-active > a:focus,
@@ -16039,6 +17219,42 @@ a.slds-button--inverse:focus {
   border-top: 0;
   border-radius: 0 0 0.25rem 0.25rem;
   padding: 1rem; }
+
+/**
+ * A scoped tabset style has a closed container with a defined border. Initialize
+ * a scoped tab set by applying the `.slds-tab_scoped` class to the containing
+ * `<div>` around the tab list and tab panels. The `<ul>` element also requires
+ * the class `.slds-tab_scoped__nav` to prevent styles from bleeding into nested tabs.
+ *
+ * @summary Initializes scoped tabs
+ *
+ * @name base
+ * @selector .slds-tabs_scoped
+ * @restrict div
+ * @required
+ * @variant
+ */
+.slds-tabs_scoped,
+.slds-tabs--scoped {
+  display: block;
+  width: 100%;
+  /**
+   * Creates the container for the default tabs
+   *
+   * @selector .slds-tabs_scoped__nav
+   * @restrict .slds-tabs_scoped ul
+   * @required
+   */ }
+
+.slds-tabs_scoped__nav,
+.slds-tabs--scoped__nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  background-color: #f3f2f2;
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem 0.25rem 0 0; }
 
 /**
  * Styles each list item as a single tab
@@ -16204,27 +17420,7 @@ a.slds-button--inverse:focus {
   border-radius: 0 0.25rem 0 0; }
 
 /**
- * Sub Tabs are used to provide an additional level of navigation below the
- * Global Navigation Tab Bar. Use these tabs when users need to work across
- * multiple sub-pages within a single navigation item.
- *
- * ----
- *
- * The first tab within the Sub Tab Bar is always the default content for the
- * parent navigation item. To differentiate this tab from other sub-navigation
- * tabs, this tab cannot be closed.
- *
- * When opening a navigation item for the first time, the default sub-navigation
- * tab can be assumed; don’t show the Sub Tab Bar.
- *
- * When opening the first additional sub-navigation tab a new tab bar is inserted
- * containing both the default tab and the new sub-navigation tab.
- *
- * All sub tabs are closed when the parent navigation item is closed.
- *
- * Sub Tabs can optionally include a tab menu for additional controls.
- *
- * @summary Sub tabs
+ * @summary Subtabs
  *
  * @name sub-tabs
  * @selector .slds-sub-tabs
@@ -16235,7 +17431,7 @@ a.slds-button--inverse:focus {
   border-bottom-width: 1px; }
 
 /**
- * @summary Sub tab item
+ * @summary Subtab item
  * @selector .slds-sub-tabs__item
  * @restrict .slds-sub-tabs li
  */
@@ -16262,6 +17458,76 @@ a.slds-button--inverse:focus {
   top: 0;
   left: -1px;
   right: -1px; }
+
+.slds-navigation-list-vertical,
+.slds-navigation-list--vertical {
+  /**
+     * Active item in vertical navigation list
+     *
+     * @selector .slds-is-active
+     * @restrict .slds-navigation-list-vertical li
+     * @modifier
+     */ }
+
+.slds-navigation-list-vertical .slds-is-active,
+.slds-navigation-list--vertical .slds-is-active {
+  color: #3e3e3c; }
+
+.slds-navigation-list-vertical .slds-is-active .slds-navigation-list-vertical__action,
+.slds-navigation-list-vertical .slds-is-active .slds-navigation-list--vertical__action,
+.slds-navigation-list--vertical .slds-is-active .slds-navigation-list-vertical__action,
+.slds-navigation-list--vertical .slds-is-active .slds-navigation-list--vertical__action {
+  background-color: rgba(21, 137, 238, 0.1);
+  border-color: #dddbda;
+  border-left-color: #1589ee; }
+
+.slds-navigation-list-vertical .slds-is-active .slds-navigation-list-vertical__action:focus,
+.slds-navigation-list-vertical .slds-is-active .slds-navigation-list--vertical__action:focus,
+.slds-navigation-list--vertical .slds-is-active .slds-navigation-list-vertical__action:focus,
+.slds-navigation-list--vertical .slds-is-active .slds-navigation-list--vertical__action:focus {
+  border-left-width: 0.5rem;
+  color: #005fb2; }
+
+/**
+   * Vertical Navigation on tinted background
+   *
+   * @selector .slds-navigation-list-vertical_shade
+   * @restrict .slds-navigation-list-vertical
+   * @modifier
+   * @group theme
+   */
+.slds-navigation-list-vertical_shade .slds-is-active .slds-navigation-list-vertical__action,
+.slds-navigation-list-vertical_shade .slds-is-active .slds-navigation-list--vertical__action,
+.slds-navigation-list-vertical--shade .slds-is-active .slds-navigation-list-vertical__action,
+.slds-navigation-list-vertical--shade .slds-is-active .slds-navigation-list--vertical__action,
+.slds-navigation-list--vertical-inverse .slds-is-active .slds-navigation-list-vertical__action,
+.slds-navigation-list--vertical-inverse .slds-is-active .slds-navigation-list--vertical__action {
+  background-color: white; }
+
+/**
+   * Actionable item inside a vertical navigation list
+   *
+   * @selector .slds-navigation-list-vertical__action
+   * @restrict .slds-navigation-list-vertical a
+   * @required
+   */
+.slds-navigation-list-vertical__action,
+.slds-navigation-list--vertical__action {
+  display: block;
+  border-left: 0.25rem solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding: 0.5rem 1.5rem; }
+
+.slds-navigation-list-vertical__action:hover, .slds-navigation-list-vertical__action:focus,
+.slds-navigation-list--vertical__action:hover,
+.slds-navigation-list--vertical__action:focus {
+  outline: 0;
+  background-color: #f3f2f2; }
+
+.slds-navigation-list-vertical__action:active,
+.slds-navigation-list--vertical__action:active {
+  background-color: #ecebea; }
 
 /**
  * @name list
@@ -16380,83 +17646,6 @@ a.slds-button--inverse:focus {
   background-color: rgba(21, 137, 238, 0.1); }
 
 /**
- * @name base
- * @selector .slds-navigation-list_vertical
- * @restrict div
- * @variant
- * @deprecated
- */
-.slds-navigation-list-vertical,
-.slds-navigation-list--vertical {
-  /**
-     * Active item in vertical navigation list
-     *
-     * @selector .slds-is-active
-     * @restrict .slds-navigation-list-vertical li
-     * @modifier
-     */ }
-
-.slds-navigation-list-vertical .slds-is-active,
-.slds-navigation-list--vertical .slds-is-active {
-  color: #3e3e3c; }
-
-.slds-navigation-list-vertical .slds-is-active .slds-navigation-list-vertical__action,
-.slds-navigation-list-vertical .slds-is-active .slds-navigation-list--vertical__action,
-.slds-navigation-list--vertical .slds-is-active .slds-navigation-list-vertical__action,
-.slds-navigation-list--vertical .slds-is-active .slds-navigation-list--vertical__action {
-  background-color: rgba(21, 137, 238, 0.1);
-  border-color: #dddbda;
-  border-left-color: #1589ee; }
-
-.slds-navigation-list-vertical .slds-is-active .slds-navigation-list-vertical__action:focus,
-.slds-navigation-list-vertical .slds-is-active .slds-navigation-list--vertical__action:focus,
-.slds-navigation-list--vertical .slds-is-active .slds-navigation-list-vertical__action:focus,
-.slds-navigation-list--vertical .slds-is-active .slds-navigation-list--vertical__action:focus {
-  border-left-width: 0.5rem;
-  color: #005fb2; }
-
-/**
-   * Vertical Navigation on tinted background
-   *
-   * @selector .slds-navigation-list-vertical_shade
-   * @restrict .slds-navigation-list-vertical
-   * @modifier
-   * @group theme
-   */
-.slds-navigation-list-vertical_shade .slds-is-active .slds-navigation-list-vertical__action,
-.slds-navigation-list-vertical_shade .slds-is-active .slds-navigation-list--vertical__action,
-.slds-navigation-list-vertical--shade .slds-is-active .slds-navigation-list-vertical__action,
-.slds-navigation-list-vertical--shade .slds-is-active .slds-navigation-list--vertical__action,
-.slds-navigation-list--vertical-inverse .slds-is-active .slds-navigation-list-vertical__action,
-.slds-navigation-list--vertical-inverse .slds-is-active .slds-navigation-list--vertical__action {
-  background-color: white; }
-
-/**
-   * Actionable item inside a vertical navigation list
-   *
-   * @selector .slds-navigation-list-vertical__action
-   * @restrict .slds-navigation-list-vertical a
-   * @required
-   */
-.slds-navigation-list-vertical__action,
-.slds-navigation-list--vertical__action {
-  display: block;
-  border-left: 0.25rem solid transparent;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  padding: 0.5rem 1.5rem; }
-
-.slds-navigation-list-vertical__action:hover, .slds-navigation-list-vertical__action:focus,
-.slds-navigation-list--vertical__action:hover,
-.slds-navigation-list--vertical__action:focus {
-  outline: 0;
-  background-color: #f3f2f2; }
-
-.slds-navigation-list-vertical__action:active,
-.slds-navigation-list--vertical__action:active {
-  background-color: #ecebea; }
-
-/**
  * @name radio-group
  * @summary Version of vertical nav that uses radio buttons
  * @selector .slds-nav-vertical__item [type="radio"]
@@ -16520,7 +17709,7 @@ a.slds-button--inverse:focus {
  * @restrict .slds-nav-vertical__action_overflow span
  */
 .slds-nav-vertical__action-text {
-  color: #0070d2; }
+  color: #006dcc; }
 
 /**
  * @summary Initializes alert notification
@@ -16580,6 +17769,10 @@ a.slds-button--inverse:focus {
   margin-left: 0.25rem;
   transform: translateY(-50%); }
 
+.slds-modal_prompt .slds-modal__close,
+.slds-modal--prompt .slds-modal__close {
+  display: none; }
+
 /**
  * @summary Initializes Prompt style notification
  *
@@ -16602,10 +17795,6 @@ a.slds-button--inverse:focus {
 .slds-modal--prompt .slds-modal__footer {
   border-top: 0;
   text-align: center; }
-
-.slds-modal_prompt .slds-modal__close,
-.slds-modal--prompt .slds-modal__close {
-  display: none; }
 
 /**
  * @name base
@@ -16875,80 +18064,72 @@ a.slds-button--inverse:focus {
 .slds-trial-header .slds-icon--selected {
   fill: #4bca81; }
 
-/**
- * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
- *
- * @name base
- * @selector .slds-combobox-lookup
- * @restrict div
- * @variant
- */
 .slds-lookup {
   position: relative;
   width: 100%;
   /**
-   * Initializes lookup results list
-   *
-   * @selector .slds-lookup__list
-   * @restrict .slds-lookup ul
-   */
+     * Initializes lookup results list
+     *
+     * @selector .slds-lookup__list
+     * @restrict .slds-lookup ul
+     */
   /**
-   * Initializes lookup results list container
-   *
-   * @selector .slds-lookup__menu
-   * @restrict .slds-lookup div
-   * @notes Applies positioning and container styles
-   * @required
-   */
+     * Initializes lookup results list container
+     *
+     * @selector .slds-lookup__menu
+     * @restrict .slds-lookup div
+     * @notes Applies positioning and container styles
+     * @required
+     */
   /**
-   * Non-actionable label inside of a lookup item
-   *
-   * @selector .slds-lookup__item_label
-   * @restrict .slds-lookup h3
-   */
+     * Non-actionable label inside of a lookup item
+     *
+     * @selector .slds-lookup__item_label
+     * @restrict .slds-lookup h3
+     */
   /**
-   * Actionable element inside of a lookup item
-   *
-   * @selector .slds-lookup__item-action
-   * @restrict .slds-lookup a, .slds-lookup button, .slds-lookup span
-   */
+     * Actionable element inside of a lookup item
+     *
+     * @selector .slds-lookup__item-action
+     * @restrict .slds-lookup a, .slds-lookup button, .slds-lookup span
+     */
   /**
-   * Actionable element inside of a lookup item that's output is single line text
-   *
-   * @selector .slds-lookup__item-action_label
-   * @restrict .slds-lookup__item-action
-   */
+     * Actionable element inside of a lookup item that's output is single line text
+     *
+     * @selector .slds-lookup__item-action_label
+     * @restrict .slds-lookup__item-action
+     */
   /**
-   * Search input inside of lookup
-   *
-   * @selector .slds-lookup__search-input
-   * @restrict .slds-lookup input
-   */
+     * Search input inside of lookup
+     *
+     * @selector .slds-lookup__search-input
+     * @restrict .slds-lookup input
+     */
   /**
-   * Primary entity name within lookup item
-   *
-   * @selector .slds-lookup__result-text
-   * @restrict .slds-lookup__item-action span
-   */
+     * Primary entity name within lookup item
+     *
+     * @selector .slds-lookup__result-text
+     * @restrict .slds-lookup__item-action span
+     */
   /**
-   * Secondary info of primary entity name within lookup item
-   *
-   * @selector .slds-lookup__result-meta
-   * @restrict .slds-lookup__item-action span
-   */
+     * Secondary info of primary entity name within lookup item
+     *
+     * @selector .slds-lookup__result-meta
+     * @restrict .slds-lookup__item-action span
+     */
   /**
-   * Deal with Lookup when user activates the lookup
-   *
-   * @selector .slds-is-open
-   * @restrict .slds-lookup
-   * @modifier
-   */
+     * Deal with Lookup when user activates the lookup
+     *
+     * @selector .slds-is-open
+     * @restrict .slds-lookup
+     * @modifier
+     */
   /**
-   * Deal with lookup if selection has been made
-   *
-   * @selector .slds-has-selection
-   * @restrict .slds-lookup
-   */ }
+     * Deal with lookup if selection has been made
+     *
+     * @selector .slds-has-selection
+     * @restrict .slds-lookup
+     */ }
 
 .slds-lookup__list {
   max-height: calc((((1.5 * 0.8125rem) + (1.5 * 0.75rem) - 0.25rem) + (0.25rem * 2)) * 8);
@@ -17010,12 +18191,12 @@ a.slds-button--inverse:focus {
   line-height: 1.5;
   border-radius: 0;
   /**
-     * Hover/focus state for actionable lookup item
-     *
-     * @selector .slds-has-focus
-     * @restrict .slds-lookup__item-action
-     * @modifier
-     */ }
+       * Hover/focus state for actionable lookup item
+       *
+       * @selector .slds-has-focus
+       * @restrict .slds-lookup__item-action
+       * @modifier
+       */ }
 
 .slds-lookup__item-action:hover, .slds-lookup__item-action:focus, .slds-lookup__item-action.slds-has-focus {
   outline: 0;
@@ -17074,6 +18255,14 @@ a.slds-button--inverse:focus {
 .slds-lookup.slds-has-selection .slds-pill__remove {
   margin-left: auto; }
 
+/**
+ * @summary Container that manages layout when a listbox of pill options sit next to a combobox search input
+ *
+ * @name base
+ * @selector .slds-combobox
+ * @restrict div
+ * @variant
+ */
 /**
  * An image is the preferred format for an avatar
  *
@@ -17212,7 +18401,8 @@ a.slds-button--inverse:focus {
   -ms-flex-align: center;
       align-items: center;
   margin: auto;
-  height: 100%; }
+  height: 100%;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8); }
 
 .slds-avatar__initials[title] {
   cursor: default;
@@ -17221,6 +18411,20 @@ a.slds-button--inverse:focus {
 .slds-avatar__initials:hover {
   color: white;
   cursor: default; }
+
+/**
+ * @summary Used for initials that are dark text on light background
+ *
+ * @selector .slds-avatar__initials_inverse
+ * @restrict .slds-avatar__initials
+ */
+.slds-avatar__initials_inverse {
+  background-color: #f3f2f2;
+  color: #706e6b;
+  text-shadow: none; }
+
+.slds-avatar__initials_inverse:hover {
+  color: #706e6b; }
 
 /**
  * A figure component is a self-contained unit of content, such as an image with an optional caption. The figure component should NOT be used with icons or logos. A figure can optionally be cropped to a specific ratio such as 16x9, 4x3 and 1x1 with the use of `.slds-image__crop` and passing in a ratio class such as `.slds-image__crop_16-by-9`.
@@ -18384,7 +19588,7 @@ a.slds-button--inverse:focus {
  * @selector .slds-cell-edit
  * @restrict .slds-table_edit th, .slds-table_edit td
  */
-.slds-cell-edit {
+.slds-table .slds-cell-edit {
   outline: 0;
   /**
    * Informs a cell that it has been edited but not saved
@@ -18401,27 +19605,27 @@ a.slds-button--inverse:focus {
    * @modifier
    */ }
 
-.slds-cell-edit.slds-has-focus {
+.slds-table .slds-cell-edit.slds-has-focus {
   background-color: white;
   box-shadow: #005fb2 0 0 0 1px inset; }
 
-.slds-cell-edit.slds-has-focus .slds-button__icon_edit,
-.slds-cell-edit.slds-has-focus .slds-button__icon--edit,
-.slds-cell-edit.slds-has-focus .slds-button__icon_lock,
-.slds-cell-edit.slds-has-focus .slds-button__icon--lock {
+.slds-table .slds-cell-edit.slds-has-focus .slds-button__icon_edit,
+.slds-table .slds-cell-edit.slds-has-focus .slds-button__icon--edit,
+.slds-table .slds-cell-edit.slds-has-focus .slds-button__icon_lock,
+.slds-table .slds-cell-edit.slds-has-focus .slds-button__icon--lock {
   opacity: 1; }
 
-.slds-cell-edit.slds-has-focus:hover {
+.slds-table .slds-cell-edit.slds-has-focus:hover {
   box-shadow: #005fb2 0 0 0 1px inset; }
 
-.slds-cell-edit.slds-has-focus a:focus {
+.slds-table .slds-cell-edit.slds-has-focus a:focus {
   text-decoration: underline;
   outline: none; }
 
-.slds-cell-edit.slds-is-edited, .slds-cell-edit.slds-is-edited:hover {
+.slds-table .slds-cell-edit.slds-is-edited, .slds-table .slds-cell-edit.slds-is-edited:hover {
   background-color: #faffbd; }
 
-.slds-cell-edit.slds-has-error, .slds-cell-edit.slds-has-error:hover {
+.slds-table .slds-cell-edit.slds-has-error, .slds-table .slds-cell-edit.slds-has-error:hover {
   background-color: #faffbd;
   box-shadow: #c23934 0 0 0 2px inset; }
 
@@ -18481,11 +19685,11 @@ a.slds-button--inverse:focus {
   box-shadow: #c23934 0 0 0 2px inset; }
 
 .slds-no-cell-focus thead .slds-has-focus:hover {
-  color: #0070d2; }
+  color: #006dcc; }
 
 .slds-no-cell-focus thead .slds-has-focus:hover .slds-is-sortable__icon {
   display: inline-block;
-  fill: #0070d2; }
+  fill: #006dcc; }
 
 .slds-hint-parent .slds-cell-edit .slds-button__icon_edit,
 .slds-hint-parent .slds-cell-edit .slds-button__icon--edit,
@@ -18903,7 +20107,7 @@ a.slds-button--inverse:focus {
 
 .slds-table_tree .slds-tree__item a,
 .slds-table--tree .slds-tree__item a {
-  color: #0070d2; }
+  color: #006dcc; }
 
 .slds-table_tree .slds-tree__item a:hover,
 .slds-table--tree .slds-tree__item a:hover {
@@ -19034,6 +20238,31 @@ a.slds-button--inverse:focus {
 .slds-popover_einstein.slds-nubbin_top:before, .slds-popover_einstein.slds-nubbin--top:before, .slds-popover_einstein.slds-nubbin_top-left:before, .slds-popover_einstein.slds-nubbin--top-left:before, .slds-popover_einstein.slds-nubbin_top-right:before, .slds-popover_einstein.slds-nubbin--top-right:before, .slds-popover_einstein.slds-nubbin_left-top:before, .slds-popover_einstein.slds-nubbin--left-top:before, .slds-popover_einstein.slds-nubbin_right-top:before, .slds-popover_einstein.slds-nubbin--right-top:before {
   background-color: #95cbfc; }
 
+.slds-section-title {
+  font-size: 1rem; }
+
+.slds-section-title > a {
+  display: inline-block;
+  color: #3e3e3c; }
+
+.slds-section-title > a:hover, .slds-section-title > a:focus {
+  color: #005fb2; }
+
+.slds-section-title > a:focus {
+  box-shadow: 0 0 3px #0070D2; }
+
+.slds-section-title > a:active {
+  color: #3e3e3c; }
+
+.slds-section-title .slds-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor; }
+
+.slds-section-title .slds-section-group_is-closed .slds-icon,
+.slds-section-title .slds-section-group--is-closed .slds-icon {
+  transform: rotate(-90deg); }
+
 /**
  * @summary Container for a expandable section
  *
@@ -19119,31 +20348,6 @@ a.slds-button--inverse:focus {
   opacity: 1;
   height: auto; }
 
-.slds-section-title {
-  font-size: 1rem; }
-
-.slds-section-title > a {
-  display: inline-block;
-  color: #3e3e3c; }
-
-.slds-section-title > a:hover, .slds-section-title > a:focus {
-  color: #005fb2; }
-
-.slds-section-title > a:focus {
-  box-shadow: 0 0 3px #0070D2; }
-
-.slds-section-title > a:active {
-  color: #3e3e3c; }
-
-.slds-section-title .slds-icon {
-  width: 1rem;
-  height: 1rem;
-  fill: currentColor; }
-
-.slds-section-title .slds-section-group_is-closed .slds-icon,
-.slds-section-title .slds-section-group--is-closed .slds-icon {
-  transform: rotate(-90deg); }
-
 .slds-section-title_divider,
 .slds-section-title--divider {
   font-size: 0.75rem;
@@ -19153,6 +20357,56 @@ a.slds-button--inverse:focus {
   letter-spacing: 0.0625rem;
   padding: 0.75rem 1rem;
   background: #f3f2f2; }
+
+/**
+ *
+ * @summary Initiates an illustration component
+ *
+ * @name base
+ * @selector .slds-illustration
+ * @restrict div
+ * @variant
+ */
+.slds-illustration {
+  text-align: center;
+  /**
+   * @summary Applies width and height values for small illustrations
+   * @selector .slds-illustration_small
+   * @restrict .slds-illustration
+   * @modifier
+   * @group width
+   */
+  /**
+   * @summary Applies width and height values for large illustrations
+   * @selector .slds-illustration_large
+   * @restrict .slds-illustration
+   * @modifier
+   * @group width
+   */ }
+
+.slds-illustration.slds-illustration_small .slds-illustration__svg {
+  width: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  margin-bottom: 1rem; }
+
+.slds-illustration.slds-illustration_large .slds-illustration__svg {
+  width: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  margin-bottom: 1rem; }
+
+.slds-illustration .slds-illustration__stroke-primary {
+  stroke: #8cd3f8; }
+
+.slds-illustration .slds-illustration__stroke-secondary {
+  stroke: #c2e8ff; }
+
+.slds-illustration .slds-illustration__fill-primary {
+  fill: #8cd3f8; }
+
+.slds-illustration .slds-illustration__fill-secondary {
+  fill: #c2e8ff; }
 
 /**
  * @summary A region that can be inside of a layout
@@ -19178,12 +20432,22 @@ a.slds-button--inverse:focus {
 /**
  * @summary A region that can be pinned on the left side of a layout
  *
- * @selector .slds-region__pinned-top
+ * @selector .slds-region__pinned-left
  * @restrict .slds-region
  */
 .slds-region__pinned-left {
   background-color: white;
   border-right: 1px solid #dddbda; }
+
+/**
+ * @summary A region that can be pinned on the right side of a layout
+ *
+ * @selector .slds-region__pinned-right
+ * @restrict .slds-region
+ */
+.slds-region__pinned-right {
+  background-color: white;
+  border-left: 1px solid #dddbda; }
 
 /**
  * The default Vertical Tabs component renders a list of tabs and their
@@ -19245,6 +20509,9 @@ a.slds-button--inverse:focus {
   color: #3e3e3c;
   text-decoration: none; }
 
+.slds-vertical-tabs__link:focus {
+  outline: 0; }
+
 /**
  * @summary Tab Content Container
  *
@@ -19269,7 +20536,7 @@ a.slds-button--inverse:focus {
   margin-right: -1px;
   border-right: 0;
   background: white;
-  color: #0070d2; }
+  color: #006dcc; }
 
 .slds-vertical-tabs__nav-item.slds-is-active .slds-vertical-tabs__link:hover {
   background: white;
@@ -19284,6 +20551,370 @@ a.slds-button--inverse:focus {
  */
 .slds-vertical-tabs__nav-item.slds-has-focus {
   text-decoration: underline; }
+
+/**
+ * @summary Welcome Mat component
+ *
+ * @name base
+ * @selector .slds-welcome-mat
+ * @restrict section
+ * @variant
+ */
+.slds-welcome-mat .slds-modal__container {
+  width: 52.0625rem;
+  max-width: none; }
+
+.slds-welcome-mat .slds-box {
+  margin: 1rem 0; }
+
+.slds-welcome-mat .slds-box:not(.slds-welcome-mat__tile_complete) {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+  background: white; }
+
+.slds-welcome-mat .slds-box:not(.slds-welcome-mat__tile_complete):hover {
+  box-shadow: 0 0 0 1px #1589ee inset, 0 2px 2px rgba(0, 0, 0, 0.05); }
+
+.slds-welcome-mat .slds-progress-bar {
+  display: inline-block;
+  width: 12.5rem;
+  background: white; }
+
+.slds-welcome-mat .slds-progress-bar__value {
+  background: #4bca81; }
+
+/**
+ * @summary Content container for the whole Welcome Mat
+ *
+ * @selector .slds-welcome-mat__content
+ * @restrict .slds-welcome-mat .slds-modal__content
+ */
+.slds-welcome-mat__content {
+  min-height: 25rem;
+  max-height: 37.5rem; }
+
+/**
+ * @summary Container element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info
+ * @restrict .slds-welcome-mat__content div
+ */
+.slds-welcome-mat__info {
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  padding: 1rem 3rem 7.75rem;
+  color: #00396b;
+  background-image: url("/assets/images/welcome-mat/bg-info@2x.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #cae6f1; }
+
+/**
+ * @summary Content container for the informational side of the Welcome Mat. Centers in container space.
+ *
+ * @selector .slds-welcome-mat__info-content
+ * @restrict .slds-welcome-mat__info div
+ */
+.slds-welcome-mat__info-content {
+  margin: auto;
+  text-align: center; }
+
+/**
+ * @summary Title element for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info-title
+ * @restrict .slds-welcome-mat__info-content h2
+ */
+.slds-welcome-mat__info-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: 1.25; }
+
+/**
+ * @summary Description container for the informational side of the Welcome Mat
+ *
+ * @selector .slds-welcome-mat__info-description
+ * @restrict .slds-welcome-mat__info-content p, .slds-welcome-mat__info-content div
+ */
+.slds-welcome-mat__info-description {
+  margin-bottom: 1.5rem; }
+
+/**
+ * @summary Text description of walkthrough progress
+ *
+ * @selector .slds-welcome-mat__info-progress
+ * @restrict .slds-welcome-mat__info-content div
+ */
+.slds-welcome-mat__info-progress {
+  margin-bottom: 1rem; }
+
+/**
+ * @summary Container element for the Actions side of the Welcome Mat.
+ *
+ * @selector .slds-welcome-mat__tiles
+ * @restrict .slds-welcome-mat__content div
+ */
+.slds-welcome-mat__tiles {
+  background: #f3f2f2;
+  overflow: auto; }
+
+/**
+ * @summary Welcome Mat Tile item. Shows an actionable step a user can take
+ * to complete a greater objective. Based on a SLDS Visual Picker.
+ *
+ * @selector .slds-welcome-mat__tile
+ * @restrict .slds-welcome-mat__tiles .slds-box
+ */
+.slds-welcome-mat__tile:not(.slds-welcome-mat__tile_complete) .slds-icon-action-check {
+  display: none; }
+
+.slds-welcome-mat__tile:first-child {
+  margin-top: 0; }
+
+.slds-welcome-mat__tile:last-child {
+  margin-bottom: 0; }
+
+/**
+ * @summary Title element for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-title
+ * @restrict .slds-welcome-mat__tile h3
+ */
+.slds-welcome-mat__tile-title {
+  font-weight: 700; }
+
+/**
+ * @summary Description element for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-description
+ * @restrict .slds-welcome-mat__tile p
+ */
+.slds-welcome-mat__tile-description {
+  color: #706e6b;
+  font-size: 0.75rem;
+  line-height: 1.5; }
+
+/**
+ * @summary Icon Container for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile-icon-container
+ * @restrict .slds-welcome-mat__tile div
+ */
+.slds-welcome-mat__tile-icon-container {
+  position: relative; }
+
+/**
+ * @summary Complete modifier class for Welcome Mat Tile item.
+ *
+ * @selector .slds-welcome-mat__tile_complete
+ * @restrict .slds-welcome-mat__tile
+ * @modifier
+ */
+.slds-welcome-mat__tile_complete .slds-icon {
+  fill: #a7b9d1; }
+
+/**
+ * @summary Icon Check mark for completed Welcome Mat Tiles.
+ *
+ * @selector .slds-welcome-mat__icon-check
+ * @restrict .slds-welcome-mat__tile-icon-container svg, .slds-welcome-mat__info-badge-container svg
+ */
+.slds-welcome-mat .slds-icon-action-check {
+  position: absolute;
+  bottom: -0.625rem;
+  right: -0.625rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 0.25rem;
+  border: 2px solid #f3f2f2;
+  border-radius: 1.25rem;
+  line-height: 0;
+  background: #4bca81; }
+
+.slds-welcome-mat .slds-icon-action-check .slds-icon {
+  fill: white; }
+
+/**
+ * The Trailhead Connected variant should be used when users can achieve
+ * a badge in Trailhead for completing all steps in the current Welcome Mat.
+ *
+ * Only Trailhead Connected Mats may have the Trailhead font for the header.
+ *
+ * @name trailhead-connected
+ * @selector .slds-welcome-mat_trailhead
+ * @restrict .slds-welcome-mat
+ * @variant
+ */
+/**
+ * @summary Badge container for Welcome Mat Trailhead Progress Info.
+ * Overrides properties for the check icon, specific for this variant.
+ *
+ * @selector .slds-welcome-mat__info-badge-container
+ * @restrict .slds-welcome-mat__info-progress div
+ */
+.slds-welcome-mat__info-badge-container {
+  display: inline-block;
+  position: relative; }
+
+.slds-welcome-mat__info-badge-container .slds-icon-action-check {
+  border-width: 0;
+  top: 50%;
+  right: 0%;
+  transform: translate3d(50%, -50%, 0);
+  display: none; }
+
+/**
+ * @summary Badge for the Trailhead Progress Info.
+ *
+ * @selector .slds-welcome-mat__info-badge
+ * @restrict .slds-welcome-mat__info-badge-container img
+ */
+.slds-welcome-mat__info-badge {
+  margin-bottom: 0.5rem; }
+
+/**
+ * @summary Modifier for Completed progress. Shows completed checkmark.
+ *
+ * @selector .slds-welcome-mat__info-progress_complete
+ * @restrict .slds-welcome-mat__info-progress
+ * @modifier
+ */
+.slds-welcome-mat__info-progress_complete .slds-icon-action-check {
+  display: -ms-flexbox;
+  display: flex; }
+
+/**
+ *
+ * @summary Initializes a summary detail
+ *
+ * @name base
+ * @selector .slds-summary-detail
+ * @restrict div
+ * @variant
+ */
+.slds-summary-detail {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  /**
+   * @summary Styles the position of the toggle icon
+   *
+   * @selector .slds-summary-detail__content
+   * @restrict .slds-summary-detail div
+   */
+  /**
+   * @summary Styles the visibility of the detail content
+   *
+   * @selector .slds-summary-detail__content
+   * @restrict .slds-summary-detail div
+   */ }
+
+.slds-summary-detail .slds-summary-detail__action-icon {
+  transform: rotate(-90deg); }
+
+.slds-summary-detail .slds-summary-detail__content {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0; }
+
+/**
+ * Toggle visibility of the detail section + rotate icon
+ *
+ * @selector .slds-is-open
+ * @restrict .slds-summary-detail
+ * @modifier
+ */
+.slds-summary-detail.slds-is-open .slds-summary-detail__action-icon {
+  transform: rotate(0deg);
+  transform-origin: 45%; }
+
+.slds-summary-detail.slds-is-open .slds-summary-detail__content {
+  padding-top: 0.75rem;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+  height: auto; }
+
+/**
+ * @summary Setup Assistant component
+ *
+ * @name base
+ * @selector .slds-setup-assistant
+ * @restrict ol
+ * @variant
+ */
+.slds-setup-assistant {
+  padding: 1rem; }
+
+/**
+ * @summary Creates a Setup Assistant list item
+ *
+ * @selector .slds-setup-assistant__item
+ * @restrict .slds-setup-assistant li
+ */
+.slds-setup-assistant__item {
+  border-bottom: 1px #dddbda solid;
+  padding: 2rem 0; }
+
+.slds-setup-assistant__item:first-child {
+  padding-top: 0; }
+
+.slds-setup-assistant__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0; }
+
+/**
+ * @summary Creates a Setup Assistant step
+ *
+ * @selector .slds-setup-assistant__step
+ * @restrict .slds-setup-assistant article
+ */
+/**
+ * @summary Setup Assistant step's summary portion
+ *
+ * @selector .slds-setup-assistant__step-summary
+ * @restrict .slds-setup-assistant__step div, .slds-setup-assistant__step .slds-summary_detail__title div
+ */
+.slds-setup-assistant__step-summary .slds-progress-ring_large {
+  top: 1px; }
+
+/**
+ * @summary Add a right margin to Setup Assistant step's summary content
+ *
+ * @selector .slds-setup-assistant__step-summary-content
+ * @restrict .slds-setup-assistant__step-summary div
+ */
+.slds-setup-assistant__step-summary-content {
+  margin-right: 3rem; }
+
+/**
+ * @summary Add bottom padding to Setup Assistant step's summary title
+ *
+ * @selector .slds-setup-assistant__step-summary-title
+ * @restrict .slds-setup-assistant__step-summary h3
+ */
+.slds-setup-assistant__step-summary-title {
+  padding-bottom: 0.5rem;
+  font-weight: 700; }
+
+/**
+ * @summary Add left padding before Setup Assistant step's detail portion
+ *
+ * @selector .slds-setup-assistant__step-detail
+ * @restrict .slds-setup-assistant__step div
+ */
+.slds-setup-assistant__step-detail {
+  padding-left: 2.75rem; }
 
 @media (min-width: 30em) {
   .slds-nowrap_small,
@@ -20152,6 +21783,35 @@ a.slds-button--inverse:focus {
       align-items: center;
   margin: auto; }
 
+.slds-media_reverse > .slds-media__figure,
+.slds-media--reverse > .slds-media__figure {
+  -ms-flex-order: 1;
+      order: 1; }
+
+.slds-media_reverse.slds-media_small .slds-media__figure,
+.slds-media_reverse.slds-media--small .slds-media__figure,
+.slds-media--reverse.slds-media_small .slds-media__figure,
+.slds-media--reverse.slds-media--small .slds-media__figure {
+  margin-left: 0.25rem; }
+
+.slds-media_double > .slds-media__figure,
+.slds-media--double > .slds-media__figure {
+  -ms-flex-order: 1;
+      order: 1; }
+
+.slds-media_double .slds-media__figure_reverse,
+.slds-media_double .slds-media__figure--reverse,
+.slds-media--double .slds-media__figure_reverse,
+.slds-media--double .slds-media__figure--reverse {
+  -ms-flex-order: 3;
+      order: 3;
+  margin: 0 0 0 1rem; }
+
+.slds-media_double .slds-media__body,
+.slds-media--double .slds-media__body {
+  -ms-flex-order: 2;
+      order: 2; }
+
 /**
  * @summary Creates media object
  *
@@ -20256,35 +21916,6 @@ a.slds-button--inverse:focus {
 .slds-media__figure_reverse,
 .slds-media__figure--reverse {
   margin: 0 0 0 0.75rem; }
-
-.slds-media_reverse > .slds-media__figure,
-.slds-media--reverse > .slds-media__figure {
-  -ms-flex-order: 1;
-      order: 1; }
-
-.slds-media_reverse.slds-media_small .slds-media__figure,
-.slds-media_reverse.slds-media--small .slds-media__figure,
-.slds-media--reverse.slds-media_small .slds-media__figure,
-.slds-media--reverse.slds-media--small .slds-media__figure {
-  margin-left: 0.25rem; }
-
-.slds-media_double > .slds-media__figure,
-.slds-media--double > .slds-media__figure {
-  -ms-flex-order: 1;
-      order: 1; }
-
-.slds-media_double .slds-media__figure_reverse,
-.slds-media_double .slds-media__figure--reverse,
-.slds-media--double .slds-media__figure_reverse,
-.slds-media--double .slds-media__figure--reverse {
-  -ms-flex-order: 3;
-      order: 3;
-  margin: 0 0 0 1rem; }
-
-.slds-media_double .slds-media__body,
-.slds-media--double .slds-media__body {
-  -ms-flex-order: 2;
-      order: 2; }
 
 @media (max-width: 48em) {
   /**
@@ -20456,36 +22087,6 @@ a.slds-button--inverse:focus {
 .slds-m-around--xx-small {
   margin: 0.25rem; }
 
-.slds-m-top_card-wrapper-spacing,
-.slds-m-top--card-wrapper-spacing {
-  margin-top: 1rem; }
-
-.slds-m-right_card-wrapper-spacing,
-.slds-m-right--card-wrapper-spacing {
-  margin-right: 1rem; }
-
-.slds-m-bottom_card-wrapper-spacing,
-.slds-m-bottom--card-wrapper-spacing {
-  margin-bottom: 1rem; }
-
-.slds-m-left_card-wrapper-spacing,
-.slds-m-left--card-wrapper-spacing {
-  margin-left: 1rem; }
-
-.slds-m-vertical_card-wrapper-spacing,
-.slds-m-vertical--card-wrapper-spacing {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
-.slds-m-horizontal_card-wrapper-spacing,
-.slds-m-horizontal--card-wrapper-spacing {
-  margin-right: 1rem;
-  margin-left: 1rem; }
-
-.slds-m-around_card-wrapper-spacing,
-.slds-m-around--card-wrapper-spacing {
-  margin: 1rem; }
-
 .slds-m-top_small,
 .slds-m-top--small {
   margin-top: 0.75rem; }
@@ -20576,36 +22177,6 @@ a.slds-button--inverse:focus {
 .slds-m-around--none {
   margin: 0; }
 
-.slds-m-top_table-cell-spacing,
-.slds-m-top--table-cell-spacing {
-  margin-top: 0.5rem; }
-
-.slds-m-right_table-cell-spacing,
-.slds-m-right--table-cell-spacing {
-  margin-right: 0.5rem; }
-
-.slds-m-bottom_table-cell-spacing,
-.slds-m-bottom--table-cell-spacing {
-  margin-bottom: 0.5rem; }
-
-.slds-m-left_table-cell-spacing,
-.slds-m-left--table-cell-spacing {
-  margin-left: 0.5rem; }
-
-.slds-m-vertical_table-cell-spacing,
-.slds-m-vertical--table-cell-spacing {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
-
-.slds-m-horizontal_table-cell-spacing,
-.slds-m-horizontal--table-cell-spacing {
-  margin-right: 0.5rem;
-  margin-left: 0.5rem; }
-
-.slds-m-around_table-cell-spacing,
-.slds-m-around--table-cell-spacing {
-  margin: 0.5rem; }
-
 .slds-m-top_x-large,
 .slds-m-top--x-large {
   margin-top: 2rem; }
@@ -20695,6 +22266,66 @@ a.slds-button--inverse:focus {
 .slds-m-around_large,
 .slds-m-around--large {
   margin: 1.5rem; }
+
+.slds-m-top_card-wrapper-spacing,
+.slds-m-top--card-wrapper-spacing {
+  margin-top: 1rem; }
+
+.slds-m-right_card-wrapper-spacing,
+.slds-m-right--card-wrapper-spacing {
+  margin-right: 1rem; }
+
+.slds-m-bottom_card-wrapper-spacing,
+.slds-m-bottom--card-wrapper-spacing {
+  margin-bottom: 1rem; }
+
+.slds-m-left_card-wrapper-spacing,
+.slds-m-left--card-wrapper-spacing {
+  margin-left: 1rem; }
+
+.slds-m-vertical_card-wrapper-spacing,
+.slds-m-vertical--card-wrapper-spacing {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.slds-m-horizontal_card-wrapper-spacing,
+.slds-m-horizontal--card-wrapper-spacing {
+  margin-right: 1rem;
+  margin-left: 1rem; }
+
+.slds-m-around_card-wrapper-spacing,
+.slds-m-around--card-wrapper-spacing {
+  margin: 1rem; }
+
+.slds-m-top_table-cell-spacing,
+.slds-m-top--table-cell-spacing {
+  margin-top: 0.5rem; }
+
+.slds-m-right_table-cell-spacing,
+.slds-m-right--table-cell-spacing {
+  margin-right: 0.5rem; }
+
+.slds-m-bottom_table-cell-spacing,
+.slds-m-bottom--table-cell-spacing {
+  margin-bottom: 0.5rem; }
+
+.slds-m-left_table-cell-spacing,
+.slds-m-left--table-cell-spacing {
+  margin-left: 0.5rem; }
+
+.slds-m-vertical_table-cell-spacing,
+.slds-m-vertical--table-cell-spacing {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+.slds-m-horizontal_table-cell-spacing,
+.slds-m-horizontal--table-cell-spacing {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem; }
+
+.slds-m-around_table-cell-spacing,
+.slds-m-around--table-cell-spacing {
+  margin: 0.5rem; }
 
 .slds-m-bottom_none,
 .slds-m-bottom--none {
@@ -20856,36 +22487,6 @@ a.slds-button--inverse:focus {
 .slds-p-around--xx-small {
   padding: 0.25rem; }
 
-.slds-p-top_card-wrapper-spacing,
-.slds-p-top--card-wrapper-spacing {
-  padding-top: 1rem; }
-
-.slds-p-right_card-wrapper-spacing,
-.slds-p-right--card-wrapper-spacing {
-  padding-right: 1rem; }
-
-.slds-p-bottom_card-wrapper-spacing,
-.slds-p-bottom--card-wrapper-spacing {
-  padding-bottom: 1rem; }
-
-.slds-p-left_card-wrapper-spacing,
-.slds-p-left--card-wrapper-spacing {
-  padding-left: 1rem; }
-
-.slds-p-vertical_card-wrapper-spacing,
-.slds-p-vertical--card-wrapper-spacing {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-
-.slds-p-horizontal_card-wrapper-spacing,
-.slds-p-horizontal--card-wrapper-spacing {
-  padding-right: 1rem;
-  padding-left: 1rem; }
-
-.slds-p-around_card-wrapper-spacing,
-.slds-p-around--card-wrapper-spacing {
-  padding: 1rem; }
-
 .slds-p-top_small,
 .slds-p-top--small {
   padding-top: 0.75rem; }
@@ -20975,36 +22576,6 @@ a.slds-button--inverse:focus {
 .slds-p-around_none,
 .slds-p-around--none {
   padding: 0; }
-
-.slds-p-top_table-cell-spacing,
-.slds-p-top--table-cell-spacing {
-  padding-top: 0.5rem; }
-
-.slds-p-right_table-cell-spacing,
-.slds-p-right--table-cell-spacing {
-  padding-right: 0.5rem; }
-
-.slds-p-bottom_table-cell-spacing,
-.slds-p-bottom--table-cell-spacing {
-  padding-bottom: 0.5rem; }
-
-.slds-p-left_table-cell-spacing,
-.slds-p-left--table-cell-spacing {
-  padding-left: 0.5rem; }
-
-.slds-p-vertical_table-cell-spacing,
-.slds-p-vertical--table-cell-spacing {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-
-.slds-p-horizontal_table-cell-spacing,
-.slds-p-horizontal--table-cell-spacing {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem; }
-
-.slds-p-around_table-cell-spacing,
-.slds-p-around--table-cell-spacing {
-  padding: 0.5rem; }
 
 .slds-p-top_x-large,
 .slds-p-top--x-large {
@@ -21096,6 +22667,66 @@ a.slds-button--inverse:focus {
 .slds-p-around--large {
   padding: 1.5rem; }
 
+.slds-p-top_card-wrapper-spacing,
+.slds-p-top--card-wrapper-spacing {
+  padding-top: 1rem; }
+
+.slds-p-right_card-wrapper-spacing,
+.slds-p-right--card-wrapper-spacing {
+  padding-right: 1rem; }
+
+.slds-p-bottom_card-wrapper-spacing,
+.slds-p-bottom--card-wrapper-spacing {
+  padding-bottom: 1rem; }
+
+.slds-p-left_card-wrapper-spacing,
+.slds-p-left--card-wrapper-spacing {
+  padding-left: 1rem; }
+
+.slds-p-vertical_card-wrapper-spacing,
+.slds-p-vertical--card-wrapper-spacing {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.slds-p-horizontal_card-wrapper-spacing,
+.slds-p-horizontal--card-wrapper-spacing {
+  padding-right: 1rem;
+  padding-left: 1rem; }
+
+.slds-p-around_card-wrapper-spacing,
+.slds-p-around--card-wrapper-spacing {
+  padding: 1rem; }
+
+.slds-p-top_table-cell-spacing,
+.slds-p-top--table-cell-spacing {
+  padding-top: 0.5rem; }
+
+.slds-p-right_table-cell-spacing,
+.slds-p-right--table-cell-spacing {
+  padding-right: 0.5rem; }
+
+.slds-p-bottom_table-cell-spacing,
+.slds-p-bottom--table-cell-spacing {
+  padding-bottom: 0.5rem; }
+
+.slds-p-left_table-cell-spacing,
+.slds-p-left--table-cell-spacing {
+  padding-left: 0.5rem; }
+
+.slds-p-vertical_table-cell-spacing,
+.slds-p-vertical--table-cell-spacing {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
+.slds-p-horizontal_table-cell-spacing,
+.slds-p-horizontal--table-cell-spacing {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem; }
+
+.slds-p-around_table-cell-spacing,
+.slds-p-around--table-cell-spacing {
+  padding: 0.5rem; }
+
 /**
  * @summary Global padding that can be applied to any element
  *
@@ -21186,7 +22817,7 @@ a.slds-button--inverse:focus {
  * @modifier
  */
 .slds-text-link {
-  color: #0070d2;
+  color: #006dcc;
   text-decoration: none;
   transition: color 0.1s linear; }
 
@@ -21250,6 +22881,58 @@ a.slds-button--inverse:focus {
   border-color: #1589ee;
   background-color: white;
   box-shadow: 0 0 3px #0070D2; }
+
+.slds-list_vertical.slds-has-dividers > .slds-list__item,
+.slds-list--vertical.slds-has-dividers > .slds-list__item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #dddbda; }
+
+.slds-list_vertical.slds-has-dividers > .slds-list__item:hover,
+.slds-list--vertical.slds-has-dividers > .slds-list__item:hover {
+  background-color: #f3f2f2;
+  border-color: #dddbda;
+  cursor: pointer; }
+
+.slds-list_vertical.slds-has-dividers > .slds-list__item:active,
+.slds-list--vertical.slds-has-dividers > .slds-list__item:active {
+  background-color: #ecebea;
+  box-shadow: #dddbda 0 -1px 0 inset; }
+
+.slds-list_vertical.slds-has-dividers > .slds-list__item.slds-is-selected,
+.slds-list--vertical.slds-has-dividers > .slds-list__item.slds-is-selected {
+  box-shadow: #0070d2 0 0 0 1px inset;
+  background-color: #ecebea; }
+
+.slds-list_vertical.slds-has-dividers > .slds-list__item.slds-is-selected:hover, .slds-list_vertical.slds-has-dividers > .slds-list__item.slds-is-selected:focus,
+.slds-list--vertical.slds-has-dividers > .slds-list__item.slds-is-selected:hover,
+.slds-list--vertical.slds-has-dividers > .slds-list__item.slds-is-selected:focus {
+  box-shadow: #1589ee 0 -2px 0 inset, #1589ee 0 0 0 1px inset; }
+
+.slds-has-cards > .slds-list__item {
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  background-clip: padding-box; }
+
+.slds-has-cards > .slds-list__item + .slds-list__item {
+  margin-top: 0.5rem; }
+
+.slds-has-cards_space > .slds-list__item, .slds-has-cards--space > .slds-list__item {
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  background-clip: padding-box;
+  padding: 0.75rem; }
+
+@media (min-width: 30em) {
+  .slds-has-cards_space > .slds-list__item, .slds-has-cards--space > .slds-list__item {
+    padding: 0.5rem; } }
+
+.slds-has-cards_space > .slds-list__item + .slds-list__item, .slds-has-cards--space > .slds-list__item + .slds-list__item {
+  margin-top: 0.5rem; }
+
+.slds-has-divider {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #dddbda; }
 
 .slds-has-block-links a {
   display: block;
@@ -21474,57 +23157,7 @@ a.slds-button--inverse:focus {
 .slds-has-list-interactions > .slds-item.slds-is-selected:focus {
   box-shadow: #1589ee 0 -2px 0 inset, #1589ee 0 0 0 1px inset; }
 
-.slds-list_vertical.slds-has-dividers > .slds-list__item,
-.slds-list--vertical.slds-has-dividers > .slds-list__item {
-  padding: 0.5rem;
-  border-bottom: 1px solid #dddbda; }
-
-.slds-list_vertical.slds-has-dividers > .slds-list__item:hover,
-.slds-list--vertical.slds-has-dividers > .slds-list__item:hover {
-  background-color: #f3f2f2;
-  border-color: #dddbda;
-  cursor: pointer; }
-
-.slds-list_vertical.slds-has-dividers > .slds-list__item:active,
-.slds-list--vertical.slds-has-dividers > .slds-list__item:active {
-  background-color: #ecebea;
-  box-shadow: #dddbda 0 -1px 0 inset; }
-
-.slds-list_vertical.slds-has-dividers > .slds-list__item.slds-is-selected,
-.slds-list--vertical.slds-has-dividers > .slds-list__item.slds-is-selected {
-  box-shadow: #0070d2 0 0 0 1px inset;
-  background-color: #ecebea; }
-
-.slds-list_vertical.slds-has-dividers > .slds-list__item.slds-is-selected:hover, .slds-list_vertical.slds-has-dividers > .slds-list__item.slds-is-selected:focus,
-.slds-list--vertical.slds-has-dividers > .slds-list__item.slds-is-selected:hover,
-.slds-list--vertical.slds-has-dividers > .slds-list__item.slds-is-selected:focus {
-  box-shadow: #1589ee 0 -2px 0 inset, #1589ee 0 0 0 1px inset; }
-
-.slds-has-cards > .slds-list__item {
-  border: 1px solid #dddbda;
-  border-radius: 0.25rem;
-  background-clip: padding-box; }
-
-.slds-has-cards > .slds-list__item + .slds-list__item {
-  margin-top: 0.5rem; }
-
-.slds-has-cards_space > .slds-list__item, .slds-has-cards--space > .slds-list__item {
-  border: 1px solid #dddbda;
-  border-radius: 0.25rem;
-  background-clip: padding-box;
-  padding: 0.75rem; }
-
-@media (min-width: 30em) {
-  .slds-has-cards_space > .slds-list__item, .slds-has-cards--space > .slds-list__item {
-    padding: 0.5rem; } }
-
-.slds-has-cards_space > .slds-list__item + .slds-list__item, .slds-has-cards--space > .slds-list__item + .slds-list__item {
-  margin-top: 0.5rem; }
-
 .slds-has-divider {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid #dddbda;
   /**
    * @summary Adds 1px border divider above an HTML element
    *
@@ -21616,6 +23249,33 @@ a.slds-button--inverse:focus {
   padding-right: 0; }
 
 .slds-has-divider_left:first-child:before, .slds-has-divider--left:first-child:before {
+  content: none; }
+
+.slds-list_horizontal.slds-has-dividers > .slds-list__item,
+.slds-list--horizontal.slds-has-dividers > .slds-list__item {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.slds-list_horizontal.slds-has-dividers > .slds-list__item:after,
+.slds-list--horizontal.slds-has-dividers > .slds-list__item:after {
+  width: 2px;
+  height: 2px;
+  content: '';
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background-color: #16325c; }
+
+.slds-list_horizontal.slds-has-dividers > .slds-list__item:last-child,
+.slds-list--horizontal.slds-has-dividers > .slds-list__item:last-child {
+  margin-right: 0;
+  padding-right: 0; }
+
+.slds-list_horizontal.slds-has-dividers > .slds-list__item:last-child:after,
+.slds-list--horizontal.slds-has-dividers > .slds-list__item:last-child:after {
   content: none; }
 
 /**
@@ -21721,33 +23381,6 @@ a.slds-button--inverse:focus {
 .slds-has-dividers--right > .slds-list__item:last-child:after,
 .slds-has-dividers_right > .slds-item:last-child:after,
 .slds-has-dividers--right > .slds-item:last-child:after {
-  content: none; }
-
-.slds-list_horizontal.slds-has-dividers > .slds-list__item,
-.slds-list--horizontal.slds-has-dividers > .slds-list__item {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center; }
-
-.slds-list_horizontal.slds-has-dividers > .slds-list__item:after,
-.slds-list--horizontal.slds-has-dividers > .slds-list__item:after {
-  width: 2px;
-  height: 2px;
-  content: '';
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  background-color: #16325c; }
-
-.slds-list_horizontal.slds-has-dividers > .slds-list__item:last-child,
-.slds-list--horizontal.slds-has-dividers > .slds-list__item:last-child {
-  margin-right: 0;
-  padding-right: 0; }
-
-.slds-list_horizontal.slds-has-dividers > .slds-list__item:last-child:after,
-.slds-list--horizontal.slds-has-dividers > .slds-list__item:last-child:after {
   content: none; }
 
 /**
@@ -22452,7 +24085,7 @@ a.slds-button--inverse:focus {
  * @modifier
  */
 .slds-text-color_success {
-  color: #028048; }
+  color: #027e46; }
 
 /**
  * @summary Default color of text on inversed background
@@ -22550,6 +24183,15 @@ a.slds-button--inverse:focus {
 
 .slds-text-longform .slds-video.slds-video_right, .slds-text-longform .slds-video.slds-video--right {
   margin: 0 0 0 auto; }
+
+/**
+* @summary Monospace font family
+*
+* @selector .slds-text-font_monospace
+* @modifier
+*/
+.slds-text-font_monospace {
+  font-family: Consolas, Menlo, Monaco, Courier, monospace; }
 
 /**
  * @summary Text color utility class for Palette Gray #1
@@ -23081,69 +24723,44 @@ a.slds-button--inverse:focus {
  * @selector .slds-size_small
  * @modifier
  */
-/*
-   * @selector .slds-size_xxx-small,
-   * @modifier
-   */
 .slds-size_xxx-small,
 .slds-size--xxx-small {
   width: 3rem; }
 
-/*
-   * @selector .slds-size_xx-small
-   * @modifier
-   */
 .slds-size_xx-small,
 .slds-size--xx-small {
   width: 6rem; }
 
-/*
-   * @selector .slds-size_x-small
-   * @modifier
-   */
 .slds-size_x-small,
 .slds-size--x-small {
   width: 12rem; }
 
-/*
-   * @selector .slds-size_small
-   * @modifier
-   */
 .slds-size_small,
 .slds-size--small {
   width: 15rem; }
 
-/*
-   * @selector .slds-size_medium
-   * @modifier
-   */
 .slds-size_medium,
 .slds-size--medium {
   width: 20rem; }
 
-/*
-   * @selector .slds-size_large
-   * @modifier
-   */
 .slds-size_large,
 .slds-size--large {
   width: 25rem; }
 
-/*
-   * @selector .slds-size_x-large
-   * @modifier
-   */
 .slds-size_x-large,
 .slds-size--x-large {
   width: 40rem; }
 
-/*
-   * @selector .slds-size_xx-large
-   * @modifier
-   */
 .slds-size_xx-large,
 .slds-size--xx-large {
   width: 60rem; }
+
+/**
+ * @selector .slds-size_full
+ * @modifier
+ */
+.slds-size_full {
+  width: 100%; }
 
 .slds-size_1-of-1,
 .slds-size--1-of-1 {
@@ -25264,6 +26881,14 @@ a.slds-button--inverse:focus {
 .slds-is-absolute {
   position: absolute; }
 
+.slds-collapsed {
+  height: 0;
+  overflow: hidden; }
+
+.slds-expanded {
+  height: auto;
+  overflow: visible; }
+
 /* stylelint-disable declaration-no-important */
 /**
  * @summary Hides an element yet enables a screen reader to read the element that is hidden
@@ -25311,21 +26936,13 @@ a.slds-button--inverse:focus {
   height: 0;
   overflow: hidden; }
 
-.slds-collapsed {
-  height: 0;
-  overflow: hidden; }
-
 /**
  * @summary Shows the elements inside the parent
  *
- * @selector .slds-is-collapsed
+ * @selector .slds-is-expanded
  * @modifier
  */
 .slds-is-expanded {
-  height: auto;
-  overflow: visible; }
-
-.slds-expanded {
   height: auto;
   overflow: visible; }
 
@@ -25337,7 +26954,7 @@ a.slds-button--inverse:focus {
  * @modifier
  */
 .slds-hidden {
-  visibility: hidden; }
+  visibility: hidden !important; }
 
 /**
  * @summary Shows the element by setting the visibility property to `visible`
@@ -25357,7 +26974,7 @@ a.slds-button--inverse:focus {
  * @modifier
  */
 .slds-hide {
-  display: none; }
+  display: none !important; }
 
 /**
  * @summary Shows the element by setting display property to `block`
