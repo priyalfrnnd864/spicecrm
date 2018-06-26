@@ -21,6 +21,50 @@ $uri = explode('/', $urlArray[0]);
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         switch (end($uri)) {
+            case 'stylesheet':
+                header('Content-Type: text/css');
+                echo file_get_contents ( __DIR__.'/../assets/css/spicecrm.css' )."\n\n\n";
+                $customCss = @file_get_contents ( __DIR__.'/assets/css/spicecrm.css' );
+                if ( isset( $customCss{0} )) echo "/***** Custom Stylesheet ***************/\n\n\n".$customCss;
+                else echo "/* NO Custom Stylesheet */\n";
+                break;
+            case 'loginimage':
+                $filetype = '';
+                if ( file_exists( $filepath = __DIR__.'/assets/images/loginimage.png' )) $filetype = 'png';
+                elseif ( file_exists( $filepath = __DIR__.'/assets/images/loginimage.gif' )) $filetype = 'gif';
+                elseif ( file_exists( $filepath = __DIR__.'/assets/images/loginimage.jpg' )) $filetype = 'jpg';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/loginimage.png' )) $filetype = 'png';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/loginimage.gif' )) $filetype = 'gif';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/loginimage.jpg' )) $filetype = 'jpg';
+                if ( $filetype !== '' ) {
+                    header('Content-Type: image/'.$filetype );
+                    readfile( $filepath );
+                } else http_response_code(404);
+                break;
+            case 'headerimage':
+                $filetype = '';
+                if ( file_exists( $filepath = __DIR__.'/assets/images/headerimage.png' )) $filetype = 'png';
+                elseif ( file_exists( $filepath = __DIR__.'/assets/images/headerimage.gif' )) $filetype = 'gif';
+                elseif ( file_exists( $filepath = __DIR__.'/assets/images/headerimage.jpg' )) $filetype = 'jpg';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/headerimage.png' )) $filetype = 'png';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/headerimage.gif' )) $filetype = 'gif';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/headerimage.jpg' )) $filetype = 'jpg';
+                if ( $filetype !== '' ) {
+                    header('Content-Type: image/'.$filetype );
+                    readfile( $filepath );
+                } else http_response_code(404);
+                break;
+            case 'favicon':
+                $filetype = '';
+                if ( file_exists( $filepath = __DIR__.'/assets/images/favicon.ico' )) $contenttype = 'image/x-icon';
+                elseif ( file_exists( $filepath = __DIR__.'/assets/images/favicon.png' )) $contenttype = 'image/png';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/favicon.ico' )) $contenttype = 'image/x-icon';
+                elseif ( file_exists( $filepath = __DIR__.'/../assets/images/favicon.png' )) $contenttype = 'image/png';
+                if ( $contenttype !== '' ) {
+                    header('Content-Type: '.$contenttype );
+                    readfile( $filepath );
+                } else http_response_code(404);
+                break;
             case 'sites':
                 echo json_encode( array( 'sites' => configHandler::getSites(), 'general' => configHandler::getGeneralConfig()));
                 break;
