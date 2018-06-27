@@ -26,6 +26,7 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'S' => 
         array (
             'Symfony\\Component\\OptionsResolver\\' => 34,
+            'SpiceCRM\\modules\\Skype\\' => 23,
             'SpiceCRM\\modules\\Mailboxes\\' => 27,
             'Slim\\' => 5,
             'SendGrid\\' => 9,
@@ -71,6 +72,10 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'Symfony\\Component\\OptionsResolver\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/options-resolver',
+        ),
+        'SpiceCRM\\modules\\Skype\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/modules/Skype',
         ),
         'SpiceCRM\\modules\\Mailboxes\\' => 
         array (

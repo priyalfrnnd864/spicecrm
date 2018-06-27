@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Symfony\\Component\\OptionsResolver\\' => array($vendorDir . '/symfony/options-resolver'),
+    'SpiceCRM\\modules\\Skype\\' => array($baseDir . '/modules/Skype'),
     'SpiceCRM\\modules\\Mailboxes\\' => array($baseDir . '/modules/Mailboxes'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
     'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
