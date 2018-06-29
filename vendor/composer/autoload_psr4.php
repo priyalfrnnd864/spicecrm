@@ -11,6 +11,7 @@ return array(
     'SpiceCRM\\modules\\Skype\\' => array($baseDir . '/modules/Skype'),
     'SpiceCRM\\modules\\OutputTemplates\\' => array($baseDir . '/modules/OutputTemplates'),
     'SpiceCRM\\modules\\Mailboxes\\' => array($baseDir . '/modules/Mailboxes'),
+    'SpiceCRM\\custom\\modules\\Mailboxes\\' => array($baseDir . '/custom/modules/Mailboxes'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
     'SendGrid\\' => array($vendorDir . '/sendgrid/php-http-client/lib'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
