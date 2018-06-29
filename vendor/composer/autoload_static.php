@@ -19,151 +19,161 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
     );
 
     public static $prefixLengthsPsr4 = array (
-        'W' => 
-        array (
-            'Webmozart\\Assert\\' => 17,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Component\\OptionsResolver\\' => 34,
-            'SpiceCRM\\modules\\Skype\\' => 23,
-            'SpiceCRM\\modules\\OutputTemplates\\' => 33,
-            'SpiceCRM\\modules\\Mailboxes\\' => 27,
-            'Slim\\' => 5,
-            'SendGrid\\' => 9,
-        ),
-        'P' => 
-        array (
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Container\\' => 14,
-        ),
-        'I' => 
-        array (
-            'Interop\\Container\\' => 18,
-        ),
-        'H' => 
-        array (
-            'Http\\Promise\\' => 13,
-            'Http\\Message\\MultipartStream\\' => 29,
-            'Http\\Message\\' => 13,
-            'Http\\Discovery\\' => 15,
-            'Http\\Client\\Curl\\' => 17,
-            'Http\\Client\\Common\\' => 19,
-            'Http\\Client\\' => 12,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-        ),
-        'F' => 
-        array (
-            'FastRoute\\' => 10,
-        ),
-        'C' => 
-        array (
-            'Clue\\StreamFilter\\' => 18,
-        ),
+        'W' =>
+            array (
+                'Webmozart\\Assert\\' => 17,
+            ),
+        'S' =>
+            array (
+                'Symfony\\Component\\OptionsResolver\\' => 34,
+                'SpiceCRM\\modules\\Skype\\' => 23,
+                'SpiceCRM\\modules\\OutputTemplates\\' => 33,
+                'SpiceCRM\\modules\\Mailboxes\\' => 27,
+                'SpiceCRM\\custom\\modules\\Mailboxes\\' => 34,
+                'SpiceCRM\\custom\\modules\\' => 24,
+                'Slim\\' => 5,
+                'SendGrid\\' => 9,
+            ),
+        'P' =>
+            array (
+                'Psr\\Http\\Message\\' => 17,
+                'Psr\\Container\\' => 14,
+            ),
+        'I' =>
+            array (
+                'Interop\\Container\\' => 18,
+            ),
+        'H' =>
+            array (
+                'Http\\Promise\\' => 13,
+                'Http\\Message\\MultipartStream\\' => 29,
+                'Http\\Message\\' => 13,
+                'Http\\Discovery\\' => 15,
+                'Http\\Client\\Curl\\' => 17,
+                'Http\\Client\\Common\\' => 19,
+                'Http\\Client\\' => 12,
+            ),
+        'G' =>
+            array (
+                'GuzzleHttp\\Psr7\\' => 16,
+            ),
+        'F' =>
+            array (
+                'FastRoute\\' => 10,
+            ),
+        'C' =>
+            array (
+                'Clue\\StreamFilter\\' => 18,
+            ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Webmozart\\Assert\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webmozart/assert/src',
-        ),
-        'Symfony\\Component\\OptionsResolver\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/options-resolver',
-        ),
+        'Webmozart\\Assert\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/webmozart/assert/src',
+            ),
+        'Symfony\\Component\\OptionsResolver\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/symfony/options-resolver',
+            ),
         'SpiceCRM\\modules\\Skype\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/modules/Skype',
-        ),
+            array (
+                0 => __DIR__ . '/../..' . '/modules/Skype',
+            ),
         'SpiceCRM\\modules\\OutputTemplates\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/modules/OutputTemplates',
-        ),
+            array (
+                0 => __DIR__ . '/../..' . '/modules/OutputTemplates',
+            ),
         'SpiceCRM\\modules\\Mailboxes\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/modules/Mailboxes',
-        ),
-        'Slim\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/slim/slim/Slim',
-        ),
-        'SendGrid\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Psr\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'Interop\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
-        ),
-        'Http\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/promise/src',
-        ),
-        'Http\\Message\\MultipartStream\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/multipart-stream-builder/src',
-        ),
-        'Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/message/src',
-            1 => __DIR__ . '/..' . '/php-http/message-factory/src',
-        ),
-        'Http\\Discovery\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/discovery/src',
-        ),
-        'Http\\Client\\Curl\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/curl-client/src',
-        ),
-        'Http\\Client\\Common\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/client-common/src',
-        ),
-        'Http\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-http/httplug/src',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'FastRoute\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
-        ),
-        'Clue\\StreamFilter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/clue/stream-filter/src',
-        ),
+            array (
+                0 => __DIR__ . '/../..' . '/modules/Mailboxes',
+            ),
+        'SpiceCRM\\custom\\modules\\Mailboxes\\' =>
+            array (
+                0 => __DIR__ . '/../..' . '/custom/modules/Mailboxes',
+            ),
+        'SpiceCRM\\custom\\modules\\' =>
+            array (
+                0 => __DIR__ . '/../..' . '/custom/modules',
+            ),
+        'Slim\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/slim/slim/Slim',
+            ),
+        'SendGrid\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+            ),
+        'Psr\\Http\\Message\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/psr/http-message/src',
+            ),
+        'Psr\\Container\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/psr/container/src',
+            ),
+        'Interop\\Container\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+            ),
+        'Http\\Promise\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/promise/src',
+            ),
+        'Http\\Message\\MultipartStream\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/multipart-stream-builder/src',
+            ),
+        'Http\\Message\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/message/src',
+                1 => __DIR__ . '/..' . '/php-http/message-factory/src',
+            ),
+        'Http\\Discovery\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/discovery/src',
+            ),
+        'Http\\Client\\Curl\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/curl-client/src',
+            ),
+        'Http\\Client\\Common\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/client-common/src',
+            ),
+        'Http\\Client\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/php-http/httplug/src',
+            ),
+        'GuzzleHttp\\Psr7\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+            ),
+        'FastRoute\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+            ),
+        'Clue\\StreamFilter\\' =>
+            array (
+                0 => __DIR__ . '/..' . '/clue/stream-filter/src',
+            ),
     );
 
     public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'Pimple' => 
+        'P' =>
             array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+                'Pimple' =>
+                    array (
+                        0 => __DIR__ . '/..' . '/pimple/pimple/src',
+                    ),
             ),
-        ),
-        'M' => 
-        array (
-            'Mailgun' => 
+        'M' =>
             array (
-                0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
+                'Mailgun' =>
+                    array (
+                        0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
+                    ),
             ),
-        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
