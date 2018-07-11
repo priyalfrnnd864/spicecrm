@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {isBrowser, isMix} from '../common/utils';
+import {attachOriginToPatched, isBrowser, isMix, ObjectGetOwnPropertyDescriptor, wrapWithCurrentZone} from '../common/utils';
 
 import {_redefineProperty} from './define-property';
 
@@ -19,24 +19,27 @@ export function registerElementPatch(_global: any) {
   const callbacks =
       ['createdCallback', 'attachedCallback', 'detachedCallback', 'attributeChangedCallback'];
 
-  (<any>document).registerElement = function(name, opts) {
+  (<any>document).registerElement = function(name: any, opts: any) {
     if (opts && opts.prototype) {
       callbacks.forEach(function(callback) {
         const source = 'Document.registerElement::' + callback;
-        if (opts.prototype.hasOwnProperty(callback)) {
-          const descriptor = Object.getOwnPropertyDescriptor(opts.prototype, callback);
+        const prototype = opts.prototype;
+        if (prototype.hasOwnProperty(callback)) {
+          const descriptor = ObjectGetOwnPropertyDescriptor(prototype, callback);
           if (descriptor && descriptor.value) {
-            descriptor.value = Zone.current.wrap(descriptor.value, source);
+            descriptor.value = wrapWithCurrentZone(descriptor.value, source);
             _redefineProperty(opts.prototype, callback, descriptor);
           } else {
-            opts.prototype[callback] = Zone.current.wrap(opts.prototype[callback], source);
+            prototype[callback] = wrapWithCurrentZone(prototype[callback], source);
           }
-        } else if (opts.prototype[callback]) {
-          opts.prototype[callback] = Zone.current.wrap(opts.prototype[callback], source);
+        } else if (prototype[callback]) {
+          prototype[callback] = wrapWithCurrentZone(prototype[callback], source);
         }
       });
     }
 
-    return _registerElement.apply(document, [name, opts]);
+    return _registerElement.call(document, name, opts);
   };
+
+  attachOriginToPatched((<any>document).registerElement, _registerElement);
 }

@@ -1,72 +1,45 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "@angular/router@5.2.5",
-        "scope": "@angular",
-        "escapedName": "@angular%2frouter",
-        "name": "@angular/router",
-        "rawSpec": "5.2.5",
-        "spec": "5.2.5",
-        "type": "version"
-      },
-      "C:\\htdocs\\spicecrm_ui_pilot"
-    ]
-  ],
-  "_from": "@angular/router@5.2.5",
-  "_hasShrinkwrap": false,
-  "_id": "@angular/router@5.2.5",
-  "_inCache": true,
+  "_from": "@angular/router@~6.0.7",
+  "_id": "@angular/router@6.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-KuQBeIgfiwV3bLafepMhYVJQIAF8cTckCudFh5Z0OqckJgGsWSgtvEdtBctPi+lzt7OQBi7Ym2rOv3X0dOvu0Q==",
   "_location": "/@angular/router",
-  "_nodeVersion": "8.9.2",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/router_5.2.5_1518585894043_0.13271757343502655"
-  },
-  "_npmUser": {
-    "name": "angular",
-    "email": "devops+npm@angular.io"
-  },
-  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/router@5.2.5",
-    "scope": "@angular",
-    "escapedName": "@angular%2frouter",
+    "type": "range",
+    "registry": true,
+    "raw": "@angular/router@~6.0.7",
     "name": "@angular/router",
-    "rawSpec": "5.2.5",
-    "spec": "5.2.5",
-    "type": "version"
+    "escapedName": "@angular%2frouter",
+    "scope": "@angular",
+    "rawSpec": "~6.0.7",
+    "saveSpec": null,
+    "fetchSpec": "~6.0.7"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-5.2.5.tgz",
-  "_shasum": "f8f220d5fb85fc10d60fe606b0f2a64732265142",
-  "_shrinkwrap": null,
-  "_spec": "@angular/router@5.2.5",
-  "_where": "C:\\htdocs\\spicecrm_ui_pilot",
+  "_resolved": "https://registry.npmjs.org/@angular/router/-/router-6.0.7.tgz",
+  "_shasum": "53ce5dba1bb0f033687caca1451a12489a615415",
+  "_spec": "@angular/router@~6.0.7",
+  "_where": "C:\\WebServer\\apache24\\htdocs\\angularupgrade\\ui",
   "author": {
     "name": "angular"
   },
   "bugs": {
     "url": "https://github.com/angular/angular/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
-    "tslib": "^1.7.1"
+    "tslib": "^1.9.0"
   },
+  "deprecated": false,
   "description": "Angular - the routing library",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-I8U0iy59lz0dAxU4zxRQHagfUPWF+MikLNMirRL1lrA49PG+5K1tiuIQ6p+8fZFAJ5UXwNHyXqYuWqsKRiVBHQ==",
-    "shasum": "f8f220d5fb85fc10d60fe606b0f2a64732265142",
-    "tarball": "https://registry.npmjs.org/@angular/router/-/router-5.2.5.tgz",
-    "fileCount": 70,
-    "unpackedSize": 2813228
-  },
-  "es2015": "./esm2015/router.js",
+  "es2015": "./fesm2015/router.js",
+  "esm2015": "./esm2015/router.js",
+  "esm5": "./esm5/router.js",
+  "fesm2015": "./fesm2015/router.js",
+  "fesm5": "./fesm5/router.js",
   "homepage": "https://github.com/angular/angular/tree/master/packages/router",
   "keywords": [
     "angular",
@@ -74,26 +47,41 @@
   ],
   "license": "MIT",
   "main": "./bundles/router.umd.js",
-  "maintainers": [
-    {
-      "name": "angular",
-      "email": "devops+npm@angular.io"
-    }
-  ],
-  "module": "./esm5/router.js",
+  "module": "./fesm5/router.js",
   "name": "@angular/router",
-  "optionalDependencies": {},
-  "peerDependencies": {
-    "@angular/core": "5.2.5",
-    "@angular/common": "5.2.5",
-    "@angular/platform-browser": "5.2.5",
-    "rxjs": "^5.5.0"
+  "ng-update": {
+    "packageGroup": [
+      "@angular/core",
+      "@angular/bazel",
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/compiler-cli",
+      "@angular/animations",
+      "@angular/elements",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/forms",
+      "@angular/http",
+      "@angular/platform-server",
+      "@angular/platform-webworker",
+      "@angular/platform-webworker-dynamic",
+      "@angular/upgrade",
+      "@angular/router",
+      "@angular/language-service",
+      "@angular/service-worker"
+    ]
   },
-  "readme": "ERROR: No README data found!",
+  "peerDependencies": {
+    "@angular/core": "6.0.7",
+    "@angular/common": "6.0.7",
+    "@angular/platform-browser": "6.0.7",
+    "rxjs": "^6.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angular/angular.git"
   },
+  "sideEffects": false,
   "typings": "./router.d.ts",
-  "version": "5.2.5"
+  "version": "6.0.7"
 }
