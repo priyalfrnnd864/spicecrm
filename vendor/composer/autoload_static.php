@@ -10,15 +10,22 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         'ddc0a4d7e61c0286f0f8593b1903e894' => __DIR__ . '/..' . '/clue/stream-filter/src/functions.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
         '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
         '5d7e2090c9a3b69b2ff2fceddeadca94' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/contacts/Recipients.php',
         '04a9a7b26fb79fbd712347cc9bc9d9be' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/stats/Stats.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'p' => 
+        array (
+            'phpseclib\\' => 10,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -33,8 +40,14 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Psr\\Cache\\' => 10,
+        ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
         ),
         'I' => 
         array (
@@ -53,9 +66,13 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
+            'Google\\Auth\\' => 12,
         ),
         'F' => 
         array (
+            'Firebase\\JWT\\' => 13,
             'FastRoute\\' => 10,
         ),
         'C' => 
@@ -65,6 +82,10 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
     );
 
     public static $prefixDirsPsr4 = array (
+        'phpseclib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+        ),
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
@@ -89,6 +110,10 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
@@ -96,6 +121,14 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
         'Interop\\Container\\' => 
         array (
@@ -134,6 +167,22 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
         ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Google\\Auth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/auth/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
@@ -159,6 +208,22 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
                 0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
             ),
         ),
+        'G' => 
+        array (
+            'Google_Service_' => 
+            array (
+                0 => __DIR__ . '/..' . '/google/apiclient-services/src',
+            ),
+            'Google_' => 
+            array (
+                0 => __DIR__ . '/..' . '/google/apiclient/src',
+            ),
+        ),
+    );
+
+    public static $classMap = array (
+        'Google_Service_Exception' => __DIR__ . '/..' . '/google/apiclient/src/Google/Service/Exception.php',
+        'Google_Service_Resource' => __DIR__ . '/..' . '/google/apiclient/src/Google/Service/Resource.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -167,6 +232,7 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             $loader->prefixLengthsPsr4 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$classMap;
 
         }, null, ClassLoader::class);
     }
