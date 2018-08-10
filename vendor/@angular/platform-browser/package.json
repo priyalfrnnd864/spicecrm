@@ -1,27 +1,27 @@
 {
-  "_from": "@angular/platform-browser@~6.0.7",
-  "_id": "@angular/platform-browser@6.0.7",
+  "_from": "@angular/platform-browser@~6.1.2",
+  "_id": "@angular/platform-browser@6.1.2",
   "_inBundle": false,
-  "_integrity": "sha512-CASH1CDr2DD+aBrWN9qpDDFTI3H6p/oqH23h28bEV+LZl7F57r4sj8KXKgaE+mcrOFRQqXTAlPoq3hRCLmhtVA==",
+  "_integrity": "sha512-Rm8nkj2RTFqufbI4z1J4qxWgm7h+8uEAmg7Iied0kzjpY3RZ6rYBc92bW/gFHV42zTkyRT2nngZVG4MB3EcBBw==",
   "_location": "/@angular/platform-browser",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@angular/platform-browser@~6.0.7",
+    "raw": "@angular/platform-browser@~6.1.2",
     "name": "@angular/platform-browser",
     "escapedName": "@angular%2fplatform-browser",
     "scope": "@angular",
-    "rawSpec": "~6.0.7",
+    "rawSpec": "~6.1.2",
     "saveSpec": null,
-    "fetchSpec": "~6.0.7"
+    "fetchSpec": "~6.1.2"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-6.0.7.tgz",
-  "_shasum": "53470304671534b545c2b00385b9d6dfe5dbb722",
-  "_spec": "@angular/platform-browser@~6.0.7",
+  "_resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-6.1.2.tgz",
+  "_shasum": "9a2a498e27e2bcd0fc8d6c696340c258f8b3e322",
+  "_spec": "@angular/platform-browser@~6.1.2",
   "_where": "C:\\WebServer\\apache24\\htdocs\\angularupgrade\\ui",
   "author": {
     "name": "angular"
@@ -68,8 +68,8 @@
     ]
   },
   "peerDependencies": {
-    "@angular/core": "6.0.7",
-    "@angular/common": "6.0.7"
+    "@angular/core": "6.1.2",
+    "@angular/common": "6.1.2"
   },
   "repository": {
     "type": "git",
@@ -77,5 +77,5 @@
   },
   "sideEffects": false,
   "typings": "./platform-browser.d.ts",
-  "version": "6.0.7"
+  "version": "6.1.2"
 }

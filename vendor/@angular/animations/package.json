@@ -1,27 +1,27 @@
 {
-  "_from": "@angular/animations@~6.0.7",
-  "_id": "@angular/animations@6.0.7",
+  "_from": "@angular/animations@~6.1.2",
+  "_id": "@angular/animations@6.1.2",
   "_inBundle": false,
-  "_integrity": "sha512-yOig45sxzpEmlXy+eFgh2v2yxoE/Hh9rn7BX82uj71yobSpCYoe58AEOay1cu0FCcLi/P5qltHepDrRRxNxPMw==",
+  "_integrity": "sha512-E6eFwoRSKKEGPDsIF5AnecDid3ZoOczG5WUTpOYIGUfKtB1kqiisZCP/090RWN48xU3nDssxwPiN9dJ7a4Hf4w==",
   "_location": "/@angular/animations",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@angular/animations@~6.0.7",
+    "raw": "@angular/animations@~6.1.2",
     "name": "@angular/animations",
     "escapedName": "@angular%2fanimations",
     "scope": "@angular",
-    "rawSpec": "~6.0.7",
+    "rawSpec": "~6.1.2",
     "saveSpec": null,
-    "fetchSpec": "~6.0.7"
+    "fetchSpec": "~6.1.2"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/animations/-/animations-6.0.7.tgz",
-  "_shasum": "af9fd317556f3bf425f77905eb6a7f3281dca12a",
-  "_spec": "@angular/animations@~6.0.7",
+  "_resolved": "https://registry.npmjs.org/@angular/animations/-/animations-6.1.2.tgz",
+  "_shasum": "31070ac85bca47e3feab887fed8872c147fcf63e",
+  "_spec": "@angular/animations@~6.1.2",
   "_where": "C:\\WebServer\\apache24\\htdocs\\angularupgrade\\ui",
   "author": {
     "name": "angular"
@@ -68,7 +68,7 @@
     ]
   },
   "peerDependencies": {
-    "@angular/core": "6.0.7"
+    "@angular/core": "6.1.2"
   },
   "repository": {
     "type": "git",
@@ -76,5 +76,5 @@
   },
   "sideEffects": false,
   "typings": "./animations.d.ts",
-  "version": "6.0.7"
+  "version": "6.1.2"
 }

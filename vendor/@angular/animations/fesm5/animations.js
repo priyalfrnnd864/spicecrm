@@ -1,5 +1,5 @@
 /**
- * @license Angular v6.0.7
+ * @license Angular v6.1.2
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
@@ -9,7 +9,7 @@
  * BrowserAnimationsModule BrowserAnimationsModule} or {@link NoopAnimationsModule
  * NoopAnimationsModule} modules are used within an application.
  *
- * The purpose if this service is to produce an animation sequence programmatically within an
+ * The purpose of this service is to produce an animation sequence programmatically within an
  * angular component or directive.
  *
  * Programmatic animations are first built and then a player is created when the build animation is
@@ -943,7 +943,7 @@ var NoopAnimationPlayer = /** @class */ (function () {
         }
         this._started = true;
     };
-    /* @internal */
+    /** @internal */
     NoopAnimationPlayer.prototype.triggerMicrotask = function () {
         var _this = this;
         scheduleMicroTask(function () { return _this._onFinish(); });
@@ -967,9 +967,9 @@ var NoopAnimationPlayer = /** @class */ (function () {
         }
     };
     NoopAnimationPlayer.prototype.reset = function () { };
-    NoopAnimationPlayer.prototype.setPosition = function (p) { };
+    NoopAnimationPlayer.prototype.setPosition = function (position) { };
     NoopAnimationPlayer.prototype.getPosition = function () { return 0; };
-    /* @internal */
+    /** @internal */
     NoopAnimationPlayer.prototype.triggerCallback = function (phaseName) {
         var methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
         methods.forEach(function (fn) { return fn(); });
@@ -1095,7 +1095,7 @@ var AnimationGroupPlayer = /** @class */ (function () {
             }
         });
     };
-    /* @internal */
+    /** @internal */
     AnimationGroupPlayer.prototype.triggerCallback = function (phaseName) {
         var methods = phaseName == 'start' ? this._onStartFns : this._onDoneFns;
         methods.forEach(function (fn) { return fn(); });
@@ -1120,10 +1120,13 @@ var ɵPRE_STYLE = '!';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
+
 /**
- * @module
- * @description
- * Entry point for all animation APIs of the animation package.
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 
 /**
@@ -1133,23 +1136,6 @@ var ɵPRE_STYLE = '!';
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/**
- * @module
- * @description
- * Entry point for all public APIs of this package.
- */
-
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-// This file is not used to build this module. It is only used during editing
-// by the TypeScript language service and during build for verification. `ngc`
-// replaces this file with production index.ts when it rewrites private symbol
-// names.
 
 /**
  * Generated bundle index. Do not edit.

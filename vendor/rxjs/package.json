@@ -1,26 +1,31 @@
 {
-  "_from": "rxjs@~6.2.1",
-  "_id": "rxjs@6.2.1",
+  "_from": "rxjs@~6.2.2",
+  "_id": "rxjs@6.2.2",
   "_inBundle": false,
-  "_integrity": "sha512-OwMxHxmnmHTUpgO+V7dZChf3Tixf4ih95cmXjzzadULziVl/FKhHScGLj4goEw9weePVOH2Q0+GcCBUhKCZc/g==",
+  "_integrity": "sha512-0MI8+mkKAXZUF9vMrEoPnaoHkfzBPP4IGwUYRJhIRJF6/w3uByO1e91bEHn8zd43RdkTMKiooYKmwz7RH6zfOQ==",
   "_location": "/rxjs",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "rxjs@~6.2.1",
+    "raw": "rxjs@~6.2.2",
     "name": "rxjs",
     "escapedName": "rxjs",
-    "rawSpec": "~6.2.1",
+    "rawSpec": "~6.2.2",
     "saveSpec": null,
-    "fetchSpec": "~6.2.1"
+    "fetchSpec": "~6.2.2"
   },
   "_requiredBy": [
-    "/"
+    "/",
+    "/@angular-devkit/architect",
+    "/@angular-devkit/core",
+    "/@angular-devkit/schematics",
+    "/@angular/cli",
+    "/@schematics/update"
   ],
-  "_resolved": "https://registry.npmjs.org/rxjs/-/rxjs-6.2.1.tgz",
-  "_shasum": "246cebec189a6cbc143a3ef9f62d6f4c91813ca1",
-  "_spec": "rxjs@~6.2.1",
+  "_resolved": "https://registry.npmjs.org/rxjs/-/rxjs-6.2.2.tgz",
+  "_shasum": "eb75fa3c186ff5289907d06483a77884586e1cf9",
+  "_spec": "rxjs@~6.2.2",
   "_where": "C:\\WebServer\\apache24\\htdocs\\angularupgrade\\ui",
   "author": {
     "name": "Ben Lesh",
@@ -193,14 +198,14 @@
   },
   "sideEffects": false,
   "typings": "./index.d.ts",
-  "version": "6.2.1",
+  "version": "6.2.2",
   "warnings": [
     {
       "code": "ENOTSUP",
       "required": {
         "npm": ">=2.0.0"
       },
-      "pkgid": "rxjs@6.2.1"
+      "pkgid": "rxjs@6.2.2"
     }
   ]
 }

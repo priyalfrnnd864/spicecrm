@@ -1,11 +1,11 @@
 /**
- * @license Angular v6.0.7
+ * @license Angular v6.1.2
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
 
-import { __assign, __extends, __spread, __values } from 'tslib';
-import { Directive, ElementRef, EventEmitter, Host, Inject, Injectable, InjectionToken, Injector, Input, NgModule, Optional, Output, Renderer2, Self, SkipSelf, Version, forwardRef, isDevMode, ɵisObservable, ɵisPromise, ɵlooseIdentical } from '@angular/core';
+import { __extends, __values, __assign, __spread } from 'tslib';
+import { InjectionToken, ɵisObservable, ɵisPromise, Directive, ElementRef, Renderer2, forwardRef, Inject, Optional, Injectable, Injector, Input, Host, ɵlooseIdentical, isDevMode, Self, EventEmitter, SkipSelf, Output, Version, NgModule } from '@angular/core';
 import { forkJoin, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ɵgetDOM } from '@angular/platform-browser';
@@ -262,60 +262,72 @@ function isEmptyInputValue(value) {
     return value == null || value.length === 0;
 }
 /**
- * Providers for validators to be used for `FormControl`s in a form.
+ * @description
+ * An `InjectionToken` for registering additional synchronous validators used with `AbstractControl`s.
  *
- * Provide this using `multi: true` to add validators.
+ * @see `NG_ASYNC_VALIDATORS`
  *
- * ### Example
+ * @usageNotes
+ *
+ * ### Providing a custom validator
+ *
+ * The following example registers a custom validator directive. Adding the validator to the
+ * existing collection of validators requires the `multi: true` option.
  *
  * ```typescript
  * @Directive({
- *   selector: '[custom-validator]',
+ *   selector: '[customValidator]',
  *   providers: [{provide: NG_VALIDATORS, useExisting: CustomValidatorDirective, multi: true}]
  * })
  * class CustomValidatorDirective implements Validator {
  *   validate(control: AbstractControl): ValidationErrors | null {
- *     return {"custom": true};
+ *     return { 'custom': true };
  *   }
  * }
  * ```
  *
- *
  */
 var NG_VALIDATORS = new InjectionToken('NgValidators');
 /**
- * Providers for asynchronous validators to be used for `FormControl`s
- * in a form.
+ * @description
+ * An `InjectionToken` for registering additional asynchronous validators used with `AbstractControl`s.
  *
- * Provide this using `multi: true` to add validators.
- *
- * See `NG_VALIDATORS` for more details.
- *
+ * @see `NG_VALIDATORS`
  *
  */
 var NG_ASYNC_VALIDATORS = new InjectionToken('NgAsyncValidators');
 var EMAIL_REGEXP = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
 /**
- * Provides a set of validators used by form controls.
+ * @description
+ * Provides a set of built-in validators that can be used by form controls.
  *
  * A validator is a function that processes a `FormControl` or collection of
- * controls and returns a map of errors. A null map means that validation has passed.
+ * controls and returns an error map or null. A null map means that validation has passed.
  *
- * ### Example
- *
- * ```typescript
- * var loginControl = new FormControl("", Validators.required)
- * ```
- *
+ * @see [Form Validation](/guide/form-validation)
  *
  */
 var Validators = /** @class */ (function () {
     function Validators() {
     }
     /**
-     * Validator that requires controls to have a value greater than a number.
-     *`min()` exists only as a function, not as a directive. For example,
-     * `control = new FormControl('', Validators.min(3));`.
+     * @description
+     * Validator that requires the control's value to be greater than or equal to the provided number.
+     * The validator exists only as a function and not as a directive.
+     *
+     * @usageNotes
+     *
+     * ### Validate against a minimum of 3
+     *
+     * ```typescript
+     * const control = new FormControl(2, Validators.min(3));
+     *
+     * console.log(control.errors); // {min: {min: 3, actual: 2}}
+     * ```
+     *
+     * @returns A validator function that returns an error map with the
+     * `min` property if the validation check fails, otherwise `null`.
+     *
      */
     Validators.min = function (min) {
         return function (control) {
@@ -329,9 +341,23 @@ var Validators = /** @class */ (function () {
         };
     };
     /**
-     * Validator that requires controls to have a value less than a number.
-     * `max()` exists only as a function, not as a directive. For example,
-     * `control = new FormControl('', Validators.max(15));`.
+     * @description
+     * Validator that requires the control's value to be less than or equal to the provided number.
+     * The validator exists only as a function and not as a directive.
+     *
+     * @usageNotes
+     *
+     * ### Validate against a maximum of 15
+     *
+     * ```typescript
+     * const control = new FormControl(16, Validators.max(15));
+     *
+     * console.log(control.errors); // {max: {max: 15, actual: 16}}
+     * ```
+     *
+     * @returns A validator function that returns an error map with the
+     * `max` property if the validation check fails, otherwise `null`.
+     *
      */
     Validators.max = function (max) {
         return function (control) {
@@ -345,19 +371,64 @@ var Validators = /** @class */ (function () {
         };
     };
     /**
-     * Validator that requires controls to have a non-empty value.
+     * @description
+     * Validator that requires the control have a non-empty value.
+     *
+     * @usageNotes
+     *
+     * ### Validate that the field is non-empty
+     *
+     * ```typescript
+     * const control = new FormControl('', Validators.required);
+     *
+     * console.log(control.errors); // {required: true}
+     * ```
+     *
+     * @returns An error map with the `required` property
+     * if the validation check fails, otherwise `null`.
+     *
      */
     Validators.required = function (control) {
         return isEmptyInputValue(control.value) ? { 'required': true } : null;
     };
     /**
-     * Validator that requires control value to be true.
+     * @description
+     * Validator that requires the control's value be true. This validator is commonly
+     * used for required checkboxes.
+     *
+     * @usageNotes
+     *
+     * ### Validate that the field value is true
+     *
+     * ```typescript
+     * const control = new FormControl('', Validators.requiredTrue);
+     *
+     * console.log(control.errors); // {required: true}
+     * ```
+     *
+     * @returns An error map that contains the `required` property
+     * set to `true` if the validation check fails, otherwise `null`.
      */
     Validators.requiredTrue = function (control) {
         return control.value === true ? null : { 'required': true };
     };
     /**
-     * Validator that performs email validation.
+     * @description
+     * Validator that requires the control's value pass an email validation test.
+     *
+     * @usageNotes
+     *
+     * ### Validate that the field matches a valid email pattern
+     *
+     * ```typescript
+     * const control = new FormControl('bad@', Validators.email);
+     *
+     * console.log(control.errors); // {email: true}
+     * ```
+     *
+     * @returns An error map with the `email` property
+     * if the validation check fails, otherwise `null`.
+     *
      */
     Validators.email = function (control) {
         if (isEmptyInputValue(control.value)) {
@@ -366,7 +437,27 @@ var Validators = /** @class */ (function () {
         return EMAIL_REGEXP.test(control.value) ? null : { 'email': true };
     };
     /**
-     * Validator that requires controls to have a value of a minimum length.
+     * @description
+     * Validator that requires the length of the control's value to be greater than or equal
+     * to the provided minimum length. This validator is also provided by default if you use the
+     * the HTML5 `minlength` attribute.
+     *
+     * @usageNotes
+     *
+     * ### Validate that the field has a minimum of 3 characters
+     *
+     * ```typescript
+     * const control = new FormControl('ng', Validators.minLength(3));
+     *
+     * console.log(control.errors); // {minlength: {requiredLength: 3, actualLength: 2}}
+     * ```
+     *
+     * ```html
+     * <input minlength="5">
+     * ```
+     *
+     * @returns A validator function that returns an error map with the
+     * `minlength` if the validation check fails, otherwise `null`.
      */
     Validators.minLength = function (minLength) {
         return function (control) {
@@ -380,7 +471,27 @@ var Validators = /** @class */ (function () {
         };
     };
     /**
-     * Validator that requires controls to have a value of a maximum length.
+     * @description
+     * Validator that requires the length of the control's value to be less than or equal
+     * to the provided maximum length. This validator is also provided by default if you use the
+     * the HTML5 `maxlength` attribute.
+     *
+     * @usageNotes
+     *
+     * ### Validate that the field has maximum of 5 characters
+     *
+     * ```typescript
+     * const control = new FormControl('Angular', Validators.maxLength(5));
+     *
+     * console.log(control.errors); // {maxlength: {requiredLength: 5, actualLength: 7}}
+     * ```
+     *
+     * ```html
+     * <input maxlength="5">
+     * ```
+     *
+     * @returns A validator function that returns an error map with the
+     * `maxlength` property if the validation check fails, otherwise `null`.
      */
     Validators.maxLength = function (maxLength) {
         return function (control) {
@@ -391,7 +502,27 @@ var Validators = /** @class */ (function () {
         };
     };
     /**
-     * Validator that requires a control to match a regex to its value.
+     * @description
+     * Validator that requires the control's value to match a regex pattern. This validator is also
+     * provided
+     * by default if you use the HTML5 `pattern` attribute.
+     *
+     * @usageNotes
+     *
+     * ### Validate that the field only contains letters or spaces
+     *
+     * ```typescript
+     * const control = new FormControl('1', Validators.pattern('[a-zA-Z ]*'));
+     *
+     * console.log(control.errors); // {pattern: {requiredPattern: '^[a-zA-Z ]*$', actualValue: '1'}}
+     * ```
+     *
+     * ```html
+     * <input pattern="[a-zA-Z ]*">
+     * ```
+     *
+     * @returns A validator function that returns an error map with the
+     * `pattern` property if the validation check fails, otherwise `null`.
      */
     Validators.pattern = function (pattern) {
         if (!pattern)
@@ -421,7 +552,8 @@ var Validators = /** @class */ (function () {
         };
     };
     /**
-     * No-op validator.
+     * @description
+     * Validator that performs no operation.
      */
     Validators.nullValidator = function (c) { return null; };
     Validators.compose = function (validators) {
@@ -434,6 +566,14 @@ var Validators = /** @class */ (function () {
             return _mergeErrors(_executeValidators(control, presentValidators));
         };
     };
+    /**
+     * @description
+     * Compose multiple async validators into a single function that returns the union
+     * of the individual error objects for the provided control.
+     *
+     * @returns A validator function that returns an error map with the
+     * merged error objects of the async validators if the validation check fails, otherwise `null`.
+    */
     Validators.composeAsync = function (validators) {
         if (!validators)
             return null;
@@ -1140,9 +1280,10 @@ var SelectControlValueAccessor = /** @class */ (function () {
     SelectControlValueAccessor.prototype._registerOption = function () { return (this._idCounter++).toString(); };
     /** @internal */
     SelectControlValueAccessor.prototype._getOptionId = function (value) {
+        var e_1, _a;
         try {
-            for (var _a = __values(Array.from(this._optionMap.keys())), _b = _a.next(); !_b.done; _b = _a.next()) {
-                var id = _b.value;
+            for (var _b = __values(Array.from(this._optionMap.keys())), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var id = _c.value;
                 if (this._compareWith(this._optionMap.get(id), value))
                     return id;
             }
@@ -1150,12 +1291,11 @@ var SelectControlValueAccessor = /** @class */ (function () {
         catch (e_1_1) { e_1 = { error: e_1_1 }; }
         finally {
             try {
-                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
             }
             finally { if (e_1) throw e_1.error; }
         }
         return null;
-        var e_1, _c;
     };
     /** @internal */
     SelectControlValueAccessor.prototype._getOptionValue = function (valueString) {
@@ -1344,6 +1484,7 @@ var SelectMultipleControlValueAccessor = /** @class */ (function () {
                     selected.push(val);
                 }
             }
+            // Degrade on IE
             else {
                 var options = _.options;
                 for (var i = 0; i < options.length; i++) {
@@ -1370,9 +1511,10 @@ var SelectMultipleControlValueAccessor = /** @class */ (function () {
     };
     /** @internal */
     SelectMultipleControlValueAccessor.prototype._getOptionId = function (value) {
+        var e_1, _a;
         try {
-            for (var _a = __values(Array.from(this._optionMap.keys())), _b = _a.next(); !_b.done; _b = _a.next()) {
-                var id = _b.value;
+            for (var _b = __values(Array.from(this._optionMap.keys())), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var id = _c.value;
                 if (this._compareWith(this._optionMap.get(id)._value, value))
                     return id;
             }
@@ -1380,12 +1522,11 @@ var SelectMultipleControlValueAccessor = /** @class */ (function () {
         catch (e_1_1) { e_1 = { error: e_1_1 }; }
         finally {
             try {
-                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
             }
             finally { if (e_1) throw e_1.error; }
         }
         return null;
-        var e_1, _c;
     };
     /** @internal */
     SelectMultipleControlValueAccessor.prototype._getOptionValue = function (valueString) {
@@ -2488,31 +2629,31 @@ var AbstractControl = /** @class */ (function () {
  * Instantiate a `FormControl`, with an initial value.
  *
  * ```ts
- * const ctrl = new FormControl('some value');
- * console.log(ctrl.value);     // 'some value'
+ * const control = new FormControl('some value');
+ * console.log(control.value);     // 'some value'
  *```
  *
  * The following example initializes the control with a form state object. The `value`
  * and `disabled` keys are required in this case.
  *
  * ```ts
- * const ctrl = new FormControl({ value: 'n/a', disabled: true });
- * console.log(ctrl.value);     // 'n/a'
- * console.log(ctrl.status);    // 'DISABLED'
+ * const control = new FormControl({ value: 'n/a', disabled: true });
+ * console.log(control.value);     // 'n/a'
+ * console.log(control.status);    // 'DISABLED'
  * ```
  *
  * The following example initializes the control with a sync validator.
  *
  * ```ts
- * const ctrl = new FormControl('', Validators.required);
- * console.log(ctrl.value);      // ''
- * console.log(ctrl.status);     // 'INVALID'
+ * const control = new FormControl('', Validators.required);
+ * console.log(control.value);      // ''
+ * console.log(control.status);     // 'INVALID'
  * ```
  *
  * The following example initializes the control using an options object.
  *
  * ```ts
- * const ctrl = new FormControl('', {
+ * const control = new FormControl('', {
  *    validators: Validators.required,
  *    asyncValidators: myAsyncValidator
  * });
@@ -2523,7 +2664,7 @@ var AbstractControl = /** @class */ (function () {
  * Set the `updateOn` option to `'blur'` to update on the blur `event`.
  *
  * ```ts
- * const ctrl = new FormControl('', { updateOn: 'blur' });
+ * const control = new FormControl('', { updateOn: 'blur' });
  * ```
  *
  * ### Configure the control to update on a submit event
@@ -2531,7 +2672,7 @@ var AbstractControl = /** @class */ (function () {
  * Set the `updateOn` option to `'submit'` to update on a submit `event`.
  *
  * ```ts
- * const ctrl = new FormControl('', { updateOn: 'submit' });
+ * const control = new FormControl('', { updateOn: 'submit' });
  * ```
  *
  * ### Reset the control back to an initial value
@@ -2541,7 +2682,7 @@ var AbstractControl = /** @class */ (function () {
  * (these are the only two properties that cannot be calculated).
  *
  * ```ts
- * const ctrl = new FormControl('Nancy');
+ * const control = new FormControl('Nancy');
  *
  * console.log(control.value); // 'Nancy'
  *
@@ -2553,15 +2694,15 @@ var AbstractControl = /** @class */ (function () {
  * ### Reset the control back to an initial value and disabled
  *
  * ```
- * const ctrl = new FormControl('Nancy');
+ * const control = new FormControl('Nancy');
  *
  * console.log(control.value); // 'Nancy'
- * console.log(this.control.status); // 'DISABLED'
+ * console.log(control.status); // 'VALID'
  *
  * control.reset({ value: 'Drew', disabled: true });
  *
- * console.log(this.control.value); // 'Drew'
- * console.log(this.control.status); // 'DISABLED'
+ * console.log(control.value); // 'Drew'
+ * console.log(control.status); // 'DISABLED'
  *
 */
 var FormControl = /** @class */ (function (_super) {
@@ -2569,9 +2710,8 @@ var FormControl = /** @class */ (function (_super) {
     /**
     * Creates a new `FormControl` instance.
     *
-    * @param formState Initializes the control with an initial state value,
-    * or with an object that defines the initial value, status, and options
-    * for handling updates and validation.
+    * @param formState Initializes the control with an initial value,
+    * or an object that defines the initial value and disabled state.
     *
     * @param validatorOrOpts A synchronous validator function, or an array of
     * such functions, or an `AbstractControlOptions` object that contains validation functions
@@ -2640,9 +2780,8 @@ var FormControl = /** @class */ (function (_super) {
      * Resets the form control, marking it `pristine` and `untouched`, and setting
      * the value to null.
      *
-     * @param formState Initializes the control with an initial state value,
-     * or with an object that defines the initial value, status, and options
-     * for handling updates and validation.
+     * @param formState Resets the control with an initial value,
+     * or an object that defines the initial value and disabled state.
      *
      * @param options Configuration options that determine how the control propagates changes
      * and emits events after the value changes.
@@ -2988,9 +3127,8 @@ var FormGroup = /** @class */ (function (_super) {
      * is a standalone value or a form state object with both a value and a disabled
      * status.
      *
-     * @param value Initializes the control with an initial state value,
-     * or with an object that defines the initial value, status,
-     * and options for handling updates and validation.
+     * @param formState Resets the control with an initial value,
+     * or an object that defines the initial value and disabled state.
      *
      * @param options Configuration options that determine how the control propagates changes
      * and emits events when the group is reset.
@@ -3120,9 +3258,10 @@ var FormGroup = /** @class */ (function (_super) {
     };
     /** @internal */
     FormGroup.prototype._allControlsDisabled = function () {
+        var e_1, _a;
         try {
-            for (var _a = __values(Object.keys(this.controls)), _b = _a.next(); !_b.done; _b = _a.next()) {
-                var controlName = _b.value;
+            for (var _b = __values(Object.keys(this.controls)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var controlName = _c.value;
                 if (this.controls[controlName].enabled) {
                     return false;
                 }
@@ -3131,12 +3270,11 @@ var FormGroup = /** @class */ (function (_super) {
         catch (e_1_1) { e_1 = { error: e_1_1 }; }
         finally {
             try {
-                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
             }
             finally { if (e_1) throw e_1.error; }
         }
         return Object.keys(this.controls).length > 0 || this.disabled;
-        var e_1, _c;
     };
     /** @internal */
     FormGroup.prototype._checkAllValuesPresent = function (value) {
@@ -3501,9 +3639,10 @@ var FormArray = /** @class */ (function (_super) {
     };
     /** @internal */
     FormArray.prototype._allControlsDisabled = function () {
+        var e_2, _a;
         try {
-            for (var _a = __values(this.controls), _b = _a.next(); !_b.done; _b = _a.next()) {
-                var control = _b.value;
+            for (var _b = __values(this.controls), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var control = _c.value;
                 if (control.enabled)
                     return false;
             }
@@ -3511,12 +3650,11 @@ var FormArray = /** @class */ (function (_super) {
         catch (e_2_1) { e_2 = { error: e_2_1 }; }
         finally {
             try {
-                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
             }
             finally { if (e_2) throw e_2.error; }
         }
         return this.controls.length > 0 || this.disabled;
-        var e_2, _c;
     };
     FormArray.prototype._registerControl = function (control) {
         control.setParent(this);
@@ -5047,9 +5185,8 @@ var MAX_LENGTH_VALIDATOR = {
     multi: true
 };
 /**
- * A directive which installs the `MaxLengthValidator` for any `formControlName,
- * `formControl`,
- * or control with `ngModel` that also has a `maxlength` attribute.
+ * A directive which installs the `MaxLengthValidator` for any `formControlName`,
+ * `formControl`, or control with `ngModel` that also has a `maxlength` attribute.
  *
  *
  */
@@ -5135,32 +5272,29 @@ var PatternValidator = /** @class */ (function () {
  */
 /**
  * @description
- *
  * Creates an `AbstractControl` from a user-specified configuration.
  *
- * This is essentially syntactic sugar that shortens the `new FormGroup()`,
- * `new FormControl()`, and `new FormArray()` boilerplate that can build up in larger
+ * The `FormBuilder` provides syntactic sugar that shortens creating instances of a `FormControl`,
+ * `FormGroup`, or `FormArray`. It reduces the amount of boilerplate needed to build complex
  * forms.
  *
- * To use, inject `FormBuilder` into your component class. You can then call its methods
- * directly.
- *
- * {@example forms/ts/formBuilder/form_builder_example.ts region='Component'}
- *
- *  * **npm package**: `@angular/forms`
- *
- *  * **NgModule**: `ReactiveFormsModule`
- *
+ * @see [Reactive Forms Guide](/guide/reactive-forms)
  *
  */
 var FormBuilder = /** @class */ (function () {
     function FormBuilder() {
     }
     /**
-     * Construct a new `FormGroup` with the given map of configuration.
-     * Valid keys for the `extra` parameter map are `validator` and `asyncValidator`.
+     * @description
+     * Construct a new `FormGroup` instance.
      *
-     * See the `FormGroup` constructor for more details.
+     * @param controlsConfig A collection of child controls. The key for each child is the name
+     * under which it is registered.
+     *
+     * @param extra An object of configuration options for the `FormGroup`.
+     * * `validator`: A synchronous validator function, or an array of validator functions
+     * * `asyncValidator`: A single async validator or array of async validator functions
+     *
      */
     FormBuilder.prototype.group = function (controlsConfig, extra) {
         if (extra === void 0) { extra = null; }
@@ -5170,19 +5304,42 @@ var FormBuilder = /** @class */ (function () {
         return new FormGroup(controls, validator, asyncValidator);
     };
     /**
-     * Construct a new `FormControl` with the given `formState`,`validator`, and
-     * `asyncValidator`.
+     * @description
+     * Construct a new `FormControl` instance.
      *
-     * `formState` can either be a standalone value for the form control or an object
-     * that contains both a value and a disabled status.
+     * @param formState Initializes the control with an initial value,
+     * or an object that defines the initial value and disabled state.
+     *
+     * @param validator A synchronous validator function, or an array of synchronous validator
+     * functions.
+     *
+     * @param asyncValidator A single async validator or array of async validator functions
+     *
+     * @usageNotes
+     *
+     * ### Initialize a control as disabled
+     *
+     * The following example returns a control with an initial value in a disabled state.
+     *
+     * <code-example path="forms/ts/formBuilder/form_builder_example.ts"
+     *   linenums="false" region="disabled-control">
+     * </code-example>
      *
      */
     FormBuilder.prototype.control = function (formState, validator, asyncValidator) {
         return new FormControl(formState, validator, asyncValidator);
     };
     /**
-     * Construct a `FormArray` from the given `controlsConfig` array of
-     * configuration, with the given optional `validator` and `asyncValidator`.
+     * @description
+     * Construct a new `FormArray` instance.
+     *
+     * @param controlsConfig An array of child controls. The key for each child control is its index
+     * in the array.
+     *
+     * @param validator A synchronous validator function, or an array of synchronous validator
+     * functions.
+     *
+     * @param asyncValidator A single async validator or array of async validator functions
      */
     FormBuilder.prototype.array = function (controlsConfig, validator, asyncValidator) {
         var _this = this;
@@ -5227,12 +5384,7 @@ var FormBuilder = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the common package.
- */
-var VERSION = new Version('6.0.7');
+var VERSION = new Version('6.1.2');
 
 /**
  * @license
@@ -5368,16 +5520,6 @@ var ReactiveFormsModule = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/**
- * @module
- * @description
- * This module is used for handling user input, by defining and building a `FormGroup` that
- * consists of `FormControl` objects, and mapping them onto the DOM. `FormControl`
- * objects can then be used to read information from the form DOM elements.
- *
- * Forms providers are not included in default providers; you must import these providers
- * explicitly.
- */
 
 /**
  * @license
@@ -5386,12 +5528,6 @@ var ReactiveFormsModule = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/**
- * @module
- * @description
- * Entry point for all public APIs of this package.
- */
-
 // This file only reexports content of the `src` folder. Keep it that way.
 
 /**
@@ -5401,10 +5537,6 @@ var ReactiveFormsModule = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-// This file is not used to build this module. It is only used during editing
-// by the TypeScript language service and during build for verification. `ngc`
-// replaces this file with production index.ts when it rewrites private symbol
-// names.
 
 /**
  * Generated bundle index. Do not edit.

@@ -117,20 +117,19 @@ var TestScheduler = (function (_super) {
         };
     };
     TestScheduler.prototype.flush = function () {
+        var _this = this;
         var hotObservables = this.hotObservables;
         while (hotObservables.length > 0) {
             hotObservables.shift().setup();
         }
         _super.prototype.flush.call(this);
-        var flushTests = this.flushTests;
-        var flushTestsCopy = flushTests.slice();
-        for (var i = 0, l = flushTests.length; i < l; i++) {
-            var test = flushTestsCopy[i];
+        this.flushTests = this.flushTests.filter(function (test) {
             if (test.ready) {
-                flushTests.splice(i, 1);
-                this.assertDeepEqual(test.actual, test.expected);
+                _this.assertDeepEqual(test.actual, test.expected);
+                return false;
             }
-        }
+            return true;
+        });
     };
     TestScheduler.parseMarblesAsSubscriptions = function (marbles, runMode) {
         var _this = this;

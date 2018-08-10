@@ -1,27 +1,27 @@
 {
-  "_from": "@angular/compiler@~6.0.7",
-  "_id": "@angular/compiler@6.0.7",
+  "_from": "@angular/compiler@~6.1.2",
+  "_id": "@angular/compiler@6.1.2",
   "_inBundle": false,
-  "_integrity": "sha512-J9I2U4NiWIBXl0ZOJkBW5G7xXhphggSirTwFLD4yKCTeJXgyldZytJZRkDUx1uouZtI2/PycvaOZoRr85N67AA==",
+  "_integrity": "sha512-IMaqx1gIYMqrori41bITgm22patbde/SRINiSggeUqegVhX4b2wIZ6ALIyT6utD2CC9n7oHQgp/VpMVMOIg0yA==",
   "_location": "/@angular/compiler",
   "_phantomChildren": {},
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@angular/compiler@~6.0.7",
+    "raw": "@angular/compiler@~6.1.2",
     "name": "@angular/compiler",
     "escapedName": "@angular%2fcompiler",
     "scope": "@angular",
-    "rawSpec": "~6.0.7",
+    "rawSpec": "~6.1.2",
     "saveSpec": null,
-    "fetchSpec": "~6.0.7"
+    "fetchSpec": "~6.1.2"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-6.0.7.tgz",
-  "_shasum": "8313251be50a4446653a52279d806de6582012a3",
-  "_spec": "@angular/compiler@~6.0.7",
+  "_resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-6.1.2.tgz",
+  "_shasum": "56fada04cb7dc77a5d3f0b786be713130293d468",
+  "_spec": "@angular/compiler@~6.1.2",
   "_where": "C:\\WebServer\\apache24\\htdocs\\angularupgrade\\ui",
   "author": {
     "name": "angular"
@@ -73,5 +73,5 @@
   },
   "sideEffects": false,
   "typings": "./compiler.d.ts",
-  "version": "6.0.7"
+  "version": "6.1.2"
 }

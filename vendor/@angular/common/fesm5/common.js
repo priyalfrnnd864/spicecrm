@@ -1,11 +1,11 @@
 /**
- * @license Angular v6.0.7
+ * @license Angular v6.1.2
  * (c) 2010-2018 Google, Inc. https://angular.io/
  * License: MIT
  */
 
-import { Attribute, ChangeDetectorRef, ComponentFactoryResolver, Directive, ElementRef, EventEmitter, Host, Inject, Injectable, InjectionToken, Input, IterableDiffers, KeyValueDiffers, LOCALE_ID, NgModule, NgModuleRef, Optional, Pipe, Renderer2, TemplateRef, Version, ViewContainerRef, WrappedValue, isDevMode, ɵisListLikeIterable, ɵisObservable, ɵisPromise, ɵstringify } from '@angular/core';
-import { __assign, __extends, __read, __values } from 'tslib';
+import { InjectionToken, EventEmitter, Injectable, Inject, Optional, LOCALE_ID, Directive, ElementRef, Input, IterableDiffers, KeyValueDiffers, Renderer2, ɵisListLikeIterable, ɵstringify, ComponentFactoryResolver, NgModuleRef, ViewContainerRef, TemplateRef, isDevMode, Host, Attribute, Pipe, ChangeDetectorRef, WrappedValue, ɵisObservable, ɵisPromise, NgModule, Version, defineInjectable, inject } from '@angular/core';
+import { __read, __extends, __values, __assign } from 'tslib';
 
 /**
  * @license
@@ -85,6 +85,8 @@ var LocationStrategy = /** @class */ (function () {
  * representing the URL prefix that should be preserved when generating and recognizing
  * URLs.
  *
+ * @usageNotes
+ *
  * ### Example
  *
  * ```typescript
@@ -116,7 +118,9 @@ var APP_BASE_HREF = new InjectionToken('appBaseHref');
  * Depending on which {@link LocationStrategy} is used, `Location` will either persist
  * to the URL's path or the URL's hash segment.
  *
- * Note: it's better to use {@link Router#navigate} service to trigger route changes. Use
+ * @usageNotes
+ *
+ * It's better to use {@link Router#navigate} service to trigger route changes. Use
  * `Location` only if you need to interact with or create normalized URLs outside of
  * routing.
  *
@@ -128,6 +132,7 @@ var APP_BASE_HREF = new InjectionToken('appBaseHref');
  * - `/my/app/user/123/` **is not** normalized
  *
  * ### Example
+ *
  * {@example common/location/ts/path_location_component.ts region='LocationComponent'}
  *
  */
@@ -292,6 +297,8 @@ function _stripIndexHtml(url) {
  * For instance, if you call `location.go('/foo')`, the browser's URL will become
  * `example.com#/foo`.
  *
+ * @usageNotes
+ *
  * ### Example
  *
  * {@example common/location/ts/hash_location_component.ts region='LocationComponent'}
@@ -379,6 +386,8 @@ var HashLocationStrategy = /** @class */ (function (_super) {
  * Similarly, if you add `<base href='/my/app'/>` to the document and call
  * `location.go('/foo')`, the browser's URL will become
  * `example.com/my/app/foo`.
+ *
+ * @usageNotes
  *
  * ### Example
  *
@@ -1204,7 +1213,7 @@ var DateType;
     DateType[DateType["Hours"] = 3] = "Hours";
     DateType[DateType["Minutes"] = 4] = "Minutes";
     DateType[DateType["Seconds"] = 5] = "Seconds";
-    DateType[DateType["Milliseconds"] = 6] = "Milliseconds";
+    DateType[DateType["FractionalSeconds"] = 6] = "FractionalSeconds";
     DateType[DateType["Day"] = 7] = "Day";
 })(DateType || (DateType = {}));
 var TranslationType;
@@ -1231,8 +1240,6 @@ var TranslationType;
  *   If not specified, host system settings are used.
  *
  * See {@link DatePipe} for more details.
- *
- *
  */
 function formatDate(value, format, locale, timezone) {
     var date = toDate(value);
@@ -1358,6 +1365,10 @@ function padNumber(num, digits, minusSign, trim, negWrap) {
     }
     return neg + strNum;
 }
+function formatFractionalSeconds(milliseconds, digits) {
+    var strMs = padNumber(milliseconds, 3);
+    return strMs.substr(0, digits);
+}
 /**
  * Returns a date formatter that transforms a date into its locale digit representation
  */
@@ -1366,18 +1377,24 @@ function dateGetter(name, size, offset, trim, negWrap) {
     if (trim === void 0) { trim = false; }
     if (negWrap === void 0) { negWrap = false; }
     return function (date, locale) {
-        var part = getDatePart(name, date, size);
+        var part = getDatePart(name, date);
         if (offset > 0 || part > -offset) {
             part += offset;
         }
-        if (name === DateType.Hours && part === 0 && offset === -12) {
-            part = 12;
+        if (name === DateType.Hours) {
+            if (part === 0 && offset === -12) {
+                part = 12;
+            }
         }
-        return padNumber(part, size, getLocaleNumberSymbol(locale, NumberSymbol.MinusSign), trim, negWrap);
+        else if (name === DateType.FractionalSeconds) {
+            return formatFractionalSeconds(part, size);
+        }
+        var localeMinus = getLocaleNumberSymbol(locale, NumberSymbol.MinusSign);
+        return padNumber(part, size, localeMinus, trim, negWrap);
     };
 }
-function getDatePart(name, date, size) {
-    switch (name) {
+function getDatePart(part, date) {
+    switch (part) {
         case DateType.FullYear:
             return date.getFullYear();
         case DateType.Month:
@@ -1390,13 +1407,12 @@ function getDatePart(name, date, size) {
             return date.getMinutes();
         case DateType.Seconds:
             return date.getSeconds();
-        case DateType.Milliseconds:
-            var div = size === 1 ? 100 : (size === 2 ? 10 : 1);
-            return Math.round(date.getMilliseconds() / div);
+        case DateType.FractionalSeconds:
+            return date.getMilliseconds();
         case DateType.Day:
             return date.getDay();
         default:
-            throw new Error("Unknown DateType value \"" + name + "\".");
+            throw new Error("Unknown DateType value \"" + part + "\".");
     }
 }
 /**
@@ -1436,7 +1452,7 @@ function getDateTranslation(date, locale, name, width, form, extended) {
                             result_1 = dayPeriods_1[index];
                         }
                     }
-                    else {
+                    else { // noon or midnight
                         var hours = rule.hours, minutes = rule.minutes;
                         if (hours === currentHours_1 && minutes === currentMinutes_1) {
                             result_1 = dayPeriods_1[index];
@@ -1689,16 +1705,15 @@ function getDateFormatter(format) {
         case 'ss':
             formatter = dateGetter(DateType.Seconds, 2);
             break;
-        // Fractional second padded (0-9)
+        // Fractional second
         case 'S':
-            formatter = dateGetter(DateType.Milliseconds, 1);
+            formatter = dateGetter(DateType.FractionalSeconds, 1);
             break;
         case 'SS':
-            formatter = dateGetter(DateType.Milliseconds, 2);
+            formatter = dateGetter(DateType.FractionalSeconds, 2);
             break;
-        // = millisecond
         case 'SSS':
-            formatter = dateGetter(DateType.Milliseconds, 3);
+            formatter = dateGetter(DateType.FractionalSeconds, 3);
             break;
         // Timezone ISO8601 short format (-0430)
         case 'Z':
@@ -1958,6 +1973,7 @@ function formatCurrency(value, locale, currency, currencyCode, digitsInfo) {
     var res = formatNumberToLocaleString(value, pattern, locale, NumberSymbol.CurrencyGroup, NumberSymbol.CurrencyDecimal, digitsInfo);
     return res
         .replace(CURRENCY_CHAR, currency)
+        // if we have 2 time the currency character, the second one is ignored
         .replace(CURRENCY_CHAR, '');
 }
 /**
@@ -2094,7 +2110,7 @@ function parseNumber(num) {
         integerLen = numStr.length;
     }
     // Count the number of leading zeros.
-    for (i = 0; numStr.charAt(i) === ZERO_CHAR; i++) {
+    for (i = 0; numStr.charAt(i) === ZERO_CHAR; i++) { /* empty */
     }
     if (i === (zeros = numStr.length)) {
         // The digits are all zero.
@@ -2664,12 +2680,13 @@ function getPluralCase(locale, nLike) {
  * found in the LICENSE file at https://angular.io/license
  */
 function parseCookieValue(cookieStr, name) {
+    var e_1, _a;
     name = encodeURIComponent(name);
     try {
-        for (var _a = __values(cookieStr.split(';')), _b = _a.next(); !_b.done; _b = _a.next()) {
-            var cookie = _b.value;
+        for (var _b = __values(cookieStr.split(';')), _c = _b.next(); !_c.done; _c = _b.next()) {
+            var cookie = _c.value;
             var eqIndex = cookie.indexOf('=');
-            var _c = __read(eqIndex == -1 ? [cookie, ''] : [cookie.slice(0, eqIndex), cookie.slice(eqIndex + 1)], 2), cookieName = _c[0], cookieValue = _c[1];
+            var _d = __read(eqIndex == -1 ? [cookie, ''] : [cookie.slice(0, eqIndex), cookie.slice(eqIndex + 1)], 2), cookieName = _d[0], cookieValue = _d[1];
             if (cookieName.trim() === name) {
                 return decodeURIComponent(cookieValue);
             }
@@ -2678,12 +2695,11 @@ function parseCookieValue(cookieStr, name) {
     catch (e_1_1) { e_1 = { error: e_1_1 }; }
     finally {
         try {
-            if (_b && !_b.done && (_d = _a.return)) _d.call(_a);
+            if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
         }
         finally { if (e_1) throw e_1.error; }
     }
     return null;
-    var e_1, _d;
 }
 
 /**
@@ -2730,9 +2746,9 @@ var NgClass = /** @class */ (function () {
         this._initialClasses = [];
     }
     Object.defineProperty(NgClass.prototype, "klass", {
-        set: function (v) {
+        set: function (value) {
             this._removeClasses(this._initialClasses);
-            this._initialClasses = typeof v === 'string' ? v.split(/\s+/) : [];
+            this._initialClasses = typeof value === 'string' ? value.split(/\s+/) : [];
             this._applyClasses(this._initialClasses);
             this._applyClasses(this._rawClass);
         },
@@ -2740,12 +2756,12 @@ var NgClass = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(NgClass.prototype, "ngClass", {
-        set: function (v) {
+        set: function (value) {
             this._removeClasses(this._rawClass);
             this._applyClasses(this._initialClasses);
             this._iterableDiffer = null;
             this._keyValueDiffer = null;
-            this._rawClass = typeof v === 'string' ? v.split(/\s+/) : v;
+            this._rawClass = typeof value === 'string' ? value.split(/\s+/) : value;
             if (this._rawClass) {
                 if (ɵisListLikeIterable(this._rawClass)) {
                     this._iterableDiffer = this._iterableDiffers.find(this._rawClass).create();
@@ -2873,6 +2889,8 @@ var NgClass = /** @class */ (function () {
  * `NgComponentOutlet` requires a component type, if a falsy value is set the view will clear and
  * any existing component will get destroyed.
  *
+ * @usageNotes
+ *
  * ### Fine tune control
  *
  * You can control the component creation process by using the following optional attributes:
@@ -2907,7 +2925,8 @@ var NgClass = /** @class */ (function () {
  *                                   ngModuleFactory: moduleFactory;">
  * </ng-container>
  * ```
- * ## Example
+ *
+ * ### A simple example
  *
  * {@example common/ngComponentOutlet/ts/module.ts region='SimpleExample'}
  *
@@ -3010,6 +3029,8 @@ var NgForOfContext = /** @class */ (function () {
  * for each instantiated template inherits from the outer context with the given loop variable
  * set to the current item from the iterable.
  *
+ * @usageNotes
+ *
  * ### Local Variables
  *
  * `NgForOf` provides several exported values that can be aliased to local variables:
@@ -3080,8 +3101,17 @@ var NgForOf = /** @class */ (function () {
         this._viewContainer = _viewContainer;
         this._template = _template;
         this._differs = _differs;
+        this._ngForOfDirty = true;
         this._differ = null;
     }
+    Object.defineProperty(NgForOf.prototype, "ngForOf", {
+        set: function (ngForOf) {
+            this._ngForOf = ngForOf;
+            this._ngForOfDirty = true;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(NgForOf.prototype, "ngForTrackBy", {
         get: function () { return this._trackByFn; },
         set: function (fn) {
@@ -3109,10 +3139,11 @@ var NgForOf = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    NgForOf.prototype.ngOnChanges = function (changes) {
-        if ('ngForOf' in changes) {
+    NgForOf.prototype.ngDoCheck = function () {
+        if (this._ngForOfDirty) {
+            this._ngForOfDirty = false;
             // React on ngForOf changes only once all inputs have been initialized
-            var value = changes['ngForOf'].currentValue;
+            var value = this._ngForOf;
             if (!this._differ && value) {
                 try {
                     this._differ = this._differs.find(value).create(this.ngForTrackBy);
@@ -3122,10 +3153,8 @@ var NgForOf = /** @class */ (function () {
                 }
             }
         }
-    };
-    NgForOf.prototype.ngDoCheck = function () {
         if (this._differ) {
-            var changes = this._differ.diff(this.ngForOf);
+            var changes = this._differ.diff(this._ngForOf);
             if (changes)
                 this._applyChanges(changes);
         }
@@ -3135,7 +3164,7 @@ var NgForOf = /** @class */ (function () {
         var insertTuples = [];
         changes.forEachOperation(function (item, adjustedPreviousIndex, currentIndex) {
             if (item.previousIndex == null) {
-                var view = _this._viewContainer.createEmbeddedView(_this._template, new NgForOfContext(null, _this.ngForOf, -1, -1), currentIndex);
+                var view = _this._viewContainer.createEmbeddedView(_this._template, new NgForOfContext(null, _this._ngForOf, -1, -1), currentIndex);
                 var tuple = new RecordViewTuple(item, view);
                 insertTuples.push(tuple);
             }
@@ -3156,6 +3185,7 @@ var NgForOf = /** @class */ (function () {
             var viewRef = this._viewContainer.get(i);
             viewRef.context.index = i;
             viewRef.context.count = ilen;
+            viewRef.context.ngForOf = this._ngForOf;
         }
         changes.forEachIdentityChange(function (record) {
             var viewRef = _this._viewContainer.get(record.currentIndex);
@@ -3207,13 +3237,16 @@ function getTypeNameForDebugging(type) {
  *  - `then` template is the inline template of `ngIf` unless bound to a different value.
  *  - `else` template is blank unless it is bound.
  *
- * ## Most common usage
+ *
+ * @usageNotes
+ *
+ * ### Most common usage
  *
  * The most common usage of the `ngIf` directive is to conditionally show the inline template as
  * seen in this example:
  * {@example common/ngIf/ts/module.ts region='NgIfSimple'}
  *
- * ## Showing an alternative template using `else`
+ * ### Showing an alternative template using `else`
  *
  * If it is necessary to display a template when the `expression` is falsy use the `else` template
  * binding as shown. Note that the `else` binding points to a `<ng-template>` labeled `#elseBlock`.
@@ -3222,7 +3255,7 @@ function getTypeNameForDebugging(type) {
  *
  * {@example common/ngIf/ts/module.ts region='NgIfElse'}
  *
- * ## Using non-inlined `then` template
+ * ### Using non-inlined `then` template
  *
  * Usually the `then` template is the inlined template of the `ngIf`, but it can be changed using
  * a binding (just like `else`). Because `then` and `else` are bindings, the template references can
@@ -3230,7 +3263,7 @@ function getTypeNameForDebugging(type) {
  *
  * {@example common/ngIf/ts/module.ts region='NgIfThenElse'}
  *
- * ## Storing conditional result in a variable
+ * ### Storing conditional result in a variable
  *
  * A common pattern is that we need to show a set of properties from the same object. If the
  * object is undefined, then we have to use the safe-traversal-operator `?.` to guard against
@@ -3741,10 +3774,10 @@ var NgStyle = /** @class */ (function () {
         this._renderer = _renderer;
     }
     Object.defineProperty(NgStyle.prototype, "ngStyle", {
-        set: function (v) {
-            this._ngStyle = v;
-            if (!this._differ && v) {
-                this._differ = this._differs.find(v).create();
+        set: function (values) {
+            this._ngStyle = values;
+            if (!this._differ && values) {
+                this._differ = this._differs.find(values).create();
             }
         },
         enumerable: true,
@@ -3799,11 +3832,6 @@ var NgStyle = /** @class */ (function () {
 /**
  * @ngModule CommonModule
  *
- * @usageNotes
- * ```
- * <ng-container *ngTemplateOutlet="templateRefExp; context: contextExp"></ng-container>
- * ```
- *
  * @description
  *
  * Inserts an embedded view from a prepared `TemplateRef`.
@@ -3812,12 +3840,16 @@ var NgStyle = /** @class */ (function () {
  * `[ngTemplateOutletContext]` should be an object, the object's keys will be available for binding
  * by the local template `let` declarations.
  *
- * Note: using the key `$implicit` in the context object will set its value as default.
+ * @usageNotes
+ * ```
+ * <ng-container *ngTemplateOutlet="templateRefExp; context: contextExp"></ng-container>
+ * ```
  *
- * ## Example
+ * Using the key `$implicit` in the context object will set its value as default.
+ *
+ * ### Example
  *
  * {@example common/ngTemplateOutlet/ts/module.ts region='NgTemplateOutlet'}
- *
  *
  */
 var NgTemplateOutlet = /** @class */ (function () {
@@ -3855,6 +3887,7 @@ var NgTemplateOutlet = /** @class */ (function () {
         return !!changes['ngTemplateOutlet'] || (ctxChange && this._hasContextShapeChanged(ctxChange));
     };
     NgTemplateOutlet.prototype._hasContextShapeChanged = function (ctxChange) {
+        var e_1, _a;
         var prevCtxKeys = Object.keys(ctxChange.previousValue || {});
         var currCtxKeys = Object.keys(ctxChange.currentValue || {});
         if (prevCtxKeys.length === currCtxKeys.length) {
@@ -3878,23 +3911,22 @@ var NgTemplateOutlet = /** @class */ (function () {
         else {
             return true;
         }
-        var e_1, _a;
     };
     NgTemplateOutlet.prototype._updateExistingContext = function (ctx) {
+        var e_2, _a;
         try {
-            for (var _a = __values(Object.keys(ctx)), _b = _a.next(); !_b.done; _b = _a.next()) {
-                var propName = _b.value;
+            for (var _b = __values(Object.keys(ctx)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var propName = _c.value;
                 this._viewRef.context[propName] = this.ngTemplateOutletContext[propName];
             }
         }
         catch (e_2_1) { e_2 = { error: e_2_1 }; }
         finally {
             try {
-                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
             }
             finally { if (e_2) throw e_2.error; }
         }
-        var e_2, _c;
     };
     NgTemplateOutlet.decorators = [
         { type: Directive, args: [{ selector: '[ngTemplateOutlet]' },] }
@@ -3946,13 +3978,6 @@ function invalidPipeArgumentError(type, value) {
     return Error("InvalidPipeArgument: '" + value + "' for pipe '" + ɵstringify(type) + "'");
 }
 
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
 var NumberFormatter = /** @class */ (function () {
     function NumberFormatter() {
     }
@@ -4192,6 +4217,8 @@ var DateFormatter = /** @class */ (function () {
  * - this pipe uses the Internationalization API. Therefore it is only reliable in Chrome and Opera
  *   browsers.
  *
+ * @usageNotes
+ *
  * ### Examples
  *
  * Assuming `dateObj` is (year: 2010, month: 9, day: 3, hour: 12 PM, minute: 05, second: 08)
@@ -4302,13 +4329,13 @@ function formatNumber$1(pipe, locale, value, style, digits, currency, currencyAs
         if (parts === null) {
             throw new Error(digits + " is not a valid digit info for number pipes");
         }
-        if (parts[1] != null) {
+        if (parts[1] != null) { // min integer digits
             minInt = parseIntAutoRadix(parts[1]);
         }
-        if (parts[3] != null) {
+        if (parts[3] != null) { // min fraction digits
             minFraction = parseIntAutoRadix(parts[3]);
         }
-        if (parts[5] != null) {
+        if (parts[5] != null) { // max fraction digits
             maxFraction = parseIntAutoRadix(parts[5]);
         }
     }
@@ -4339,10 +4366,11 @@ function formatNumber$1(pipe, locale, value, style, digits, currency, currencyAs
  * WARNING: this pipe uses the Internationalization API which is not yet available in all browsers
  * and may require a polyfill. See [Browser Support](guide/browser-support) for details.
  *
+ * @usageNotes
+ *
  * ### Example
  *
  * {@example common/pipes/ts/number_pipe.ts region='DeprecatedNumberPipe'}
- *
  *
  */
 var DeprecatedDecimalPipe = /** @class */ (function () {
@@ -4372,6 +4400,8 @@ var DeprecatedDecimalPipe = /** @class */ (function () {
  *
  * WARNING: this pipe uses the Internationalization API which is not yet available in all browsers
  * and may require a polyfill. See [Browser Support](guide/browser-support) for details.
+ *
+ * @usageNotes
  *
  * ### Example
  *
@@ -4412,6 +4442,8 @@ var DeprecatedPercentPipe = /** @class */ (function () {
  *
  * WARNING: this pipe uses the Internationalization API which is not yet available in all browsers
  * and may require a polyfill. See [Browser Support](guide/browser-support) for details.
+ *
+ * @usageNotes
  *
  * ### Example
  *
@@ -4492,8 +4524,9 @@ var _observableStrategy = new ObservableStrategy();
  * changes. When the component gets destroyed, the `async` pipe unsubscribes automatically to avoid
  * potential memory leaks.
  *
+ * @usageNotes
  *
- * ## Examples
+ * ### Examples
  *
  * This example binds a `Promise` to the view. Clicking the `Resolve` button resolves the
  * promise.
@@ -4504,7 +4537,6 @@ var _observableStrategy = new ObservableStrategy();
  * to the view. The Observable continuously updates the view with the current time.
  *
  * {@example common/pipes/ts/async_pipe.ts region='AsyncPipeObservable'}
- *
  *
  */
 var AsyncPipe = /** @class */ (function () {
@@ -4884,7 +4916,9 @@ var _INTERPOLATION_REGEXP = /#/g;
  *
  * Maps a value to a string that pluralizes the value according to locale rules.
  *
- *  ## Example
+ * @usageNotes
+ *
+ * ### Example
  *
  * {@example common/pipes/ts/i18n_pipe.ts region='I18nPluralPipeComponent'}
  *
@@ -4936,7 +4970,9 @@ var I18nPluralPipe = /** @class */ (function () {
  * If none of the keys of the `mapping` match the `value`, then the content
  * of the `other` key is returned when present, otherwise an empty string is returned.
  *
- * ## Example
+ * @usageNotes
+ *
+ * ### Example
  *
  * {@example common/pipes/ts/i18n_pipe.ts region='I18nSelectPipeComponent'}
  *
@@ -4987,9 +5023,8 @@ var I18nSelectPipe = /** @class */ (function () {
  *
  * The following component uses a JSON pipe to convert an object
  * to JSON format, and displays the string in both formats for comparison.
-
- * {@example common/pipes/ts/json_pipe.ts region='JsonPipe'}
  *
+ * {@example common/pipes/ts/json_pipe.ts region='JsonPipe'}
  *
  */
 var JsonPipe = /** @class */ (function () {
@@ -5012,6 +5047,97 @@ var JsonPipe = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
+function makeKeyValuePair(key, value) {
+    return { key: key, value: value };
+}
+/**
+ * @ngModule CommonModule
+ * @description
+ *
+ * Transforms Object or Map into an array of key value pairs.
+ *
+ * The output array will be ordered by keys.
+ * By default the comparator will be by Unicode point value.
+ * You can optionally pass a compareFn if your keys are complex types.
+ *
+ * ## Examples
+ *
+ * This examples show how an Object or a Map and be iterated by ngFor with the use of this keyvalue
+ * pipe.
+ *
+ * {@example common/pipes/ts/keyvalue_pipe.ts region='KeyValuePipe'}
+ */
+var KeyValuePipe = /** @class */ (function () {
+    function KeyValuePipe(differs) {
+        this.differs = differs;
+    }
+    KeyValuePipe.prototype.transform = function (input, compareFn) {
+        var _this = this;
+        if (compareFn === void 0) { compareFn = defaultComparator; }
+        if (!input || (!(input instanceof Map) && typeof input !== 'object')) {
+            return null;
+        }
+        if (!this.differ) {
+            // make a differ for whatever type we've been passed in
+            this.differ = this.differs.find(input).create();
+        }
+        var differChanges = this.differ.diff(input);
+        if (differChanges) {
+            this.keyValues = [];
+            differChanges.forEachItem(function (r) {
+                _this.keyValues.push(makeKeyValuePair(r.key, r.currentValue));
+            });
+            this.keyValues.sort(compareFn);
+        }
+        return this.keyValues;
+    };
+    KeyValuePipe.decorators = [
+        { type: Pipe, args: [{ name: 'keyvalue', pure: false },] }
+    ];
+    /** @nocollapse */
+    KeyValuePipe.ctorParameters = function () { return [
+        { type: KeyValueDiffers }
+    ]; };
+    return KeyValuePipe;
+}());
+function defaultComparator(keyValueA, keyValueB) {
+    var a = keyValueA.key;
+    var b = keyValueB.key;
+    // if same exit with 0;
+    if (a === b)
+        return 0;
+    // make sure that undefined are at the end of the sort.
+    if (a === undefined)
+        return 1;
+    if (b === undefined)
+        return -1;
+    // make sure that nulls are at the end of the sort.
+    if (a === null)
+        return 1;
+    if (b === null)
+        return -1;
+    if (typeof a == 'string' && typeof b == 'string') {
+        return a < b ? -1 : 1;
+    }
+    if (typeof a == 'number' && typeof b == 'number') {
+        return a - b;
+    }
+    if (typeof a == 'boolean' && typeof b == 'boolean') {
+        return a < b ? -1 : 1;
+    }
+    // `a` and `b` are of different types. Compare their string values.
+    var aString = String(a);
+    var bString = String(b);
+    return aString == bString ? 0 : aString < bString ? -1 : 1;
+}
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 /**
  * @ngModule CommonModule
  * @description
@@ -5021,6 +5147,19 @@ var JsonPipe = /** @class */ (function () {
  * separator, decimal-point character, and other locale-specific
  * configurations.
  *
+ * If no parameters are specified, the function rounds off to the nearest value using this
+ * [rounding method](https://en.wikibooks.org/wiki/Arithmetic/Rounding).
+ * The behavior differs from that of the JavaScript ```Math.round()``` function.
+ * In the following case for example, the pipe rounds down where
+ * ```Math.round()``` rounds up:
+ *
+ * ```html
+ * -2.5 | number:'1.0-0'
+ * > -3
+ * Math.round(-2.5)
+ * > -2
+ * ```
+ *
  * @see `formatNumber()`
  *
  * @usageNotes
@@ -5028,8 +5167,9 @@ var JsonPipe = /** @class */ (function () {
  * into text strings, according to various format specifications,
  * where the caller's default locale is `en-US`.
  *
- * <code-example path="common/pipes/ts/number_pipe.ts" region='NumberPipe'></code-example>
+ * ### Example
  *
+ * <code-example path="common/pipes/ts/number_pipe.ts" region='NumberPipe'></code-example>
  *
  */
 var DecimalPipe = /** @class */ (function () {
@@ -5181,6 +5321,9 @@ var CurrencyPipe = /** @class */ (function () {
      * Default is `0`.
      *   - `maxFractionDigits`: The maximum number of digits after the decimal point.
      * Default is `3`.
+     * If not provided, the number will be formatted with the proper amount of digits,
+     * depending on what the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) specifies.
+     * For example, the Canadian dollar has 2 digits, whereas the Chilean peso has none.
      * @param locale A locale code for the locale format rules to use.
      * When not supplied, uses the value of `LOCALE_ID`, which is `en-US` by default.
      * See [Setting your app locale](guide/i18n#setting-up-the-locale-of-your-app).
@@ -5252,6 +5395,8 @@ function strToNumber(value) {
  *
  * Creates a new `Array` or `String` containing a subset (slice) of the elements.
  *
+ * @usageNotes
+ *
  * All behavior is based on the expected behavior of the JavaScript API `Array.prototype.slice()`
  * and `String.prototype.slice()`.
  *
@@ -5268,13 +5413,14 @@ function strToNumber(value) {
  *
  * produces the following:
  *
- *     <li>b</li>
- *     <li>c</li>
+ * ```html
+ * <li>b</li>
+ * <li>c</li>
+ * ```
  *
- * ## String Examples
+ * ### String Examples
  *
  * {@example common/pipes/ts/slice_pipe.ts region='SlicePipe_string'}
- *
  *
  */
 var SlicePipe = /** @class */ (function () {
@@ -5318,11 +5464,6 @@ var SlicePipe = /** @class */ (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * @module
- * @description
- * This module provides a set of common Pipes.
- */
-/**
  * A collection of Angular pipes that are likely to be used in each and every application.
  */
 var COMMON_PIPES = [
@@ -5338,6 +5479,7 @@ var COMMON_PIPES = [
     DatePipe,
     I18nPluralPipe,
     I18nSelectPipe,
+    KeyValuePipe,
 ];
 
 /**
@@ -5451,12 +5593,7 @@ function isPlatformWorkerUi(platformId) {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the common package.
- */
-var VERSION = new Version('6.0.7');
+var VERSION = new Version('6.1.2');
 
 /**
  * @license
@@ -5466,9 +5603,149 @@ var VERSION = new Version('6.0.7');
  * found in the LICENSE file at https://angular.io/license
  */
 /**
- * @module
- * @description
- * Entry point for all public APIs of the common package.
+ * @whatItDoes Manages the scroll position.
+ */
+var ViewportScroller = /** @class */ (function () {
+    function ViewportScroller() {
+    }
+    // De-sugared tree-shakable injection
+    // See #23917
+    /** @nocollapse */
+    ViewportScroller.ngInjectableDef = defineInjectable({ providedIn: 'root', factory: function () { return new BrowserViewportScroller(inject(DOCUMENT), window); } });
+    return ViewportScroller;
+}());
+/**
+ * @whatItDoes Manages the scroll position.
+ */
+var BrowserViewportScroller = /** @class */ (function () {
+    function BrowserViewportScroller(document, window) {
+        this.document = document;
+        this.window = window;
+        this.offset = function () { return [0, 0]; };
+    }
+    /**
+     * @whatItDoes Configures the top offset used when scrolling to an anchor.
+     *
+     * * When given a number, the service will always use the number.
+     * * When given a function, the service will invoke the function every time it restores scroll
+     * position.
+     */
+    BrowserViewportScroller.prototype.setOffset = function (offset) {
+        if (Array.isArray(offset)) {
+            this.offset = function () { return offset; };
+        }
+        else {
+            this.offset = offset;
+        }
+    };
+    /**
+     * @whatItDoes Returns the current scroll position.
+     */
+    BrowserViewportScroller.prototype.getScrollPosition = function () {
+        if (this.supportScrollRestoration()) {
+            return [this.window.scrollX, this.window.scrollY];
+        }
+        else {
+            return [0, 0];
+        }
+    };
+    /**
+     * @whatItDoes Sets the scroll position.
+     */
+    BrowserViewportScroller.prototype.scrollToPosition = function (position) {
+        if (this.supportScrollRestoration()) {
+            this.window.scrollTo(position[0], position[1]);
+        }
+    };
+    /**
+     * @whatItDoes Scrolls to the provided anchor.
+     */
+    BrowserViewportScroller.prototype.scrollToAnchor = function (anchor) {
+        if (this.supportScrollRestoration()) {
+            var elSelectedById = this.document.querySelector("#" + anchor);
+            if (elSelectedById) {
+                this.scrollToElement(elSelectedById);
+                return;
+            }
+            var elSelectedByName = this.document.querySelector("[name='" + anchor + "']");
+            if (elSelectedByName) {
+                this.scrollToElement(elSelectedByName);
+                return;
+            }
+        }
+    };
+    /**
+     * @whatItDoes Disables automatic scroll restoration provided by the browser.
+     */
+    BrowserViewportScroller.prototype.setHistoryScrollRestoration = function (scrollRestoration) {
+        if (this.supportScrollRestoration()) {
+            var history_1 = this.window.history;
+            if (history_1 && history_1.scrollRestoration) {
+                history_1.scrollRestoration = scrollRestoration;
+            }
+        }
+    };
+    BrowserViewportScroller.prototype.scrollToElement = function (el) {
+        var rect = el.getBoundingClientRect();
+        var left = rect.left + this.window.pageXOffset;
+        var top = rect.top + this.window.pageYOffset;
+        var offset = this.offset();
+        this.window.scrollTo(left - offset[0], top - offset[1]);
+    };
+    /**
+     * We only support scroll restoration when we can get a hold of window.
+     * This means that we do not support this behavior when running in a web worker.
+     *
+     * Lifting this restriction right now would require more changes in the dom adapter.
+     * Since webworkers aren't widely used, we will lift it once RouterScroller is
+     * battle-tested.
+     */
+    BrowserViewportScroller.prototype.supportScrollRestoration = function () {
+        try {
+            return !!this.window && !!this.window.scrollTo;
+        }
+        catch (e) {
+            return false;
+        }
+    };
+    return BrowserViewportScroller;
+}());
+/**
+ * @whatItDoes Provides an empty implementation of the viewport scroller. This will
+ * live in @angular/common as it will be used by both platform-server and platform-webworker.
+ */
+var NullViewportScroller = /** @class */ (function () {
+    function NullViewportScroller() {
+    }
+    /**
+     * @whatItDoes empty implementation
+     */
+    NullViewportScroller.prototype.setOffset = function (offset) { };
+    /**
+     * @whatItDoes empty implementation
+     */
+    NullViewportScroller.prototype.getScrollPosition = function () { return [0, 0]; };
+    /**
+     * @whatItDoes empty implementation
+     */
+    NullViewportScroller.prototype.scrollToPosition = function (position) { };
+    /**
+     * @whatItDoes empty implementation
+     */
+    NullViewportScroller.prototype.scrollToAnchor = function (anchor) { };
+    /**
+     * @whatItDoes empty implementation
+     */
+    NullViewportScroller.prototype.setHistoryScrollRestoration = function (scrollRestoration) { };
+    return NullViewportScroller;
+}());
+
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
  */
 
 /**
@@ -5478,12 +5755,6 @@ var VERSION = new Version('6.0.7');
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-/**
- * @module
- * @description
- * Entry point for all public APIs of this package.
- */
-
 // This file only reexports content of the `src` folder. Keep it that way.
 
 /**
@@ -5493,14 +5764,10 @@ var VERSION = new Version('6.0.7');
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-// This file is not used to build this module. It is only used during editing
-// by the TypeScript language service and during build for verification. `ngc`
-// replaces this file with production index.ts when it rewrites private symbol
-// names.
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { COMMON_DIRECTIVES as ɵangular_packages_common_common_e, findLocaleData as ɵangular_packages_common_common_d, DEPRECATED_PLURAL_FN as ɵangular_packages_common_common_a, getPluralCase as ɵangular_packages_common_common_b, COMMON_DEPRECATED_I18N_PIPES as ɵangular_packages_common_common_g, COMMON_PIPES as ɵangular_packages_common_common_f, registerLocaleData as ɵregisterLocaleData, formatDate, formatCurrency, formatNumber, formatPercent, NgLocaleLocalization, NgLocalization, registerLocaleData, Plural, NumberFormatStyle, FormStyle, TranslationWidth, FormatWidth, NumberSymbol, WeekDay, getNumberOfCurrencyDigits, getCurrencySymbol, getLocaleDayPeriods, getLocaleDayNames, getLocaleMonthNames, getLocaleId, getLocaleEraNames, getLocaleWeekEndRange, getLocaleFirstDayOfWeek, getLocaleDateFormat, getLocaleDateTimeFormat, getLocaleExtraDayPeriodRules, getLocaleExtraDayPeriods, getLocalePluralCase, getLocaleTimeFormat, getLocaleNumberSymbol, getLocaleNumberFormat, getLocaleCurrencyName, getLocaleCurrencySymbol, parseCookieValue as ɵparseCookieValue, CommonModule, DeprecatedI18NPipesModule, NgClass, NgForOf, NgForOfContext, NgIf, NgIfContext, NgPlural, NgPluralCase, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet, NgComponentOutlet, DOCUMENT, AsyncPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, JsonPipe, LowerCasePipe, CurrencyPipe, DecimalPipe, PercentPipe, SlicePipe, UpperCasePipe, TitleCasePipe, DeprecatedDatePipe, DeprecatedCurrencyPipe, DeprecatedDecimalPipe, DeprecatedPercentPipe, PLATFORM_BROWSER_ID as ɵPLATFORM_BROWSER_ID, PLATFORM_SERVER_ID as ɵPLATFORM_SERVER_ID, PLATFORM_WORKER_APP_ID as ɵPLATFORM_WORKER_APP_ID, PLATFORM_WORKER_UI_ID as ɵPLATFORM_WORKER_UI_ID, isPlatformBrowser, isPlatformServer, isPlatformWorkerApp, isPlatformWorkerUi, VERSION, PlatformLocation, LOCATION_INITIALIZED, LocationStrategy, APP_BASE_HREF, HashLocationStrategy, PathLocationStrategy, Location };
+export { COMMON_DIRECTIVES as ɵangular_packages_common_common_e, findLocaleData as ɵangular_packages_common_common_d, DEPRECATED_PLURAL_FN as ɵangular_packages_common_common_a, getPluralCase as ɵangular_packages_common_common_b, COMMON_DEPRECATED_I18N_PIPES as ɵangular_packages_common_common_g, COMMON_PIPES as ɵangular_packages_common_common_f, registerLocaleData as ɵregisterLocaleData, formatDate, formatCurrency, formatNumber, formatPercent, NgLocaleLocalization, NgLocalization, registerLocaleData, Plural, NumberFormatStyle, FormStyle, TranslationWidth, FormatWidth, NumberSymbol, WeekDay, getNumberOfCurrencyDigits, getCurrencySymbol, getLocaleDayPeriods, getLocaleDayNames, getLocaleMonthNames, getLocaleId, getLocaleEraNames, getLocaleWeekEndRange, getLocaleFirstDayOfWeek, getLocaleDateFormat, getLocaleDateTimeFormat, getLocaleExtraDayPeriodRules, getLocaleExtraDayPeriods, getLocalePluralCase, getLocaleTimeFormat, getLocaleNumberSymbol, getLocaleNumberFormat, getLocaleCurrencyName, getLocaleCurrencySymbol, parseCookieValue as ɵparseCookieValue, CommonModule, DeprecatedI18NPipesModule, NgClass, NgForOf, NgForOfContext, NgIf, NgIfContext, NgPlural, NgPluralCase, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgTemplateOutlet, NgComponentOutlet, DOCUMENT, AsyncPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, JsonPipe, LowerCasePipe, CurrencyPipe, DecimalPipe, PercentPipe, SlicePipe, UpperCasePipe, TitleCasePipe, KeyValuePipe, DeprecatedDatePipe, DeprecatedCurrencyPipe, DeprecatedDecimalPipe, DeprecatedPercentPipe, PLATFORM_BROWSER_ID as ɵPLATFORM_BROWSER_ID, PLATFORM_SERVER_ID as ɵPLATFORM_SERVER_ID, PLATFORM_WORKER_APP_ID as ɵPLATFORM_WORKER_APP_ID, PLATFORM_WORKER_UI_ID as ɵPLATFORM_WORKER_UI_ID, isPlatformBrowser, isPlatformServer, isPlatformWorkerApp, isPlatformWorkerUi, VERSION, ViewportScroller, NullViewportScroller as ɵNullViewportScroller, PlatformLocation, LOCATION_INITIALIZED, LocationStrategy, APP_BASE_HREF, HashLocationStrategy, PathLocationStrategy, Location };
 //# sourceMappingURL=common.js.map
