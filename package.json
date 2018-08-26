@@ -19,7 +19,10 @@
     "systemjs": "0.21.4",
     "tslib": "^1.9.3",
     "zone.js": "^0.8.4",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "rxjs-compat": "^6.0.0-rc.0",
+    "@types/gapi": "0.0.35",
+    "@types/gapi.auth2": "0.0.47",
+    "google-auth-library": "^1.6.1"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
