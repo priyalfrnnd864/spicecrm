@@ -121,62 +121,6 @@ global-user-panel {
     right: 16px;
 }
 
-.userProileAvatar {
-    position: absolute;
-}
-
-.userProfileContent {
-    margin-left: 50px;
-}
-
-.userProfileContent h1 {
-    font-size: 1rem;
-    color: rgb(22, 50, 92);
-}
-
-.userProfileLinks {
-    cursor: pointer;
-}
-
-.OptionsSeparator {
-    width: 370px;
-    background-color: #f7f9fb;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    margin: 10px -10px 10px -10px;
-    padding: 10px;
-}
-
-.OptionsElements > div {
-    padding: 5px 0px;
-}
-
-object-list td {
-    font-size: 13px !important;
-}
-
-global-recent-items td {
-    font-size: 13px !important;
-}
-
-.spiceRecordContainer {
-    display: flex;
-}
-
-.spiceMainContainer {
-    display: inline;
-    width: 70%;
-    margin: 15px;
-    min-width: 650px;
-}
-
-.spiceSidebarContainer {
-    display: inline;
-    width: 30%;
-    margin: 15px;
-    min-width: 400px;
-}
-
 .spiceActivitiyTimelineHeader::before {
     position: absolute;
     right: 0;
@@ -187,64 +131,12 @@ global-recent-items td {
     content: ' ';
 }
 
-/*
-.spiceActivitiyTimelineHeader h2 {
-    padding-top: 0.25rem;
-    background-color: #fff;
-}
-*/
 .spiceActivitiyTimelineHeader .showmorebutton {
     position: absolute;
     right: 0px;
     top: 0px;
 }
 
-object-activitiytimeline-add-container {
-    margin-bottom: 2rem;
-}
-
-.slds-card__body {
-    margin-bottom: 10px;
-}
-
-object-record-details-tab-row {
-    display: flex;
-}
-
-field-generic {
-    width: calc(50% - 10px);
-    margin: 0.5rem 0px;
-}
-
-/* properly set the chevrons in the select field but not in the popover*/
-/*
-.slds-select_container:before {
-    margin-top: 5px;
-}
-
-.slds-select_container:after {
-    margin-bottom: 5px;
-}
-
-.slds-popover__body .slds-select_container:before {
-    margin-top: 0px;
-}
-
-.slds-popover__body .slds-select_container:after {
-    margin-bottom: 0px;
-}
-*/
-.spicecrm-object-record-details-tab-row-field, object-record-details-tab-row-field {
-    margin: 0.5rem 5px;
-}
-
-.spicecrm-object-record-details-tab-row-field .spicecrm-fieldbody, object-record-details-tab-row-field .spicecrm-fieldbody {
-    border-bottom: 1px solid #ddd;
-    /*margin: 1rem 5px;*/
-}
-
-.spicecrm-fieldbody {
-}
 
 .spicecrm-fieldbody {
     /*padding: 5px 0px*/;
@@ -254,15 +146,6 @@ field-generic {
 .spicecrm-fieldminheight {
     /*padding: 5px 0px*/;
     min-height: 34px;
-}
-
-.spicecrm-recorddetail-buttons {
-    text-align: center;
-    padding-bottom: 1rem;
-}
-
-.spicecrm-recorddetails-tab {
-    transition: 0.5s;
 }
 
 .panelChevron {
@@ -309,18 +192,6 @@ field-generic {
     padding: 10px;
 }
 
-/* to keep the banne header of the deailt view when scrolling */
-.spicecrm-rolebanner, .slds-page-header[role="fixedbanner"] {
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-    border-bottom: none;
-}
-
-.spicecrm-bannerflex, .slds-page-header[role="detailrow"] {
-    padding-top: 68px;
-}
-
 /* filter panel */
 object-listview-filter-panel {
     height: 100%;
@@ -349,19 +220,6 @@ object-listview-aggregates-panel .slds-panel {
     height: 100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .40)
 }
-
-/*
-.spicecrm-listview-header{
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-}
-
-.spicecrm-listview-list{
-    position: absolute;
-    top: 186px;
-}
-*/
 
 global-navigation-menu-item li.slds-dropdown-trigger, global-navigation-menu-more li.slds-dropdown-trigger {
     display: flex;
