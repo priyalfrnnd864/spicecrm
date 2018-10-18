@@ -54,6 +54,9 @@
 /custom/blowfish/*
 /custom/modules/*/Ext/*
 
+# no media files
+/media
+
 # Custom configuration should also be ignored.
 /config.php
 /config_override.php
