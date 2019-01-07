@@ -48,7 +48,7 @@ $cw=array(
 8800=>560,8804=>560,8805=>560,9674=>560,63166=>259,63171=>170);
 $enc='';
 $diff='';
-$file='titilliumweb-bold.z';
-$ctg='titilliumweb-bold.ctg.z';
+$file='titilliumwebb.z';
+$ctg='titilliumwebb.ctg.z';
 $originalsize=87824;
 // --- EOF ---
