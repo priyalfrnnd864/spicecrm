@@ -56,6 +56,7 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'I' => 
         array (
             'Interop\\Container\\' => 18,
+            'IXR\\' => 4,
         ),
         'H' => 
         array (
@@ -158,6 +159,10 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+        ),
+        'IXR\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kissifrot/php-ixr/src',
         ),
         'Http\\Promise\\' => 
         array (
