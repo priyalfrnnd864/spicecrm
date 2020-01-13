@@ -145,3 +145,6 @@ Thumbs.db
 custom/blowfish/rapelcg_svryq.php
 composer.lock
 xmlfiles
+
+# dompdf
+/vendor/dompdf/dompdf/lib/fonts/dompdf_font_family_cache.php
