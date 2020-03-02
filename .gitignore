@@ -148,3 +148,10 @@ xmlfiles
 
 # dompdf
 /vendor/dompdf/dompdf/lib/fonts/dompdf_font_family_cache.php
+/custom/Extension/application/Ext/Language/en_us.serviceorders.ext.php
+/custom/modules/Cases/logic_hooks.php
+/custom/modules/Connectors/metadata/display_config.php
+/custom/modules/Contacts/logic_hooks.php
+/custom/modules/Leads/logic_hooks.php
+/custom/modules/Opportunities/logic_hooks.php
+/custom/modules/Users/logic_hooks.php
