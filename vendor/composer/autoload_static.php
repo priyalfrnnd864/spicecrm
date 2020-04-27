@@ -26,6 +26,11 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             'libphonenumber\\' => 15,
         ),
+        'j' => 
+        array (
+            'jamesiarmes\\PhpNtlm\\' => 20,
+            'jamesiarmes\\PhpEws\\' => 19,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -95,6 +100,14 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'libphonenumber\\' => 
         array (
             0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
+        ),
+        'jamesiarmes\\PhpNtlm\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jamesiarmes/php-ntlm/src',
+        ),
+        'jamesiarmes\\PhpEws\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-ews/php-ews/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
