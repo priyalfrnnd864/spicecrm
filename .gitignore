@@ -39,7 +39,8 @@
 
 # Ignore some files and directories from the custom directory.
 /custom/blowfish/*.*
-/custom/modules/**/*.*
+/custom/modules/*/Ext
+/custom/modules/*/Ext/*
 
 # no media files
 /media
