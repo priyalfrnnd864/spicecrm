@@ -45,6 +45,7 @@ class SoapClient extends \SoapClient
      */
     public function __construct($wsdl, array $options = null)
     {
+
         // Set missing indexes to their default value.
         $options += array(
             'user' => null,
@@ -63,6 +64,7 @@ class SoapClient extends \SoapClient
         }
 
         parent::__construct($wsdl, $options);
+
     }
 
     /**
@@ -82,7 +84,7 @@ class SoapClient extends \SoapClient
 
         curl_setopt_array($this->ch, $this->curlOptions($action, $request));
         $response = curl_exec($this->ch);
-
+//        echo '<pre>'.print_r($response, true);
         // TODO: Add some real error handling.
         // If the response if false than there was an error and we should throw
         // an exception.
