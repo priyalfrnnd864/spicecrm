@@ -1,7 +1,6 @@
 # SugarCRM #
 ###################
 # Ignore custom .htaccess stuff.
-/.htaccess
 /.htpasswd
 
 # Ignore large parts of the annoying cache directory without breaking things.
