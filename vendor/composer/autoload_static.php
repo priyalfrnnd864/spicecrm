@@ -42,6 +42,7 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             'Symfony\\Component\\OptionsResolver\\' => 34,
             'SpiceCRM\\modules\\' => 17,
             'SpiceCRM\\includes\\' => 18,
+            'SpiceCRM\\data\\' => 14,
             'SpiceCRM\\custom\\modules\\' => 24,
             'SpiceCRM\\custom\\includes\\' => 25,
             'SpiceCRM\\KREST\\' => 15,
@@ -133,6 +134,10 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/../..' . '/include',
         ),
+        'SpiceCRM\\data\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/data',
+        ),
         'SpiceCRM\\custom\\modules\\' => 
         array (
             0 => __DIR__ . '/../..' . '/custom/modules',
@@ -144,10 +149,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         'SpiceCRM\\KREST\\' => 
         array (
             0 => __DIR__ . '/../..' . '/KREST',
-        ),
-        'SpiceCRM\\custom\\KREST\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/custom/KREST',
         ),
         'Slim\\' => 
         array (
