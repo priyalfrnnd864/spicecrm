@@ -234,7 +234,6 @@ r354 - 2004-08-02 23:00:37 -0700 (Mon, 02 Aug 2004) - sugarjacob - Adding Soap
 */
 
 
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 
 /*
 $Id: nusoap.php 58622 2010-10-23 01:18:59Z engsvnbuild $
@@ -9134,7 +9133,7 @@ class nusoap_client extends nusoap_base  {
 			if(empty($proxy_config)){
 				if(!empty($GLOBALS['db'])){
 
-					$proxy_config = BeanFactory::getBean('Administration');
+					$proxy_config = \SpiceCRM\data\BeanFactory::getBean('Administration');
 					$proxy_config->retrieveSettings('proxy');
 				}
 			}

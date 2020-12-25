@@ -141,7 +141,6 @@ r354 - 2004-08-02 23:00:37 -0700 (Mon, 02 Aug 2004) - sugarjacob - Adding Soap
 */
 
 
-if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*
 $Id: nusoapmime.php 39619 2008-09-09 20:41:34Z jmertic $
 
