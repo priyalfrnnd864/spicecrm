@@ -306,6 +306,8 @@ require_once('class.soap_server.php');*/
 
 // class variable emulation
 // cf. http://www.webkreator.com/php/techniques/php-static-class-variables.html
+use SpiceCRM\data\BeanFactory;
+
 $GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'] = 0;
 
 /**
@@ -9133,7 +9135,7 @@ class nusoap_client extends nusoap_base  {
 			if(empty($proxy_config)){
 				if(!empty($GLOBALS['db'])){
 
-					$proxy_config = \SpiceCRM\data\BeanFactory::getBean('Administration');
+					$proxy_config = BeanFactory::getBean('Administration');
 					$proxy_config->retrieveSettings('proxy');
 				}
 			}

@@ -12,10 +12,7 @@ require_once "../../vendor/autoload.php";
 // *** DO NOT MODIFY BELOW THIS POINT ***
 
 use Dompdf\Dompdf;
-use Dompdf\CanvasFactory;
 use Dompdf\Exception;
-use Dompdf\FontMetrics;
-use Dompdf\Options;
 
 use FontLib\Font;
 

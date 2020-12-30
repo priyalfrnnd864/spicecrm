@@ -508,7 +508,9 @@ Please disable it either in your php.ini file, or in your code by calling 'set_m
 
 namespace Pdfcrowd {
 
-class Error extends \Exception {
+    use Exception;
+
+    class Error extends Exception {
     // custom string representation of object
     public function __toString() {
         if ($this->code) {
@@ -934,7 +936,7 @@ class HtmlToPdfClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertUrlToStream($url, $output_file);
@@ -994,7 +996,7 @@ class HtmlToPdfClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertFileToStream($file, $output_file);
@@ -1048,7 +1050,7 @@ class HtmlToPdfClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertStringToStream($text, $output_file);
@@ -2221,7 +2223,7 @@ class HtmlToImageClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertUrlToStream($url, $output_file);
@@ -2281,7 +2283,7 @@ class HtmlToImageClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertFileToStream($file, $output_file);
@@ -2335,7 +2337,7 @@ class HtmlToImageClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertStringToStream($text, $output_file);
@@ -2802,7 +2804,7 @@ class ImageToImageClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertUrlToStream($url, $output_file);
@@ -2856,7 +2858,7 @@ class ImageToImageClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertFileToStream($file, $output_file);
@@ -2904,7 +2906,7 @@ class ImageToImageClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertRawDataToStream($data, $output_file);
@@ -3345,7 +3347,7 @@ class ImageToPdfClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertUrlToStream($url, $output_file);
@@ -3399,7 +3401,7 @@ class ImageToPdfClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertFileToStream($file, $output_file);
@@ -3447,7 +3449,7 @@ class ImageToPdfClient {
         
         $output_file = fopen($file_path, "wb");
         if (!$output_file)
-            throw new \Exception(error_get_last()['message']);
+            throw new Exception(error_get_last()['message']);
         try
         {
             $this->convertRawDataToStream($data, $output_file);
