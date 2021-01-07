@@ -307,6 +307,7 @@ require_once('class.soap_server.php');*/
 // class variable emulation
 // cf. http://www.webkreator.com/php/techniques/php-static-class-variables.html
 use SpiceCRM\data\BeanFactory;
+use SpiceCRM\includes\database\DBManagerFactory;
 
 $GLOBALS['_transient']['static']['nusoap_base']['globalDebugLevel'] = 0;
 
