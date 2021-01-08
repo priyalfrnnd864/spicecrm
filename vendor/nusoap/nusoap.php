@@ -336,7 +336,7 @@ class nusoap_base {
 	var $version = '0.9.5';
 	/**
 	 * CVS revision for HTTP headers.
-	 *
+
 	 * @var string
 	 * @access private
 	 */
