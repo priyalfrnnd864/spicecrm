@@ -9133,7 +9133,7 @@ class nusoap_client extends nusoap_base  {
 		global $proxy_config;
 		if(!$proxyhost){
 			if(empty($proxy_config)){
-				if(!empty(DBManagerFactory::getInstance())){
+				if(!empty(\SpiceCRM\includes\database\DBManagerFactory::getInstance())){
 
 					$proxy_config = BeanFactory::getBean('Administration');
 					$proxy_config->retrieveSettings('proxy');
