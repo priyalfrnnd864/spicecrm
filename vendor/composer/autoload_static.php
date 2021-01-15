@@ -6,7 +6,7 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
 {
-    public static $files = array (
+    public static $files = array(
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -298,57 +298,57 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Svg\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src',
+    public static $prefixesPsr0 = array(
+        'S' =>
+            array(
+                'Svg\\' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src',
+                    ),
+                'Sabberworm\\CSS' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+                    ),
             ),
-            'Sabberworm\\CSS' => 
-            array (
-                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+        'P' =>
+            array(
+                'Pimple' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/pimple/pimple/src',
+                    ),
+                'PEAR' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/pear/pear_exception',
+                    ),
             ),
-        ),
-        'P' => 
-        array (
-            'Pimple' => 
-            array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+        'O' =>
+            array(
+                'OLE' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/pear/ole',
+                    ),
             ),
-            'PEAR' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/pear_exception',
+        'M' =>
+            array(
+                'Mailgun' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
+                    ),
             ),
-        ),
-        'O' => 
-        array (
-            'OLE' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/ole',
+        'C' =>
+            array(
+                'Console' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/pear/console_getopt',
+                    ),
             ),
-        ),
-        'M' => 
-        array (
-            'Mailgun' => 
-            array (
-                0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
-            ),
-        ),
-        'C' => 
-        array (
-            'Console' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/console_getopt',
-            ),
-        ),
     );
 
-    public static $fallbackDirsPsr0 = array (
+    public static $fallbackDirsPsr0 = array(
         0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
-    public static $classMap = array (
+    public static $classMap = array(
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',

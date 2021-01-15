@@ -19,6 +19,7 @@ return array(
     'SpiceCRM\\data\\' => array($baseDir . '/data'),
     'SpiceCRM\\custom\\modules\\' => array($baseDir . '/custom/modules'),
     'SpiceCRM\\custom\\includes\\' => array($baseDir . '/custom/include'),
+    'SpiceCRM\\custom\\KREST\\' => array($baseDir . '/custom/KREST'),
     'SpiceCRM\\KREST\\' => array($baseDir . '/KREST'),
     'Slim\\Psr7\\' => array($vendorDir . '/slim/psr7/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
