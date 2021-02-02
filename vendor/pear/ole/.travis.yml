@@ -7,26 +7,27 @@ php:
   - 7.1
   - 7.2
   - 7.3
+  - 7.4
+  - 8.0snapshot
   - nightly
-
-matrix:
-  fast_finish: true
-  allow_failures:
-    - php: nightly
 
 stages:
   - analyze
   - test
 
 jobs:
+  fast_finish: true
+  allow_failures:
+    - php: nightly
   include:
     - stage: analyze
-      php: 7.2
+      php: 7.4
       install:
         - composer install --prefer-dist
       script:
         - php vendor/bin/php-cs-fixer fix --dry-run --diff
         - composer validate
+        - find OLE* -type f -name \*.php | xargs -n1 php -l
 
 cache:
   directories:
