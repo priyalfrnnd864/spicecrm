@@ -19,9 +19,9 @@ class CurlCommandFormatter implements Formatter
     public function formatRequest(RequestInterface $request)
     {
         $command = sprintf('curl %s', escapeshellarg((string) $request->getUri()->withFragment('')));
-        if ('1.0' === $request->getProtocolVersion()) {
+        if ($request->getProtocolVersion() === '1.0') {
             $command .= ' --http1.0';
-        } elseif ('2.0' === $request->getProtocolVersion()) {
+        } elseif ($request->getProtocolVersion() === '2.0') {
             $command .= ' --http2';
         }
 
@@ -36,25 +36,11 @@ class CurlCommandFormatter implements Formatter
 
         $body = $request->getBody();
         if ($body->getSize() > 0) {
-            // escapeshellarg argument max length on Windows, but longer body in curl command would be impractical anyways
-            if ($body->getSize() > 8192) {
-                $data = '[too long stream omitted]';
-            } elseif ($body->isSeekable()) {
-                $data = $body->__toString();
-                $body->rewind();
-                // all non-printable ASCII characters and <DEL> except for \t, \r, \n
-                if (preg_match('/([\x00-\x09\x0C\x0E-\x1F\x7F])/', $data)) {
-                    $data = '[binary stream omitted]';
-                }
-            } else {
-                $data = '[non-seekable stream omitted]';
+            if (!$body->isSeekable()) {
+                return 'Cant format Request as cUrl command if body stream is not seekable.';
             }
-            $escapedData = @escapeshellarg($data);
-            if (empty($escapedData)) {
-                $escapedData = 'We couldn\'t not escape the data properly';
-            }
-
-            $command .= sprintf(' --data %s', $escapedData);
+            $command .= sprintf(' --data %s', escapeshellarg($body->__toString()));
+            $body->rewind();
         }
 
         return $command;
@@ -69,6 +55,8 @@ class CurlCommandFormatter implements Formatter
     }
 
     /**
+     * @param RequestInterface $request
+     *
      * @return string
      */
     private function getHeadersAsCommandOptions(RequestInterface $request)
@@ -81,7 +69,6 @@ class CurlCommandFormatter implements Formatter
 
             if ('user-agent' === strtolower($name)) {
                 $command .= sprintf(' -A %s', escapeshellarg($values[0]));
-
                 continue;
             }
 

@@ -4,7 +4,6 @@ namespace Http\Client\Common;
 
 use Http\Client\HttpAsyncClient;
 use Http\Client\HttpClient;
-use Psr\Http\Client\ClientInterface;
 
 /**
  * A flexible http client, which implements both interface and will emulate
@@ -18,18 +17,18 @@ final class FlexibleHttpClient implements HttpClient, HttpAsyncClient
     use HttpAsyncClientDecorator;
 
     /**
-     * @param HttpClient|HttpAsyncClient|ClientInterface $client
+     * @param HttpClient|HttpAsyncClient $client
      */
     public function __construct($client)
     {
-        if (!($client instanceof HttpClient) && !($client instanceof HttpAsyncClient) && !($client instanceof ClientInterface)) {
+        if (!($client instanceof HttpClient) && !($client instanceof HttpAsyncClient)) {
             throw new \LogicException('Client must be an instance of Http\\Client\\HttpClient or Http\\Client\\HttpAsyncClient');
         }
 
         $this->httpClient = $client;
         $this->httpAsyncClient = $client;
 
-        if (!($this->httpClient instanceof HttpClient) && !($client instanceof ClientInterface)) {
+        if (!($this->httpClient instanceof HttpClient)) {
             $this->httpClient = new EmulatedHttpClient($this->httpClient);
         }
 

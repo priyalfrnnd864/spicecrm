@@ -3,14 +3,13 @@
 namespace SendGrid\Test;
 
 use SendGrid\Response;
-use PHPUnit\Framework\TestCase;
 
-class ResponseTest extends TestCase
+class ResponseTest extends \PHPUnit_Framework_TestCase
 {
     public function testConstructor()
     {
         $response = new Response();
-
+        
         $this->assertAttributeEquals(200, 'statusCode', $response);
         $this->assertAttributeEquals('', 'body', $response);
         $this->assertAttributeEquals([], 'headers', $response);
@@ -42,11 +41,11 @@ class ResponseTest extends TestCase
 
         $this->assertEquals(['Content-Type: text/html'], $response->headers());
     }
-
+    
     public function testAssociativeHeaders()
     {
         $response = new Response(null, null, ['Content-Type: text/html', 'HTTP/1.1 200 OK']);
-
+        
         $this->assertEquals(['Content-Type' => 'text/html', 'Status' => 'HTTP/1.1 200 OK'], $response->headers(true));
     }
 }

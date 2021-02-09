@@ -38,14 +38,13 @@ return array (
   ),
   'mobile' => 
   array (
-    'NationalNumberPattern' => '7\\d{8}',
+    'NationalNumberPattern' => '7(?:[014-9]\\d|2[89]|3[01])\\d{6}',
     'ExampleNumber' => '701234567',
     'PossibleLength' => 
     array (
     ),
     'PossibleLengthLocalOnly' => 
     array (
-      0 => 7,
     ),
   ),
   'tollFree' => 
@@ -152,7 +151,7 @@ return array (
       'format' => '$1 $2',
       'leadingDigitsPatterns' => 
       array (
-        0 => '[1-9]',
+        0 => '[2-9]',
       ),
       'nationalPrefixFormattingRule' => '',
       'domesticCarrierCodeFormattingRule' => '',

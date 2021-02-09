@@ -38,7 +38,6 @@ final class CookiePlugin implements Plugin
      */
     public function handleRequest(RequestInterface $request, callable $next, callable $first)
     {
-        $cookies = [];
         foreach ($this->cookieJar->getCookies() as $cookie) {
             if ($cookie->isExpired()) {
                 continue;
@@ -56,11 +55,7 @@ final class CookiePlugin implements Plugin
                 continue;
             }
 
-            $cookies[] = sprintf('%s=%s', $cookie->getName(), $cookie->getValue());
-        }
-
-        if (!empty($cookies)) {
-            $request = $request->withAddedHeader('Cookie', implode('; ', array_unique($cookies)));
+            $request = $request->withAddedHeader('Cookie', sprintf('%s=%s', $cookie->getName(), $cookie->getValue()));
         }
 
         return $next($request)->then(function (ResponseInterface $response) use ($request) {
@@ -130,7 +125,7 @@ final class CookiePlugin implements Plugin
                                 $name,
                                 $value
                             ),
-                            0,
+                            null,
                             $e
                         );
                     }

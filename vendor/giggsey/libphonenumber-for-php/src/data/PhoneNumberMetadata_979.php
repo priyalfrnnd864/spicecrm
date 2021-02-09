@@ -14,14 +14,13 @@
 return array (
   'generalDesc' => 
   array (
-    'NationalNumberPattern' => '[1359]\\d{8}',
+    'NationalNumberPattern' => '\\d{9}',
     'PossibleLength' => 
     array (
       0 => 9,
     ),
     'PossibleLengthLocalOnly' => 
     array (
-      0 => 8,
     ),
   ),
   'fixedLine' => 
@@ -56,14 +55,13 @@ return array (
   ),
   'premiumRate' => 
   array (
-    'NationalNumberPattern' => '[1359]\\d{8}',
+    'NationalNumberPattern' => '\\d{9}',
     'ExampleNumber' => '123456789',
     'PossibleLength' => 
     array (
     ),
     'PossibleLengthLocalOnly' => 
     array (
-      0 => 8,
     ),
   ),
   'sharedCost' => 
@@ -148,7 +146,6 @@ return array (
       'format' => '$1 $2 $3',
       'leadingDigitsPatterns' => 
       array (
-        0 => '[1359]',
       ),
       'nationalPrefixFormattingRule' => '',
       'domesticCarrierCodeFormattingRule' => '',

@@ -22,7 +22,7 @@ use Dompdf\Frame;
  *
  * The FrameTree consists of {@link Frame} objects each tied to specific
  * DOMNode objects in a specific DomDocument.  The FrameTree has the same
- * structure as the DomDocument, but adds additional capabilities for
+ * structure as the DomDocument, but adds additional capabalities for
  * styling and layout.
  *
  * @package dompdf
@@ -34,7 +34,7 @@ class FrameTree
      *
      * @var array
      */
-    protected static $HIDDEN_TAGS = [
+    protected static $HIDDEN_TAGS = array(
         "area",
         "base",
         "basefont",
@@ -46,7 +46,7 @@ class FrameTree
         "noembed",
         "param",
         "#comment"
-    ];
+    );
 
     /**
      * The main DomDocument
@@ -86,11 +86,11 @@ class FrameTree
     {
         $this->_dom = $dom;
         $this->_root = null;
-        $this->_registry = [];
+        $this->_registry = array();
     }
 
     /**
-     * Returns the DOMDocument object representing the current html document
+     * Returns the DOMDocument object representing the curent html document
      *
      * @return DOMDocument
      */
@@ -239,7 +239,7 @@ class FrameTree
         }
 
         // Store the children in an array so that the tree can be modified
-        $children = [];
+        $children = array();
         $length = $node->childNodes->length;
         for ($i = 0; $i < $length; $i++) {
             $children[] = $node->childNodes->item($i);

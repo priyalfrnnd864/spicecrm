@@ -215,6 +215,7 @@ return array (
   35257 => 'Esch-sur-Alzette/Schifflingen',
   35258 => 'Differdingen',
   35259 => 'Soleuvre',
+  35267 => 'Düdelingen',
   35271 => 'Betzdorf',
   35272 => 'Echternach',
   35273 => 'Rosport',
