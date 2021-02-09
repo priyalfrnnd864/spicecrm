@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Serbia - High
+// (c) ammap.com | SVG (in JSON format) map of Serbia - High
 // areas: {id:"RS-00"},{id:"RS-01"},{id:"RS-02"},{id:"RS-03"},{id:"RS-04"},{id:"RS-05"},{id:"RS-06"},{id:"RS-07"},{id:"RS-08"},{id:"RS-09"},{id:"RS-10"},{id:"RS-11"},{id:"RS-12"},{id:"RS-13"},{id:"RS-14"},{id:"RS-15"},{id:"RS-16"},{id:"RS-17"},{id:"RS-18"},{id:"RS-19"},{id:"RS-20"},{id:"RS-21"},{id:"RS-22"},{id:"RS-23"},{id:"RS-24"},{id:"RS-25"},{id:"RS-26"},{id:"RS-27"},{id:"RS-28"},{id:"RS-29"}
 AmCharts.maps.serbiaHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Germany
+// (c) ammap.com | SVG (in JSON format) map of Germany
 // areas: {id:"DE-BW"},{id:"DE-BY"},{id:"DE-BE"},{id:"DE-BB"},{id:"DE-HB"},{id:"DE-HH"},{id:"DE-HE"},{id:"DE-MV"},{id:"DE-NI"},{id:"DE-NW"},{id:"DE-RP"},{id:"DE-SL"},{id:"DE-SN"},{id:"DE-ST"},{id:"DE-SH"},{id:"DE-TH"}
 AmCharts.maps.germanyHigh={
 	"svg": {

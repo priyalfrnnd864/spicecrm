@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Tajikistan - High
+// (c) ammap.com | SVG (in JSON format) map of Tajikistan - High
 // areas: {id:"TJ-GB"},{id:"TJ-KT"},{id:"TJ-RR"},{id:"TJ-SU"}
 AmCharts.maps.tajikistanHigh={
 	"svg": {

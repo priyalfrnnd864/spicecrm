@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Luxembourg - High
+// (c) ammap.com | SVG (in JSON format) map of Luxembourg - High
 // areas: {id:"LU-D"},{id:"LU-G"},{id:"LU-L"}
 AmCharts.maps.luxembourgHigh={
 	"svg": {

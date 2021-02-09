@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Swaziland - Low
+// (c) ammap.com | SVG (in JSON format) map of Swaziland - Low
 // areas: {id:"SZ-HH"},{id:"SZ-LU"},{id:"SZ-MA"},{id:"SZ-SH"}
 AmCharts.maps.swazilandLow={
 	"svg": {

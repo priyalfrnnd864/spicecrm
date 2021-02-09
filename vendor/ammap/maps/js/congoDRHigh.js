@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of DR Congo - High
+// (c) ammap.com | SVG (in JSON format) map of DR Congo - High
 // areas: {id:"CD-BC"},{id:"CD-BN"},{id:"CD-EQ"},{id:"CD-KA"},{id:"CD-KE"},{id:"CD-KN"},{id:"CD-KW"},{id:"CD-MA"},{id:"CD-NK"},{id:"CD-OR"},{id:"CD-SK"}
 AmCharts.maps.congoDRHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Djibouti - Low
+// (c) ammap.com | SVG (in JSON format) map of Djibouti - Low
 // areas: {id:"DJ-AR"},{id:"DJ-AS"},{id:"DJ-DI"},{id:"DJ-DJ"},{id:"DJ-OB"},{id:"DJ-TA"}
 AmCharts.maps.djiboutiLow={
 	"svg": {

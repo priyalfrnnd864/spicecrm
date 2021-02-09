@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Greece - High
+// (c) ammap.com | SVG (in JSON format) map of Greece - High
 // areas: {id:"GR-A"},{id:"GR-B"},{id:"GR-C"},{id:"GR-D"},{id:"GR-E"},{id:"GR-F"},{id:"GR-G"},{id:"GR-H"},{id:"GR-I"},{id:"GR-J"},{id:"GR-K"},{id:"GR-L"},{id:"GR-M"},{id:"GR-69"}
 AmCharts.maps.greeceHigh={
 	"svg": {

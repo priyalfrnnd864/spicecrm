@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Colombia
+// (c) ammap.com | SVG (in JSON format) map of Colombia
 // areas: {id:"CO-AMA"},{id:"CO-ANT"},{id:"CO-ARA"},{id:"CO-ATL"},{id:"CO-BOL"},{id:"CO-BOY"},{id:"CO-CAL"},{id:"CO-CES"},{id:"CO-CHO"},{id:"CO-CAL"},{id:"CO-COR"},{id:"CO-CAQ"},{id:"CO-CAS"},{id:"CO-CUN"},{id:"CO-DC"},{id:"CO-GUA"},{id:"CO-GUV"},{id:"CO-HUI"},{id:"CO-LAG"},{id:"CO-MAG"},{id:"CO-MET"},{id:"CO-NAR"},{id:"CO-NSA"},{id:"CO-PUT"},{id:"CO-QUI"},{id:"CO-RIS"},{id:"CO-SAN"},{id:"CO-SUC"},{id:"CO-SAP"},{id:"CO-TOL"},{id:"CO-VAC"},{id:"CO-VID"},{id:"CO-VAU"}
 AmCharts.maps.colombiaLow={
 	"svg": {

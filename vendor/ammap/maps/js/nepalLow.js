@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Nepal - Low
+// (c) ammap.com | SVG (in JSON format) map of Nepal - Low
 // areas: {id:"NP-BA"},{id:"NP-BH"},{id:"NP-DH"},{id:"NP-GA"},{id:"NP-JA"},{id:"NP-KA"},{id:"NP-KO"},{id:"NP-LU"},{id:"NP-MA"},{id:"NP-ME"},{id:"NP-NA"},{id:"NP-RA"},{id:"NP-SA"},{id:"NP-SE"}
 AmCharts.maps.nepalLow={
 	"svg": {

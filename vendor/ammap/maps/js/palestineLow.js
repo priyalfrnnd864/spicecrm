@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Palestine Low
+// (c) ammap.com | SVG (in JSON format) map of Palestine Low
 // areas: {id:"PS-JRH"},{id:"PS-JEN"},{id:"PS-TKM"},{id:"PS-TBS"},{id:"PS-NBS"},{id:"PS-QQA"},{id:"PS-SLT"},{id:"PS-RBH"},{id:"PS-JEM"},{id:"PS-BTH"},{id:"PS-HBN"},{id:"PS-NGZ"},{id:"PS-GZA"},{id:"PS-DEB"},{id:"PS-KYS"},{id:"PS-RFH"},{id:"IL"}
 AmCharts.maps.palestineLow={
 	"svg": {

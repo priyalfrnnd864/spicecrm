@@ -115,7 +115,7 @@ class Message extends MessageItem
         return $this->properties->getStore()->getNameId();
     }
 
-    public function getInternetMessageId(): ?string
+    public function getInternetMessageId()
     {
         return $this->properties['internet_message_id'] ?? null;
     }
@@ -200,7 +200,7 @@ class Message extends MessageItem
         return $from;
     }
 
-    public function getSendTime(): ?\DateTime
+    public function getSendTime()
     {
         $sendTime = $this->properties['client_submit_time'];
 

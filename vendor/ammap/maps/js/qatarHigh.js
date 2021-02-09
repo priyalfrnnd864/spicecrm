@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Qatar - High
+// (c) ammap.com | SVG (in JSON format) map of Qatar - High
 // areas: {id:"QA-DA"},{id:"QA-KH"},{id:"QA-MS"},{id:"QA-RA"},{id:"QA-US"},{id:"QA-WA"},{id:"QA-ZA"}
 AmCharts.maps.qatarHigh={
 	"svg": {

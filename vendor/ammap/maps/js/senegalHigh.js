@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Senegal - High
+// (c) ammap.com | SVG (in JSON format) map of Senegal - High
 // areas: {id:"SN-DK"},{id:"SN-DB"},{id:"SN-FK"},{id:"SN-KE"},{id:"SN-KA"},{id:"SN-KL"},{id:"SN-KD"},{id:"SN-LG"},{id:"SN-MT"},{id:"SN-SE"},{id:"SN-SL"},{id:"SN-TC"},{id:"SN-TH"},{id:"SN-ZG"}
 AmCharts.maps.senegalHigh={
 	"svg": {

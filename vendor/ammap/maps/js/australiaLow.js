@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Australia - Low
+// (c) ammap.com | SVG (in JSON format) map of Australia - Low
 // areas: {id:"AU-NT"},{id:"AU-WA"},{id:"AU-ACT"},{id:"AU-NSW"},{id:"AU-SA"},{id:"AU-VIC"},{id:"AU-QLD"},{id:"AU-TAS"}
 AmCharts.maps.australiaLow={
 	"svg": {

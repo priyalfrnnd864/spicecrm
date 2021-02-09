@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Finland - High
+// (c) ammap.com | SVG (in JSON format) map of Finland - High
 // areas: {id:"FI-01"},{id:"FI-02"},{id:"FI-03"},{id:"FI-04"},{id:"FI-05"},{id:"FI-06"},{id:"FI-07"},{id:"FI-08"},{id:"FI-09"},{id:"FI-10"},{id:"FI-11"},{id:"FI-12"},{id:"FI-13"},{id:"FI-14"},{id:"FI-15"},{id:"FI-16"},{id:"FI-17"},{id:"FI-18"},{id:"FI-19"}
 AmCharts.maps.finlandHigh={
 	"svg": {

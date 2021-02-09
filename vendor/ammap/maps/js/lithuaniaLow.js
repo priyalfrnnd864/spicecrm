@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Lithuania - Low
+// (c) ammap.com | SVG (in JSON format) map of Lithuania - Low
 // areas: {id:"LT-AL"},{id:"LT-KU"},{id:"LT-KL"},{id:"LT-MR"},{id:"LT-PN"},{id:"LT-SA"},{id:"LT-TA"},{id:"LT-TE"},{id:"LT-UT"},{id:"LT-VL"}
 AmCharts.maps.lithuaniaLow={
 	"svg": {

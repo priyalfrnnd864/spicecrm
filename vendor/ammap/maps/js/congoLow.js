@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Congo - Low
+// (c) ammap.com | SVG (in JSON format) map of Congo - Low
 // areas: {id:"CG-2"},{id:"CG-5"},{id:"CG-7"},{id:"CG-8"},{id:"CG-9"},{id:"CG-11"},{id:"CG-12"},{id:"CG-13"},{id:"CG-14"},{id:"CG-15"},{id:"CG-16"},{id:"CG-BZV"}
 AmCharts.maps.congoLow={
 	"svg": {

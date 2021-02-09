@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Bhutan - High
+// (c) ammap.com | SVG (in JSON format) map of Bhutan - High
 // areas: {id:"BT-11"},{id:"BT-12"},{id:"BT-13"},{id:"BT-14"},{id:"BT-15"},{id:"BT-21"},{id:"BT-22"},{id:"BT-23"},{id:"BT-24"},{id:"BT-31"},{id:"BT-32"},{id:"BT-33"},{id:"BT-34"},{id:"BT-41"},{id:"BT-42"},{id:"BT-43"},{id:"BT-44"},{id:"BT-45"},{id:"BT-GA"},{id:"BT-TY"}
 AmCharts.maps.bhutanHigh={
 	"svg": {

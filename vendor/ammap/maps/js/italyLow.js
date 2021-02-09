@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Italy - Low
+// (c) ammap.com | SVG (in JSON format) map of Italy - Low
 // areas: {id:"VA"},{id:"SM"},{id:"FR-H"},{id:"MT"},{id:"IT_65"},{id:"IT-77"},{id:"IT-78"},{id:"IT-72"},{id:"IT-45"},{id:"IT-36"},{id:"IT-62"},{id:"IT-42"},{id:"IT-25"},{id:"IT-57"},{id:"IT-67"},{id:"IT-21"},{id:"IT-75"},{id:"IT-88"},{id:"IT-82"},{id:"IT-52"},{id:"IT-32"},{id:"IT-55"},{id:"IT-23"},{id:"IT-34"}
 AmCharts.maps.italyLow={
 	"svg": {

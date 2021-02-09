@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Hong Kong - Low
+// (c) ammap.com | SVG (in JSON format) map of Hong Kong - Low
 // areas: {id:"HK-KI"},{id:"HK-WT"},{id:"HK-TW"},{id:"HK-SS"},{id:"HK-KC"},{id:"HK-TM"},{id:"HK-KU"},{id:"HK-YT"},{id:"HK-IS"},{id:"HK-NO"},{id:"HK-YL"},{id:"HK-TP"},{id:"HK-ST"},{id:"HK-EA"},{id:"HK-CW"},{id:"HK-WC"},{id:"HK-SK"},{id:"HK-SO"}
 AmCharts.maps.hongKongLow={
 	"svg": {

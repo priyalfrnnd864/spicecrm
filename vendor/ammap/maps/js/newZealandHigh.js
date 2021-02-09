@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of New Zealand - High
+// (c) ammap.com | SVG (in JSON format) map of New Zealand - High
 // areas: {id:"NZ-AUK"},{id:"NZ-BOP"},{id:"NZ-CAN"},{id:"NZ-CIT"},{id:"NZ-GIS"},{id:"NZ-HKB"},{id:"NZ-MBH"},{id:"NZ-MWT"},{id:"NZ-NSN"},{id:"NZ-NTL"},{id:"NZ-OTA"},{id:"NZ-STL"},{id:"NZ-TAS"},{id:"NZ-TKI"},{id:"NZ-WKO"},{id:"NZ-WGN"},{id:"NZ-WTC"}
 AmCharts.maps.newZealandHigh={
 	"svg": {

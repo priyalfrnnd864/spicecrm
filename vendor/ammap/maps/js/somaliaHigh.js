@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Somalia - High
+// (c) ammap.com | SVG (in JSON format) map of Somalia - High
 // areas: {id:"SO-AW"},{id:"SO-BK"},{id:"SO-BN"},{id:"SO-BR"},{id:"SO-BY"},{id:"SO-GA"},{id:"SO-GE"},{id:"SO-HI"},{id:"SO-JD"},{id:"SO-JH"},{id:"SO-MU"},{id:"SO-NU"},{id:"SO-SA"},{id:"SO-SD"},{id:"SO-SH"},{id:"SO-SO"},{id:"SO-TO"},{id:"SO-WO"}
 AmCharts.maps.somaliaHigh={
 	"svg": {

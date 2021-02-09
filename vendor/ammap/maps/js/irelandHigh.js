@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Ireland - High
+// (c) ammap.com | SVG (in JSON format) map of Ireland - High
 // areas: {id:"GB-NIR"},{id:"IE-CW"},{id:"IE-CN"},{id:"IE-CE"},{id:"IE-CO"},{id:"IE-DL"},{id:"IE-D"},{id:"IE-G"},{id:"IE-KE"},{id:"IE-KK"},{id:"IE-KY"},{id:"IE-LD"},{id:"IE-LH"},{id:"IE-LK"},{id:"IE-LM"},{id:"IE-LS"},{id:"IE-MH"},{id:"IE-MN"},{id:"IE-MO"},{id:"IE-OY"},{id:"IE-RN"},{id:"IE-SO"},{id:"IE-TA"},{id:"IE-WD"},{id:"IE-WH"},{id:"IE-WX"},{id:"IE-WW"}
 AmCharts.maps.irelandHigh={
 	"svg": {

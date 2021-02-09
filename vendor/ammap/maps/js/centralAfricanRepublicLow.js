@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Central African Republic - Low
+// (c) ammap.com | SVG (in JSON format) map of Central African Republic - Low
 // areas: {id:"CF-AC"},{id:"CF-BB"},{id:"CF-BGF"},{id:"CF-BK"},{id:"CF-HK"},{id:"CF-HM"},{id:"CF-HS"},{id:"CF-KB"},{id:"CF-KG"},{id:"CF-LB"},{id:"CF-MB"},{id:"CF-MP"},{id:"CF-NM"},{id:"CF-OP"},{id:"CF-SE"},{id:"CF-UK"},{id:"CF-VK"}
 AmCharts.maps.centralAfricanRepublicLow={
 	"svg": {

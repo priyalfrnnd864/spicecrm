@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Georgia with South Ossetia - High
+// (c) ammap.com | SVG (in JSON format) map of Georgia with South Ossetia - High
 // areas: {id:"GE-AB"},{id:"GE-AJ"},{id:"GE-GU"},{id:"GE-IM"},{id:"GE-KA"},{id:"GE-KK"},{id:"GE-MM"},{id:"GE-RL"},{id:"GE-SJ"},{id:"GE-SK"},{id:"GE-SO"},{id:"GE-SZ"},{id:"GE-TB"}
 AmCharts.maps.georgiaSouthOssetiaHigh={
 	"svg": {

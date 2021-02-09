@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Syria - High
+// (c) ammap.com | SVG (in JSON format) map of Syria - High
 // areas: {id:"SY-HA"},{id:"SY-DY"},{id:"SY-ID"},{id:"SY-RD"},{id:"SY-HL"},{id:"SY-RA"},{id:"SY-LA"},{id:"SY-HM"},{id:"SY-HI"},{id:"SY-TA"},{id:"SY-DI"},{id:"SY-QU"},{id:"SY-DR"},{id:"SY-SU"}
 AmCharts.maps.syriaHigh={
 	"svg": {

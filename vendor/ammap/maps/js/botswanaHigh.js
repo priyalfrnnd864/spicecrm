@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Botswana - High
+// (c) ammap.com | SVG (in JSON format) map of Botswana - High
 // areas: {id:"BW-CE"},{id:"BW-GH"},{id:"BW-KG"},{id:"BW-KL"},{id:"BW-KW"},{id:"BW-NE"},{id:"BW-NW"},{id:"BW-SE"},{id:"BW-SO"}
 AmCharts.maps.botswanaHigh={
 	"svg": {

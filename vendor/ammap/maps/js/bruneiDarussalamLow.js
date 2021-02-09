@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Brunei Darussalam - Low
+// (c) ammap.com | SVG (in JSON format) map of Brunei Darussalam - Low
 // areas: {id:"BN-BE"},{id:"BN-BM"},{id:"BN-TE"},{id:"BN-TU"}
 AmCharts.maps.bruneiDarussalamLow={
 	"svg": {

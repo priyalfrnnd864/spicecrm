@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Uzebekistan - High
+// (c) ammap.com | SVG (in JSON format) map of Uzebekistan - High
 // areas: {id:"UZ-AS"},{id:"TJ-SU"},{id:"UZ-AN"},{id:"UZ-BU"},{id:"UZ-FA"},{id:"UZ-JI"},{id:"UZ-NG"},{id:"UZ-NW"},{id:"UZ-QA"},{id:"UZ-QR"},{id:"UZ-SA"},{id:"UZ-SI"},{id:"UZ-SU"},{id:"UZ-TK"},{id:"UZ-TO"},{id:"UZ-XO"}
 AmCharts.maps.uzbekistanHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Nigeria - High
+// (c) ammap.com | SVG (in JSON format) map of Nigeria - High
 // areas: {id:"NG-AB"},{id:"NG-AD"},{id:"NG-AK"},{id:"NG-AN"},{id:"NG-BA"},{id:"NG-BE"},{id:"NG-BO"},{id:"NG-BY"},{id:"NG-CR"},{id:"NG-DE"},{id:"NG-EB"},{id:"NG-ED"},{id:"NG-EK"},{id:"NG-EN"},{id:"NG-FC"},{id:"NG-GO"},{id:"NG-IM"},{id:"NG-JI"},{id:"NG-KD"},{id:"NG-KE"},{id:"NG-KN"},{id:"NG-KO"},{id:"NG-KT"},{id:"NG-KW"},{id:"NG-LA"},{id:"NG-NA"},{id:"NG-NI"},{id:"NG-OG"},{id:"NG-ON"},{id:"NG-OS"},{id:"NG-OY"},{id:"NG-PL"},{id:"NG-RI"},{id:"NG-SO"},{id:"NG-TA"},{id:"NG-YO"},{id:"NG-ZA"}
 AmCharts.maps.nigeriaHigh={
 	"svg": {

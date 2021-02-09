@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of French Guiana - Low
+// (c) ammap.com | SVG (in JSON format) map of French Guiana - Low
 // areas: {id:"GF-CY"},{id:"GF-SL"}
 AmCharts.maps.frenchGuianaLow={
 	"svg": {

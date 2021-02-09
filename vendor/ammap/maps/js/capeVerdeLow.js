@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Cape Verde - Low
+// (c) ammap.com | SVG (in JSON format) map of Cape Verde - Low
 // areas: {id:"CV-BR"},{id:"CV-BV"},{id:"CV-CA"},{id:"CV-CF"},{id:"CV-CR"},{id:"CV-MA"},{id:"CV-MO"},{id:"CV-PA"},{id:"CV-PN"},{id:"CV-PR"},{id:"CV-RB"},{id:"CV-RG"},{id:"CV-RS"},{id:"CV-SD"},{id:"CV-SF"},{id:"CV-SL"},{id:"CV-SM"},{id:"CV-SO"},{id:"CV-SS"},{id:"CV-SV"},{id:"CV-TA"},{id:"CV-TS"}
 AmCharts.maps.capeVerdeLow={
 	"svg": {

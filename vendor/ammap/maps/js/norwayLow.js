@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Norway - Low
+// (c) ammap.com | SVG (in JSON format) map of Norway - Low
 // areas: {id:"NO-02"},{id:"NO-09"},{id:"NO-06"},{id:"NO-20"},{id:"NO-04"},{id:"NO-12"},{id:"NO-15"},{id:"NO-18"},{id:"NO-17"},{id:"NO-01"},{id:"NO-05"},{id:"NO-03"},{id:"NO-11"},{id:"NO-14"},{id:"NO-16"},{id:"NO-08"},{id:"NO-19"},{id:"NO-10"},{id:"NO-07"}
 AmCharts.maps.norwayLow={
 	"svg": {

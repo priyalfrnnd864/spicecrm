@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Israel-Palestine High
+// (c) ammap.com | SVG (in JSON format) map of Israel-Palestine High
 // areas: {id:"PS-JRH"},{id:"PS-JEN"},{id:"PS-TKM"},{id:"PS-TBS"},{id:"PS-NBS"},{id:"PS-QQA"},{id:"PS-SLT"},{id:"PS-RBH"},{id:"PS-JEM"},{id:"PS-BTH"},{id:"PS-HBN"},{id:"PS-NGZ"},{id:"PS-GZA"},{id:"PS-DEB"},{id:"PS-KYS"},{id:"PS-RFH"},{id:"IL-GH"},{id:"IL-Z"},{id:"IL-HA"},{id:"IL-M"},{id:"IL-TA"},{id:"IL-D"},{id:"IL-JM"}
 AmCharts.maps.israelPalestineHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of France 2016 - Low
+// (c) ammap.com | SVG (in JSON format) map of France 2016 - Low
 // areas: {id:"FR-A"},{id:"FR-B"},{id:"FR-C"},{id:"FR-D"},{id:"FR-E"},{id:"FR-F"},{id:"FR-G"},{id:"FR-H"},{id:"FR-I"},{id:"FR-J"},{id:"FR-K"},{id:"FR-L"},{id:"FR-M"}
 AmCharts.maps.france2016Low={
 	"svg": {

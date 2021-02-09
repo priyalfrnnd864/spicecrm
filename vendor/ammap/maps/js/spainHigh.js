@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Spain High
+// (c) ammap.com | SVG (in JSON format) map of Spain High
 // areas: {id:"ES-AN"},{id:"ES-AR"},{id:"ES-AS"},{id:"ES-CB"},{id:"ES-CL"},{id:"ES-CM"},{id:"ES-CN"},{id:"ES-CT"},{id:"ES-EX"},{id:"ES-GA"},{id:"ES-RI"},{id:"ES-MD"},{id:"ES-MC"},{id:"ES-NC"},{id:"ES-IB"},{id:"ES-PV"},{id:"ES-VC"}
 AmCharts.maps.spainHigh={
 	"svg": {

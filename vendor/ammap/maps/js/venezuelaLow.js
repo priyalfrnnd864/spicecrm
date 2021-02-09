@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Venezuela - Low
+// (c) ammap.com | SVG (in JSON format) map of Venezuela - Low
 // areas: {id:"AW"},{id:"BQ"},{id:"CW"},{id:"VE-A"},{id:"VE-B"},{id:"VE-C"},{id:"VE-D"},{id:"VE-E"},{id:"VE-F"},{id:"VE-G"},{id:"VE-H"},{id:"VE-I"},{id:"VE-J"},{id:"VE-K"},{id:"VE-L"},{id:"VE-M"},{id:"VE-N"},{id:"VE-O"},{id:"VE-P"},{id:"VE-R"},{id:"VE-S"},{id:"VE-T"},{id:"VE-U"},{id:"VE-V"},{id:"VE-W"},{id:"VE-X"},{id:"VE-Y"},{id:"VE-Z"}
 AmCharts.maps.venezuelaLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Cambodia - Low
+// (c) ammap.com | SVG (in JSON format) map of Cambodia - Low
 // areas: {id:"KH-1"},{id:"KH-2"},{id:"KH-3"},{id:"KH-4"},{id:"KH-5"},{id:"KH-6"},{id:"KH-7"},{id:"KH-8"},{id:"KH-9"},{id:"KH-10"},{id:"KH-11"},{id:"KH-12"},{id:"KH-13"},{id:"KH-14"},{id:"KH-15"},{id:"KH-16"},{id:"KH-17"},{id:"KH-18"},{id:"KH-19"},{id:"KH-20"},{id:"KH-21"},{id:"KH-22"},{id:"KH-23"},{id:"KH-24"}
 AmCharts.maps.cambodiaLow={
 	"svg": {

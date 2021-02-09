@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Zimbabwe - Low
+// (c) ammap.com | SVG (in JSON format) map of Zimbabwe - Low
 // areas: {id:"ZW-BU"},{id:"ZW-HA"},{id:"ZW-MA"},{id:"ZW-MC"},{id:"ZW-ME"},{id:"ZW-MI"},{id:"ZW-MN"},{id:"ZW-MS"},{id:"ZW-MV"},{id:"ZW-MW"}
 AmCharts.maps.zimbabweLow={
 	"svg": {

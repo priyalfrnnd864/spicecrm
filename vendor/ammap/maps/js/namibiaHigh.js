@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Namibia - High
+// (c) ammap.com | SVG (in JSON format) map of Namibia - High
 // areas: {id:"NA-CA"},{id:"NA-ER"},{id:"NA-HA"},{id:"NA-KA"},{id:"NA-KE"},{id:"NA-KH"},{id:"NA-KU"},{id:"NA-KW"},{id:"NA-OD"},{id:"NA-OH"},{id:"NA-ON"},{id:"NA-OS"},{id:"NA-OT"},{id:"NA-OW"}
 AmCharts.maps.namibiaHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Estonia - Low
+// (c) ammap.com | SVG (in JSON format) map of Estonia - Low
 // areas: {id:"EE-84"},{id:"EE-65"},{id:"EE-44"},{id:"EE-78"},{id:"EE-51"},{id:"EE-86"},{id:"EE-67"},{id:"EE-59"},{id:"EE-39"},{id:"EE-57"},{id:"EE-82"},{id:"EE-49"},{id:"EE-70"},{id:"EE-74"},{id:"EE-37"}
 AmCharts.maps.estoniaLow={
 	"svg": {

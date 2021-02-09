@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Switzerland - Low
+// (c) ammap.com | SVG (in JSON format) map of Switzerland - Low
 // areas: {id:"CH-AG"},{id:"CH-AI"},{id:"CH-AR"},{id:"CH-BE"},{id:"CH-BL"},{id:"CH-BS"},{id:"CH-FR"},{id:"CH-GE"},{id:"CH-GL"},{id:"CH-GR"},{id:"CH-JU"},{id:"CH-LU"},{id:"CH-NE"},{id:"CH-NW"},{id:"CH-OW"},{id:"CH-SG"},{id:"CH-SH"},{id:"CH-SO"},{id:"CH-SZ"},{id:"CH-TG"},{id:"CH-TI"},{id:"CH-UR"},{id:"CH-VD"},{id:"CH-VS"},{id:"CH-ZG"},{id:"CH-ZH"}
 AmCharts.maps.switzerlandLow={
 	"svg": {

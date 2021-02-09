@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Costa Rica - High
+// (c) ammap.com | SVG (in JSON format) map of Costa Rica - High
 // areas: {id:"CR-A"},{id:"CR-C"},{id:"CR-G"},{id:"CR-H"},{id:"CR-L"},{id:"CR-LA"},{id:"CR-P"},{id:"CR-SJ"}
 AmCharts.maps.costaRicaHigh={
 	"svg": {

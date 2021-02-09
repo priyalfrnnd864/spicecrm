@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Guinea - High
+// (c) ammap.com | SVG (in JSON format) map of Guinea - High
 // areas: {id:"GN-B"},{id:"GN-C"},{id:"GN-D"},{id:"GN-F"},{id:"GN-K"},{id:"GN-L"},{id:"GN-M"},{id:"GN-N3"}
 AmCharts.maps.guineaHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Saudi Arabia - Low
+// (c) ammap.com | SVG (in JSON format) map of Saudi Arabia - Low
 // areas: {id:"SA-01"},{id:"SA-02"},{id:"SA-03"},{id:"SA-04"},{id:"SA-05"},{id:"SA-06"},{id:"SA-07"},{id:"SA-08"},{id:"SA-09"},{id:"SA-10"},{id:"SA-11"},{id:"SA-12"},{id:"SA-14"}
 AmCharts.maps.saudiArabiaLow={
 	"svg": {

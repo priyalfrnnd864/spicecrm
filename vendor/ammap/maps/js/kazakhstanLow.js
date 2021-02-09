@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Kazakhstan - Low
+// (c) ammap.com | SVG (in JSON format) map of Kazakhstan - Low
 // areas: {id:"KZ-AKM"},{id:"KZ-AKT"},{id:"KZ-ALM"},{id:"KZ-ATY"},{id:"KZ-KAR"},{id:"KZ-KUS"},{id:"KZ-KZY"},{id:"KZ-MAN"},{id:"KZ-PAV"},{id:"KZ-SEV"},{id:"KZ-VOS"},{id:"KZ-YUZ"},{id:"KZ-ZAP"},{id:"KZ-ZHA"},{id:"KZ-AS"}
 AmCharts.maps.kazakhstanLow={
 	"svg": {

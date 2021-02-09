@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Spain Provinces - High
+// (c) ammap.com | SVG (in JSON format) map of Spain Provinces - High
 // areas: {id:"divider"},{id:"ES-A"},{id:"ES-AB"},{id:"ES-AL"},{id:"ES-AV"},{id:"ES-B"},{id:"ES-BA"},{id:"ES-BI"},{id:"ES-BU"},{id:"ES-C"},{id:"ES-CA"},{id:"ES-CC"},{id:"ES-CE"},{id:"ES-CO"},{id:"ES-CR"},{id:"ES-CS"},{id:"ES-CU"},{id:"ES-GC"},{id:"ES-GI"},{id:"ES-GR"},{id:"ES-GU"},{id:"ES-H"},{id:"ES-HU"},{id:"ES-J"},{id:"ES-L"},{id:"ES-LE"},{id:"ES-LO"},{id:"ES-LU"},{id:"ES-M"},{id:"ES-MA"},{id:"ES-ML"},{id:"ES-MU"},{id:"ES-NA"},{id:"ES-O"},{id:"ES-OR"},{id:"ES-P"},{id:"ES-PM"},{id:"ES-PO"},{id:"ES-S"},{id:"ES-SA"},{id:"ES-SE"},{id:"ES-SG"},{id:"ES-SO"},{id:"ES-SS"},{id:"ES-TE"},{id:"ES-TF"},{id:"ES-TO"},{id:"ES-T"},{id:"ES-V"},{id:"ES-VA"},{id:"ES-VI"},{id:"ES-Z"},{id:"ES-ZA"}
 AmCharts.maps.spainProvincesHigh={
 	"svg": {

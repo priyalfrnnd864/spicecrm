@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Faroe Islands - High
+// (c) ammap.com | SVG (in JSON format) map of Faroe Islands - High
 // areas: {id:"FO-OS"},{id:"FO-NO"},{id:"FO-SA"},{id:"FO-ST"},{id:"FO-SU"},{id:"FO-VG"}
 AmCharts.maps.faroeIslandsHigh={
 	"svg": {

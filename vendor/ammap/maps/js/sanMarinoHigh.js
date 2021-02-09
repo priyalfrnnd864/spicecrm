@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of San Marino - High
+// (c) ammap.com | SVG (in JSON format) map of San Marino - High
 // areas: {id:"SM-01"},{id:"SM-02"},{id:"SM-03"},{id:"SM-04"},{id:"SM-05"},{id:"SM-06"},{id:"SM-07"},{id:"SM-08"},{id:"SM-09"}
 AmCharts.maps.sanMarinoHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Continents with Antarctica - Russia split - High
+// (c) ammap.com | SVG (in JSON format) map of Continents with Antarctica - Russia split - High
 // areas: {id:"europe"},{id:"asia"},{id:"northAamerica"},{id:"africa"},{id:"AQ"},{id:"southAmerica"},{id:"australia"}
 AmCharts.maps.continentsWithAntarcticaHigh={
 	"svg": {

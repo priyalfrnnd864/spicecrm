@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Netherlands - Low
+// (c) ammap.com | SVG (in JSON format) map of Netherlands - Low
 // areas: {id:"NL-DR"},{id:"NL-FL"},{id:"NL-FR"},{id:"NL-GE"},{id:"NL-GR"},{id:"NL-LI"},{id:"NL-NB"},{id:"NL-NH"},{id:"NL-OV"},{id:"NL-UT"},{id:"NL-ZE"},{id:"NL-ZH"}
 AmCharts.maps.netherlandsLow={
 	"svg": {

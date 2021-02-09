@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Sri Lanka - High
+// (c) ammap.com | SVG (in JSON format) map of Sri Lanka - High
 // areas: {id:"LK-11"},{id:"LK-12"},{id:"LK-13"},{id:"LK-21"},{id:"LK-22"},{id:"LK-23"},{id:"LK-31"},{id:"LK-32"},{id:"LK-33"},{id:"LK-41"},{id:"LK-42"},{id:"LK-43"},{id:"LK-44"},{id:"LK-45"},{id:"LK-51"},{id:"LK-52"},{id:"LK-53"},{id:"LK-61"},{id:"LK-62"},{id:"LK-71"},{id:"LK-72"},{id:"LK-81"},{id:"LK-82"},{id:"LK-91"},{id:"LK-92"}
 AmCharts.maps.sriLankaHigh={
 	"svg": {

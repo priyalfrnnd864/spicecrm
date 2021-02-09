@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Armenia - High
+// (c) ammap.com | SVG (in JSON format) map of Armenia - High
 // areas: {id:"AM-AG"},{id:"AM-AR"},{id:"AM-AV"},{id:"AM-ER"},{id:"AM-GR"},{id:"AM-KT"},{id:"AM-LO"},{id:"AM-SH"},{id:"AM-SU"},{id:"AM-TV"},{id:"AM-VD"}
 AmCharts.maps.armeniaHigh={
 	"svg": {

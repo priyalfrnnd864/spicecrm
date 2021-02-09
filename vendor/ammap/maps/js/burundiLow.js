@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Burundi - Low
+// (c) ammap.com | SVG (in JSON format) map of Burundi - Low
 // areas: {id:"BI-BB"},{id:"BI-BL"},{id:"BI-BM"},{id:"BI-BR"},{id:"BI-CA"},{id:"BI-CI"},{id:"BI-GI"},{id:"BI-KI"},{id:"BI-KR"},{id:"BI-KY"},{id:"BI-MA"},{id:"BI-MU"},{id:"BI-MW"},{id:"BI-MY"},{id:"BI-NG"},{id:"BI-RT"},{id:"BI-RY"}
 AmCharts.maps.burundiLow={
 	"svg": {

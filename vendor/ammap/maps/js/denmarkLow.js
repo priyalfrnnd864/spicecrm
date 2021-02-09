@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Denmark - Low
+// (c) ammap.com | SVG (in JSON format) map of Denmark - Low
 // areas: {id:"DK-84"},{id:"DK-82"},{id:"DK-81"},{id:"DK-85"},{id:"DK-83"}
 AmCharts.maps.denmarkLow={
 	"svg": {

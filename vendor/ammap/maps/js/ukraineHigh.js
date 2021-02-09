@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Ukraine - High
+// (c) ammap.com | SVG (in JSON format) map of Ukraine - High
 // areas: {id:"UA-40"},{id:"UA-43"},{id:"UA-71"},{id:"UA-74"},{id:"UA-77"},{id:"UA-12"},{id:"UA-14"},{id:"UA-26"},{id:"UA-63"},{id:"UA-65"},{id:"UA-68"},{id:"UA-30"},{id:"UA-32"},{id:"UA-35"},{id:"UA-09"},{id:"UA-46"},{id:"UA-48"},{id:"UA-51"},{id:"UA-53"},{id:"UA-56"},{id:"UA-59"},{id:"UA-61"},{id:"UA-21"},{id:"UA-05"},{id:"UA-07"},{id:"UA-23"},{id:"UA-18"}
 AmCharts.maps.ukraineHigh={
 	"svg": {

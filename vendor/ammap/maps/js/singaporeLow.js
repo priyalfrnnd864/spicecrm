@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Singapore - Low
+// (c) ammap.com | SVG (in JSON format) map of Singapore - Low
 // areas: {id:"SG-01"},{id:"SG-02"},{id:"SG-03"},{id:"SG-04"},{id:"SG-05"}
 AmCharts.maps.singaporeLow={
 	"svg": {

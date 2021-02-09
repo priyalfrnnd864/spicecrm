@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Malaysia - High
+// (c) ammap.com | SVG (in JSON format) map of Malaysia - High
 // areas: {id:"BN"},{id:"MY-01"},{id:"MY-02"},{id:"MY-03"},{id:"MY-04"},{id:"MY-05"},{id:"MY-06"},{id:"MY-07"},{id:"MY-08"},{id:"MY-09"},{id:"MY-10"},{id:"MY-11"},{id:"MY-12"},{id:"MY-13"},{id:"MY-15"}
 AmCharts.maps.malaysiaHigh={
 	"svg": {

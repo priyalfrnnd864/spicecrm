@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Bangladesh - Low
+// (c) ammap.com | SVG (in JSON format) map of Bangladesh - Low
 // areas: {id:"BD-A"},{id:"BD-B"},{id:"BD-C"},{id:"BD-D"},{id:"BD-E"},{id:"BD-F"},{id:"BD-G"}
 AmCharts.maps.bangladeshLow={
 	"svg": {

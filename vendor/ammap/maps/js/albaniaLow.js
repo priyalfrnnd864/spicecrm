@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Albania - Low
+// (c) ammap.com | SVG (in JSON format) map of Albania - Low
 // areas: {id:"AL-01"},{id:"AL-09"},{id:"AL-02"},{id:"AL-03"},{id:"AL-04"},{id:"AL-05"},{id:"AL-06"},{id:"AL-07"},{id:"AL-08"},{id:"AL-10"},{id:"AL-11"},{id:"AL-12"}
 AmCharts.maps.albaniaLow={
 	"svg": {

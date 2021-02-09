@@ -4,42 +4,23 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
+class ComposerStaticInit988bb6eafe040e21b0ad61e931fc58ff
 {
     public static $files = array (
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        'ddc0a4d7e61c0286f0f8593b1903e894' => __DIR__ . '/..' . '/clue/stream-filter/src/functions.php',
         '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
-        '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
-        '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
-        '5d7e2090c9a3b69b2ff2fceddeadca94' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/contacts/Recipients.php',
-        '04a9a7b26fb79fbd712347cc9bc9d9be' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/stats/Stats.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'l' => 
-        array (
-            'libphonenumber\\' => 15,
-        ),
-        'j' => 
-        array (
-            'jamesiarmes\\PhpNtlm\\' => 20,
-            'jamesiarmes\\PhpEws\\' => 19,
-        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
         ),
         'S' => 
         array (
-            'Symfony\\Polyfill\\Ctype\\' => 23,
-            'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\OptionsResolver\\' => 34,
             'SpiceCRM\\modules\\' => 17,
             'SpiceCRM\\includes\\' => 18,
             'SpiceCRM\\data\\' => 14,
@@ -48,21 +29,9 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             'SpiceCRM\\custom\\' => 16,
             'SpiceCRM\\KREST\\' => 15,
             'Slim\\' => 5,
-            'SendGrid\\' => 9,
-        ),
-        'R' => 
-        array (
-            'Ramsey\\Uuid\\' => 12,
-        ),
-        'P' => 
-        array (
-            'Psr\\Log\\' => 8,
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Container\\' => 14,
         ),
         'I' => 
         array (
-            'Interop\\Container\\' => 18,
             'IXR\\' => 4,
         ),
         'H' => 
@@ -74,58 +43,27 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             'Http\\Client\\Curl\\' => 17,
             'Http\\Client\\Common\\' => 19,
             'Http\\Client\\' => 12,
-            'Hfig\\MAPI\\' => 10,
         ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
-            'Giggsey\\Locale\\' => 15,
         ),
         'F' => 
         array (
-            'FontLib\\' => 8,
             'FastRoute\\' => 10,
         ),
         'D' => 
         array (
             'Dompdf\\' => 7,
         ),
-        'C' => 
-        array (
-            'Clue\\StreamFilter\\' => 18,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'libphonenumber\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
-        ),
-        'jamesiarmes\\PhpNtlm\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jamesiarmes/php-ntlm/src',
-        ),
-        'jamesiarmes\\PhpEws\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/php-ews/php-ews/src',
-        ),
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
-        ),
-        'Symfony\\Polyfill\\Ctype\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
-        'Symfony\\Component\\Yaml\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/yaml',
-        ),
-        'Symfony\\Component\\OptionsResolver\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/options-resolver',
         ),
         'SpiceCRM\\modules\\' => 
         array (
@@ -159,30 +97,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
-        'SendGrid\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
-        ),
-        'Ramsey\\Uuid\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ramsey/uuid/src',
-        ),
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Psr\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'Interop\\Container\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
-        ),
         'IXR\\' => 
         array (
             0 => __DIR__ . '/..' . '/kissifrot/php-ixr/src',
@@ -197,8 +111,8 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         ),
         'Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-http/message-factory/src',
-            1 => __DIR__ . '/..' . '/php-http/message/src',
+            0 => __DIR__ . '/..' . '/php-http/message/src',
+            1 => __DIR__ . '/..' . '/php-http/message-factory/src',
         ),
         'Http\\Discovery\\' => 
         array (
@@ -216,10 +130,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/php-http/httplug/src',
         ),
-        'Hfig\\MAPI\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hfig/mapi/src/MAPI',
-        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -232,14 +142,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'Giggsey\\Locale\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/giggsey/locale/src',
-        ),
-        'FontLib\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
-        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
@@ -248,19 +150,11 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
         array (
             0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
-        'Clue\\StreamFilter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/clue/stream-filter/src',
-        ),
     );
 
     public static $prefixesPsr0 = array (
         'S' => 
         array (
-            'Svg\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src',
-            ),
             'Sabberworm\\CSS' => 
             array (
                 0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
@@ -272,17 +166,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
             ),
-            'PEAR' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/pear_exception',
-            ),
-        ),
-        'O' => 
-        array (
-            'OLE' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/ole',
-            ),
         ),
         'M' => 
         array (
@@ -291,17 +174,6 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
                 0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
             ),
         ),
-        'C' => 
-        array (
-            'Console' => 
-            array (
-                0 => __DIR__ . '/..' . '/pear/console_getopt',
-            ),
-        ),
-    );
-
-    public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
     public static $classMap = array (
@@ -317,11 +189,10 @@ class ComposerStaticInit9961db7456b6021e867a4aee4ea34352
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$prefixesPsr0;
-            $loader->fallbackDirsPsr0 = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$fallbackDirsPsr0;
-            $loader->classMap = ComposerStaticInit9961db7456b6021e867a4aee4ea34352::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit988bb6eafe040e21b0ad61e931fc58ff::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit988bb6eafe040e21b0ad61e931fc58ff::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit988bb6eafe040e21b0ad61e931fc58ff::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit988bb6eafe040e21b0ad61e931fc58ff::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Israel Low
+// (c) ammap.com | SVG (in JSON format) map of Israel Low
 // areas: {id:"IL-GH"},{id:"IL-Z"},{id:"IL-HA"},{id:"IL-M"},{id:"IL-TA"},{id:"IL-D"},{id:"IL-JM"},{id:"PS"}
 AmCharts.maps.israelLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Andorra High
+// (c) ammap.com | SVG (in JSON format) map of Andorra High
 // areas: {id:"AD-02"},{id:"AD-03"},{id:"AD-04"},{id:"AD-05"},{id:"AD-06"},{id:"AD-07"},{id:"AD-08"}
 AmCharts.maps.andorraHigh={
 	"svg": {

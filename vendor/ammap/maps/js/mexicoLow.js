@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Mexico
+// (c) ammap.com | SVG (in JSON format) map of Mexico
 // areas: {id:"MX-AGU"},{id:"MX-BCN"},{id:"MX-BCS"},{id:"MX-CAM"},{id:"MX-CHP"},{id:"MX-CHH"},{id:"MX-COA"},{id:"MX-OCL"},{id:"MX-DIF"},{id:"MX-DUR"},{id:"MX-GUA"},{id:"MX-GRO"},{id:"MX-HID"},{id:"MX-JAL"},{id:"MX-MEX"},{id:"MX-MIC"},{id:"MX-MOR"},{id:"MX-NAY"},{id:"MX-NLE"},{id:"MX-OAX"},{id:"MX-PUE"},{id:"MX-QUE"},{id:"MX-ROO"},{id:"MX-SLP"},{id:"MX-SIN"},{id:"MX-SON"},{id:"MX-TAB"},{id:"MX-TAM"},{id:"MX-TLA"},{id:"MX-VER"},{id:"MX-YUC"},{id:"MX-ZAC"}
 AmCharts.maps.mexicoLow={
 	"svg": {
