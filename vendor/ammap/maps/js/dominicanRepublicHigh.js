@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Dominican Republic - High
+// (c) ammap.com | SVG (in JSON format) map of Dominican Republic - High
 // areas: {id:"DO-01"},{id:"DO-02"},{id:"DO-03"},{id:"DO-04"},{id:"DO-05"},{id:"DO-06"},{id:"DO-08"},{id:"DO-09"},{id:"DO-30"},{id:"DO-10"},{id:"DO-11"},{id:"DO-07"},{id:"DO-12"},{id:"DO-13"},{id:"DO-14"},{id:"DO-28"},{id:"DO-15 Monte"},{id:"DO-29"},{id:"DO-16"},{id:"DO-17"},{id:"DO-18"},{id:"DO-19"},{id:"DO-20"},{id:"DO-21"},{id:"DO-31"},{id:"DO-22"},{id:"DO-23"},{id:"DO-24"},{id:"DO-25"},{id:"DO-26"},{id:"DO-32"},{id:"DO-27"}
 AmCharts.maps.dominicanRepublicHigh={
 	"svg": {

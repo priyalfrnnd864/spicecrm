@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Bosnia-Herzegovina Cantons Low
+// (c) ammap.com | SVG (in JSON format) map of Bosnia-Herzegovina Cantons Low
 // areas: {id:"BA-01"},{id:"BA-02"},{id:"BA-03"},{id:"BA-04"},{id:"BA-05"},{id:"BA-06"},{id:"BA-07"},{id:"BA-08"},{id:"BA-09"},{id:"BA-10"},{id:"BA-BR-BR"},{id:"BA-SR-BI"},{id:"BA-SR-BJ"},{id:"BA-SR-DO"},{id:"BA-SR-FO"},{id:"BA-SR-SR"},{id:"BA-SR-TR"},{id:"BA-SR-VL"}
 AmCharts.maps.bosniaHerzegovinaCantonsLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Peru - Low
+// (c) ammap.com | SVG (in JSON format) map of Peru - Low
 // areas: {id:"PE-AMA"},{id:"PE-ANC"},{id:"PE-APU"},{id:"PE-ARE"},{id:"PE-AYA"},{id:"PE-CAJ"},{id:"PE-CAL"},{id:"PE-CUS"},{id:"PE-HUC"},{id:"PE-HUV"},{id:"PE-ICA"},{id:"PE-JUN"},{id:"PE-LAL"},{id:"PE-LAM"},{id:"PE-LIM"},{id:"PE-LMA"},{id:"PE-LOR"},{id:"PE-MDD"},{id:"PE-MOQ"},{id:"PE-PAS"},{id:"PE-PIU"},{id:"PE-PUN"},{id:"PE-SAM"},{id:"PE-TAC"},{id:"PE-TUM"},{id:"PE-UCA"},{id:"PE-LKT"}
 AmCharts.maps.peruLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of United Arab Emirates - High
+// (c) ammap.com | SVG (in JSON format) map of United Arab Emirates - High
 // areas: {id:"AE-AJ"},{id:"AE-AZ"},{id:"AE-DU"},{id:"AE-FU"},{id:"AE-RK"},{id:"AE-SH"},{id:"AE-UQ"},{id:"OM-MU"},{id:"AE-NZ1"},{id:"AE-NZ2"}
 AmCharts.maps.unitedArabEmiratesHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Continents - Russia split - High
+// (c) ammap.com | SVG (in JSON format) map of Continents - Russia split - High
 // areas: {id:"europe"},{id:"asia"},{id:"northAmerica"},{id:"africa"},{id:"southAmerica"},{id:"australia"}
 AmCharts.maps.continentsHigh={
 	"svg": {

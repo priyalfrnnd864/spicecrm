@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Continents with Antarctica - Low
+// (c) ammap.com | SVG (in JSON format) map of Continents with Antarctica - Low
 // areas: {id:"southAmerica"},{id:"northAmerica"},{id:"asia"},{id:"europe"},{id:"australia"},{id:"africa"},{id:"AQ"}
 AmCharts.maps.continentsWithAntarcticaLow={
 	"svg": {

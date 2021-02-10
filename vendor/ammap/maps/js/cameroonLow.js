@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Cameroon - Low
+// (c) ammap.com | SVG (in JSON format) map of Cameroon - Low
 // areas: {id:"CM-AD"},{id:"CM-CE"},{id:"CM-EN"},{id:"CM-ES"},{id:"CM-LT"},{id:"CM-NO"},{id:"CM-NW"},{id:"CM-OU"},{id:"CM-SU"},{id:"CM-SW"}
 AmCharts.maps.cameroonLow={
 	"svg": {

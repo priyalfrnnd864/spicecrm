@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of St Helena - Low
+// (c) ammap.com | SVG (in JSON format) map of St Helena - Low
 // areas: {id:"SH-HL-AF"},{id:"SH-HL-BH"},{id:"SH-HL-HT"},{id:"SH-HL-JM"},{id:"SH-HL-LV"},{id:"SH-HL-LW"},{id:"SH-HL-SB"},{id:"SH-HL-SP"}
 AmCharts.maps.stHelenaLow={
 	"svg": {

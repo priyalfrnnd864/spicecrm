@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Montenegro - High
+// (c) ammap.com | SVG (in JSON format) map of Montenegro - High
 // areas: {id:"ME-01"},{id:"ME-02"},{id:"ME-03"},{id:"ME-04"},{id:"ME-05"},{id:"ME-06"},{id:"ME-07"},{id:"ME-08"},{id:"ME-09"},{id:"ME-10"},{id:"ME-11"},{id:"ME-12"},{id:"ME-13"},{id:"ME-14"},{id:"ME-15"},{id:"ME-16"},{id:"ME-17"},{id:"ME-18"},{id:"ME-19"},{id:"ME-20"},{id:"ME-21"},{id:"ME-SLK"}
 AmCharts.maps.montenegroHigh={
 	"svg": {

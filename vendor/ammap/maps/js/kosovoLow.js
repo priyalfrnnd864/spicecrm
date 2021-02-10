@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Kosovo - Low
+// (c) ammap.com | SVG (in JSON format) map of Kosovo - Low
 // areas: {id:"XK-PR"},{id:"XK-KM"},{id:"XK-DA"},{id:"XK-GN"},{id:"XK-PE"},{id:"XK-UR"},{id:"XK-PZ"}
 AmCharts.maps.kosovoLow={
 	"svg": {

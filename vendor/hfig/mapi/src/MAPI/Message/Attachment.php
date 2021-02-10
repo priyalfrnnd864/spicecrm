@@ -92,7 +92,7 @@ class Attachment extends AttachmentItem
         return $mime;
     }
 
-    public function getContentId(): ?string
+    public function getContentId()
     {
         return $this->properties['attach_content_id'] ?? null;
     }

@@ -6,11 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src'),
     'Sabberworm\\CSS' => array($vendorDir . '/sabberworm/php-css-parser/lib'),
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
+    'PEAR' => array($vendorDir . '/pear/pear_exception'),
     'OLE' => array($vendorDir . '/pear/ole'),
     'Mailgun' => array($vendorDir . '/mailgun/mailgun-php/src'),
     'Console' => array($vendorDir . '/pear/console_getopt'),
-    'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
     '' => array($vendorDir . '/pear/pear-core-minimal/src'),
 );

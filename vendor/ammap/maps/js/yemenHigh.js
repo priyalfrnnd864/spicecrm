@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Yemen - High
+// (c) ammap.com | SVG (in JSON format) map of Yemen - High
 // areas: {id:"YE-AB"},{id:"YE-AD"},{id:"YE-AM"},{id:"YE-BA"},{id:"YE-DA"},{id:"YE-DH"},{id:"YE-HD"},{id:"YE-HJ"},{id:"YE-HU"},{id:"YE-IB"},{id:"YE-JA"},{id:"YE-LA"},{id:"YE-MA"},{id:"YE-MR"},{id:"YE-MW"},{id:"YE-RA"},{id:"YE-SA"},{id:"YE-SD"},{id:"YE-SH"},{id:"YE-SN"},{id:"YE-TA"}
 AmCharts.maps.yemenHigh={
 	"svg": {

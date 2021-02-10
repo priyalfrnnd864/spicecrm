@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Bosnia-Herzegovina Regions High
+// (c) ammap.com | SVG (in JSON format) map of Bosnia-Herzegovina Regions High
 // areas: {id:"BA-BIH"},{id:"BA-SRP"},{id:"BA-BRC"}
 AmCharts.maps.bosniaHerzegovinaRegionsHigh={
 	"svg": {

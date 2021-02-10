@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of India - High
+// (c) ammap.com | SVG (in JSON format) map of India - High
 // areas: {id:"IN-AN"},{id:"IN-AP"},{id:"IN-AR"},{id:"IN-AS"},{id:"IN-BR"},{id:"IN-CH"},{id:"IN-CT"},{id:"IN-DD"},{id:"IN-DL"},{id:"IN-DN"},{id:"IN-GA"},{id:"IN-GJ"},{id:"IN-HP"},{id:"IN-HR"},{id:"IN-JH"},{id:"IN-JK"},{id:"IN-KA"},{id:"IN-KL"},{id:"IN-LD"},{id:"IN-MH"},{id:"IN-ML"},{id:"IN-MN"},{id:"IN-MP"},{id:"IN-MZ"},{id:"IN-NL"},{id:"IN-OR"},{id:"IN-PB"},{id:"IN-PY"},{id:"IN-RJ"},{id:"IN-SK"},{id:"IN-TG"},{id:"IN-TN"},{id:"IN-TR"},{id:"IN-UP"},{id:"IN-UT"},{id:"IN-WB"}
 AmCharts.maps.indiaHigh={
 	"svg": {

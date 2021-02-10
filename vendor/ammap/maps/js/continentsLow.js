@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Continents - Low
+// (c) ammap.com | SVG (in JSON format) map of Continents - Low
 // areas: {id:"southAmerica"},{id:"northAmerica"},{id:"asia"},{id:"europe"},{id:"australia"},{id:"africa"}
 AmCharts.maps.continentsLow={
 	"svg": {

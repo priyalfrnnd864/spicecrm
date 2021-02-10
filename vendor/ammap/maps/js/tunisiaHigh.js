@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Tunisia - High
+// (c) ammap.com | SVG (in JSON format) map of Tunisia - High
 // areas: {id:"TN-11"},{id:"TN-12"},{id:"TN-13"},{id:"TN-14"},{id:"TN-21"},{id:"TN-22"},{id:"TN-23"},{id:"TN-31"},{id:"TN-32"},{id:"TN-33"},{id:"TN-34"},{id:"TN-41"},{id:"TN-42"},{id:"TN-43"},{id:"TN-51"},{id:"TN-52"},{id:"TN-53"},{id:"TN-61"},{id:"TN-71"},{id:"TN-72"},{id:"TN-73"},{id:"TN-81"},{id:"TN-82"},{id:"TN-83"}
 AmCharts.maps.tunisiaHigh={
 	"svg": {

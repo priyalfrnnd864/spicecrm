@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of South Sudan - High
+// (c) ammap.com | SVG (in JSON format) map of South Sudan - High
 // areas: {id:"SS-BN"},{id:"SS-BW"},{id:"SS-EC"},{id:"SS-EE"},{id:"SS-EW"},{id:"SS-JG"},{id:"SS-LK"},{id:"SS-NU"},{id:"SS-UY"},{id:"SS-WR"}
 AmCharts.maps.southSudanHigh={
 	"svg": {

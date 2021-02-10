@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Angola - High
+// (c) ammap.com | SVG (in JSON format) map of Angola - High
 // areas: {id:"AO-BGO"},{id:"AO-BGU"},{id:"AO-BIE"},{id:"AO-CAB"},{id:"AO-CCU"},{id:"AO-CNO"},{id:"AO-CUS"},{id:"AO-CNN"},{id:"AO-HUA"},{id:"AO-HUI"},{id:"AO-LUA"},{id:"AO-LNO"},{id:"AO-LSU"},{id:"AO-MAL"},{id:"AO-MOX"},{id:"AO-NAM"},{id:"AO-UIG"},{id:"AO-ZAI"}
 AmCharts.maps.angolaHigh={
 	"svg": {

@@ -11,7 +11,6 @@
  */
 
 return array (
-  37433 => 'Beeline',
   37441 => 'Ucom',
   37443 => 'Beeline',
   37444 => 'Ucom',

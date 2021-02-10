@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Belgium
+// (c) ammap.com | SVG (in JSON format) map of Belgium
 // areas: {id:"BE-VAN"},{id:"BE-BWR"},{id:"BE-BRU"},{id:"BE-WHT"},{id:"BE-WLG"},{id:"BE-VLI"},{id:"BEW-LX"},{id:"BE-WNA"},{id:"BE-VOV"},{id:"BE-VBR"},{id:"BE-VWV"}
 AmCharts.maps.belgiumLow={
 	"svg": {

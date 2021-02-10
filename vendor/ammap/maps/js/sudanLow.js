@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Sudan - Low
+// (c) ammap.com | SVG (in JSON format) map of Sudan - Low
 // areas: {id:"SD-DE"},{id:"SD-DC"},{id:"SD-DN"},{id:"SD-DS"},{id:"SD-DW"},{id:"SD-GD"},{id:"SD-GK"},{id:"SD-GZ"},{id:"SD-KA"},{id:"SD-KH"},{id:"SD-KN"},{id:"SD-KS"},{id:"SD-NB"},{id:"SD-NO"},{id:"SD-NR"},{id:"SD-NW"},{id:"SD-RS"},{id:"SD-SI"}
 AmCharts.maps.sudanLow={
 	"svg": {

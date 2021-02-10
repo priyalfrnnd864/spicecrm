@@ -4,7 +4,6 @@ namespace Http\Client\Common;
 
 use Http\Client\HttpAsyncClient;
 use Http\Client\HttpClient;
-use Psr\Http\Client\ClientInterface;
 
 /**
  * Emulates an async HTTP client.
@@ -19,14 +18,10 @@ class EmulatedHttpAsyncClient implements HttpClient, HttpAsyncClient
     use HttpClientDecorator;
 
     /**
-     * @param HttpClient|ClientInterface $httpClient
+     * @param HttpClient $httpClient
      */
-    public function __construct($httpClient)
+    public function __construct(HttpClient $httpClient)
     {
-        if (!($httpClient instanceof HttpClient) && !($httpClient instanceof ClientInterface)) {
-            throw new \LogicException('Client must be an instance of Http\\Client\\HttpClient or Psr\\Http\\Client\\ClientInterface');
-        }
-
         $this->httpClient = $httpClient;
     }
 }

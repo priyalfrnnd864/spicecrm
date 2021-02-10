@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of El Salvador - Low
+// (c) ammap.com | SVG (in JSON format) map of El Salvador - Low
 // areas: {id:"SV-AH"},{id:"SV-CA"},{id:"SV-CH"},{id:"SV-CU"},{id:"SV-LI"},{id:"SV-MO"},{id:"SV-PA"},{id:"SV-SA"},{id:"SV-SM"},{id:"SV-SO"},{id:"SV-SS"},{id:"SV-SV"},{id:"SV-UN"},{id:"SV-US"}
 AmCharts.maps.elSalvadorLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of St. Lucia - Low
+// (c) ammap.com | SVG (in JSON format) map of St. Lucia - Low
 // areas: {id:"LC-01"},{id:"LC-02"},{id:"LC-03"},{id:"LC-05"},{id:"LC-06 Gros"},{id:"LC-07"},{id:"LC-08"},{id:"LC-10"},{id:"LC-11"},{id:"LC-12"}
 AmCharts.maps.stLuciaLow={
 	"svg": {

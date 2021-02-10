@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Canada
+// (c) ammap.com | SVG (in JSON format) map of Canada
 // areas: {id:"CA-AB"},{id:"CA-BC"},{id:"CA-MB"},{id:"CA-NB"},{id:"CA-NL"},{id:"CA-NS"},{id:"CA-NT"},{id:"CA-NU"},{id:"CA-ON"},{id:"CA-PE"},{id:"CA-QC"},{id:"CA-SK"},{id:"CA-YT"}
 AmCharts.maps.canadaHigh={
 	"svg": {

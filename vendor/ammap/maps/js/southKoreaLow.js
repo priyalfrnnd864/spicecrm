@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of South Korea - Low
+// (c) ammap.com | SVG (in JSON format) map of South Korea - Low
 // areas: {id:"KR-11"},{id:"KR-26"},{id:"KR-27"},{id:"KR-28"},{id:"KR-29"},{id:"KR-30"},{id:"KR-31"},{id:"KR-41"},{id:"KR-42"},{id:"KR-43"},{id:"KR-44"},{id:"KR-45"},{id:"KR-46"},{id:"KR-47"},{id:"KR-48"},{id:"KR-49"},{id:"KR-50"}
 AmCharts.maps.southKoreaLow={
 	"svg": {

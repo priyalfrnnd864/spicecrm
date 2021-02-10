@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Czech Republic Low
+// (c) ammap.com | SVG (in JSON format) map of Czech Republic Low
 // areas: {id:"CZ-JC"},{id:"CZ-JM"},{id:"CZ-KA"},{id:"CZ-KR"},{id:"CZ-LI"},{id:"CZ-MO"},{id:"CZ-OL"},{id:"CZ-PA"},{id:"CZ-ZL"},{id:"CZ-PL"},{id:"CZ-PR"},{id:"CZ-ST"},{id:"CZ-US"},{id:"CZ-VY"}
 AmCharts.maps.czechRepublicLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of South Africa - Low
+// (c) ammap.com | SVG (in JSON format) map of South Africa - Low
 // areas: {id:"LS"},{id:"ZA-EC"},{id:"ZA-FS"},{id:"ZA-GT"},{id:"ZA-LP"},{id:"ZA-MP"},{id:"ZA-NC"},{id:"ZA-NL"},{id:"ZA-NW"},{id:"ZA-WC"}
 AmCharts.maps.southAfricaLow={
 	"svg": {

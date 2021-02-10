@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Vatican City
+// (c) ammap.com | SVG (in JSON format) map of Vatican City
 // areas: {id:"VA"}
 AmCharts.maps.vaticanCity={
 	"svg": {

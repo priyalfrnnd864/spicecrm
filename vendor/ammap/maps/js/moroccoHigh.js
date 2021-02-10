@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Moroco - High
+// (c) ammap.com | SVG (in JSON format) map of Moroco - High
 // areas: {id:"MA-01"},{id:"MA-02"},{id:"MA-03"},{id:"MA-04"},{id:"MA-05"},{id:"MA-06"},{id:"MA-07"},{id:"MA-08"},{id:"MA-09"},{id:"MA-10"},{id:"MA-11"},{id:"MA-12"},{id:"MA-13"},{id:"MA-15"},{id:"MA-14"},{id:"MA-16"}
 AmCharts.maps.moroccoHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Oman - Low
+// (c) ammap.com | SVG (in JSON format) map of Oman - Low
 // areas: {id:"AE-SH"},{id:"AE-DU"},{id:"AE-FU"},{id:"AE-RK"},{id:"AE-NZ1"},{id:"AE-NZ2"},{id:"OM-BAN"},{id:"OM-BAS"},{id:"OM-BU"},{id:"OM-DA"},{id:"OM-MA"},{id:"OM-MU"},{id:"OM-SHN"},{id:"OM-SHS"},{id:"OM-WU"},{id:"OM-ZA"},{id:"OM-ZU"}
 AmCharts.maps.omanLow={
 	"svg": {

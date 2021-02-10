@@ -14,11 +14,10 @@
 return array (
   'generalDesc' => 
   array (
-    'NationalNumberPattern' => '[14]\\d\\d(?:\\d{2})?',
+    'NationalNumberPattern' => '4\\d{4}',
     'PossibleLength' => 
     array (
-      0 => 3,
-      1 => 5,
+      0 => 5,
     ),
     'PossibleLengthLocalOnly' => 
     array (
@@ -56,8 +55,8 @@ return array (
   ),
   'shortCode' => 
   array (
-    'NationalNumberPattern' => '12\\d|40404',
-    'ExampleNumber' => '120',
+    'NationalNumberPattern' => '40404',
+    'ExampleNumber' => '40404',
     'PossibleLength' => 
     array (
     ),
@@ -81,7 +80,6 @@ return array (
     'ExampleNumber' => '40400',
     'PossibleLength' => 
     array (
-      0 => 5,
     ),
     'PossibleLengthLocalOnly' => 
     array (
@@ -93,7 +91,6 @@ return array (
     'ExampleNumber' => '40400',
     'PossibleLength' => 
     array (
-      0 => 5,
     ),
     'PossibleLengthLocalOnly' => 
     array (

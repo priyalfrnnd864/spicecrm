@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Chile
+// (c) ammap.com | SVG (in JSON format) map of Chile
 // areas: {id:"CL-AI"},{id:"CL-MA"},{id:"CL-TA"},{id:"CL-AN"},{id:"CL-AT"},{id:"CL-CO"},{id:"CL-RM"},{id:"CL-VS"},{id:"CL-AR"},{id:"CL-BI"},{id:"CL-LI"},{id:"CL-LL"},{id:"CL-ML"},{id:"CL-AP"},{id:"CL-LR"}
 AmCharts.maps.chileLow={
 	"svg": {

@@ -1,5 +1,4 @@
 <?php
-
 namespace GuzzleHttp\Psr7;
 
 use Psr\Http\Message\StreamInterface;
@@ -73,7 +72,7 @@ class LimitStream implements StreamInterface
     {
         if ($whence !== SEEK_SET || $offset < 0) {
             throw new \RuntimeException(sprintf(
-                'Cannot seek to offset %s with whence %s',
+                'Cannot seek to offset % with whence %s',
                 $offset,
                 $whence
             ));

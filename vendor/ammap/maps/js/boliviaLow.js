@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Bolivia - Low
+// (c) ammap.com | SVG (in JSON format) map of Bolivia - Low
 // areas: {id:"BO-B"},{id:"BO-C"},{id:"BO-H"},{id:"BO-L"},{id:"BO-N"},{id:"BO-O"},{id:"BO-P"},{id:"BO-S"},{id:"BO-T"}
 AmCharts.maps.boliviaLow={
 	"svg": {

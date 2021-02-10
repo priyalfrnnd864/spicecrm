@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Guinea - Low
+// (c) ammap.com | SVG (in JSON format) map of Guinea - Low
 // areas: {id:"GN-B"},{id:"GN-C"},{id:"GN-D"},{id:"GN-F"},{id:"GN-K"},{id:"GN-L"},{id:"GN-M"},{id:"GN-N3"}
 AmCharts.maps.guineaLow={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Burkina Faso - High
+// (c) ammap.com | SVG (in JSON format) map of Burkina Faso - High
 // areas: {id:"BF-01"},{id:"BF-02"},{id:"BF-03"},{id:"BF-04"},{id:"BF-05"},{id:"BF-06"},{id:"BF-07"},{id:"BF-08"},{id:"BF-09"},{id:"BF-10"},{id:"BF-11"},{id:"BF-12"},{id:"BF-13"}
 AmCharts.maps.burkinaFasoHigh={
 	"svg": {

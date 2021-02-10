@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Ecuador - High
+// (c) ammap.com | SVG (in JSON format) map of Ecuador - High
 // areas: {id:"EC-A"},{id:"EC-B"},{id:"EC-C"},{id:"EC-D"},{id:"EC-E"},{id:"EC-F"},{id:"EC-G"},{id:"EC-H"},{id:"EC-I"},{id:"EC-L"},{id:"EC-M"},{id:"EC-N"},{id:"EC-O"},{id:"EC-P"},{id:"EC-R"},{id:"EC-S"},{id:"EC-SD"},{id:"EC-SE"},{id:"EC-T"},{id:"EC-U"},{id:"EC-W"},{id:"EC-X"},{id:"EC-Y"},{id:"EC-Z"}
 AmCharts.maps.ecuadorHigh={
 	"svg": {

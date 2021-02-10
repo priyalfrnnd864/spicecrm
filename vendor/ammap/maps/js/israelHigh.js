@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Israel High
+// (c) ammap.com | SVG (in JSON format) map of Israel High
 // areas: {id:"IL-GH"},{id:"IL-Z"},{id:"IL-HA"},{id:"IL-M"},{id:"IL-TA"},{id:"IL-D"},{id:"IL-JM"},{id:"PS"}
 AmCharts.maps.israelHigh={
 	"svg": {

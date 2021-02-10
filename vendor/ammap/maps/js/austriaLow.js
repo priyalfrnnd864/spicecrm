@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Austria
+// (c) ammap.com | SVG (in JSON format) map of Austria
 // areas:  {id:"AT-1"},{id:"AT-2"},{id:"AT-3"},{id:"AT-4"},{id:"AT-6"},{id:"AT-5"},{id:"AT-7"},{id:"AT-8"},{id:"AT-9"}
 AmCharts.maps.austriaLow={
 	"svg": {

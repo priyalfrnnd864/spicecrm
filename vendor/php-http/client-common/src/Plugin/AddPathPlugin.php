@@ -19,13 +19,6 @@ final class AddPathPlugin implements Plugin
     private $uri;
 
     /**
-     * Stores identifiers of the already altered requests.
-     *
-     * @var array
-     */
-    private $alteredRequests = [];
-
-    /**
      * @param UriInterface $uri
      */
     public function __construct(UriInterface $uri)
@@ -35,7 +28,7 @@ final class AddPathPlugin implements Plugin
         }
 
         if ('/' === substr($uri->getPath(), -1)) {
-            $uri = $uri->withPath(rtrim($uri->getPath(), '/'));
+            throw new \LogicException('URI path cannot end with a slash.');
         }
 
         $this->uri = $uri;
@@ -46,14 +39,9 @@ final class AddPathPlugin implements Plugin
      */
     public function handleRequest(RequestInterface $request, callable $next, callable $first)
     {
-        $identifier = spl_object_hash((object) $first);
-
-        if (!array_key_exists($identifier, $this->alteredRequests)) {
-            $request = $request->withUri($request->getUri()
-                ->withPath($this->uri->getPath().$request->getUri()->getPath())
-            );
-            $this->alteredRequests[$identifier] = $identifier;
-        }
+        $request = $request->withUri($request->getUri()
+            ->withPath($this->uri->getPath().$request->getUri()->getPath())
+        );
 
         return $next($request);
     }

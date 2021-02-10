@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Argentina - High
+// (c) ammap.com | SVG (in JSON format) map of Argentina - High
 // areas: {id:"AR-B"},{id:"AR-K"},{id:"AR-H"},{id:"AR-U"},{id:"AR-C"},{id:"AR-X"},{id:"AR-W"},{id:"AR-E"},{id:"AR-P"},{id:"AR-Y"},{id:"AR-L"},{id:"AR-F"},{id:"AR-M"},{id:"AR-N"},{id:"AR-Q"},{id:"AR-R"},{id:"AR-A"},{id:"AR-Z"},{id:"AR-G"},{id:"AR-S"},{id:"AR-J"},{id:"AR-D"},{id:"AR-V"},{id:"AR-T"}
 AmCharts.maps.argentinaHigh={
 	"svg": {

@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Honduras - High
+// (c) ammap.com | SVG (in JSON format) map of Honduras - High
 // areas: {id:"HN-AT"},{id:"HN-CH"},{id:"HN-CL"},{id:"HN-CM"},{id:"HN-CP"},{id:"HN-CR"},{id:"HN-EP"},{id:"HN-FM"},{id:""},{id:"HN-IN"},{id:"HN-IB"},{id:"HN-LP"},{id:"HN-LE"},{id:"HN-OC"},{id:"HN-OL"},{id:"HN-SB"},{id:"HN-VA"},{id:"HN-YO"}
 AmCharts.maps.hondurasHigh={
 	"svg": {

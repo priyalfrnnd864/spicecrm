@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Indonesia - High
+// (c) ammap.com | SVG (in JSON format) map of Indonesia - High
 // areas: {id:"ID-AC"},{id:"ID-BA"},{id:"ID-BB"},{id:"ID-BE"},{id:"ID-BT"},{id:"ID-GO"},{id:"ID-JA"},{id:"ID-JB"},{id:"ID-JI"},{id:"ID-JK"},{id:"ID-JT"},{id:"ID-KB"},{id:"ID-KI"},{id:"ID-KR"},{id:"ID-KS"},{id:"ID-KT"},{id:"ID-KU"},{id:"ID-LA"},{id:"ID-MA"},{id:"ID-MU"},{id:"ID-NB"},{id:"ID-NT"},{id:"ID-PA"},{id:"ID-PB"},{id:"ID-RI"},{id:"ID-SA"},{id:"ID-SB"},{id:"ID-SG"},{id:"ID-SN"},{id:"ID-SR"},{id:"ID-SS"},{id:"ID-ST"},{id:"ID-SU"},{id:"ID-YO"},{id:"TL"},{id:"MY-12"},{id:"MY-13"},{id:"BN"}
 AmCharts.maps.indonesiaHigh={
 	"svg": {

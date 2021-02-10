@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Chad - High
+// (c) ammap.com | SVG (in JSON format) map of Chad - High
 // areas: {id:"TD-BA"},{id:"TD-BG"},{id:"TD-BO"},{id:"TD-CB"},{id:"TD-EN"},{id:"TD-GR"},{id:"TD-HL"},{id:"TD-KA"},{id:"TD-LC"},{id:"TD-LO"},{id:"TD-LR"},{id:"TD-MA"},{id:"TD-MC"},{id:"TD-ME"},{id:"TD-MO"},{id:"TD-ND"},{id:"TD-OD"},{id:"TD-SA"},{id:"TD-SI"},{id:"TD-TA"},{id:"TD-TI"},{id:"TD-WF"}
 AmCharts.maps.chadHigh={
 	"svg": {

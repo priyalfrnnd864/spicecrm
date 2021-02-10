@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Pakistan - Low
+// (c) ammap.com | SVG (in JSON format) map of Pakistan - Low
 // areas: {id:"PK-BA"},{id:"PK-GB"},{id:"PK-IS"},{id:"PK-JK"},{id:"PK-KP"},{id:"PK-PB"},{id:"PK-SD"},{id:"PK-TA"}
 AmCharts.maps.pakistanLow={
 	"svg": {

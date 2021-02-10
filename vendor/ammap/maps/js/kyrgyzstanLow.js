@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Kyrgyzstan - Low
+// (c) ammap.com | SVG (in JSON format) map of Kyrgyzstan - Low
 // areas: {id:"KG-B"},{id:"KG-C"},{id:"KG-J"},{id:"KG-N"},{id:"KG-O"},{id:"KG-T"},{id:"KG-Y"}
 AmCharts.maps.kyrgyzstanLow={
 	"svg": {

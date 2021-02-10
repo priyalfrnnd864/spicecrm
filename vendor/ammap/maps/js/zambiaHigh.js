@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Zambia - High
+// (c) ammap.com | SVG (in JSON format) map of Zambia - High
 // areas: {id:"ZM-01"},{id:"ZM-02"},{id:"ZM-03"},{id:"ZM-04"},{id:"ZM-05"},{id:"ZM-06"},{id:"ZM-07"},{id:"ZM-08"},{id:"ZM-09"},{id:"ZM-10"}
 AmCharts.maps.zambiaHigh={
 	"svg": {

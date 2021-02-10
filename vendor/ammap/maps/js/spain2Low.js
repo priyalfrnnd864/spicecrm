@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Spain - Custom - Low
+// (c) ammap.com | SVG (in JSON format) map of Spain - Custom - Low
 // areas: {id:"divider"},{id:"ES-AN"},{id:"ES-AR"},{id:"ES-AS"},{id:"ES-CB"},{id:"ES-CE"},{id:"ES-CL"},{id:"ES-CM"},{id:"ES-CN"},{id:"ES-CT"},{id:"ES-EX"},{id:"ES-GA"},{id:"ES-IB"},{id:"ES-MC"},{id:"ES-MD"},{id:"ES-ML"},{id:"ES-NC"},{id:"ES-PV"},{id:"ES-RI"},{id:"ES-VC"}
 AmCharts.maps.spain2Low={
 	"svg": {

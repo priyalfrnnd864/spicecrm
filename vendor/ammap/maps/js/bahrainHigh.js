@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Bahrain - High
+// (c) ammap.com | SVG (in JSON format) map of Bahrain - High
 // areas: {id:"BH-13"},{id:"BH-14"},{id:"BH-15"},{id:"BH-16"},{id:"BH-17"}
 AmCharts.maps.bahrainHigh={
 	"svg": {

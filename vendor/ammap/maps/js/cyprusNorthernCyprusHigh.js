@@ -1,4 +1,4 @@
-﻿// (c) ammap.com | SVG (in JSON format) map of Cyprus - Northern Cyprus - High
+// (c) ammap.com | SVG (in JSON format) map of Cyprus - Northern Cyprus - High
 // areas: {id:"CY-01"},{id:"CY-02"},{id:"CY-03"},{id:"CY-05"},{id:"CY-04"},{id:"CY-GA"},{id:"CY-GI"},{id:"CY-GU"},{id:"CY-IS"},{id:"CY-LE"},{id:"UN-BZ"},{id:"GB-AX"},{id:"GB-DX"}
 AmCharts.maps.cyprusNorthernCyprusHigh={
 	"svg": {
