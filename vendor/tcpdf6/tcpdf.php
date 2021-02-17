@@ -24084,7 +24084,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 					$this->SVGTransform($tm);
 					$obstyle = $this->setSVGStyles($svgstyle, $prev_svgstyle, $x, $y, $w, $h, 'Ellipse', array($cx, $cy, $rx, $ry, 0, 0, 360, 'CNZ'));
 					if (!empty($obstyle)) {
-						$this->Ellipse($cx, $cy, $rx, $ry, 0, 0, 360, $obstyle, array(), array(), 8);
+						$this->Ellipse($cx, $cy, $rx, $ry, 0, 0, 360, $obstyle, [], [], 8);
 					}
 					$this->StopTransform();
 				}
@@ -24149,19 +24149,19 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 					$this->SVGTransform($tm);
 					$obstyle = $this->setSVGStyles($svgstyle, $prev_svgstyle, $x, $y, $w, $h, 'PolyLine', array($p, 'CNZ'));
 					if (!empty($obstyle)) {
-						$this->PolyLine($p, $obstyle, array(), array());
+						$this->PolyLine($p, $obstyle, [], array());
 					}
 					$this->StopTransform();
 				} else { // polygon
 					if ($clipping) {
 						$this->SVGTransform($tm);
-						$this->Polygon($p, 'CNZ', array(), array(), true);
+						$this->Polygon($p, 'CNZ', [], [], true);
 					} else {
 						$this->StartTransform();
 						$this->SVGTransform($tm);
 						$obstyle = $this->setSVGStyles($svgstyle, $prev_svgstyle, $x, $y, $w, $h, 'Polygon', array($p, 'CNZ'));
 						if (!empty($obstyle)) {
-							$this->Polygon($p, $obstyle, array(), array(), true);
+							$this->Polygon($p, $obstyle, [], [], true);
 						}
 						$this->StopTransform();
 					}
