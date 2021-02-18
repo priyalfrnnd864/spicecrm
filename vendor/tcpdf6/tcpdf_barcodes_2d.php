@@ -256,7 +256,7 @@ class TCPDF2DBarcode {
 			case 'DATAMATRIX': { // DATAMATRIX (ISO/IEC 16022)
 				require_once(dirname(__FILE__).'/include/barcodes/datamatrix.php');
 				$qrcode = new Datamatrix($code);
-				$this->barcode_array = $qrcode->getBarcode[];
+				$this->barcode_array = $qrcode->getBarcodeArray();
 				$this->barcode_array['code'] = $code;
 				break;
 			}
@@ -287,7 +287,7 @@ class TCPDF2DBarcode {
 					}
 				}
 				$qrcode = new PDF417($code, $ecl, $aspectratio, $macro);
-				$this->barcode_array = $qrcode->getBarcode[];
+				$this->barcode_array = $qrcode->getBarcodeArray();
 				$this->barcode_array['code'] = $code;
 				break;
 			}
@@ -297,7 +297,7 @@ class TCPDF2DBarcode {
 					$mode[1] = 'L'; // Ddefault: Low error correction
 				}
 				$qrcode = new QRcode($code, strtoupper($mode[1]));
-				$this->barcode_array = $qrcode->getBarcode[];
+				$this->barcode_array = $qrcode->getBarcodeArray();
 				$this->barcode_array['code'] = $code;
 				break;
 			}
