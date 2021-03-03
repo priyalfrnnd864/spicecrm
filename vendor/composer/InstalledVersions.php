@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'eb8a7de4ea3abb820776edf77d57c62fbdf4b88a',
+    'reference' => '980bb43bba3cb0fe7000e25bdf6e5f4e61dad645',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'eb8a7de4ea3abb820776edf77d57c62fbdf4b88a',
+      'reference' => '980bb43bba3cb0fe7000e25bdf6e5f4e61dad645',
+    ),
+    'brick/math' => 
+    array (
+      'pretty_version' => '0.9.2',
+      'version' => '0.9.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dff976c2f3487d42c1db75a3b180e2b9f0e72ce0',
     ),
     'dompdf/dompdf' => 
     array (
@@ -64,12 +73,12 @@ private static $installed = array (
     ),
     'giggsey/libphonenumber-for-php' => 
     array (
-      'pretty_version' => '8.12.18',
-      'version' => '8.12.18.0',
+      'pretty_version' => '8.12.19',
+      'version' => '8.12.19.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2d50e0aea1f70508b39a3d22c62d24d66d532ed2',
+      'reference' => 'f3c196dcb3e76e456783a38bab87d99b4d727918',
     ),
     'giggsey/locale' => 
     array (
@@ -79,6 +88,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b07f1eace8072ccc61445ad8fbd493ff9d783043',
+    ),
+    'hfig/mapi' => 
+    array (
+      'pretty_version' => 'v1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8fa6f64ed2969e7422b4053c2dc6ca018aa31c83',
     ),
     'jamesiarmes/php-ntlm' => 
     array (
@@ -106,6 +124,42 @@ private static $installed = array (
       array (
       ),
       'reference' => '943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5',
+    ),
+    'pear/console_getopt' => 
+    array (
+      'pretty_version' => 'v1.4.3',
+      'version' => '1.4.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a41f8d3e668987609178c7c4a9fe48fecac53fa0',
+    ),
+    'pear/ole' => 
+    array (
+      'pretty_version' => 'v1.0.0RC8',
+      'version' => '1.0.0.0-RC8',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1ee17e4ac71d6e39ff98f78c4674e8a748d16db3',
+    ),
+    'pear/pear-core-minimal' => 
+    array (
+      'pretty_version' => 'v1.10.10',
+      'version' => '1.10.10.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '625a3c429d9b2c1546438679074cac1b089116a7',
+    ),
+    'pear/pear_exception' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dbb42a5a0e45f3adcf99babfb2a1ba77b8ac36a7',
     ),
     'phenx/php-font-lib' => 
     array (
@@ -245,6 +299,38 @@ private static $installed = array (
       ),
       'reference' => '120b605dfeb996808c31b6477290a714d356e822',
     ),
+    'ramsey/collection' => 
+    array (
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '28a5c4ab2f5111db6a60b2b4ec84057e0f43b9c1',
+    ),
+    'ramsey/uuid' => 
+    array (
+      'pretty_version' => '4.1.1',
+      'version' => '4.1.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cd4032040a750077205918c86049aa0f43d22947',
+    ),
+    'rhumsaa/uuid' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '4.1.1',
+      ),
+    ),
+    'rsky/pear-core-min' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v1.10.10',
+      ),
+    ),
     'sabberworm/php-css-parser' => 
     array (
       'pretty_version' => '8.3.1',
@@ -281,23 +367,41 @@ private static $installed = array (
       ),
       'reference' => '7ffc1ea296ed14bf8260b6ef11b80208dbadba91',
     ),
-    'symfony/polyfill-mbstring' => 
+    'symfony/polyfill-ctype' => 
     array (
-      'pretty_version' => 'v1.22.0',
-      'version' => '1.22.0.0',
+      'pretty_version' => 'v1.22.1',
+      'version' => '1.22.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f377a3dd1fde44d37b9831d68dc8dea3ffd28e13',
+      'reference' => 'c6c942b1ac76c82448322025e084cadc56048b4e',
+    ),
+    'symfony/polyfill-mbstring' => 
+    array (
+      'pretty_version' => 'v1.22.1',
+      'version' => '1.22.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5232de97ee3b75b0360528dae24e73db49566ab1',
     ),
     'symfony/polyfill-php80' => 
     array (
-      'pretty_version' => 'v1.22.0',
-      'version' => '1.22.0.0',
+      'pretty_version' => 'v1.22.1',
+      'version' => '1.22.1.0',
       'aliases' => 
       array (
       ),
       'reference' => 'dc3063ba22c2a1fd2f45ed856374d79114998f91',
+    ),
+    'symfony/yaml' => 
+    array (
+      'pretty_version' => 'v4.4.19',
+      'version' => '4.4.19.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '17ed9f14c1aa05b1a5cf2e2c5ef2d0be28058ef9',
     ),
   ),
 );
@@ -522,7 +626,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

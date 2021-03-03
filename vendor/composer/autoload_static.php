@@ -7,13 +7,15 @@ namespace Composer\Autoload;
 class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -30,6 +32,8 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Svg\\' => 4,
             'SpiceCRM\\modules\\' => 17,
             'SpiceCRM\\includes\\' => 18,
@@ -40,6 +44,11 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
             'SpiceCRM\\KREST\\' => 15,
             'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
+        ),
+        'R' => 
+        array (
+            'Ramsey\\Uuid\\' => 12,
+            'Ramsey\\Collection\\' => 18,
         ),
         'P' => 
         array (
@@ -57,6 +66,10 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         array (
             'Invoker\\' => 8,
         ),
+        'H' => 
+        array (
+            'Hfig\\MAPI\\' => 10,
+        ),
         'G' => 
         array (
             'Giggsey\\Locale\\' => 15,
@@ -71,6 +84,10 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         array (
             'Dompdf\\' => 7,
             'DI\\' => 3,
+        ),
+        'B' => 
+        array (
+            'Brick\\Math\\' => 11,
         ),
     );
 
@@ -94,6 +111,14 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Svg\\' => 
         array (
@@ -135,6 +160,14 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
+        'Ramsey\\Uuid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/uuid/src',
+        ),
+        'Ramsey\\Collection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ramsey/collection/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -165,6 +198,10 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         array (
             0 => __DIR__ . '/..' . '/php-di/invoker/src',
         ),
+        'Hfig\\MAPI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hfig/mapi/src/MAPI',
+        ),
         'Giggsey\\Locale\\' => 
         array (
             0 => __DIR__ . '/..' . '/giggsey/locale/src',
@@ -189,6 +226,10 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         array (
             0 => __DIR__ . '/..' . '/php-di/php-di/src',
         ),
+        'Brick\\Math\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brick/math/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -199,6 +240,24 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
                 0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
             ),
         ),
+        'O' => 
+        array (
+            'OLE' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/ole',
+            ),
+        ),
+        'C' => 
+        array (
+            'Console' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/console_getopt',
+            ),
+        ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
     public static $classMap = array (
@@ -210,6 +269,7 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
         'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
         'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
+        'PEAR_Exception' => __DIR__ . '/..' . '/pear/pear_exception/PEAR/Exception.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
@@ -221,6 +281,7 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
             $loader->prefixLengthsPsr4 = ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1::$classMap;
 
         }, null, ClassLoader::class);
