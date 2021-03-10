@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '980bb43bba3cb0fe7000e25bdf6e5f4e61dad645',
+    'reference' => 'e65d72ea1bef0824ff92e6690a79bf0e86106ece',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '980bb43bba3cb0fe7000e25bdf6e5f4e61dad645',
+      'reference' => 'e65d72ea1bef0824ff92e6690a79bf0e86106ece',
     ),
     'brick/math' => 
     array (
@@ -55,12 +55,12 @@ private static $installed = array (
     ),
     'dompdf/dompdf' => 
     array (
-      'pretty_version' => 'v0.8.6',
-      'version' => '0.8.6.0',
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'db91d81866c69a42dad1d2926f61515a1e3f42c5',
+      'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
     ),
     'fig/http-message-util' => 
     array (
