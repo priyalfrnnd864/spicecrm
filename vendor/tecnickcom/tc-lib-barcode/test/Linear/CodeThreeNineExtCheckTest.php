@@ -15,6 +15,9 @@
 
 namespace Test\Linear;
 
+use PHPUnit\Framework\TestCase;
+use \Test\TestUtil;
+
 /**
  * Barcode class test
  *
@@ -26,19 +29,17 @@ namespace Test\Linear;
  * @license     http://www.gnu.org/copyleft/lesser.html GNU-LGPL v3 (see LICENSE.TXT)
  * @link        https://github.com/tecnickcom/tc-lib-barcode
  */
-class CodeThreeNineExtCheckTest extends \PHPUnit_Framework_TestCase
+class CodeThreeNineExtCheckTest extends TestUtil
 {
-    protected $obj = null;
-
-    public function setUp()
+    protected function getTestObject()
     {
-        //$this->markTestSkipped(); // skip this test
-        $this->obj = new \Com\Tecnick\Barcode\Barcode;
+        return new \Com\Tecnick\Barcode\Barcode;
     }
 
     public function testGetGrid()
     {
-        $bobj = $this->obj->getBarcodeObj('C39E+', '0123456789');
+        $testObj = $this->getTestObject();
+        $bobj = $testObj->getBarcodeObj('C39E+', '0123456789');
         $grid = $bobj->getGrid();
         $expected = "10001011101110101010001110111010111010001010111010111000101011101110111000101010101000"
             ."111010111011101000111010101011100011101010101000101110111011101000101110101011100010111010101"
@@ -48,7 +49,8 @@ class CodeThreeNineExtCheckTest extends \PHPUnit_Framework_TestCase
 
     public function testInvalidInput()
     {
-        $this->setExpectedException('\Com\Tecnick\Barcode\Exception');
-        $this->obj->getBarcodeObj('C39E+', chr(218));
+        $this->bcExpectException('\Com\Tecnick\Barcode\Exception');
+        $testObj = $this->getTestObject();
+        $testObj->getBarcodeObj('C39E+', chr(218));
     }
 }

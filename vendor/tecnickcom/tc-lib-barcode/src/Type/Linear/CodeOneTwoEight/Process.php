@@ -52,19 +52,24 @@ abstract class Process extends \Com\Tecnick\Barcode\Type\Linear
         if (!empty($numseq[1])) {
             $end_offset = 0;
             foreach ($numseq[1] as $val) {
+                // offset to the start of numeric substr
                 $offset = $val[1];
+                
+                // numeric sequence
+                $slen = strlen($val[0]);
+                if (($slen % 2) != 0) {
+                    // the length must be even
+                    --$slen;
+                    // add 1 to start of offset so numbers are c type encoded "from the end"
+                    ++$offset;
+                }
+                
                 if ($offset > $end_offset) {
                     // non numeric sequence
                     $sequence = array_merge(
                         $sequence,
                         $this->get128ABsequence(substr($code, $end_offset, ($offset - $end_offset)))
                     );
-                }
-                // numeric sequence
-                $slen = strlen($val[0]);
-                if (($slen % 2) != 0) {
-                    // the length must be even
-                    --$slen;
                 }
                 $sequence[] = array('C', substr($code, $offset, $slen), $slen);
                 $end_offset = $offset + $slen;
@@ -180,25 +185,37 @@ abstract class Process extends \Com\Tecnick\Barcode\Type\Linear
      *
      * @param array  $code_data  Array of codepoints to alter
      * @param string $code       Code to process
-     * @param int    $len        Number of characters to process
      *
      * @retun array
      *
      * @throws BarcodeException in case of error
      */
-    protected function getCodeDataC(&$code_data, $code, $len)
+    protected function getCodeDataC(&$code_data, $code)
     {
-        if (($len % 2) != 0) {
-            throw new BarcodeException('The length must be even');
-        }
-        for ($pos = 0; $pos < $len; $pos += 2) {
-            $chrnum = $code[$pos].$code[($pos + 1)];
-            if (preg_match('/([0-9]{2})/', $chrnum) > 0) {
-                $code_data[] = intval($chrnum);
-            } else {
-                throw new BarcodeException('Invalid character sequence');
+        // code blocks separated by FNC1 (chr 241)
+        $blocks = explode(chr(241), $code);
+
+        foreach ($blocks as $blk) {
+            $len = strlen($blk);
+  
+            if (($len % 2) != 0) {
+                throw new BarcodeException('The length of each FNC1-separated code block must be even');
             }
+
+            for ($pos = 0; $pos < $len; $pos += 2) {
+                $chrnum = $blk[$pos].$blk[($pos + 1)];
+                if (preg_match('/([0-9]{2})/', $chrnum) > 0) {
+                    $code_data[] = intval($chrnum);
+                } else {
+                    throw new BarcodeException('Invalid character sequence');
+                }
+            }
+
+            $code_data[] = 102;
         }
+
+        // remove last 102 code
+        array_pop($code_data);
     }
 
     /**
@@ -218,13 +235,13 @@ abstract class Process extends \Com\Tecnick\Barcode\Type\Linear
         }
         // add check character
         $code_data[] = ($sum % 103);
-        
+
         // add stop sequence
         $code_data[] = 106;
         $code_data[] = 107;
         // add start code at the beginning
         array_unshift($code_data, $startid);
-        
+
         return $code_data;
     }
 }

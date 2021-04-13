@@ -15,6 +15,8 @@
 
 namespace Test;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * Barcode class test
  *
@@ -26,26 +28,25 @@ namespace Test;
  * @license     http://www.gnu.org/copyleft/lesser.html GNU-LGPL v3 (see LICENSE.TXT)
  * @link        https://github.com/tecnickcom/tc-lib-barcode
  */
-class BarcodeTest extends \PHPUnit_Framework_TestCase
+class BarcodeTest extends TestUtil
 {
-    protected $obj = null;
-
-    public function setUp()
+    protected function getTestObject()
     {
-        //$this->markTestSkipped(); // skip this test
-        $this->obj = new \Com\Tecnick\Barcode\Barcode;
+        return new \Com\Tecnick\Barcode\Barcode;
     }
 
     public function testGetTypes()
     {
-        $types = $this->obj->getTypes();
+        $testObj = $this->getTestObject();
+        $types = $testObj->getTypes();
         $this->assertEquals(36, count($types));
     }
 
     public function testGetBarcodeObjException()
     {
-        $this->setExpectedException('\Com\Tecnick\Barcode\Exception');
-        $this->obj->getBarcodeObj(
+        $this->bcExpectException('\Com\Tecnick\Barcode\Exception');
+        $testObj = $this->getTestObject();
+        $testObj->getBarcodeObj(
             'ERROR',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -56,8 +57,9 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
 
     public function testSetPaddingException()
     {
-        $this->setExpectedException('\Com\Tecnick\Barcode\Exception');
-        $this->obj->getBarcodeObj(
+        $this->bcExpectException('\Com\Tecnick\Barcode\Exception');
+        $testObj = $this->getTestObject();
+        $testObj->getBarcodeObj(
             'LRAW,AB,12,E3F',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -69,19 +71,22 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
 
     public function testEmptyColumns()
     {
-        $this->setExpectedException('\Com\Tecnick\Barcode\Exception');
-        $this->obj->getBarcodeObj('LRAW', '');
+        $this->bcExpectException('\Com\Tecnick\Barcode\Exception');
+        $testObj = $this->getTestObject();
+        $testObj->getBarcodeObj('LRAW', '');
     }
 
     public function testEmptyInput()
     {
-        $this->setExpectedException('\Com\Tecnick\Barcode\Exception');
-        $this->obj->getBarcodeObj('LRAW', array());
+        $this->bcExpectException('\Com\Tecnick\Barcode\Exception');
+        $testObj = $this->getTestObject();
+        $testObj->getBarcodeObj('LRAW', array());
     }
 
     public function testSpotColor()
     {
-        $bobj = $this->obj->getBarcodeObj(
+        $testObj = $this->getTestObject();
+        $bobj = $testObj->getBarcodeObj(
             'LRAW',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -89,13 +94,15 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
             'all',
             array(-2, 3, 0, 1)
         );
-        $this->assertEquals('#000000ff', $bobj->getArray()['color_obj']->getRgbaHexColor());
-        $this->assertNUll($bobj->getArray()['bg_color_obj']);
+        $bobjarr = $bobj->getArray();
+        $this->assertEquals('#000000ff', $bobjarr['color_obj']->getRgbaHexColor());
+        $this->assertNUll($bobjarr['bg_color_obj']);
     }
 
     public function testBackgroundColor()
     {
-        $bobj = $this->obj->getBarcodeObj(
+        $testObj = $this->getTestObject();
+        $bobj = $testObj->getBarcodeObj(
             'LRAW',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -103,13 +110,15 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
             'all',
             array(-2, 3, 0, 1)
         )->setBackgroundColor('mediumaquamarine');
-        $this->assertEquals('#66cdaaff', $bobj->getArray()['bg_color_obj']->getRgbaHexColor());
+        $bobjarr = $bobj->getArray();
+        $this->assertEquals('#66cdaaff', $bobjarr['bg_color_obj']->getRgbaHexColor());
     }
 
     public function testNoColorException()
     {
-        $this->setExpectedException('\Com\Tecnick\Barcode\Exception');
-        $this->obj->getBarcodeObj(
+        $this->bcExpectException('\Com\Tecnick\Barcode\Exception');
+        $testObj = $this->getTestObject();
+        $testObj->getBarcodeObj(
             'LRAW',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -121,7 +130,8 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
 
     public function testExportMethods()
     {
-        $bobj = $this->obj->getBarcodeObj(
+        $testObj = $this->getTestObject();
+        $bobj = $testObj->getBarcodeObj(
             'LRAW,AB,12,E3F',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -172,7 +182,7 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
         .' viewBox="0 0 44.000000 8.000000" version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<desc>01001100011100001111,10110011100011110000</desc>
 	<rect x="0" y="0" width="44.000000" height="8.000000" fill="#ffff00"'
-        .' stroke="none" stroke-width="0" stroke-linecap="square""/>
+        .' stroke="none" stroke-width="0" stroke-linecap="square" />
 	<g id="bars" fill="#800080" stroke="none" stroke-width="0" stroke-linecap="square">
 		<rect x="3.000000" y="4.000000" width="2.000000" height="2.000000" />
 		<rect x="9.000000" y="4.000000" width="4.000000" height="2.000000" />
@@ -287,7 +297,8 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetSvg()
     {
-        $bobj = $this->obj->getBarcodeObj(
+        $testObj = $this->getTestObject();
+        $bobj = $testObj->getBarcodeObj(
             'LRAW,AB,12,E3F',
             '01001100011100001111,10110011100011110000',
             -2,
@@ -305,7 +316,8 @@ class BarcodeTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetPng()
     {
-        $bobj = $this->obj->getBarcodeObj(
+        $testObj = $this->getTestObject();
+        $bobj = $testObj->getBarcodeObj(
             'LRAW,AB,12,E3F',
             '01001100011100001111,10110011100011110000',
             -2,
