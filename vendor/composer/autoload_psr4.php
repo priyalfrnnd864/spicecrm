@@ -39,6 +39,7 @@ return array(
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
     'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
     'DI\\' => array($vendorDir . '/php-di/php-di/src'),
+    'Cron\\' => array($vendorDir . '/mtdowling/cron-expression/src/Cron'),
     'Com\\Tecnick\\Color\\' => array($vendorDir . '/tecnickcom/tc-lib-color/src'),
     'Com\\Tecnick\\Barcode\\' => array($vendorDir . '/tecnickcom/tc-lib-barcode/src'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
