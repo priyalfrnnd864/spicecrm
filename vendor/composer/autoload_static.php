@@ -37,6 +37,7 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
             'Svg\\' => 4,
             'SpiceCRM\\modules\\' => 17,
             'SpiceCRM\\includes\\' => 18,
+            'SpiceCRM\\extensions\\' => 20,
             'SpiceCRM\\data\\' => 14,
             'SpiceCRM\\custom\\modules\\' => 24,
             'SpiceCRM\\custom\\includes\\' => 25,
@@ -136,6 +137,10 @@ class ComposerStaticInit91604407326b7423faa9c75e3a2ce1a1
         'SpiceCRM\\includes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/include',
+        ),
+        'SpiceCRM\\extensions\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/extensions',
         ),
         'SpiceCRM\\data\\' => 
         array (
