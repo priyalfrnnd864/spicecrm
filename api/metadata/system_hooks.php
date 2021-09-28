@@ -20,6 +20,11 @@ $dictionary['syshooks'] = [
             'name' => 'hook_index',
             'type' => 'int',
         ],
+        'hook_include' => [
+            'name' => 'hook_include',
+            'type' => 'varchar',
+            'len' => 100
+        ],
         'hook_class' => [
             'name' => 'hook_class',
             'type' => 'varchar',
@@ -85,6 +90,11 @@ $dictionary['syscustomhooks'] = [
         'hook_index' => [
             'name' => 'hook_index',
             'type' => 'int',
+        ],
+        'hook_include' => [
+            'name' => 'hook_include',
+            'type' => 'varchar',
+            'len' => 100
         ],
         'hook_class' => [
             'name' => 'hook_class',
