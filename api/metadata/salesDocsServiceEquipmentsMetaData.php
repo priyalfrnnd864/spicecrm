@@ -1,4 +1,6 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+
 $dictionary['salesdocs_serviceequipments'] = [
     'table' => 'salesdocs_serviceequipments'
 , 'fields' => [

@@ -1,4 +1,6 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+
 $dictionary['systemplatefunctions'] = [
     'table' => 'systemplatefunctions',
     'fields' => [
