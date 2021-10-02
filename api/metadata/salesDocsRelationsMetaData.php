@@ -1,5 +1,5 @@
 <?php
-
+/***** SPICE-HEADER-SPACEHOLDER *****/
 
 $dictionary ['salesdocsflow'] = [
     'table' => 'salesdocsflow',

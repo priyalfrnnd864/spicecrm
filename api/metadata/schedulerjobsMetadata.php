@@ -1,6 +1,5 @@
 <?php
-/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
-
+/***** SPICE-HEADER-SPACEHOLDER *****/
 
 $dictionary['schedulerjobs_schedulerjobtasks'] = [
     'table' => 'schedulerjobs_schedulerjobtasks',

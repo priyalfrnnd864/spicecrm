@@ -1,4 +1,6 @@
 <?php
+/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+
 $dictionary['contacts_contacts'] = [
     'table' => 'contacts_contacts',
     'fields' => [
