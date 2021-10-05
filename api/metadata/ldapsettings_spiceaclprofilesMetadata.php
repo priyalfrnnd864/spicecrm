@@ -1,4 +1,5 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
 
 $dictionary ['spiceaclprofiles_ldap_groups'] = [
     'table' => 'spiceaclprofiles_ldap_groups',
