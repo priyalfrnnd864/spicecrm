@@ -128,11 +128,6 @@ $dictionary['email_addr_bean_rel'] = [
             'type' => 'bool',
             'default' => '0',
         ],
-        'date_created' =>
-            [
-            'name' => 'date_created',
-            'type' => 'datetime'
-        ],
         'date_modified' =>
             [
             'name' => 'date_modified',
@@ -195,10 +190,6 @@ $dictionary['email_addr_bean_rel_audit'] = [
         'transaction_id'=> [
             'name' =>'transaction_id',
             'type' =>'varchar'
-        ],
-        'date_created'=> [
-            'name' =>'date_created',
-            'type' => 'datetime'
         ],
         'created_by'=> [
             'name' =>'created_by',
