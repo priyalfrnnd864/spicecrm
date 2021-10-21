@@ -1,5 +1,6 @@
 <?php
-/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+/***** SPICE-HEADER-SPACEHOLDER *****/
+
 global $dictionary;
 $dictionary['spicesubscriptions'] = [
     'table'  => 'spicesubscriptions',
