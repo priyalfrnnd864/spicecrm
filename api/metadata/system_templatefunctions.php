@@ -23,11 +23,10 @@ $dictionary['systemplatefunctions'] = [
             'type' => 'bool',
             'default' => '0'
         ],
-        'type' => [
-            'name' => 'type',
-            'type' => 'char',
-            'len' => 15,
-            'default' => 'number'
+        'param_configs' => [
+            'name' => 'param_configs',
+            'type' => 'varchar',
+            'len' => 5000
         ],
         'version' => [
             'name' => 'version',
@@ -71,11 +70,10 @@ $dictionary['syscustomtemplatefunctions'] = [
             'type' => 'bool',
             'default' => '0'
         ],
-        'type' => [
-            'name' => 'type',
-            'type' => 'char',
-            'len' => 15,
-            'default' => 'number'
+        'param_configs' => [
+            'name' => 'param_configs',
+            'type' => 'varchar',
+            'len' => 5000
         ],
         'version' => [
             'name' => 'version',
