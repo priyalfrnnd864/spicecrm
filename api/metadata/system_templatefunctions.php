@@ -26,7 +26,7 @@ $dictionary['systemplatefunctions'] = [
         'param_configs' => [
             'name' => 'param_configs',
             'type' => 'varchar',
-            'len' => 1000
+            'len' => 2500
         ],
         'version' => [
             'name' => 'version',
