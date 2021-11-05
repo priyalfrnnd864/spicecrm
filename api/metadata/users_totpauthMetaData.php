@@ -1,5 +1,5 @@
 <?php
-/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+/***** SPICE-HEADER-SPACEHOLDER *****/
 global $dictionary;
 $dictionary['users_totp'] = [
     'table' => 'users_totp',
