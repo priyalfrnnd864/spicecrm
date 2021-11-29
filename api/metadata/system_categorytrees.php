@@ -47,12 +47,14 @@ $dictionary['syscategorytreenodes'] = [
         ],
         'node_status' => [
             'name' => 'node_status',
-            'type' => 'id',
+            'type' => 'varchar',
+            'len' => 1,
             'comment' => 'the status a for active, i for inactive'
         ],
         'add_params' => [
             'name' => 'add_params',
             'type' => 'json',
+            'dbtype' => 'shorttext',
             'comment' => 'optional additonal data'
         ],
         'syscategorytree_id' => [
@@ -89,7 +91,8 @@ $dictionary['syscategorytrees'] = [
         ],
         'add_params_component' => [
             'name' => 'add_params_component',
-            'type' => 'json',
+            'type' => 'varchar',
+            'len' => 100,
             'comment' => 'component to manage additonal data'
         ]
     ],
