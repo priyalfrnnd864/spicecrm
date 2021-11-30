@@ -4,6 +4,7 @@
 global $dictionary;
 $dictionary['events_contacts'] = [
     'table' => 'events_contacts',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

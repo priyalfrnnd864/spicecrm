@@ -3,6 +3,7 @@
 global $dictionary;
 $dictionary['contacts_users'] = [
     'table' => 'contacts_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

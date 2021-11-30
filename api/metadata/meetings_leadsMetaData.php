@@ -2,8 +2,10 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 
 global $dictionary;
-$dictionary['meetings_leads'] = ['table' => 'meetings_leads'
-                                  , 'fields' => [
+$dictionary['meetings_leads'] = [
+    'table' => 'meetings_leads',
+    'contenttype'   => 'relationdata',
+    'fields' => [
        ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'meeting_id', 'type' =>'varchar', 'len'=>'36',]
       , ['name' =>'lead_id', 'type' =>'varchar', 'len'=>'36',]
@@ -24,5 +26,4 @@ $dictionary['meetings_leads'] = ['table' => 'meetings_leads'
 							  'relationship_type'=>'many-to-many',
 							  'join_table'=> 'meetings_leads', 'join_key_lhs'=>'meeting_id', 'join_key_rhs'=>'lead_id']]
 
-]
-?>
+];

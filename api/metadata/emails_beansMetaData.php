@@ -4,7 +4,9 @@
 /**
  * Relationship table linking emails with 1 or more SugarBeans
  */
-$dictionary['emails_beans'] = ['table' => 'emails_beans',
+$dictionary['emails_beans'] = [
+    'table' => 'emails_beans',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

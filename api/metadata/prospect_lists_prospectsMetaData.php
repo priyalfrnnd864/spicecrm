@@ -5,7 +5,7 @@ global $dictionary;
 $dictionary['prospect_lists_prospects'] = [
 
 	'table' => 'prospect_lists_prospects',
-
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		[
 			'name' => 'id',
@@ -151,5 +151,4 @@ $dictionary['prospect_lists_prospects'] = [
         ]
     ]
 
-]
-?>
+];

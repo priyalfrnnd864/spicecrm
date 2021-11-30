@@ -20,6 +20,7 @@ $dictionary["documents_opportunities"] = [
     ],
   ],
   'table' => 'documents_opportunities',
+    'contenttype'   => 'relationdata',
   'fields' => 
   [
     0 => 
@@ -87,4 +88,3 @@ $dictionary["documents_opportunities"] = [
     ],
   ],
 ];
-

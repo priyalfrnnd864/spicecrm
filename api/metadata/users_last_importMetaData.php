@@ -2,8 +2,10 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 
 global $dictionary;
-$dictionary['users_last_import'] = ['table' => 'users_last_import'
-                                  , 'fields' => [
+$dictionary['users_last_import'] = [
+    'table' => 'users_last_import',
+    'contenttype'   => 'relationdata',
+    'fields' => [
        ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'assigned_user_id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'bean_type', 'type' =>'varchar', 'len'=>'36']
@@ -14,5 +16,4 @@ $dictionary['users_last_import'] = ['table' => 'users_last_import'
         ['name' => 'users_last_importpk', 'type' => 'primary', 'fields' => ['id']]
     , ['name' => 'idx_user_imp_id', 'type' => 'index', 'fields' => ['assigned_user_id']]
     ]
-]
-?>
+];
