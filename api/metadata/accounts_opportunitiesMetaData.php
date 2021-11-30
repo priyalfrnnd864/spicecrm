@@ -4,6 +4,7 @@
 global $dictionary;
 $dictionary['accounts_opportunities'] = [
     'table' => 'accounts_opportunities',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -61,5 +62,3 @@ $dictionary['accounts_opportunities'] = [
             'join_key_rhs' => 'opportunity_id']
     ]
 ];
-
-

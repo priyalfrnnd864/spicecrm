@@ -3,6 +3,7 @@
 
 $dictionary['tasks_users'] = [
     'table' => 'tasks_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'task_id', 'type' => 'varchar', 'len' => '36'],

@@ -3,6 +3,7 @@
 
 $dictionary['schedulerjobs_schedulerjobtasks'] = [
     'table' => 'schedulerjobs_schedulerjobtasks',
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		'id' => [
 			'name' => 'id',
