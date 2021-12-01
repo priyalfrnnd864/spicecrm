@@ -4,6 +4,7 @@
 global $dictionary;
 $dictionary['calls_users'] = [
     'table' => 'calls_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'call_id', 'type' => 'varchar', 'len' => '36'],
@@ -77,4 +78,3 @@ $dictionary['calls_users'] = [
         ],
     ],
 ];
-?>

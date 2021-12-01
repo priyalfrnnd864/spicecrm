@@ -1,7 +1,9 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
 
-$dictionary['queues_beans'] = ['table' => 'queues_beans',
+$dictionary['queues_beans'] = [
+    'table' => 'queues_beans',
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		'id' => [
 			'name' => 'id',
@@ -93,5 +95,3 @@ $dictionary['queues_beans'] = ['table' => 'queues_beans',
         ],
     ], /* end indices */
 ];
-
-?>

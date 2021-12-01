@@ -3,6 +3,7 @@
 
 $dictionary['projects_opportunities'] = [
     'table' => 'projects_opportunities',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'opportunity_id', 'type' => 'varchar', 'len' => '36'],

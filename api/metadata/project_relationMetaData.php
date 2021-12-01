@@ -6,6 +6,7 @@
 /*
 $dictionary['project_relation'] = array(
 	'table' => 'project_relation',
+    'contenttype'   => 'relationdata',
 	'fields' => array(
 		'id' => array(
 			'name' => 'id',
@@ -77,4 +78,3 @@ $dictionary['project_relation'] = array(
 		),
 );
 */
-?>

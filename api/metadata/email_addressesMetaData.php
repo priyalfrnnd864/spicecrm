@@ -6,6 +6,7 @@
  */
 $dictionary['emails_email_addr_rel'] = [
     'table' => 'emails_email_addr_rel',
+    'contenttype'   => 'relationdata',
     'comment' => 'Normalization of multi-address fields such as To:, CC:, BCC',
     'fields' => [
         'id' => [
