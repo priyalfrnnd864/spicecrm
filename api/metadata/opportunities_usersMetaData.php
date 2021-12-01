@@ -4,6 +4,7 @@
 global $dictionary;
 $dictionary['opportunities_users'] = [
     'table' => 'opportunities_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         [
             'name' => 'id',

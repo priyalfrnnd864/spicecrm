@@ -5,7 +5,7 @@ global $dictionary;
 $dictionary['acl_roles_actions'] = [
 
 	'table' => 'acl_roles_actions',
-
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		[
 			'name' => 'id',
@@ -60,6 +60,4 @@ $dictionary['acl_roles_actions'] = [
 							  'relationship_type'=>'many-to-many',
 							  'join_table'=> 'acl_roles_actions', 'join_key_lhs'=>'role_id', 'join_key_rhs'=>'action_id']],
 
-]
-
-?>
+];

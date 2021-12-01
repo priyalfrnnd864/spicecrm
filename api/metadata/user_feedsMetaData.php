@@ -2,8 +2,10 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 
 global $dictionary;
-$dictionary['users_feeds'] = ['table' => 'users_feeds'
-                                  , 'fields' => [
+$dictionary['users_feeds'] = [
+    'table' => 'users_feeds',
+    'contenttype'   => 'relationdata',
+    'fields' => [
     
        ['name' =>'user_id', 'type' =>'varchar', 'len'=>'36',]
       , ['name' =>'feed_id', 'type' =>'varchar', 'len'=>'36',]
@@ -15,5 +17,4 @@ $dictionary['users_feeds'] = ['table' => 'users_feeds'
   
        ['name' =>'idx_ud_user_id', 'type' =>'index', 'fields'=> ['user_id', 'feed_id']]
     ]
-]
-?>
+];

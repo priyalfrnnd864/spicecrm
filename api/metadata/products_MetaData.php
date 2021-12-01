@@ -4,6 +4,7 @@
 // adding project-to-bugs relationship
 $dictionary['productgroups_productattributes'] = [
     'table' => 'productgroups_productattributes',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'productgroup_id', 'type' => 'varchar', 'len' => '36'],
@@ -34,6 +35,7 @@ $dictionary['productgroups_productattributes'] = [
 
 $dictionary['productvariants_resellers'] = [
     'table' => 'productvariants_resellers',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'productvariant_id', 'type' => 'varchar', 'len' => '36'],
