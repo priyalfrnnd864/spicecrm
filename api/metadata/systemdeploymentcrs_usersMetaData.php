@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['systemdeploymentcrs_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['systemdeploymentcrs_users'] = [
     'table' => 'systemdeploymentcrs_users',
     'contenttype'   => 'relationdata',
     'fields' => [

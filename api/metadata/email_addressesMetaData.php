@@ -1,10 +1,10 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /**
  * Relationship table linking email addresses to an instance of a Sugar Email object
  */
-$dictionary['emails_email_addr_rel'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['emails_email_addr_rel'] = [
     'table' => 'emails_email_addr_rel',
     'contenttype'   => 'relationdata',
     'comment' => 'Normalization of multi-address fields such as To:, CC:, BCC',
@@ -89,7 +89,7 @@ $dictionary['emails_email_addr_rel'] = [
 /**
  * Relationship table linking email addresses to various SugarBeans or type Person
  */
-$dictionary['email_addr_bean_rel'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['email_addr_bean_rel'] = [
     'table' => 'email_addr_bean_rel',
     'fields' => [
         'id' =>
@@ -174,8 +174,7 @@ $dictionary['email_addr_bean_rel'] = [
     ],
 ];
 
-
-$dictionary['email_addr_bean_rel_audit'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['email_addr_bean_rel_audit'] = [
     'table' => 'email_addr_bean_rel_audit',
     'fields' => [
         'id'=> [

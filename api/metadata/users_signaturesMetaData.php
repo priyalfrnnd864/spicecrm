@@ -1,9 +1,9 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 ///////////////////////////////////////////////////////////////////////////////
 ////	TABLE DEFINITION FOR EMAIL STUFF
-$dictionary['UserSignature'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['UserSignature'] = [
 	'table' => 'users_signatures',
 	'fields' => [
 		'id' => [
@@ -70,4 +70,3 @@ $dictionary['UserSignature'] = [
         ]
     ],
 ];
-?>

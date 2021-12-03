@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['users_password_link'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['users_password_link'] = [
     'table' => 'users_password_link',
     'fields' => [
         'id' => [
@@ -48,7 +48,7 @@ $dictionary['users_password_link'] = [
     ],
 ];
 
-$dictionary['users_password_tokens'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['users_password_tokens'] = [
     'table' => 'users_password_tokens',
     'fields' => [
         'id' => [
@@ -86,4 +86,3 @@ $dictionary['users_password_tokens'] = [
         ]
     ],
 ];
-?>

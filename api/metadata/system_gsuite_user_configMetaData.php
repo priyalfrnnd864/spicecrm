@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['sysgsuiteuserconfig'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysgsuiteuserconfig'] = [
     'table' => 'sysgsuiteuserconfig',
     'fields' => [
         'id' => [
@@ -38,8 +39,7 @@ $dictionary['sysgsuiteuserconfig'] = [
     ],
 ];
 
-
-$dictionary['sysgsuiteusersubscriptions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysgsuiteusersubscriptions'] = [
     'table' => 'sysgsuiteusersubscriptions',
     'fields' => [
         'subscriptionid' => [

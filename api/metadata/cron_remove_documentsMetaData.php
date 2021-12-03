@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['cron_remove_documents'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['cron_remove_documents'] = [
     'table' => 'cron_remove_documents',
     'fields' => [
         [

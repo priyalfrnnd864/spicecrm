@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['spicebeanguides'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguides'] = [
     'table' => 'spicebeanguides',
     'fields' => [
         'id' => [
@@ -31,7 +31,8 @@ $dictionary['spicebeanguides'] = [
         ['name' => 'idx_spicebeanguides_module', 'type' => 'index', 'fields' => ['module']],
     ]
 ];
-$dictionary['spicebeancustomguides'] = [
+
+SpiceDictionaryHandler::getInstance()->dictionary['spicebeancustomguides'] = [
     'table' => 'spicebeancustomguides',
     'fields' => [
         'id' => [
@@ -60,7 +61,8 @@ $dictionary['spicebeancustomguides'] = [
         ['name' => 'idx_spicebeancustomguides_module', 'type' => 'index', 'fields' => ['module']],
     ]
 ];
-$dictionary['spicebeanguidestages'] = [
+
+SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguidestages'] = [
     'table' => 'spicebeanguidestages',
     'fields' => [
         'id' => [
@@ -129,7 +131,7 @@ $dictionary['spicebeanguidestages'] = [
    ]
 ];
 
-$dictionary['spicebeanguidestages_texts'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguidestages_texts'] = [
     'table' => 'spicebeanguidestages_texts',
     'fields' => [
         'id' => [
@@ -168,7 +170,7 @@ $dictionary['spicebeanguidestages_texts'] = [
     ]
 ];
 
-$dictionary['spicebeanguidestages_checks'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguidestages_checks'] = [
     'table' => 'spicebeanguidestages_checks',
     'fields' => [
         'id' => [
@@ -218,7 +220,7 @@ $dictionary['spicebeanguidestages_checks'] = [
     ]
 ];
 
-$dictionary['spicebeanguidestages_check_texts'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguidestages_check_texts'] = [
     'table' => 'spicebeanguidestages_check_texts',
     'fields' => [
         'id' => [
