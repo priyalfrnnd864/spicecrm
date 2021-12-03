@@ -1,8 +1,10 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 global $dictionary;
-$dictionary['calls_contacts'] = ['table' => 'calls_contacts'
-                                  , 'fields' => [
+$dictionary['calls_contacts'] = [
+    'table' => 'calls_contacts',
+    'contenttype'   => 'relationdata',
+    'fields' => [
        ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'call_id', 'type' =>'varchar', 'len'=>'36',]
       , ['name' =>'contact_id', 'type' =>'varchar', 'len'=>'36',]
@@ -23,5 +25,4 @@ $dictionary['calls_contacts'] = ['table' => 'calls_contacts'
 							  'relationship_type'=>'many-to-many',
 							  'join_table'=> 'calls_contacts', 'join_key_lhs'=>'call_id', 'join_key_rhs'=>'contact_id']]
 
-]
-?>
+];

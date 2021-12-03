@@ -3,6 +3,7 @@
 
 $dictionary['contacts_contacts'] = [
     'table' => 'contacts_contacts',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'parent_id', 'type' => 'varchar', 'len' => '36'],

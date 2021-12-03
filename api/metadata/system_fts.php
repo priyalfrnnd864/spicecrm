@@ -45,6 +45,7 @@ $dictionary['sysfts'] = [
     ]
 ];
 
+/* moved to the api log
 $dictionary['sysftslog'] = [
     'table' => 'sysftslog',
     'fields' => [
@@ -94,3 +95,4 @@ $dictionary['sysftslog'] = [
             'fields' => ['id']]
     ]
 ];
+*/

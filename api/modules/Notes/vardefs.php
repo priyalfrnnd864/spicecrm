@@ -130,7 +130,6 @@ $dictionary['Note'] = [
             'name' => 'contact_phone',
             'vname' => 'LBL_PHONE',
             'type' => 'phone',
-            'vname' => 'LBL_PHONE',
             'source' => 'non-db'
         ],
         'contact_email' => [

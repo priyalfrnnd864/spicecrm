@@ -3,6 +3,7 @@
 
 $dictionary['distributionlists_users'] = [
     'table' => 'distributionlists_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'char', 'len' => '36'],
         ['name' => 'distributionlist_id', 'type' => 'char', 'len' => '36'],

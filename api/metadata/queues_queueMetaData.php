@@ -2,7 +2,9 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 
 global $dictionary;
-$dictionary['queues_queue'] = ['table' => 'queues_queue',
+$dictionary['queues_queue'] = [
+    'table' => 'queues_queue',
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		'id' => [
 			'name' => 'id',
@@ -104,5 +106,3 @@ $dictionary['queues_queue'] = ['table' => 'queues_queue',
         ],
     ], /* end relationships */
 ];
-
-?>

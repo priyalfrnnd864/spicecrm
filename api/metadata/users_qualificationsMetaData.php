@@ -3,6 +3,7 @@
 
 $dictionary['users_qualifications'] = [
     'table' => 'users_qualifications',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

@@ -3,6 +3,7 @@
 
 $dictionary['serviceorders_users'] = [
     'table' => 'serviceorders_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

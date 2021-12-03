@@ -2,8 +2,9 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 
 $dictionary['salesdocs_serviceequipments'] = [
-    'table' => 'salesdocs_serviceequipments'
-, 'fields' => [
+    'table' => 'salesdocs_serviceequipments',
+    'contenttype'   => 'relationdata',
+    'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36']
     , ['name' => 'salesdoc_id', 'type' => 'char', 'len' => '36']
     , ['name' => 'serviceequipment_id', 'type' => 'char', 'len' => '36']
