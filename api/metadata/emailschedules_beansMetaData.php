@@ -1,10 +1,11 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['emailschedules_beans'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['emailschedules_beans'] = [
 // TODO: EMAIL ID
     'table' => 'emailschedules_beans',
+    'contenttype'   => 'relationdata',
     'fields' => [
         [
             'name' => 'id',

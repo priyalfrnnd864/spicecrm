@@ -1,8 +1,10 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['tasks_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['tasks_users'] = [
     'table' => 'tasks_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'task_id', 'type' => 'varchar', 'len' => '36'],

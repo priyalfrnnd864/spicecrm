@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-global $dictionary;
-$dictionary['users_totp'] = [
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['users_totp'] = [
     'table' => 'users_totp',
     'fields' => [
         'id' => [

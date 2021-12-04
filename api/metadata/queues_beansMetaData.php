@@ -1,7 +1,10 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['queues_beans'] = ['table' => 'queues_beans',
+SpiceDictionaryHandler::getInstance()->dictionary['queues_beans'] = [
+    'table' => 'queues_beans',
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		'id' => [
 			'name' => 'id',
@@ -93,5 +96,3 @@ $dictionary['queues_beans'] = ['table' => 'queues_beans',
         ],
     ], /* end indices */
 ];
-
-?>

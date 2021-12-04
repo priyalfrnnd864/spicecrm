@@ -1,11 +1,11 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['acl_roles_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['acl_roles_users'] = [
 
 	'table' => 'acl_roles_users',
-
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		[
 			'name' => 'id',
@@ -54,6 +54,4 @@ $dictionary['acl_roles_users'] = [
 							  'relationship_type'=>'many-to-many',
 							  'join_table'=> 'acl_roles_users', 'join_key_lhs'=>'role_id', 'join_key_rhs'=>'user_id']],
 
-]
-                                  
-?>
+];

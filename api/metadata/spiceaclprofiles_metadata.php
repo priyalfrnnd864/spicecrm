@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary ['SpiceACLProfiles_SpiceACLObjects'] = [
+SpiceDictionaryHandler::getInstance()->dictionary ['SpiceACLProfiles_SpiceACLObjects'] = [
     'table' => 'spiceaclprofiles_spiceaclobjects',
     'fields' => [
         'id' => [
@@ -60,7 +61,7 @@ $dictionary ['SpiceACLProfiles_SpiceACLObjects'] = [
     ]
 ];
 
-$dictionary['spiceaclprofiles_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_users'] = [
     'table' => 'spiceaclprofiles_users',
     'fields' => [
         'id' => [
