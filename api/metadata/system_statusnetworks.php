@@ -46,6 +46,11 @@ $dictionary['syststatusnetworks'] = [
             'name' => 'required_model_state',
             'type' => 'varchar',
             'len' => 100
+        ],
+        'required_model_acl_action' => [
+            'name' => 'required_model_acl_action',
+            'type' => 'varchar',
+            'len' => 100
         ]
     ],
     'indices' => [
