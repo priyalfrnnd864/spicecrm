@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['ldap_settings'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
     'table' => 'ldap_settings',
     'fields' => [
         'id' => [

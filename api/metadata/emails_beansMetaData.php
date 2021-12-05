@@ -1,10 +1,10 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /**
  * Relationship table linking emails with 1 or more SugarBeans
  */
-$dictionary['emails_beans'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['emails_beans'] = [
     'table' => 'emails_beans',
     'contenttype'   => 'relationdata',
     'fields' => [
@@ -241,7 +241,7 @@ $dictionary['emails_beans'] = [
 ];
 
 if (file_exists('modules/ServiceOrders/ServiceOrder.php')) {
-    $dictionary['emails_beans']['relationships']['emails_serviceorders_rel'] = [
+    SpiceDictionaryHandler::getInstance()->dictionary['emails_beans']['relationships']['emails_serviceorders_rel'] = [
         'lhs_module' => 'Emails',
         'lhs_table' => 'emails',
         'lhs_key' => 'id',
@@ -258,7 +258,7 @@ if (file_exists('modules/ServiceOrders/ServiceOrder.php')) {
 }
 
 if (file_exists('modules/ServiceTickets/ServiceTicket.php')) {
-    $dictionary['emails_beans']['relationships']['emails_servicetickets_rel'] = [
+    SpiceDictionaryHandler::getInstance()->dictionary['emails_beans']['relationships']['emails_servicetickets_rel'] = [
         'lhs_module' => 'Emails',
         'lhs_table' => 'emails',
         'lhs_key' => 'id',
@@ -278,7 +278,7 @@ if (file_exists('modules/ServiceTickets/ServiceTicket.php')) {
  * Large text field table, shares a 1:1 with the emails table.  Moving all longtext fields to this table allows more
  * effiencient email management and full-text search capabilities.
  */
-$dictionary['emails_text'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['emails_text'] = [
     'table' => 'emails_text',
     'comment' => 'Large email text fields',
     'fields' => [

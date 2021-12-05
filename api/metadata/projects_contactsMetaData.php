@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['projects_contacts'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['projects_contacts'] = [
     'table' => 'projects_contacts',
     'contenttype'   => 'relationdata',
     'fields' => [

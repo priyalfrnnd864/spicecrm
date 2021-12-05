@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 // adding project-to-bugs relationship
-$dictionary['productgroups_productattributes'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['productgroups_productattributes'] = [
     'table' => 'productgroups_productattributes',
     'contenttype'   => 'relationdata',
     'fields' => [
@@ -33,7 +33,7 @@ $dictionary['productgroups_productattributes'] = [
     ]
 ];
 
-$dictionary['productvariants_resellers'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['productvariants_resellers'] = [
     'table' => 'productvariants_resellers',
     'contenttype'   => 'relationdata',
     'fields' => [

@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syscategorytreenodes'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreenodes'] = [
     'table' => 'syscategorytreenodes',
     'fields' => [
         'id' => [
@@ -77,8 +78,7 @@ $dictionary['syscategorytreenodes'] = [
     ]
 ];
 
-
-$dictionary['syscategorytrees'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscategorytrees'] = [
     'table' => 'syscategorytrees',
     'fields' => [
         'id' => [

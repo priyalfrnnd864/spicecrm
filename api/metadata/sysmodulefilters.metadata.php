@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['sysmodulefilters'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysmodulefilters'] = [
     'table' => 'sysmodulefilters',
     'fields' => [
         'id' => [
@@ -51,7 +52,7 @@ $dictionary['sysmodulefilters'] = [
     ]
 ];
 
-$dictionary['syscustommodulefilters'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustommodulefilters'] = [
     'table' => 'syscustommodulefilters',
     'fields' => [
         'id' => [
@@ -100,4 +101,3 @@ $dictionary['syscustommodulefilters'] = [
             'fields' => ['id']]
     ]
 ];
-
