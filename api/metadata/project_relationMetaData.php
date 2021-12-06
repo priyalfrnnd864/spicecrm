@@ -1,10 +1,9 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-
-
-
 /*
-$dictionary['project_relation'] = array(
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['project_relation'] = array(
 	'table' => 'project_relation',
     'contenttype'   => 'relationdata',
 	'fields' => array(

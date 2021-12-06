@@ -1,10 +1,10 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /* this table should never get created, it should only be used as a template for the acutal audit tables
  * for each moudule.
  */
-$dictionary['audit'] =
+SpiceDictionaryHandler::getInstance()->dictionary['audit'] =
     ['table' => 'audit_template',
         'fields' => [
             'id'=> ['name' =>'id', 'type' =>'id', 'len'=>'36','required'=>true],

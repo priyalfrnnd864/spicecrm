@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['sysgdprretentions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysgdprretentions'] = [
     'table' => 'sysgdprretentions',
     'fields' => [
         'id' => [

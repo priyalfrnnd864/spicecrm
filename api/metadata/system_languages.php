@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syslangs'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslangs'] = [
     'table' => 'syslangs',
     'changerequests' => [
         'active' => true,
@@ -58,7 +59,7 @@ $dictionary['syslangs'] = [
     ],
 ];
 
-$dictionary['syslanguagelabels'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslanguagelabels'] = [
     'table' => 'syslanguagelabels',
     'fields' => [
         'id' => [
@@ -92,7 +93,7 @@ $dictionary['syslanguagelabels'] = [
     ],
 ];
 
-$dictionary['syslanguagetranslations'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslanguagetranslations'] = [
     'table' => 'syslanguagetranslations',
     'fields' => [
         'id' => [
@@ -141,18 +142,18 @@ $dictionary['syslanguagetranslations'] = [
     ],
 ];
 
-$dictionary['syslanguagecustomlabels'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslanguagecustomlabels'] = [
     'table' => 'syslanguagecustomlabels',
-    'fields' => $dictionary['syslanguagelabels']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['syslanguagelabels']['fields'],
     'indices' => [
         ['name' => 'syslanguagecustomlabelspk', 'type' =>'primary', 'fields' => ['id']],
         ['name' => 'syslanguagecustomlabel_idx', 'type' =>'unique','fields' => ['name']],
     ],
 ];
 
-$dictionary['syslanguagecustomtranslations'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslanguagecustomtranslations'] = [
     'table' => 'syslanguagecustomtranslations',
-    'fields' => $dictionary['syslanguagetranslations']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['syslanguagetranslations']['fields'],
     'indices' => [
         ['name' => 'syslanguagecustomtranslationspk', 'type' =>'primary', 'fields' => ['id']],
         ['name' => 'syslanguagecustomtranslationlabel_idx', 'type' =>'index', 'fields' => ['syslanguagelabel_id']],

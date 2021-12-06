@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
- $dictionary["SpicePerformanceTracker"]= [
+SpiceDictionaryHandler::getInstance()->dictionary["SpicePerformanceTracker"] = [
   'table' => 'spiceperformancetrackers',
   'fields' => 
   [
