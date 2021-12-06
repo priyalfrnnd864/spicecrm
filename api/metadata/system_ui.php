@@ -2935,3 +2935,35 @@ $dictionary['sysevalanche_fieldmapping'] = [
         ]
     ]
 ];
+$dictionary['syssendinblue_fieldmapping'] = [
+    'table' => 'syssendinblue_fieldmapping',
+    'audited' => true,
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'module' => [
+            'name' => 'module',
+            'type' => 'varchar',
+            'len' => 255
+        ],
+        'spice' => [
+            'name' => 'spice',
+            'type' => 'varchar',
+            'len' => 255
+        ],
+        'sendinblue' => [
+            'name' => 'sendinblue',
+            'type' => 'varchar',
+            'len' => 255
+        ]
+    ],
+    'indices' => [
+        [
+            'name' => 'idx_syssendinblue_fieldmapping',
+            'type' => 'primary',
+            'fields' => ['id']
+        ]
+    ]
+];
