@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['salesdocs_serviceequipments'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['salesdocs_serviceequipments'] = [
     'table' => 'salesdocs_serviceequipments',
     'contenttype'   => 'relationdata',
     'fields' => [

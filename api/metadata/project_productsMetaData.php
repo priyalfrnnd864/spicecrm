@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 // adding project-to-products relationship
-$dictionary['projects_products'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['projects_products'] = [
     'table' => 'projects_products',
     'contenttype'   => 'relationdata',
     'fields' => [

@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['acl_roles_actions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['acl_roles_actions'] = [
 
 	'table' => 'acl_roles_actions',
     'contenttype'   => 'relationdata',

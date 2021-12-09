@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary["documents_opportunities"] = [
+SpiceDictionaryHandler::getInstance()->dictionary["documents_opportunities"] = [
   'true_relationship_type' => 'many-to-many',
   'relationships' => 
   [

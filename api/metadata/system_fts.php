@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['sysfts'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysfts'] = [
     'table' => 'sysfts',
     'fields' => [
         'id' => [
@@ -46,7 +47,7 @@ $dictionary['sysfts'] = [
 ];
 
 /* moved to the api log
-$dictionary['sysftslog'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysftslog'] = [
     'table' => 'sysftslog',
     'fields' => [
         'id' => [
