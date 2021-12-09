@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syslogs'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslogs'] = [
     'table' => 'syslogs',
     'fields' => [
         'id' => [
@@ -87,8 +88,7 @@ $dictionary['syslogs'] = [
     ]
 ];
 
-
-$dictionary['syslogusers'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslogusers'] = [
     'table' => 'syslogusers',
     'fields' => [
         'id' => [

@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['roles_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['roles_users'] = [
 
 	'table' => 'roles_users',
     'contenttype'   => 'relationdata',

@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['accounts_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['accounts_users'] = [
     'table' => 'accounts_users',
     'contenttype'   => 'relationdata',
     'fields' => [

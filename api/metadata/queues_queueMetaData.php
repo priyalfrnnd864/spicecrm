@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['queues_queue'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['queues_queue'] = [
     'table' => 'queues_queue',
     'contenttype'   => 'relationdata',
 	'fields' => [

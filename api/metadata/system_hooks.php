@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syshooks'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syshooks'] = [
     'table' => 'syshooks',
     'fields' => [
         'id' => [
@@ -72,7 +73,7 @@ $dictionary['syshooks'] = [
     ]
 ];
 
-$dictionary['syscustomhooks'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomhooks'] = [
     'table' => 'syscustomhooks',
     'fields' => [
         'id' => [

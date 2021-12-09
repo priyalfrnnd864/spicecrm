@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary ['sysuiroles_ldap_groups'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysuiroles_ldap_groups'] = [
     'table' => 'sysuiroles_ldap_groups',
     'fields' => [
         'id' => [

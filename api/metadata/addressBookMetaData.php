@@ -1,7 +1,9 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['AddressBook'] = ['table' => 'address_book',
+SpiceDictionaryHandler::getInstance()->dictionary['AddressBook'] = [
+    'table' => 'address_book',
 	'fields' => [
 		'assigned_user_id' => [
 			'name' => 'assigned_user_id',

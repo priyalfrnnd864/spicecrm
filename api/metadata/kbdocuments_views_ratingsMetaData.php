@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['kbdocuments_viwes_ratings'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['kbdocuments_viwes_ratings'] = [
 	'table' => 'kbdocuments_views_ratings',
 	'fields' => [
        ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
@@ -16,4 +17,3 @@ $dictionary['kbdocuments_viwes_ratings'] = [
        , ['name' =>'idx_kbvr_kbdoc', 'type' =>'index', 'fields'=> ['kbdocument_id']]
     ],
 ];
-?>
