@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['users_last_import'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['users_last_import'] = [
     'table' => 'users_last_import',
     'contenttype'   => 'relationdata',
     'fields' => [

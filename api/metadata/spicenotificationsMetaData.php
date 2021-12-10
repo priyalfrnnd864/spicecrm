@@ -1,8 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['spicenotifications'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicenotifications'] = [
     'table'  => 'spicenotifications',
     'fields' => [
         'id' => [
