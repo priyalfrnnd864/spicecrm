@@ -136,6 +136,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLModuleActions'] = [
             'vname' => 'LBL_STANDARDACTION',
             'type' => 'varchar',
             'len' => 1
+        ],
+        'description' => [
+            'name' => 'description',
+            'vname' => 'LBL_description',
+            'type' => 'varchar',
+            'len' => 255,
+            'comment' => ' a short description what this action is intended to check for'
         ]
     ],
     'indices' => [
