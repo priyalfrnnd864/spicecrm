@@ -816,6 +816,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiactionsets'] = [
             'type' => 'varchar',
             'len' => 100
         ],
+        'grouped' => [
+            'name' => 'grouped',
+            'type' => 'varchar',
+            'len' => 10,
+            'comment' => 'options vertical, horizontal, no'
+        ],
         'version' => [
             'name' => 'version',
             'type' => 'varchar',
