@@ -1,9 +1,10 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['knowledgedocuments_knowledgedocuments'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['knowledgedocuments_knowledgedocuments'] = [
     'table' => 'knowledgedocuments_knowledgedocuments',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

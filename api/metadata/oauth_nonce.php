@@ -1,10 +1,10 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /**
  * table storing reports filter information
  */
-$dictionary['oauth_nonce'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['oauth_nonce'] = [
 	'table' => 'oauth_nonce',
 	'fields' => [
 		'conskey' => [

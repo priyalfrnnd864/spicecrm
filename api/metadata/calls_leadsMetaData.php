@@ -1,9 +1,11 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['calls_leads'] = ['table' => 'calls_leads'
-                                  , 'fields' => [
+SpiceDictionaryHandler::getInstance()->dictionary['calls_leads'] = [
+    'table' => 'calls_leads',
+    'contenttype'   => 'relationdata',
+    'fields' => [
        ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'call_id', 'type' =>'varchar', 'len'=>'36',]
       , ['name' =>'lead_id', 'type' =>'varchar', 'len'=>'36',]
@@ -24,5 +26,4 @@ $dictionary['calls_leads'] = ['table' => 'calls_leads'
 							  'relationship_type'=>'many-to-many',
 							  'join_table'=> 'calls_leads', 'join_key_lhs'=>'call_id', 'join_key_rhs'=>'lead_id']]
 
-]
-?>
+];

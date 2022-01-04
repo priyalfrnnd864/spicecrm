@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['systrashcan'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['systrashcan'] = [
     'table' => 'systrashcan',
     'fields' => [
         'id' => [
@@ -72,4 +73,3 @@ $dictionary['systrashcan'] = [
             'fields' => ['id']]
     ]
 ];
-

@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['sysservicecategories'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysservicecategories'] = [
     'table' => 'sysservicecategories',
     'fields' => [
         'id' => [

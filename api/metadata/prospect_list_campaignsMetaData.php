@@ -1,11 +1,11 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['prospect_list_campaigns'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['prospect_list_campaigns'] = [
 
 	'table' => 'prospect_list_campaigns',
-
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		[
 			'name' => 'id',
@@ -61,6 +61,4 @@ $dictionary['prospect_list_campaigns'] = [
 		'relationship_type'=>'many-to-many',
 		'join_table'=> 'prospect_list_campaigns', 'join_key_lhs'=>'prospect_list_id', 'join_key_rhs'=>'campaign_id']
     ]
-]
-                                  
-?>
+];

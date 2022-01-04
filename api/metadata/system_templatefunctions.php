@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['systemplatefunctions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['systemplatefunctions'] = [
     'table' => 'systemplatefunctions',
     'fields' => [
         'id' => [
@@ -23,6 +24,11 @@ $dictionary['systemplatefunctions'] = [
             'type' => 'bool',
             'default' => '0'
         ],
+        'param_configs' => [
+            'name' => 'param_configs',
+            'type' => 'varchar',
+            'len' => 2500
+        ],
         'version' => [
             'name' => 'version',
             'type' => 'varchar',
@@ -43,7 +49,7 @@ $dictionary['systemplatefunctions'] = [
     ]
 ];
 
-$dictionary['syscustomtemplatefunctions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomtemplatefunctions'] = [
     'table' => 'syscustomtemplatefunctions',
     'fields' => [
         'id' => [
@@ -64,6 +70,11 @@ $dictionary['syscustomtemplatefunctions'] = [
             'name' => 'no_pipe',
             'type' => 'bool',
             'default' => '0'
+        ],
+        'param_configs' => [
+            'name' => 'param_configs',
+            'type' => 'varchar',
+            'len' => 2500
         ],
         'version' => [
             'name' => 'version',

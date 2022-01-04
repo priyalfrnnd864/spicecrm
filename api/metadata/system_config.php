@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['Administration'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['Administration'] = [
     'table' => 'config',
     'comment' => 'System table containing system-wide definitions',
     'fields' => [

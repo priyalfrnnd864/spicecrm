@@ -1,9 +1,11 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['linked_documents'] = ['table' => 'linked_documents'
-   , 'fields' => [
+SpiceDictionaryHandler::getInstance()->dictionary['linked_documents'] = [
+    'table' => 'linked_documents',
+    'contenttype'   => 'relationdata',
+    'fields' => [
         ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'parent_id', 'type' =>'varchar', 'len'=>'36']
       , ['name' =>'parent_type', 'type' =>'varchar', 'len'=>'25']
@@ -37,4 +39,3 @@ $dictionary['linked_documents'] = ['table' => 'linked_documents'
 				   'relationship_role_column_value'=>'ContracTemplates'],
     ],
 ];
-?>

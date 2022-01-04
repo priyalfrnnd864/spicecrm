@@ -1,8 +1,13 @@
 <?php
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['ipaddresses'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['ipaddresses'] = [
     'table' => 'ipaddresses',
     'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
         'address' => [
             'name' => 'address',
             'type' => 'char',
@@ -39,6 +44,11 @@ $dictionary['ipaddresses'] = [
         ]
     ],
     'indices' => [
+        [
+            'name' => 'idx_ipaddresses_pk',
+            'type' => 'primary',
+            'fields' => ['id'],
+        ],
         [
             'name' => 'idx_ipaddresses_address',
             'type' => 'index',
