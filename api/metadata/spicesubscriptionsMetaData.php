@@ -1,7 +1,8 @@
 <?php
-/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
-global $dictionary;
-$dictionary['spicesubscriptions'] = [
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['spicesubscriptions'] = [
     'table'  => 'spicesubscriptions',
     'fields' => [
         'user_id'     => [

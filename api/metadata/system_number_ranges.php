@@ -1,6 +1,8 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['sysnumberranges'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysnumberranges'] = [
     'table' => 'sysnumberranges',
     'fields' => [
         'id' => [
@@ -43,7 +45,7 @@ $dictionary['sysnumberranges'] = [
     ]
 ];
 
-$dictionary['sysnumberrangeallocation'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysnumberrangeallocation'] = [
     'table' => 'sysnumberrangeallocation',
     'fields' => [
         'id' => [

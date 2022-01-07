@@ -1,6 +1,10 @@
 <?php
-$dictionary['contacts_contacts'] = [
+/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['contacts_contacts'] = [
     'table' => 'contacts_contacts',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'parent_id', 'type' => 'varchar', 'len' => '36'],
@@ -23,7 +27,8 @@ $dictionary['contacts_contacts'] = [
             'relationship_type' => 'many-to-many',
             'join_table' => 'contacts_contacts',
             'join_key_lhs' => 'parent_id',
-            'join_key_rhs' => 'child_id'
+            'join_key_rhs' => 'child_id',
+            'reverse' => 1
         ]
     ]
 ];

@@ -1,6 +1,8 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syscountries'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscountries'] = [
     'table' => 'syscountries',
     'comment' => 'holds a list fo all countries for selecttion and translation',
     'fields' => [
@@ -42,7 +44,7 @@ $dictionary['syscountries'] = [
     ]
 ];
 
-$dictionary['syscountrystates'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscountrystates'] = [
     'table' => 'syscountrystates',
     'comment' => 'holds states per country - subdivision according to ISO3166-2',
     'fields' => [

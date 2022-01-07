@@ -1,6 +1,8 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['sysmailboxtransports'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysmailboxtransports'] = [
     'table' => 'sysmailboxtransports',
     'fields' => [
         'id' => [
@@ -49,9 +51,9 @@ $dictionary['sysmailboxtransports'] = [
     ]
 ];
 
-$dictionary['syscustommailboxtransports'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustommailboxtransports'] = [
     'table' => 'syscustommailboxtransports',
-    'fields' => $dictionary['sysmailboxtransports']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysmailboxtransports']['fields'],
     'indices' => [
         [
             'name' => 'idx_syscustommailboxtransports',

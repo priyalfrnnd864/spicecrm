@@ -1,9 +1,11 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /**
  * CR1000108
  * Tables for Spice variable definitions
  */
-$dictionary['sysdomaindefinitions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdomaindefinitions'] = [
     'table' => 'sysdomaindefinitions',
     'comment' => 'something like sugar var types',
     'audited' => false,
@@ -60,11 +62,11 @@ $dictionary['sysdomaindefinitions'] = [
     ]
 ];
 
-$dictionary['syscustomdomaindefinitions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomaindefinitions'] = [
     'table' => 'syscustomdomaindefinitions',
     'comment' => 'something like sugar var types',
     'audited' => false,
-    'fields' => $dictionary['sysdomaindefinitions']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdomaindefinitions']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdomaindefinitionspk',
@@ -74,7 +76,7 @@ $dictionary['syscustomdomaindefinitions'] = [
     ]
 ];
 
-$dictionary['sysdomainfields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields'] = [
     'table' => 'sysdomainfields',
     'audited' => false,
     'comment' => 'something like database var types',
@@ -179,11 +181,12 @@ $dictionary['sysdomainfields'] = [
         ['name' => 'idx_sysdomainfields_sysdofldvalid', 'type' => 'index', 'fields' => ['sysdomainfieldvalidation_id']],
     ]
 ];
-$dictionary['syscustomdomainfields'] = [
+
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfields'] = [
     'table' => 'syscustomdomainfields',
     'audited' => false,
     'comment' => 'something like database var types',
-    'fields' => $dictionary['sysdomainfields']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields']['fields'],
     'indices' => [
         ['name' => 'syscustomdomainfieldspk', 'type' => 'primary', 'fields' => ['id']],
         ['name' => 'idx_syscustomdomainfields_sysdodefid', 'type' => 'index', 'fields' => ['sysdomaindefinition_id']],
@@ -191,8 +194,7 @@ $dictionary['syscustomdomainfields'] = [
     ]
 ];
 
-
-$dictionary['sysdomainfieldvalidations'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations'] = [
     'table' => 'sysdomainfieldvalidations',
     'comment' => 'holding enum values',
     'audited' => false,
@@ -270,10 +272,10 @@ $dictionary['sysdomainfieldvalidations'] = [
     ]
 ];
 
-$dictionary['syscustomdomainfieldvalidations'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidations'] = [
     'table' => 'syscustomdomainfieldvalidations',
     'audited' => false,
-    'fields' => $dictionary['sysdomainfieldvalidations']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdomainfieldvalidationspk',
@@ -283,7 +285,7 @@ $dictionary['syscustomdomainfieldvalidations'] = [
     ]
 ];
 
-$dictionary['sysdomainfieldvalidationvalues'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalues'] = [
     'table' => 'sysdomainfieldvalidationvalues',
     'audited' => false,
     'fields' =>
@@ -359,10 +361,10 @@ $dictionary['sysdomainfieldvalidationvalues'] = [
     ]
 ];
 
-$dictionary['syscustomdomainfieldvalidationvalues'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidationvalues'] = [
     'table' => 'syscustomdomainfieldvalidationvalues',
     'audited' => false,
-    'fields' => $dictionary['sysdomainfieldvalidationvalues']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalues']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdomainfieldvalidationvaluespk',
@@ -372,8 +374,7 @@ $dictionary['syscustomdomainfieldvalidationvalues'] = [
     ]
 ];
 
-
-$dictionary['sysdictionarydefinitions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = [
     'table' => 'sysdictionarydefinitions',
     'audited' => false,
     'fields' =>
@@ -454,10 +455,10 @@ $dictionary['sysdictionarydefinitions'] = [
     ]
 ];
 
-$dictionary['syscustomdictionarydefinitions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionarydefinitions'] = [
     'table' => 'syscustomdictionarydefinitions',
     'audited' => false,
-    'fields' => $dictionary['sysdictionarydefinitions']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdictionarydefinitionspk',
@@ -477,7 +478,7 @@ $dictionary['syscustomdictionarydefinitions'] = [
     ]
 ];
 
-$dictionary['sysdictionaryitems'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
     'table' => 'sysdictionaryitems',
     'audited' => false,
     'fields' =>
@@ -577,10 +578,11 @@ $dictionary['sysdictionaryitems'] = [
 
     ]
 ];
-$dictionary['syscustomdictionaryitems'] = [
+
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryitems'] = [
     'table' => 'syscustomdictionaryitems',
     'audited' => false,
-    'fields' => $dictionary['sysdictionaryitems']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdictionaryitemspk',
@@ -591,7 +593,7 @@ $dictionary['syscustomdictionaryitems'] = [
     ]
 ];
 
-$dictionary['sysdictionaryindexes'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes'] = [
     'table' => 'sysdictionaryindexes',
     'audited' => false,
     'fields' =>
@@ -656,10 +658,10 @@ $dictionary['sysdictionaryindexes'] = [
     ]
 ];
 
-$dictionary['syscustomdictionaryindexes'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexes'] = [
     'table' => 'syscustomdictionaryindexes',
     'audited' => false,
-    'fields' => $dictionary['sysdictionaryindexes']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdictionaryindexespk',
@@ -674,8 +676,7 @@ $dictionary['syscustomdictionaryindexes'] = [
     ]
 ];
 
-
-$dictionary['sysdictionaryindexitems'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems'] = [
     'table' => 'sysdictionaryindexitems',
     'audited' => false,
     'fields' =>
@@ -736,10 +737,10 @@ $dictionary['sysdictionaryindexitems'] = [
     ]
 ];
 
-$dictionary['syscustomdictionaryindexitems'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexitems'] = [
     'table' => 'syscustomdictionaryindexitems',
     'audited' => false,
-    'fields' => $dictionary['sysdictionaryindexitems']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems']['fields'],
     'indices' => [
         [
             'name' => 'syscustomdictionaryindexitemspk',
@@ -749,7 +750,7 @@ $dictionary['syscustomdictionaryindexitems'] = [
     ]
 ];
 
-$dictionary['sysdictionaryrelationships'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] = [
     'table' => 'sysdictionaryrelationships',
     'fields' => [
         'id' => [
@@ -940,10 +941,9 @@ $dictionary['sysdictionaryrelationships'] = [
     ]
 ];
 
-
-$dictionary['syscustomdictionaryrelationships'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationships'] = [
     'table' => 'syscustomdictionaryrelationships',
-    'fields' => $dictionary['sysdictionaryrelationships']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships']['fields'],
     'indices' => [
         ['name' =>'syscustomdictionaryrelationshipspk', 'type' =>'primary', 'fields'=>['id']],
         ['name' =>'idx_syscustomdictionaryrelationships_name', 'type' =>'index', 'fields'=>['relationship_name']],
@@ -951,8 +951,7 @@ $dictionary['syscustomdictionaryrelationships'] = [
     ]
 ];
 
-
-$dictionary['sysdictionaryrelationshipfields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields'] = [
     'table' => 'sysdictionaryrelationshipfields',
     'comment' => 'represents former rel_fields attribute in link',
     'fields' => [
@@ -1023,9 +1022,9 @@ $dictionary['sysdictionaryrelationshipfields'] = [
     ]
 ];
 
-$dictionary['syscustomdictionaryrelationshipfields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshipfields'] = [
     'table' => 'syscustomdictionaryrelationshipfields',
-    'fields' => $dictionary['sysdictionaryrelationshipfields']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields']['fields'],
     'indices' => [
         ['name' =>'syscustomdictionaryrelationshipfieldspk', 'type' =>'primary', 'fields'=>['id']],
         ['name' =>'idx_syscustomdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
@@ -1033,7 +1032,7 @@ $dictionary['syscustomdictionaryrelationshipfields'] = [
     ]
 ];
 
-$dictionary['sysdictionaryrelationshiprelatefields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields'] = [
     'table' => 'sysdictionaryrelationshiprelatefields',
     'comment' => 'represents former db_concat_fields attribute in relate name',
     'fields' => [
@@ -1089,15 +1088,16 @@ $dictionary['sysdictionaryrelationshiprelatefields'] = [
         ['name' =>'sysdictionaryrelationshiprelatefieldspk', 'type' =>'primary', 'fields'=>['id']],
     ]
 ];
-$dictionary['syscustomdictionaryrelationshiprelatefields'] = [
+
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshiprelatefields'] = [
     'table' => 'syscustomdictionaryrelationshiprelatefields',
-    'fields' => $dictionary['sysdictionaryrelationshiprelatefields']['fields'],
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields']['fields'],
     'indices' => [
         ['name' =>'syscustomdictionaryrelationshiprelatefieldspk', 'type' =>'primary', 'fields'=>['id']],
     ]
 ];
 
-$dictionary['sysdictionaryfields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
     'table' => 'sysdictionaryfields',
     'comment' => 'used to cache parsed dictionary field definitions',
     'fields' => [

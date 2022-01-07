@@ -1,11 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: maretval
- * Date: 06.06.2018
- * Time: 18:30
- */
-$dictionary['syslogs'] = [
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['syslogs'] = [
     'table' => 'syslogs',
     'fields' => [
         'id' => [
@@ -91,8 +88,7 @@ $dictionary['syslogs'] = [
     ]
 ];
 
-
-$dictionary['syslogusers'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syslogusers'] = [
     'table' => 'syslogusers',
     'fields' => [
         'id' => [

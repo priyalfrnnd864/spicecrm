@@ -1,6 +1,8 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syststatusnetworks'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syststatusnetworks'] = [
     'table' => 'syststatusnetworks',
     'fields' => [
         'id' => [
@@ -43,6 +45,11 @@ $dictionary['syststatusnetworks'] = [
         ],
         'required_model_state' => [
             'name' => 'required_model_state',
+            'type' => 'varchar',
+            'len' => 100
+        ],
+        'required_model_acl_action' => [
+            'name' => 'required_model_acl_action',
             'type' => 'varchar',
             'len' => 100
         ]

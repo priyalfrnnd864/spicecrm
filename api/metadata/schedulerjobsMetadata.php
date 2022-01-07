@@ -1,9 +1,10 @@
 <?php
-/***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-
-$dictionary['schedulerjobs_schedulerjobtasks'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['schedulerjobs_schedulerjobtasks'] = [
     'table' => 'schedulerjobs_schedulerjobtasks',
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		'id' => [
 			'name' => 'id',
@@ -57,7 +58,7 @@ $dictionary['schedulerjobs_schedulerjobtasks'] = [
     ],
 ];
 
-$dictionary['SchedulerJobLog'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SchedulerJobLog'] = [
     'table' => 'schedulerjob_log',
     'comment' => 'Scheduler Job tasks execution log',
     'fields' => [

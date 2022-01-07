@@ -1,6 +1,10 @@
 <?php
-$dictionary['servicequeues_users'] = [
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['servicequeues_users'] = [
     'table' => 'servicequeues_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

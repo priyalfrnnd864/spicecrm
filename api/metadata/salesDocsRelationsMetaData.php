@@ -1,7 +1,8 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-
-$dictionary ['salesdocsflow'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['salesdocsflow'] = [
     'table' => 'salesdocsflow',
     'fields' => [
         ['name' => 'id', 'type' => 'id'],
@@ -30,7 +31,7 @@ $dictionary ['salesdocsflow'] = [
     ]
 ];
 
-$dictionary ['salesdocsitemsflow'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['salesdocsitemsflow'] = [
     'table' => 'salesdocsitemsflow',
     'fields' => [
         ['name' => 'id', 'type' => 'id'],

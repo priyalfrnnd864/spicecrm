@@ -1,6 +1,8 @@
 <?php
+/***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary ['spiceaclprofiles_ldap_groups'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_ldap_groups'] = [
     'table' => 'spiceaclprofiles_ldap_groups',
     'fields' => [
         'id' => [
@@ -44,4 +46,3 @@ $dictionary ['spiceaclprofiles_ldap_groups'] = [
 
     ]
 ];
-
