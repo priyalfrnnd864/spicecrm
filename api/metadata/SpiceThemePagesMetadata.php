@@ -1,8 +1,10 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['spicethemepages_users'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicethemepages_users'] = [
     'table' => 'spicethemepages_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'spicethemepage_id', 'type' => 'varchar', 'len' => '36'],
@@ -28,8 +30,9 @@ $dictionary['spicethemepages_users'] = [
     ]
 ];
 
-$dictionary['spicethemepages_aclroles'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicethemepages_aclroles'] = [
     'table' => 'spicethemepages_aclroles',
+    'contenttype'   => 'relationdata',
     'fields' => [
         ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
         ['name' => 'spicethemepage_id', 'type' => 'varchar', 'len' => '36'],
@@ -54,4 +57,3 @@ $dictionary['spicethemepages_aclroles'] = [
             'join_key_rhs' => 'aclrole_id']
     ]
 ];
-?>

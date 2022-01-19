@@ -1,8 +1,10 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['users_qualifications'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['users_qualifications'] = [
     'table' => 'users_qualifications',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

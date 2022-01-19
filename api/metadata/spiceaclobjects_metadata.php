@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['SpiceACLModuleFields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLModuleFields'] = [
     'table' => 'spiceaclmodulefields',
     'fields' => [
         'id' => [
@@ -63,8 +64,7 @@ $dictionary['SpiceACLModuleFields'] = [
     ]
 ];
 
-
-$dictionary['SpiceACLStandardActions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLStandardActions'] = [
     'table' => 'spiceaclstandardactions',
     'fields' => [
         'id' => [
@@ -104,7 +104,7 @@ $dictionary['SpiceACLStandardActions'] = [
     ]
 ];
 
-$dictionary['SpiceACLModuleActions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLModuleActions'] = [
     'table' => 'spiceaclmoduleactions',
     'fields' => [
         'id' => [
@@ -136,6 +136,13 @@ $dictionary['SpiceACLModuleActions'] = [
             'vname' => 'LBL_STANDARDACTION',
             'type' => 'varchar',
             'len' => 1
+        ],
+        'description' => [
+            'name' => 'description',
+            'vname' => 'LBL_description',
+            'type' => 'varchar',
+            'len' => 255,
+            'comment' => ' a short description what this action is intended to check for'
         ]
     ],
     'indices' => [
@@ -152,7 +159,7 @@ $dictionary['SpiceACLModuleActions'] = [
     ]
 ];
 
-$dictionary['SpiceACLObjectActions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLObjectActions'] = [
     'table' => 'spiceaclobjectactions',
     'fields' => [
         'id' => [
@@ -181,7 +188,7 @@ $dictionary['SpiceACLObjectActions'] = [
     ]
 ];
 
-$dictionary['spiceaclobjectvalues'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spiceaclobjectvalues'] = [
     'table' => 'spiceaclobjectvalues',
     'fields' => [
         'id' => [
@@ -229,7 +236,7 @@ $dictionary['spiceaclobjectvalues'] = [
     ]
 ];
 
-$dictionary['SpiceACLObjectsTerritoryElementValues'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLObjectsTerritoryElementValues'] = [
     'table' => 'spiceaclobjectsterritoryelementvalues',
     'fields' => [
         'spiceaclobject_id' => [
@@ -259,7 +266,7 @@ $dictionary['SpiceACLObjectsTerritoryElementValues'] = [
     ]
 ];
 
-$dictionary['SpiceACLObjectFields'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLObjectFields'] = [
     'table' => 'spiceaclobjectfields',
     'fields' => [
         'id' => [
@@ -295,7 +302,7 @@ $dictionary['SpiceACLObjectFields'] = [
     ]
 ];
 
-$dictionary['SpiceACLObjects_hash'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLObjects_hash'] = [
     'table' => 'spiceaclobjects_hash',
     'fields' => [
         'hash_id' => [

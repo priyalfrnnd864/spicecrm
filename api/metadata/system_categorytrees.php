@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['syscategorytreenodes'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreenodes'] = [
     'table' => 'syscategorytreenodes',
     'fields' => [
         'id' => [
@@ -12,7 +13,7 @@ $dictionary['syscategorytreenodes'] = [
         'node_name' => [
             'name' => 'node_name',
             'type' => 'varchar',
-            'comment'=> 'the name resp label of the node'
+            'comment' => 'the name resp label of the node'
         ],
         'node_key' => [
             'name' => 'node_key',
@@ -35,6 +36,28 @@ $dictionary['syscategorytreenodes'] = [
             'type' => 'id',
             'comment' => 'the id of a parent node inteh tree hiearchy'
         ],
+        'valid_from' => [
+            'name' => 'valid_from',
+            'type' => 'datetime',
+            'comment' => 'the date this is valid from'
+        ],
+        'valid_to' => [
+            'name' => 'valid_to',
+            'type' => 'datetime',
+            'comment' => 'the date this is valid to'
+        ],
+        'node_status' => [
+            'name' => 'node_status',
+            'type' => 'varchar',
+            'len' => 1,
+            'comment' => 'the status a for active, i for inactive'
+        ],
+        'add_params' => [
+            'name' => 'add_params',
+            'type' => 'json',
+            'dbtype' => 'shorttext',
+            'comment' => 'optional additonal data'
+        ],
         'syscategorytree_id' => [
             'name' => 'syscategorytree_id',
             'type' => 'id',
@@ -55,8 +78,7 @@ $dictionary['syscategorytreenodes'] = [
     ]
 ];
 
-
-$dictionary['syscategorytrees'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscategorytrees'] = [
     'table' => 'syscategorytrees',
     'fields' => [
         'id' => [
@@ -66,6 +88,12 @@ $dictionary['syscategorytrees'] = [
         'name' => [
             'name' => 'name',
             'type' => 'varchar',
+        ],
+        'add_params_component' => [
+            'name' => 'add_params_component',
+            'type' => 'varchar',
+            'len' => 100,
+            'comment' => 'component to manage additonal data'
         ]
     ],
     'indices' => [

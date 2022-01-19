@@ -1,11 +1,11 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-global $dictionary;
-$dictionary['roles_modules'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['roles_modules'] = [
 
 	'table' => 'roles_modules',
-
+    'contenttype'   => 'relationdata',
 	'fields' => [
 		[
 			'name' => 'id',
@@ -54,6 +54,4 @@ $dictionary['roles_modules'] = [
 			'fields' => ['module_id']
         ],
     ],
-]
-                                  
-?>
+];

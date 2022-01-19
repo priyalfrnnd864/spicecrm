@@ -1,7 +1,10 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-$dictionary['mailboxes_users'] = [
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['mailboxes_users'] = [
     'table' => 'mailboxes_users',
+    'contenttype'   => 'relationdata',
     'fields' => [
         'id' => [
             'name' => 'id',

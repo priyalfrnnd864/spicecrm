@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['spicefavorites'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicefavorites'] = [
 	'table' => 'spicefavorites',
 	'fields' => [
 		'beanid' => [
@@ -40,7 +41,8 @@ $dictionary['spicefavorites'] = [
     ],
 
 ];
-$dictionary['spicereminders'] = [
+
+SpiceDictionaryHandler::getInstance()->dictionary['spicereminders'] = [
 	'table'=> 'spicereminders',
 	'fields'=> [
         'user_id' =>
@@ -71,7 +73,7 @@ $dictionary['spicereminders'] = [
     ],
 ];
 
-$dictionary['spicenotes'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spicenotes'] = [
 		'table' => 'spicenotes',
 		'fields' => [
 				'id' => [
@@ -132,7 +134,7 @@ $dictionary['spicenotes'] = [
 
 ];
 
-$dictionary['spiceattachments'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments'] = [
 	'table'  => 'spiceattachments',
 	'fields' => [
 		'id' => [
@@ -233,7 +235,7 @@ $dictionary['spiceattachments'] = [
 	],
 ];
 
-$dictionary['spiceattachments_categories'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments_categories'] = [
 	'table'  => 'spiceattachments_categories',
 	'fields' => [
 		'id' => [

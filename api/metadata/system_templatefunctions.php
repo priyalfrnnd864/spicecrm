@@ -1,7 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-$dictionary['systemplatefunctions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['systemplatefunctions'] = [
     'table' => 'systemplatefunctions',
     'fields' => [
         'id' => [
@@ -48,7 +49,7 @@ $dictionary['systemplatefunctions'] = [
     ]
 ];
 
-$dictionary['syscustomtemplatefunctions'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomtemplatefunctions'] = [
     'table' => 'syscustomtemplatefunctions',
     'fields' => [
         'id' => [
