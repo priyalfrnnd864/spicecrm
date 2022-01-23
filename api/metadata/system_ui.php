@@ -1093,7 +1093,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysmodules'] = [
         'duplicatecheck' => [
             'name' => 'duplicatecheck',
             'type' => 'int',
-            'len' => 1
+            'len' => 1,
+            'comment' => '0 no duplicate check, 1 regular and ongoing, 2 only on save'
         ],
         'actionset' => [
             'name' => 'actionset',

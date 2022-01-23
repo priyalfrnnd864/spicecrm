@@ -12,9 +12,9 @@ import {toast} from "../../services/toast.service";
 import {configurationService} from "../../services/configuration.service";
 
 import {modal} from '../../services/modal.service';
-import {SelectTreeAddDialog} from "./selecttreeadddialog";
 
 declare var _:any;
+declare var moment:any;
 
 @Component({
     selector: 'categgory-tree-manager',
@@ -162,7 +162,7 @@ export class CategoryTreeManager {
         this.loading = true;
         this.activeTreeNodes = [];
         this.selectedTreeNodes = [null, null, null, null];
-        this.backend.getRequest(`configuration/spiceui/core/categorytrees/${this.activeTree}/categorytreenodes`).subscribe(
+        this.backend.getRequest(`configuration/spiceui/core/categorytrees/${this.activeTree}/categorytreenodes`, {all: true}).subscribe(
             (treenodes: any) => {
                 //  this.config.setData('select_tree', treenodes);
                 this.activeTreeNodes = treenodes;
@@ -174,6 +174,26 @@ export class CategoryTreeManager {
                 this.toast.sendToast('Error Loading Data', 'error');
             }
         );
+    }
+
+    /**
+     * returns a color class for the node dpending on status and dates
+     *
+     * @param node
+     */
+    public getNodeStyle(node){
+        // created to be displayed green
+        if(node.node_status == 'c'){
+            return 'slds-text-color_success';
+        }
+
+        // inactive or not in date range to be displayed red
+        let now = new moment();
+        if(node.node_status == 'i' || now.isBefore(node.valid_from) || now.isAfter(node.valid_to)){
+            return 'slds-text-color_error';
+        }
+
+        return '';
     }
 
     /**
