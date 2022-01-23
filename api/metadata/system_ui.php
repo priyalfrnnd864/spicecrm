@@ -596,6 +596,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentsets'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentsets'] = [
     'table' => 'sysuicustomcomponentsets',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'name'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentsets']['fields'],
     'indices' => [
         [
@@ -659,6 +663,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentsetscomponents'
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentsetscomponents'] = [
     'table' => 'sysuicustomcomponentsetscomponents',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'component'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentsetscomponents']['fields'],
     'indices' => [
         [
@@ -714,6 +722,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldsets'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomfieldsets'] = [
     'table' => 'sysuicustomfieldsets',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'module'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldsets']['fields'],
     'indices' => [
         [
@@ -782,6 +794,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldsetsitems'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomfieldsetsitems'] = [
     'table' => 'sysuicustomfieldsetsitems',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'field'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldsetsitems']['fields'],
     'indices' => [
         [
@@ -844,6 +860,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiactionsets'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomactionsets'] = [
     'table' => 'sysuicustomactionsets',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'action'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuiactionsets']['fields'],
     'indices' => [
         [
@@ -919,6 +939,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiactionsetitems'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomactionsetitems'] = [
     'table' => 'sysuicustomactionsetitems',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'action'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuiactionsetitems']['fields'],
     'indices' => [
         [
@@ -1168,6 +1192,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysmodules'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['syscustommodules'] = [
     'table' => 'syscustommodules',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'module'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysmodules']['fields'],
     'indices' => [
         [
@@ -1291,6 +1319,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentdefaultconf'] =
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentdefaultconf'] = [
     'table' => 'sysuicustomcomponentdefaultconf',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'component'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -1384,6 +1416,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentmoduleconf'] = 
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentmoduleconf'] = [
     'table' => 'sysuicustomcomponentmoduleconf',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'component'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -1433,6 +1469,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentmodulecon
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysmodulelists'] = [
     'table' => 'sysmodulelists',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'module'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -1882,6 +1922,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuirolemodules'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomrolemodules'] = [
     'table' => 'sysuicustomrolemodules',
+    'changerequests' => [
+        'active' => true,
+        'name' => ['sysuirole_id', 'module']
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -1927,6 +1971,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomrolemodules'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiadmingroups'] = [
     'table' => 'sysuiadmingroups',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'name'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -1968,6 +2016,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiadmingroups'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomadmingroups'] = [
     'table' => 'sysuicustomadmingroups',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'name'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -2184,6 +2236,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldtypemapping'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomfieldtypemapping'] = [
     'table' => 'sysuicustomfieldtypemapping',
+    'changerequests' => [
+        'active' => true,
+        'name' => ['fieldtype']
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -2289,6 +2345,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicopyrules'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcopyrules'] = [
     'table' => 'sysuicustomcopyrules',
+    'changerequests' => [
+        'active' => true,
+        'name' => ['frommodule', 'tomodule', 'tofield']
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -2385,6 +2445,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceimportlogs'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidations'] = [
     'table' => 'sysuimodelvalidations',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'name'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -2441,6 +2505,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidations'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidationconditions'] = [
     'table' => 'sysuimodelvalidationconditions',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'fieldname'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -2491,6 +2559,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidationcondition
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidationactions'] = [
     'table' => 'sysuimodelvalidationactions',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'fieldname'
+    ],
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -2534,56 +2606,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidationactions']
             'type' => 'primary',
             'fields' => ['id'],
         ],
-    ],
-];
-
-SpiceDictionaryHandler::getInstance()->dictionary['sysmailrelais'] = [
-    'table' => 'sysmailrelais',
-    'fields' => [
-        'id' => [
-            'name' => 'id',
-            'type' => 'id'
-        ],
-        'name' => [
-            'name' => 'name',
-            'type' => 'varchar',
-            'len' => 50,
-            'required' => true,
-        ],
-        'service' => [
-            'name' => 'service',
-            'type' => 'varchar',
-            'len' => 50,
-            'required' => true,
-        ],
-        'api_key' => [
-            'name' => 'api_key',
-            'type' => 'varchar'
-        ],
-        'username' => [
-            'name' => 'username',
-            'type' => 'varchar'
-        ],
-        'password' => [
-            'name' => 'password',
-            'type' => 'varchar'
-        ],
-        'from_email' => [
-            'name' => 'from_email',
-            'type' => 'varchar'
-        ],
-        'from_name' => [
-            'name' => 'from_name',
-            'type' => 'varchar'
-        ],
-
-    ],
-    'indices' => [
-        [
-            'name' => 'idx_sysmailrelais',
-            'type' => 'primary',
-            'fields' => ['id'],
-        ]
     ],
 ];
 
@@ -2633,6 +2655,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuilibs'] = [
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomlibs'] = [
     'table' => 'sysuicustomlibs',
+    'changerequests' => [
+        'active' => true,
+        'name' => 'name'
+    ],
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysuilibs']['fields'],
     'indices' => [
         [
