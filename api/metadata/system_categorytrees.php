@@ -63,6 +63,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreenodes'] = [
             'type' => 'id',
             'comment' => 'the id of the tree this node belongs to'
         ],
+        'deleted' => [
+            'name' => 'deleted',
+            'type' => 'bool',
+            'default' => 0,
+            'comment' => 'indicates this one is deleted'
+        ],
     ],
     'indices' => [
         [
