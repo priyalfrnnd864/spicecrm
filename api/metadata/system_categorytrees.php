@@ -15,6 +15,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreenodes'] = [
             'type' => 'varchar',
             'comment' => 'the name resp label of the node'
         ],
+        'node_description' => [
+            'name' => 'node_description',
+            'type' => 'shorttext',
+            'len' => 1000,
+            'comment' => 'a short description to be displayed'
+        ],
         'node_key' => [
             'name' => 'node_key',
             'type' => 'varchar',
@@ -62,6 +68,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreenodes'] = [
             'name' => 'syscategorytree_id',
             'type' => 'id',
             'comment' => 'the id of the tree this node belongs to'
+        ],
+        'deleted' => [
+            'name' => 'deleted',
+            'type' => 'bool',
+            'default' => 0,
+            'comment' => 'indicates this one is deleted'
         ],
     ],
     'indices' => [
