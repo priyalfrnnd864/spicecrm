@@ -1,6 +1,5 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
-global $dictionary;
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
 SpiceDictionaryHandler::getInstance()->dictionary['authentication_services'] = [
