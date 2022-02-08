@@ -1,7 +1,9 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
 global $dictionary;
-$dictionary['authentication_services'] = [
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
+SpiceDictionaryHandler::getInstance()->dictionary['authentication_services'] = [
     'table' => 'authentication_services',
     'fields' => [
         'id' => [
@@ -50,7 +52,7 @@ $dictionary['authentication_services'] = [
     ],
 ];
 
-$dictionary['sysauthconfig'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['sysauthconfig'] = [
     'table' => 'sysauthconfig',
     'fields' => [
         'name' => [
