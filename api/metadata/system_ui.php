@@ -2970,7 +2970,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysevalanche_fieldmapping'] =
         ]
     ]
 ];
-$dictionary['syssendinblue_fieldmapping'] = [
+SpiceDictionaryHandler::getInstance()->dictionary['syssendinblue_fieldmapping'] = [
     'table' => 'syssendinblue_fieldmapping',
     'audited' => true,
     'fields' => [
