@@ -74,12 +74,5 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysauthconfig'] = [
             'dbtype' => 'text',
             'comment' => 'holds the configuration of the service'
         ]
-    ],
-    'indices' => [
-        [
-            'name' => 'oauth_pk',
-            'type' => 'primary',
-            'fields' => ['issuer']
-        ]
-    ],
+    ]
 ];
