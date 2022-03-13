@@ -2630,8 +2630,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuilibs'] = [
             'name' => 'src',
             'type' => 'varchar',
         ],
-        'rank' => [
-            'name' => 'rank',
+        'sequence' => [
+            'name' => 'sequence',
             'type' => 'int',
         ],
         'version' => [
