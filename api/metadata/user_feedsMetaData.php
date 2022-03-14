@@ -9,7 +9,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['users_feeds'] = [
 
        ['name' =>'user_id', 'type' =>'varchar', 'len'=>'36',]
       , ['name' =>'feed_id', 'type' =>'varchar', 'len'=>'36',]
-      , ['name' =>'sequence', 'type' =>'int', 'required' => false]
+      , ['name' =>'feedsequence', 'type' =>'int', 'required' => false]
       , ['name' => 'date_modified','type' => 'datetime']
       , ['name' =>'deleted', 'type' =>'bool', 'len'=>'', 'default'=>'0', 'required' => false]
     ],
