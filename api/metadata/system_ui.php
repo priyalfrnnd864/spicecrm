@@ -2630,8 +2630,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuilibs'] = [
             'name' => 'src',
             'type' => 'varchar',
         ],
-        'sequence' => [
-            'name' => 'sequence',
+        'libsequence' => [
+            'name' => 'libsequence',
             'type' => 'int',
         ],
         'version' => [
