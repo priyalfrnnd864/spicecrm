@@ -308,8 +308,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalue
                 'type' => 'varchar',
                 'len' => 160
             ],
-            'maxvalue' => [
-                'name' => 'maxvalue',
+            'maxval' => [
+                'name' => 'maxval',
                 'type' => 'varchar',
                 'len' => 160
             ],
