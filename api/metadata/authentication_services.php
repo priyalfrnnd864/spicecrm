@@ -71,14 +71,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysauthconfig'] = [
             'name' => 'config',
             'vname' => 'LBL_CONFIG',
             'type' => 'json',
+            'dbtype' => 'text',
             'comment' => 'holds the configuration of the service'
         ]
-    ],
-    'indices' => [
-        [
-            'name' => 'oauth_pk',
-            'type' => 'primary',
-            'fields' => ['issuer']
-        ]
-    ],
+    ]
 ];

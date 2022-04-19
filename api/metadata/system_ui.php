@@ -2,6 +2,34 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+
+SpiceDictionaryHandler::getInstance()->dictionary['sysuiassets'] = [
+    'table' => 'sysuiassets',
+    'audited' => true,
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'assetkey' => [
+            'name' => 'assetkey',
+            'type' => 'id'
+        ],
+        'assetvalue' => [
+            'name' => 'assetvalue',
+            'type' => 'longtext'
+        ],
+    ],
+    'indices' => [
+        [
+            'name' => 'idx_sysuiassets',
+            'type' => 'primary',
+            'fields' => ['id']
+        ]
+    ]
+];
+
+
 SpiceDictionaryHandler::getInstance()->dictionary['systextids_modules'] = [
     'table' => 'systextids_modules',
     'audited' => true,
@@ -2630,8 +2658,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuilibs'] = [
             'name' => 'src',
             'type' => 'varchar',
         ],
-        'rank' => [
-            'name' => 'rank',
+        'libsequence' => [
+            'name' => 'libsequence',
             'type' => 'int',
         ],
         'version' => [
