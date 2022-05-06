@@ -73,8 +73,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscountrystates'] = [
         'google_aa' => [
             'name' => 'google_aa',
             'type' => 'varchar',
-            'len' => 50,
-            'comment' => 'the subdivison code according to Google which is not necessarily conforming'
+            'len' => 100,
+            'comment' => 'the subdivision code according to Google which is not necessarily conforming'
         ],
         'label' => [
             'name' => 'label',
