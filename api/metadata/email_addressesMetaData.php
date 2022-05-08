@@ -87,7 +87,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['emails_email_addr_rel'] = [
 ];
 
 /**
- * Relationship table linking email addresses to various SugarBeans or type Person
+ * Relationship table linking email addresses to various SpiceBeans or type Person
  */
 SpiceDictionaryHandler::getInstance()->dictionary['email_addr_bean_rel'] = [
     'table' => 'email_addr_bean_rel',

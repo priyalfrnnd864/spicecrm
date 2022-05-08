@@ -2,7 +2,7 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /**
- * Relationship table linking emails with 1 or more SugarBeans
+ * Relationship table linking emails with 1 or more SpiceBeans
  */
 SpiceDictionaryHandler::getInstance()->dictionary['emails_beans'] = [
     'table' => 'emails_beans',
