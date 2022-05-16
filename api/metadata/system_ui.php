@@ -1900,6 +1900,42 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiuserroles'] = [
     ]
 ];
 
+SpiceDictionaryHandler::getInstance()->dictionary['sysuiorgunitroles'] = [
+    'table' => 'sysuiorgunitroles',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'orgunit_id' => [
+            'name' => 'orgunit_id',
+            'type' => 'id'
+        ],
+        'sysuirole_id' => [
+            'name' => 'sysuirole_id',
+            'type' => 'id'
+        ],
+        'defaultrole' => [
+            'name' => 'defaultrole',
+            'type' => 'int',
+            'len' => 1,
+            'default' => 0
+        ]
+    ],
+    'indices' => [
+        [
+            'name' => 'idx_sysuiorgunitroles',
+            'type' => 'primary',
+            'fields' => ['id']
+        ],
+        [
+            'name' => 'idx_sysuiorgunitroles_orgunitid',
+            'type' => 'index',
+            'fields' => ['orgunit_id']
+        ]
+    ]
+];
+
 SpiceDictionaryHandler::getInstance()->dictionary['sysuirolemodules'] = [
     'table' => 'sysuirolemodules',
     'changerequests' => [
