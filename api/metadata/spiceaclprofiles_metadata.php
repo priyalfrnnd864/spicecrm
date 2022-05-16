@@ -112,8 +112,66 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_users'] = [
             'rhs_table' => 'spiceaclprofiles',
             'rhs_key' => 'id',
             'relationship_type' => 'many-to-many',
-            'join_table' => 'projects_contacts',
+            'join_table' => 'spiceaclprofiles_users',
             'join_key_lhs' => 'user_id',
+            'join_key_rhs' => 'spiceaclprofile_id',
+        ]
+    ]
+];
+
+SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_orgunits'] = [
+    'table' => 'spiceaclprofiles_orgunits',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'orgunit_id' => [
+            'name' => 'orgunit_id',
+            'type' => 'id'
+        ],
+        'spiceaclprofile_id' => [
+            'name' => 'spiceaclprofile_id',
+            'type' => 'id'
+        ],
+        'date_modified' => [
+            'name' => 'date_modified',
+            'type' => 'datetime'
+        ],
+        'deleted' => [
+            'name' => 'deleted',
+            'type' => 'bool',
+            'default' => '0'
+        ]
+    ],
+    'indices' => [
+        'spiceaclprofiles_orgunits_pk' => [
+            'name' => 'spiceaclprofiles_orgunits_pk',
+            'type' => 'primary',
+            'fields' => ['id']
+        ],
+        'spiceaclprofiles_orgunits_orgunitid' => [
+            'name' => 'spiceaclprofiles_orgunits_orgunitid',
+            'type' => 'index',
+            'fields' => ['uorgunit_id']
+        ],
+        'spiceaclprofiles_orgunits_profileid' => [
+            'name' => 'spiceaclprofiles_orgunits_profileid',
+            'type' => 'index',
+            'fields' => ['uorgunit_id', 'spiceaclprofile_id']
+        ]
+    ],
+    'relationships' => [
+        'spiceaclprofiles_orgunits' => [
+            'lhs_module' => 'OrgUnits',
+            'lhs_table' => 'orgunits',
+            'lhs_key' => 'id',
+            'rhs_module' => 'SpiceACLProfiles',
+            'rhs_table' => 'spiceaclprofiles',
+            'rhs_key' => 'id',
+            'relationship_type' => 'many-to-many',
+            'join_table' => 'spiceaclprofiles_orgunits',
+            'join_key_lhs' => 'orgunit_id',
             'join_key_rhs' => 'spiceaclprofile_id',
         ]
     ]
