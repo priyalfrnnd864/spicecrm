@@ -153,12 +153,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_orgunits'] =
         'spiceaclprofiles_orgunits_orgunitid' => [
             'name' => 'spiceaclprofiles_orgunits_orgunitid',
             'type' => 'index',
-            'fields' => ['uorgunit_id']
+            'fields' => ['orgunit_id']
         ],
         'spiceaclprofiles_orgunits_profileid' => [
             'name' => 'spiceaclprofiles_orgunits_profileid',
             'type' => 'index',
-            'fields' => ['uorgunit_id', 'spiceaclprofile_id']
+            'fields' => ['orgunit_id', 'spiceaclprofile_id']
         ]
     ],
     'relationships' => [
