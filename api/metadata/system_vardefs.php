@@ -1144,27 +1144,50 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
             'name' => 'id',
             'type' => 'id'
         ],
+        'sysdictionaryname' => [
+            'name' => 'sysdictionaryname',
+            'type' => 'varchar',
+            'len' => 150,
+            'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
+        'sysdictionarytablename' => [
+            'name' => 'sysdictionarytablename',
+            'type' => 'varchar',
+            'len' => 150,
+            'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
+        'sysdictionarytableaudited' => [
+            'name' => 'sysdictionarytableaudited',
+            'type' => 'int',
+            'len' => 1,
+            'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
         'sysdictionarydefinition_id' => [
             'name' => 'sysdictionarydefinition_id',
-            'type' => 'id'
+            'type' => 'id',
+            'comment' => 'the ID of the sysdictionary definition related to this entry'
         ],
         'sysdomainfield_id' => [
             'name' => 'sysdomainfield_id',
-            'type' => 'id'
+            'type' => 'id',
+            'comment' => 'the ID of the sysdomainfield related to this entry. Not used yet - waiting for full migration'
         ],
         'fieldname' => [
             'name' => 'fieldname',
-            'type' => 'varchar'
+            'type' => 'varchar',
+            'comment' => 'the field name'
         ],
         'fieldtype' => [
             'name' => 'fieldtype',
             'type' => 'varchar',
             'len' => 20,
+            'comment' => 'the field ytpe'
         ],
         'fielddefinition' => [
             'name' => 'fielddefinition',
             'type' => 'json',
             'dbtype' => 'text',
+            'comment' => 'the full field configuration as json'
         ]
 
     ],
@@ -1172,5 +1195,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
         ['name' =>'sysdictionaryfieldspk', 'type' =>'primary', 'fields'=>['id']],
         ['name' =>'idx_sysdictionaryfields_defid', 'type' =>'index', 'fields'=>['sysdictionarydefinition_id']],
         ['name' =>'idx_sysdictionaryfields_domid', 'type' =>'index', 'fields'=>['sysdomainfield_id']],
+        ['name' =>'idx_sysdictionaryfields_field', 'type' =>'index', 'fields'=>['fieldname']],
     ]
 ];
