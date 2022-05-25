@@ -228,12 +228,14 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations'] =
 //            ],
             'order_by' => [
                 'name' => 'order_by',
-                'type' => 'varchar'
+                'type' => 'varchar',
+                'comment' => 'name of field to sort by'
             ],
             'sort_flag' => [
                 'name' => 'sort_flag',
                 'type' => 'varchar',
                 'len' => 5,
+                'comment' => 'possible values: asc|desc'
             ],
             'description' => [
                 'name' => 'description',
@@ -269,6 +271,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations'] =
             'type' => 'primary',
             'fields' => ['id']
         ],
+        [
+            'name' => 'sysdomainfieldvalidations_alt',
+            'type' => 'unique',
+            'fields' => ['name']
+        ],
+        [
+            'name' => 'syscustomdomainfieldvalidations_statusdel',
+            'type' => 'index',
+            'fields' => ['status', 'deleted']
+        ],
     ]
 ];
 
@@ -281,6 +293,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidatio
             'name' => 'syscustomdomainfieldvalidationspk',
             'type' => 'primary',
             'fields' => ['id']
+        ],
+        [
+            'name' => 'syscustomdomainfieldvalidations_alt',
+            'type' => 'unique',
+            'fields' => ['name']
+        ],
+        [
+            'name' => 'syscustomdomainfieldvalidations_statusdel',
+            'type' => 'index',
+            'fields' => ['status', 'deleted']
         ],
     ]
 ];
@@ -298,21 +320,28 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalue
                 'name' => 'sysdomainfieldvalidation_id',
                 'type' => 'id',
             ],
+            'valuetype' => [
+                'name' => 'valuetype',
+                'type' => 'varchar',
+                'len' => 12,
+                'comment' => 'type for the value: string|integer'
+            ],
             'enumvalue' => [
                 'name' => 'enumvalue',
                 'type' => 'varchar',
-                'len' => 160
+                'len' => 160,
+                'comment' => 'the key saved to the table'
             ],
-            'minvalue' => [
-                'name' => 'minvalue',
-                'type' => 'varchar',
-                'len' => 160
-            ],
-            'maxval' => [
-                'name' => 'maxval',
-                'type' => 'varchar',
-                'len' => 160
-            ],
+//            'minvalue' => [
+//                'name' => 'minvalue',
+//                'type' => 'varchar',
+//                'len' => 160
+//            ],
+//            'maxvalue' => [
+//                'name' => 'maxvalue',
+//                'type' => 'varchar',
+//                'len' => 160
+//            ],
             'sequence' => [
                 'name' => 'sequence',
                 'type' => 'int',
@@ -358,6 +387,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalue
             'type' => 'primary',
             'fields' => ['id']
         ],
+        [
+            'name' => 'sysdomainfieldvalidationvalues_validstatusdel',
+            'type' => 'index',
+            'fields' => ['sysdomainfieldvalidation_id', 'status', 'deleted']
+        ],
     ]
 ];
 
@@ -370,6 +404,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidatio
             'name' => 'syscustomdomainfieldvalidationvaluespk',
             'type' => 'primary',
             'fields' => ['id']
+        ],
+        [
+            'name' => 'syscustomdomainfieldvalidationvalues_validstatusdel',
+            'type' => 'index',
+            'fields' => ['sysdomainfieldvalidation_id', 'status', 'deleted']
         ],
     ]
 ];
@@ -435,7 +474,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = 
                 'type' => 'bool',
                 'default' => 0
             ]
-    ],
+        ],
     'indices' => [
         [
             'name' => 'sysdictionarydefinitionspk',
@@ -861,7 +900,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
             'type' => 'varchar',
             'len' => 100
         ],
-		'join_sysdictionarydefinition_id' => [
+        'join_sysdictionarydefinition_id' => [
             'name' => 'join_sysdictionarydefinition_id',
             'vname' => 'LBL_JOIN_TABLE',
             'type' => 'id',
@@ -1105,28 +1144,57 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
             'name' => 'id',
             'type' => 'id'
         ],
+        'sysdictionaryname' => [
+            'name' => 'sysdictionaryname',
+            'type' => 'varchar',
+            'len' => 150,
+            'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
+        'sysdictionarytablename' => [
+            'name' => 'sysdictionarytablename',
+            'type' => 'varchar',
+            'len' => 150,
+            'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
+        'sysdictionarytableaudited' => [
+            'name' => 'sysdictionarytableaudited',
+            'type' => 'int',
+            'len' => 1,
+            'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
         'sysdictionarydefinition_id' => [
             'name' => 'sysdictionarydefinition_id',
-            'type' => 'id'
+            'type' => 'id',
+            'comment' => 'the ID of the sysdictionary definition related to this entry'
+        ],
+        'sysdomainfield_id' => [
+            'name' => 'sysdomainfield_id',
+            'type' => 'id',
+            'comment' => 'the ID of the sysdomainfield related to this entry. Not used yet - waiting for full migration'
         ],
         'fieldname' => [
             'name' => 'fieldname',
-            'type' => 'varchar'
+            'type' => 'varchar',
+            'comment' => 'the field name'
         ],
         'fieldtype' => [
             'name' => 'fieldtype',
             'type' => 'varchar',
             'len' => 20,
+            'comment' => 'the field ytpe'
         ],
         'fielddefinition' => [
             'name' => 'fielddefinition',
             'type' => 'json',
             'dbtype' => 'text',
+            'comment' => 'the full field configuration as json'
         ]
 
     ],
     'indices' => [
         ['name' =>'sysdictionaryfieldspk', 'type' =>'primary', 'fields'=>['id']],
         ['name' =>'idx_sysdictionaryfields_defid', 'type' =>'index', 'fields'=>['sysdictionarydefinition_id']],
+        ['name' =>'idx_sysdictionaryfields_domid', 'type' =>'index', 'fields'=>['sysdomainfield_id']],
+        ['name' =>'idx_sysdictionaryfields_field', 'type' =>'index', 'fields'=>['fieldname']],
     ]
 ];
