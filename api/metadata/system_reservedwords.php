@@ -15,12 +15,14 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysreservedwords'] = [
         [
             'id' => [
                 'name' => 'id',
-                'type' => 'id'
+                'type' => 'id',
+                'comment' => 'record id'
             ],
             'word' => [
                 'name' => 'word',
                 'type' => 'varchar',
-                'len' => 100
+                'len' => 100,
+                'comment' => 'the word itself'
             ],
             'wordcontext' => [
                 'name' => 'wordcontext',
@@ -32,7 +34,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysreservedwords'] = [
                 'name' => 'wordcontexttype',
                 'type' => 'varchar',
                 'len' => 20,
-                'comment' => 'database type like oracle, mysql or any other categprization'
+                'comment' => 'database type like oracle, mysql or any other categorization'
             ],
             'wordstatus' => [
                 'name' => 'wordstatus',
@@ -49,7 +51,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysreservedwords'] = [
             'deleted' => [
                 'name' => 'deleted',
                 'type' => 'bool',
-                'default' => 0
+                'default' => 0,
+                'comment' => 'the deletion flag'
             ]
         ],
     'indices' => [
