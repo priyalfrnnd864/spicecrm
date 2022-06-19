@@ -632,6 +632,74 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryitems'] = 
     ]
 ];
 
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindices'] = [
+    'table' => 'sysdictionaryindices',
+    'audited' => false,
+    'fields' =>
+        [
+            'id' => [
+                'name' => 'id',
+                'type' => 'id'
+            ],
+            'sysdictionaryname' => [
+                'name' => 'sysdictionaryname',
+                'type' => 'varchar',
+                'len' => 150,
+                'comment' => 'dictionary name the index is related to'
+            ],
+            'sysdictionarydefinition_id' => [
+                'name' => 'sysdictionarydefinition_id',
+                'type' => 'id',
+                'comment' => 'dictionary ID the index is related to'
+            ],
+            'indexname' => [
+                'name' => 'indexname',
+                'type' => 'varchar',
+                'len' => 100,
+                'comment' => 'the technical name of the index'
+            ],
+            'indextype' => [
+                'name' => 'indextype',
+                'type' => 'varchar',
+                'len' => 32,
+                'comment' => 'the type of index: primary|index|unique|alternate_key'
+            ],
+            'indexdefinition' => [
+                'name' => 'indexdefinition',
+                'type' => 'json',
+                'dbtype' => 'text',
+                'comment' => 'the full index configuration as json'
+            ],
+            'version' => [
+                'name' => 'version',
+                'type' => 'varchar',
+                'len' => 16
+            ],
+            'package' => [
+                'name' => 'package',
+                'type' => 'varchar',
+                'len' => 32
+            ],
+            'deleted' => [
+                'name' => 'deleted',
+                'type' => 'bool',
+                'default' => 0
+            ]
+        ],
+    'indices' => [
+        [
+            'name' => 'sysdictionaryindicespk',
+            'type' => 'primary',
+            'fields' => ['id']
+        ],
+        [
+            'name' => 'idx_sysdictionaryindices_sysdictionarydef',
+            'type' => 'index',
+            'fields' => ['sysdictionarydefinition_id']
+        ],
+    ]
+];
+
 SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes'] = [
     'table' => 'sysdictionaryindexes',
     'audited' => false,
