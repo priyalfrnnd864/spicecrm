@@ -237,6 +237,20 @@ SpiceDictionaryHandler::getInstance()->dictionary['emails_beans'] = [
             'relationship_role_column' => 'bean_module',
             'relationship_role_column_value' => 'Quotes',
         ],
+        'emails_trackinglinks' => [
+            'lhs_module' => 'Emails',
+            'lhs_table' => 'emails',
+            'lhs_key' => 'id',
+            'rhs_module' => 'TrackingLinks',
+            'rhs_table' => 'trackinglinks',
+            'rhs_key' => 'id',
+            'relationship_type' => 'many-to-many',
+            'join_table' => 'emails_beans',
+            'join_key_lhs' => 'email_id',
+            'join_key_rhs' => 'bean_id',
+            'relationship_role_column' => 'bean_module',
+            'relationship_role_column_value' => 'TrackingLinks',
+        ]
     ]
 ];
 
