@@ -81,21 +81,21 @@ SpiceDictionaryHandler::getInstance()->dictionary['tenants_deploymentpackages'] 
 SpiceDictionaryHandler::getInstance()->dictionary['tenant_auth_users'] = [
     'table'         => 'tenant_auth_users',
     'fields'        => [
-        [
+        'id' => [
             'name' => 'id',
             'type' => 'id'
         ],
-        [
+        'tenant_id' => [
             'name' => 'tenant_id',
             'type' => 'varchar',
             'len'  => '36'
         ],
-        [
+        'username' => [
             'name' => 'username',
             'type' => 'varchar',
             'len'  => 150
         ],
-        [
+        'user_hash' => [
             'name' => 'user_hash',
             'type' => 'varchar'
         ]
