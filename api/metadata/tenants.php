@@ -98,6 +98,15 @@ SpiceDictionaryHandler::getInstance()->dictionary['tenant_auth_users'] = [
         'user_hash' => [
             'name' => 'user_hash',
             'type' => 'varchar'
+        ],
+        'login_blocked' => [
+            'name' => 'login_blocked',
+            'type' => 'bool',
+            'default' => '0',
+        ],
+        'login_blocked_until' => [
+            'name' => 'login_blocked_until',
+            'type' => 'datetime',
         ]
     ],
     'indices'       => [
