@@ -6,11 +6,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['accounts_contacts'] = [
     'table'         => 'accounts_contacts',
     'contenttype'   => 'relationdata',
     'fields'        => [
-        ['name' =>'id', 'type' =>'varchar', 'len'=>'36'],
-        ['name' =>'contact_id', 'type' =>'varchar', 'len'=>'36'],
-        ['name' =>'account_id', 'type' =>'varchar', 'len'=>'36'],
-        ['name' => 'date_modified','type' => 'datetime'],
-        ['name' =>'deleted', 'type' =>'bool', 'len'=>'1', 'required'=>false, 'default'=>0],
+        'id' => ['name' =>'id', 'type' =>'varchar', 'len'=>'36'],
+        'contact_id' => ['name' =>'contact_id', 'type' =>'varchar', 'len'=>'36'],
+        'account_id' => ['name' =>'account_id', 'type' =>'varchar', 'len'=>'36'],
+        'date_modified' => ['name' => 'date_modified','type' => 'datetime'],
+        'deleted' => ['name' =>'deleted', 'type' =>'bool', 'len'=>'1', 'required'=>false, 'default'=>0],
     ],
     'indices'       => [
         ['name' =>'accounts_contactspk', 'type' =>'primary', 'fields'=> ['id']],

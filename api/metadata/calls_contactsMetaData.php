@@ -6,13 +6,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['calls_contacts'] = [
     'table' => 'calls_contacts',
     'contenttype'   => 'relationdata',
     'fields' => [
-       ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
-      , ['name' =>'call_id', 'type' =>'varchar', 'len'=>'36',]
-      , ['name' =>'contact_id', 'type' =>'varchar', 'len'=>'36',]
-      , ['name' =>'required', 'type' =>'varchar', 'len'=>'1', 'default'=>'1']
-      , ['name' =>'accept_status', 'type' =>'varchar', 'len'=>'25', 'default'=>'none']
-      , ['name' => 'date_modified','type' => 'datetime']
-      , ['name' =>'deleted', 'type' =>'bool', 'len'=>'1', 'default'=>'0', 'required'=>false]
+        'id' => ['name' =>'id', 'type' =>'varchar', 'len'=>'36']
+      , 'call_id' => ['name' =>'call_id', 'type' =>'varchar', 'len'=>'36',]
+      , 'contact_id' => ['name' =>'contact_id', 'type' =>'varchar', 'len'=>'36',]
+      , 'required' => ['name' =>'required', 'type' =>'varchar', 'len'=>'1', 'default'=>'1']
+      , 'accept_status' => ['name' =>'accept_status', 'type' =>'varchar', 'len'=>'25', 'default'=>'none']
+      , 'date_modified' => ['name' => 'date_modified','type' => 'datetime']
+      , 'deleted' => ['name' =>'deleted', 'type' =>'bool', 'len'=>'1', 'default'=>'0', 'required'=>false]
     ]
                                   , 'indices' => [
        ['name' =>'calls_contactspk', 'type' =>'primary', 'fields'=> ['id']]
