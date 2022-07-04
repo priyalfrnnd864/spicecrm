@@ -345,7 +345,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalue
             'sequence' => [
                 'name' => 'sequence',
                 'type' => 'int',
-                'len' => 4
+                'len' => 6
             ],
             'label' => [
                 'name' => 'label',
