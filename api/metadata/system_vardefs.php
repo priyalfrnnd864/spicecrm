@@ -1270,3 +1270,19 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
         ['name' =>'idx_sysdictionaryfields_field', 'type' =>'index', 'fields'=>['fieldname']],
     ]
 ];
+
+//SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarycache'] = [
+//    'table' => 'sysdictionarycache',
+//    'comment' => 'used to cache full array of dictionary definitions',
+//    'fields' => [
+//        'id' => [
+//            'name' => 'id',
+//            'type' => 'id'
+//        ],
+//        'sysdictionaryfields' => [
+//            'name' => 'sysdictionaryfields',
+//            'type' => 'longtext',
+//            'comment' => 'base64 encoded gzdeflate serialized array'
+//        ]
+//    ]
+//];
