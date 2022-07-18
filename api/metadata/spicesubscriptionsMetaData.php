@@ -28,7 +28,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicesubscriptions'] = [
     'indices' => [
         [
             'name'   => 'spicesubscriptions_pk',
-            'type'   => 'primary',
+            'type'   => 'unique',
             'fields' => ['user_id', 'bean_id'],
         ]
     ],
