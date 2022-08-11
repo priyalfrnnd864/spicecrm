@@ -28,6 +28,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
             'name'       => 'deleted',
             'vname'      => 'LBL_DELETED',
             'type'       => 'bool',
+            'default'    => 0,
             'required'   => false,
             'reportable' => false,
         ],
@@ -133,6 +134,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
             'name'   => 'ldap_settingspk',
             'type'   => 'primary',
             'fields' => ['id'],
+        ],
+        [
+            'name'   => 'ldap_settings_active',
+            'type'   => 'index',
+            'fields' => ['is_active', 'deleted'],
         ]
     ],
 ];
