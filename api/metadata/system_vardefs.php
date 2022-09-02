@@ -447,6 +447,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = 
                 'name' => 'sysdictionary_type',
                 'type' => 'enum',
             ],
+            'sysdictionary_contenttype' => [
+                'name' => 'sysdictionary_contenttype',
+                'type' => 'enum',
+            ],
             'description' => [
                 'name' => 'description',
                 'type' => 'shorttext',
@@ -1233,6 +1237,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
             'type' => 'int',
             'len' => 1,
             'comment' => 'use to store information about dictionary directly here - waiting for full migration'
+        ],
+        'sysdictionarytablecontenttype' => [
+            'name' => 'sysdictionarytablecontenttype',
+            'type' => 'varchar',
+            'len' => 16,
+            'comment' => 'store the content type of a table'
         ],
         'sysdictionarydefinition_id' => [
             'name' => 'sysdictionarydefinition_id',
