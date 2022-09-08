@@ -556,6 +556,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
                 'type' => 'varchar',
                 'len' => 100
             ],
+            'labelinputhelper' => [
+                'name' => 'labelinputhelper',
+                'vname' => 'LBL_INPUT_HELPER',
+                'type' => 'varchar',
+                'len' => 100
+            ],
             'non_db' => [
                 'name' => 'non_db',
                 'type' => 'bool',
