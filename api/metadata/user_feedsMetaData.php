@@ -4,7 +4,7 @@ use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
 SpiceDictionaryHandler::getInstance()->dictionary['users_feeds'] = [
     'table' => 'users_feeds',
-    'contenttype'   => 'relationdata for user feeds',
+    'contenttype'   => 'relationdata',
     'fields' => [
 
        ['name' =>'user_id', 'type' =>'varchar', 'len'=>'36',]
