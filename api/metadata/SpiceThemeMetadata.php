@@ -258,7 +258,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments_categories']
         ],
         'is_system' => [
             'name' => 'is_system',
-            'type' => 'bool'
+            'type' => 'bool',
+            'default' => 0
         ]
     ],
     'indices' => [
@@ -266,6 +267,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments_categories']
             'name' => 'spiceattchments_categories_idx',
             'type' => 'unique',
             'fields' => ['id'],
+        ],
+        [
+            'name' => 'idx_spiceattachments_categories_system',
+            'type' => 'index',
+            'fields' => ['is_system'],
         ]
     ],
 ];
