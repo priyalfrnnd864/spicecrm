@@ -128,6 +128,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
             'type'    => 'text',
             'comment' => 'comma seperated list of ldap groups',
         ],
+        'ldap_fields' => [
+            'name'    => 'ldap_fields',
+            'vname'   => 'LBL_LDAP_FIELDS',
+            'type'    => 'text',
+            'comment' => 'a json string containing an array of key-value pairs LDAP fields to additionally retrieve from LDAP',
+        ],
     ],
     'indices' => [
         [
