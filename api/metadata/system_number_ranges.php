@@ -69,11 +69,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysnumberrangeallocation'] = 
         ],
         'valid_from' => [
             'name' => 'valid_from',
-            'type' => 'date'
+            'type' => 'date',
+            'required' => true
         ],
         'valid_to' => [
             'name' => 'valid_to',
-            'type' => 'date'
+            'type' => 'date',
+            'required' => true
         ]
     ],
     'indices' => [
