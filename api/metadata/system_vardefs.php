@@ -134,7 +134,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields'] = [
             'exclude_from_index' => [
                 'name' => 'exclude_from_index',
                 'type' => 'bool',
-                'comment' => 'do not use a field for a table index in database'
+                'comment' => 'do not use a field for a table index in database',
+                'default' => 0
             ],
             'defaultvalue' => [
                 'name' => 'defaultvalue',

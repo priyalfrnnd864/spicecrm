@@ -47,6 +47,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['authentication_services'] = [
             'name' => 'oauth_pk',
             'type' => 'primary',
             'fields' => ['id']
+        ],
+        [
+            'name' => 'idx_oauth_issuer',
+            'type' => 'index',
+            'fields' => ['issuer']
         ]
     ],
 ];
