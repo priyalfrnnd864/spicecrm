@@ -65,6 +65,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysauthconfig'] = [
             'type' => 'char',
             'len' => 36,
             'comment' => 'An ID field to make it possible to administrate records via workbench > Auth Config interface.',
+            'isnull' => true
             // not set as primary key yet to enable the update via repair/rebuild!
         ],
         'name' => [
