@@ -116,3 +116,61 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscategorytrees'] = [
         ]
     ]
 ];
+
+SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreelinks'] = [
+    'table' => 'syscategorytreelinks',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'syscategorytree_id' => [
+            'name' => 'syscategorytree_id',
+            'type' => 'id',
+            'comment' => 'the id of the tree this node belongs to'
+        ],
+        'module_id' => [
+            'name' => ' module_id',
+            'type' => 'varchar',
+            'len' => 36,
+            'comment' => 'the id of the module from sysmodules'
+        ],
+        'module_field' => [
+            'name' => 'module_field',
+            'type' => 'varchar',
+            'len' => 100,
+            'comment' => 'the name of a nonDB field on the module to link the tree to'
+        ],
+        'module_field_c1' => [
+            'name' => 'module_field_c1',
+            'type' => 'varchar',
+            'len' => 100,
+            'comment' => 'the name of a field on teh module to write the category 1 value to'
+        ],
+        'module_field_c2' => [
+            'name' => 'module_field_c2',
+            'type' => 'varchar',
+            'len' => 100,
+            'comment' => 'the name of a field on teh module to write the category 2 value to'
+        ],
+        'module_field_c3' => [
+            'name' => 'module_field_c3',
+            'type' => 'varchar',
+            'len' => 100,
+            'comment' => 'the name of a field on teh module to write the category 3 value to'
+        ],
+        'module_field_c4' => [
+            'name' => 'module_field_c4',
+            'type' => 'varchar',
+            'len' => 100,
+            'comment' => 'the name of a field on teh module to write the category 4 value to'
+        ]
+    ],
+    'indices' => [
+        [
+            'name' => 'idx_syscategorytreelinks_pk',
+            'type' => 'primary',
+            'fields' => ['id']
+        ]
+    ]
+];
