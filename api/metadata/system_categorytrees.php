@@ -130,7 +130,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreelinks'] = [
             'comment' => 'the id of the tree this node belongs to'
         ],
         'module_id' => [
-            'name' => ' module_id',
+            'name' => 'module_id',
             'type' => 'varchar',
             'len' => 36,
             'comment' => 'the id of the module from sysmodules'
