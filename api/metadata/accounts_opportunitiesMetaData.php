@@ -1,5 +1,4 @@
 <?php
-///***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 //use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 //
 //SpiceDictionaryHandler::getInstance()->dictionary['accounts_opportunities'] = [
