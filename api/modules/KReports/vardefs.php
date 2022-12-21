@@ -103,7 +103,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['KReport'] = ['table' => 'krep
         ],
         'category_id' => [
             'name' => 'category_id',
-            'type' => 'id',
+            'type' => 'char',
+            'len' => 36,
             'vname' => 'LBL_CATEGORIES_ID'
         ],
         'category_name' => [
