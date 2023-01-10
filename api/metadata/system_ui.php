@@ -1771,6 +1771,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiroles'] = [
             'name' => 'default_dashboard',
             'type' => 'id'
         ],
+        'default_dashboardset' => [
+            'name' => 'default_dashboardset',
+            'type' => 'id'
+        ],
         'version' => [
             'name' => 'version',
             'type' => 'varchar',
@@ -1843,6 +1847,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomroles'] = [
         ],
         'default_dashboard' => [
             'name' => 'default_dashboard',
+            'type' => 'id'
+        ],
+        'default_dashboardset' => [
+            'name' => 'default_dashboardset',
             'type' => 'id'
         ],
         'version' => [
