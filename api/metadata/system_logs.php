@@ -29,6 +29,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['syslogs'] = [
         'log_level' => [
             'name' => 'log_level',
             'type' => 'varchar',
+            'len' => 25
+        ],
+        'log_sublevel' => [
+            'name' => 'log_sublevel',
+            'type' => 'varchar',
+            'len' => 25
         ],
         'level_value' => [
             'name' => 'level_value',
