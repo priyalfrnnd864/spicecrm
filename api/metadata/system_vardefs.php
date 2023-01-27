@@ -617,6 +617,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
                 'name' => 'deleted',
                 'type' => 'bool',
                 'default' => 0
+            ],
+            'duplicate_merge' => [
+                'name' => 'duplicate_merge',
+                'type' => 'bool',
+                'default' => 1
             ]
         ],
     'indices' => [
