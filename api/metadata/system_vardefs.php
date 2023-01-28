@@ -931,6 +931,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
             'default' => false,
             'comment' => 'load link per default'
         ],
+        'lhs_duplicatemerge' => [
+            'name' => 'lhs_duplicatemerge',
+            'vname' => 'LBL_DUPLICTAE_MERGE',
+            'type' => 'bool',
+        ],
         'rhs_sysdictionarydefinition_id' => [
             'name' => 'rhs_sysdictionarydefinition_id',
             'vname' => 'LBL_RHS_TABLE',
@@ -971,6 +976,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
             'type' => 'bool',
             'default' => false,
             'comment' => 'load link per default'
+        ],
+        'rhs_duplicatemerge' => [
+            'name' => 'rhs_duplicatemerge',
+            'vname' => 'LBL_DUPLICTAE_MERGE',
+            'type' => 'bool',
         ],
         'rhs_relatename' => [
             'name' => 'rhs_relatename',
