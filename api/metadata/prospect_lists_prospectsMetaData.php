@@ -152,3 +152,44 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = 
     ]
 
 ];
+
+SpiceDictionaryHandler::getInstance()->dictionary['campaigntask_targets_status'] = [
+
+    'table' => 'campaigntask_targets_status',
+    'contenttype'   => 'metadata',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'varchar',
+            'len' => '36',
+        ],
+        'campaigntask_id' => [
+            'name' => 'campaigntask_id',
+            'type' => 'varchar',
+            'len' => '36',
+        ],
+        'prospect_id' => [
+            'name' => 'prospect_id',
+            'type' => 'varchar',
+            'len' => '36',
+        ],
+        'status' => [
+            'name' => 'status',
+            'type' => 'varchar',
+            'len' => '10',
+            'comment' => 'possible options: checked, excluded',
+        ],
+        'date_modified' => [
+            'name' => 'date_modified',
+            'type' => 'datetime'
+        ]
+    ],
+
+    'indices' => [
+        [
+            'name' => 'prospect_pk',
+            'type' => 'primary',
+            'fields' => ['id', 'campaigntask_id', 'prospect_id']
+        ]
+    ],
+];
