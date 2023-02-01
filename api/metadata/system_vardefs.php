@@ -1,6 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
+
 /**
  * CR1000108
  * Tables for Spice variable definitions
@@ -818,6 +820,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems'] = [
                 'type' => 'varchar',
                 'len' => 36
             ],
+            'sysdictionaryforeigndefinition_id' => [
+                'name' => 'sysdictionaryforeigndefinition_id',
+                'type' => 'varchar',
+                'len' => 36
+            ],
+            'sysdictionaryforeignitem_id' => [
+                'name' => 'sysdictionaryforeignitem_id',
+                'type' => 'varchar',
+                'len' => 36
+            ],
             'sequence' => [
                 'name' => 'sequence',
                 'type' => 'int',
@@ -885,7 +897,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
             'name' => 'name',
             'vname' => 'LBL_NAME',
             'type' => 'varchar',
-            'required'=>true,
+            'required' => true,
             'len' => 150,
             'comment' => 'the logical name for the relationship'
         ],
@@ -893,7 +905,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
             'name' => 'relationship_name',
             'vname' => 'LBL_RELATIONSHIP_NAME',
             'type' => 'varchar',
-            'required'=>true,
+            'required' => true,
             'len' => 150,
             'comment' => 'the technical name for the relationship'
         ],
@@ -1068,11 +1080,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
         ]
     ],
     'indices' => [
-        ['name' =>'sysdictionaryrelationshipspk', 'type' =>'primary', 'fields'=>['id']],
-        ['name' =>'idx_sysdictionaryrelationship_name', 'type' =>'index', 'fields'=>['relationship_name']],
-        ['name' =>'idx_sysdictionaryrelationship_del', 'type' =>'index', 'fields'=>['deleted']],
-        ['name' =>'idx_sysdictionaryrelationship_lhs', 'type' =>'index', 'fields'=>['lhs_sysdictionarydefinition_id', 'status','deleted']],
-        ['name' =>'idx_sysdictionaryrelationship_rhs', 'type' =>'index', 'fields'=>['rhs_sysdictionarydefinition_id', 'status','deleted']],
+        ['name' => 'sysdictionaryrelationshipspk', 'type' => 'primary', 'fields' => ['id']],
+        ['name' => 'idx_sysdictionaryrelationship_name', 'type' => 'index', 'fields' => ['relationship_name']],
+        ['name' => 'idx_sysdictionaryrelationship_del', 'type' => 'index', 'fields' => ['deleted']],
+        ['name' => 'idx_sysdictionaryrelationship_lhs', 'type' => 'index', 'fields' => ['lhs_sysdictionarydefinition_id', 'status', 'deleted']],
+        ['name' => 'idx_sysdictionaryrelationship_rhs', 'type' => 'index', 'fields' => ['rhs_sysdictionarydefinition_id', 'status', 'deleted']],
     ]
 ];
 
@@ -1080,11 +1092,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
     'table' => 'syscustomdictionaryrelationships',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships']['fields'],
     'indices' => [
-        ['name' =>'syscustomdictionaryrelationshipspk', 'type' =>'primary', 'fields'=>['id']],
-        ['name' =>'idx_syscustomdictionaryrelationships_name', 'type' =>'index', 'fields'=>['relationship_name']],
-        ['name' =>'idx_syscustomdictionaryrelationships_del', 'type' =>'index', 'fields'=>['deleted']],
-        ['name' =>'idx_syscustomdictionaryrelationship_lhs', 'type' =>'index', 'fields'=>['lhs_sysdictionarydefinition_id', 'status','deleted']],
-        ['name' =>'idx_syscustomdictionaryrelationship_rhs', 'type' =>'index', 'fields'=>['rhs_sysdictionarydefinition_id', 'status','deleted']],
+        ['name' => 'syscustomdictionaryrelationshipspk', 'type' => 'primary', 'fields' => ['id']],
+        ['name' => 'idx_syscustomdictionaryrelationships_name', 'type' => 'index', 'fields' => ['relationship_name']],
+        ['name' => 'idx_syscustomdictionaryrelationships_del', 'type' => 'index', 'fields' => ['deleted']],
+        ['name' => 'idx_syscustomdictionaryrelationship_lhs', 'type' => 'index', 'fields' => ['lhs_sysdictionarydefinition_id', 'status', 'deleted']],
+        ['name' => 'idx_syscustomdictionaryrelationship_rhs', 'type' => 'index', 'fields' => ['rhs_sysdictionarydefinition_id', 'status', 'deleted']],
     ]
 ];
 
@@ -1153,9 +1165,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfiel
         ]
     ],
     'indices' => [
-        ['name' =>'sysdictionaryrelationshipfieldspk', 'type' => 'primary', 'fields' => ['id']],
-        ['name' =>'idx_sysdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
-        ['name' =>'idx_sysdictionaryrelationshipfields_delpackage', 'type' => 'index', 'fields' => ['deleted', 'package']],
+        ['name' => 'sysdictionaryrelationshipfieldspk', 'type' => 'primary', 'fields' => ['id']],
+        ['name' => 'idx_sysdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
+        ['name' => 'idx_sysdictionaryrelationshipfields_delpackage', 'type' => 'index', 'fields' => ['deleted', 'package']],
     ]
 ];
 
@@ -1163,9 +1175,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
     'table' => 'syscustomdictionaryrelationshipfields',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields']['fields'],
     'indices' => [
-        ['name' =>'syscustomdictionaryrelationshipfieldspk', 'type' =>'primary', 'fields'=>['id']],
-        ['name' =>'idx_syscustomdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
-        ['name' =>'idx_syscustomdictionaryrelationshipfields_delpackage', 'type' => 'index', 'fields' => ['deleted', 'package']],
+        ['name' => 'syscustomdictionaryrelationshipfieldspk', 'type' => 'primary', 'fields' => ['id']],
+        ['name' => 'idx_syscustomdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
+        ['name' => 'idx_syscustomdictionaryrelationshipfields_delpackage', 'type' => 'index', 'fields' => ['deleted', 'package']],
     ]
 ];
 
@@ -1222,7 +1234,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprela
         ]
     ],
     'indices' => [
-        ['name' =>'sysdictionaryrelationshiprelatefieldspk', 'type' =>'primary', 'fields'=>['id']],
+        ['name' => 'sysdictionaryrelationshiprelatefieldspk', 'type' => 'primary', 'fields' => ['id']],
     ]
 ];
 
@@ -1230,7 +1242,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
     'table' => 'syscustomdictionaryrelationshiprelatefields',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields']['fields'],
     'indices' => [
-        ['name' =>'syscustomdictionaryrelationshiprelatefieldspk', 'type' =>'primary', 'fields'=>['id']],
+        ['name' => 'syscustomdictionaryrelationshiprelatefieldspk', 'type' => 'primary', 'fields' => ['id']],
     ]
 ];
 
@@ -1296,10 +1308,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
 
     ],
     'indices' => [
-        ['name' =>'sysdictionaryfieldspk', 'type' =>'primary', 'fields'=>['id']],
-        ['name' =>'idx_sysdictionaryfields_defid', 'type' =>'index', 'fields'=>['sysdictionarydefinition_id']],
-        ['name' =>'idx_sysdictionaryfields_domid', 'type' =>'index', 'fields'=>['sysdomainfield_id']],
-        ['name' =>'idx_sysdictionaryfields_field', 'type' =>'index', 'fields'=>['fieldname']],
+        ['name' => 'sysdictionaryfieldspk', 'type' => 'primary', 'fields' => ['id']],
+        ['name' => 'idx_sysdictionaryfields_defid', 'type' => 'index', 'fields' => ['sysdictionarydefinition_id']],
+        ['name' => 'idx_sysdictionaryfields_domid', 'type' => 'index', 'fields' => ['sysdomainfield_id']],
+        ['name' => 'idx_sysdictionaryfields_field', 'type' => 'index', 'fields' => ['fieldname']],
     ]
 ];
 
