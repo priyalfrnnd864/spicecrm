@@ -47,6 +47,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['authentication_services'] = [
             'name' => 'oauth_pk',
             'type' => 'primary',
             'fields' => ['id']
+        ],
+        [
+            'name' => 'idx_oauth_issuer',
+            'type' => 'index',
+            'fields' => ['issuer']
         ]
     ],
 ];
@@ -54,6 +59,15 @@ SpiceDictionaryHandler::getInstance()->dictionary['authentication_services'] = [
 SpiceDictionaryHandler::getInstance()->dictionary['sysauthconfig'] = [
     'table' => 'sysauthconfig',
     'fields' => [
+        'id' => [
+            'name' => 'id',
+            'vname' => 'LBL_ID',
+            'type' => 'char',
+            'len' => 36,
+            'comment' => 'An ID field to make it possible to administrate records via workbench > Auth Config interface.',
+            'isnull' => true
+            // not set as primary key yet to enable the update via repair/rebuild!
+        ],
         'name' => [
             'name' => 'name',
             'vname' => 'LBL_NAME',
