@@ -24,7 +24,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['emails_email_addr_rel'] = [
         'address_type' => [
             'name' => 'address_type',
             'type' => 'varchar',
-            'len' => 4,
+            'len' => 10,
             'required' => true,
             'comment' => 'Type of entry, TO, CC, or BCC'
         ],
