@@ -885,6 +885,47 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexitems
     ]
 ];
 
+
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiptypes'] = [
+    'table' => 'sysdictionaryrelationshiptypes',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'name' => [
+            'name' => 'name',
+            'type' => 'varchar',
+            'len' => '50',
+            'comment' => 'the technical name of the relationship type'
+        ],
+        'label' => [
+            'name' => 'label',
+            'type' => 'varchar',
+            'len' => '50',
+            'comment' => 'the label for the relationship type'
+        ],
+        'class' => [
+            'name' => 'class',
+            'type' => 'varchar',
+            'len' => '255',
+            'comment' => 'the fully namespaced implementation class'
+        ],
+        'component_add' => [
+            'name' => 'component_add',
+            'type' => 'varchar',
+            'len' => '255',
+            'comment' => 'the component name to add the relationship'
+        ],
+        'component_edit' => [
+            'name' => 'component_edit',
+            'type' => 'varchar',
+            'len' => '255',
+            'comment' => 'the component name to edit the relationship'
+        ]
+    ]
+];
+
 SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] = [
     'table' => 'sysdictionaryrelationships',
     'fields' => [
@@ -1282,6 +1323,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
             'name' => 'sysdictionarydefinition_id',
             'type' => 'id',
             'comment' => 'the ID of the sysdictionary definition related to this entry'
+        ],
+        'sysdictionaryitem_id' => [
+            'name' => 'sysdictionaryitem_id',
+            'type' => 'id',
+            'comment' => 'the ID of the sysdictionary item related to this entry'
+        ],
+        'sysdictionaryrelationship_id' => [
+            'name' => 'sysdictionaryrelationship_id',
+            'type' => 'id',
+            'comment' => 'the ID of the sysdictionary relationship related to this entry'
         ],
         'sysdomainfield_id' => [
             'name' => 'sysdomainfield_id',
