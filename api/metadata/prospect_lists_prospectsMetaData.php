@@ -188,7 +188,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['campaigntask_targets_status']
     'indices' => [
         [
             'name' => 'prospect_pk',
-            'type' => 'primary',
+            'type' => 'unique',
             'fields' => ['id', 'campaigntask_id', 'prospect_id']
         ]
     ],
