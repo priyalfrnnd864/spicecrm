@@ -1141,6 +1141,76 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
     ]
 ];
 
+SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshippolymorphs'] = [
+    'table' => 'sysdictionaryrelationshippolymorphs',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'vname' => 'LBL_ID',
+            'type' => 'id',
+        ],
+        'relationship_id' => [
+            'name' => 'relationship_id',
+            'vname' => 'LBL_RELATIONSHIP_ID',
+            'type' => 'id',
+            'required' => true,
+            'comment' => 'the ID of the relationship'
+        ],
+        'relationship_name' => [
+            'name' => 'relationship_name',
+            'vname' => 'LBL_RELATIONSHIP_NAME',
+            'type' => 'varchar',
+            'required' => true,
+            'len' => 150,
+            'comment' => 'the technical name for the relationship'
+        ],
+        'lhs_sysdictionarydefinition_id' => [
+            'name' => 'lhs_sysdictionarydefinition_id',
+            'vname' => 'LBL_LHS_TABLE',
+            'type' => 'id',
+            'required' => true,
+            'comment' => 'Dictionary reference for right side'
+        ],
+        'lhs_sysdictionaryitem_id' => [
+            'name' => 'lhs_sysdictionaryitem_id',
+            'vname' => 'LBL_LHS_KEY',
+            'type' => 'id',
+            'required' => false,
+            'comment' => 'dictionary item id corresponding to key in table'
+        ],
+        'status' => [
+            'name' => 'status',
+            'type' => 'varchar',
+            'len' => 1,
+            'default' => 'd',
+            'comment' => 'the status of the item, d for draft, a for active, i for inactive'
+        ],
+        'version' => [
+            'name' => 'version',
+            'type' => 'varchar',
+            'len' => 16
+        ],
+        'package' => [
+            'name' => 'package',
+            'type' => 'varchar',
+            'len' => 32
+        ]
+    ],
+    'indices' => [
+        ['name' => 'idx_sysdictionaryrelationshippolymorphs_pk', 'type' => 'unique', 'fields' => ['id']],
+        ['name' => 'idx_sysdictionaryrelationshippolymorphs_relid', 'type' => 'index', 'fields' => ['relationship_id']],
+    ]
+];
+
+SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshippolymorphs'] = [
+    'table' => 'syscustomdictionaryrelationshippolymorphs',
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshippolymorphs']['fields'],
+    'indices' => [
+        ['name' => 'idx_syscustomdictionaryrelationshippolymorphs_pk', 'type' => 'unique', 'fields' => ['id']],
+        ['name' => 'idx_syscustomdictionaryrelationshippolymorphs_relid', 'type' => 'index', 'fields' => ['relationship_id']],
+    ]
+];
+
 SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields'] = [
     'table' => 'sysdictionaryrelationshipfields',
     'comment' => 'represents former rel_fields attribute in link',
