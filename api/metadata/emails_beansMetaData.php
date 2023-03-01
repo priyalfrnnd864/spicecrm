@@ -65,6 +65,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['emails_beans'] = [
             'type' => 'alternate_key',
             'fields' => ['email_id', 'bean_id', 'deleted']
         ],
+        'idx_emails_beans_email_beanmodule' => [
+            'name' => 'idx_emails_beans_email_beanmodule',
+            'type' => 'index',
+            'fields' => ['bean_module', 'deleted']
+        ],
     ],
     'relationships' => [
         'emails_accounts_rel' => [
