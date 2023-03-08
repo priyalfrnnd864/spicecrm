@@ -48,11 +48,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomaindefinitions'] = [
                 'len' => 1,
                 'default' => 'd',
                 'comment' => 'the status of the item, d for draft, a for active, i for inactive'
-            ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
             ]
         ],
     'indices' => [
@@ -171,11 +166,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields'] = [
                 'vname' => 'LBL_LABEL',
                 'type' => 'varchar',
                 'len' => 100
-            ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
             ]
         ],
     'indices' => [
@@ -475,11 +465,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = 
                 'len' => 1,
                 'default' => 'd',
                 'comment' => 'the status of the item, d for draft, a for active, i for inactive'
-            ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
             ]
         ],
     'indices' => [
@@ -491,7 +476,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = 
         [
             'name' => 'idx_sysdictionarydefinition_del_status_type',
             'type' => 'index',
-            'fields' => ['deleted', 'status', 'sysdictionary_type']
+            'fields' => ['status', 'sysdictionary_type']
         ],
         [
             'name' => 'idx_sysdictionarydefinition_del_status',
@@ -615,11 +600,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
                 'type' => 'bool',
                 'default' => 0
             ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
-            ],
             'duplicate_merge' => [
                 'name' => 'duplicate_merge',
                 'type' => 'bool',
@@ -697,11 +677,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindices'] = [
                 'name' => 'package',
                 'type' => 'varchar',
                 'len' => 32
-            ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
             ]
         ],
     'indices' => [
@@ -762,11 +737,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes'] = [
                 'len' => 1,
                 'default' => 'd',
                 'comment' => 'the status of the item, d for draft, a for active, i for inactive'
-            ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
             ]
         ],
     'indices' => [
@@ -856,11 +826,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems'] = [
                 'len' => 1,
                 'default' => 'd',
                 'comment' => 'the status of the item, d for draft, a for active, i for inactive'
-            ],
-            'deleted' => [
-                'name' => 'deleted',
-                'type' => 'bool',
-                'default' => 0
             ]
         ],
     'indices' => [
