@@ -2,8 +2,8 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-SpiceDictionaryHandler::getInstance()->dictionary['webhooks'] = [
-    'table' => 'webhooks',
+SpiceDictionaryHandler::getInstance()->dictionary['syswebhooks'] = [
+    'table' => 'syswebhooks',
     'fields' => [
         'id' => [
             'name' => 'id',
@@ -29,8 +29,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['webhooks'] = [
             'type' => 'bool',
             'default' => 0
         ],
-        'sent_data' => [
-            'name' => 'sent_data',
+        'send_data' => [
+            'name' => 'send_data',
             'type' => 'bool',
             'default' => 0
         ],
@@ -55,6 +55,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['webhooks'] = [
             'default' => 1
 
         ],
+        'custom_headers' => [
+            'name' => 'custom_headers',
+            'type' => 'json',
+            'dbtype' => 'longtext'
+        ]
     ],
     'indices' => [
         [
