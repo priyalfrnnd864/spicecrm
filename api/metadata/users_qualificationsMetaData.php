@@ -1,5 +1,8 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
+/* @deprecated in 2023.01.001
+ * Will be removed in 2023.02.001
+ */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
 SpiceDictionaryHandler::getInstance()->dictionary['users_qualifications'] = [
