@@ -10,6 +10,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguides'] = [
             'type' => 'varchar',
             'len' => '36'
         ],
+        'name' => [
+            'name' => 'name',
+            'type' => 'varchar',
+            'len' => '100'
+        ],
         'module' => [
             'name' => 'module',
             'type' => 'varchar',
