@@ -1284,7 +1284,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
         'fieldtype' => [
             'name' => 'fieldtype',
             'type' => 'varchar',
-            'len' => 20,
+            'len' => 32,
             'comment' => 'the field ytpe'
         ],
         'fielddefinition' => [
