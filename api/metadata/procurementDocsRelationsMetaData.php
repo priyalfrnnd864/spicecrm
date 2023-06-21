@@ -62,3 +62,60 @@ SpiceDictionaryHandler::getInstance()->dictionary['procurementdocsitemsflow'] = 
         ]
     ]
 ];
+
+SpiceDictionaryHandler::getInstance()->dictionary['sysProcurementDocItemTypesFlow'] = [
+    'table' => 'sysprocurementdocitemtypesflow',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'id'
+        ],
+        'procurementdoctype_from' => [
+            'name' => 'procurementdoctype_from',
+            'vname' => 'LBL_PROCUREMENTDOCTYPE_FROM',
+            'type' => 'varchar',
+            'len' => 36
+        ],
+        'procurementdocitemtype_from' => [
+            'name' => 'procurementdocitemtype_from',
+            'vname' => 'LBL_PROCUREMENTDOCITEMTYPE_FROM',
+            'type' => 'varchar',
+            'len' => 36
+        ],
+        'procurementdoctype_to' => [
+            'name' => 'procurementdoctype_to',
+            'vname' => 'LBL_PROCUREMENTDOCTYPE_TO',
+            'type' => 'varchar',
+            'len' => 36
+        ],
+        'procurementdocitemtype_to' => [
+            'name' => 'procurementdocitemtype_to',
+            'vname' => 'LBL_PROCUREMENTDOCITEMTYPE_TO',
+            'type' => 'varchar',
+            'len' => 36
+        ],
+        'convert_method' => [
+            'name' => 'convert_method',
+            'vname' => 'LBL_CONVERT_METHOD',
+            'type' => 'varchar',
+            'len' => 200,
+            'comment' => 'a class and method to identify the processing of the item to be applied when copying from one item to the next'
+        ],
+        'quantityhandling' => [
+            'name' => 'quantityhandling',
+            'vname' => 'LBL_QUANTITYHANDLING',
+            'type' => 'char',
+            'len' => 1,
+            'default' => '0',
+            'comment' => 'defines the quantitiy handling, 0 has no impact, - reduces the open quantity, + adds to the open quantity'
+        ]
+    ],
+    'indices' => [
+        [
+            'name' => 'sysprocurementdocitemtypesflow_id',
+            'type' => 'unique',
+            'fields' => ['id']
+        ]
+    ]
+];
+
