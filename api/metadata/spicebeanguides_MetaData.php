@@ -29,6 +29,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguides'] = [
             'name' => 'build_language',
             'type' => 'shorttext',
             'len' => 1000
+        ],
+        'systextid' => [
+            'name' => 'systextid',
+            'type' => 'varchar',
+            'len' => '120'
         ]
     ],
     'indices' => [
