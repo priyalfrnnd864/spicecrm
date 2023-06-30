@@ -54,8 +54,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
         'login_filter' => [
             'name'     => 'login_filter',
             'vname'    => 'LBL_LOGIN_FILTER',
-            'type'     => 'varchar',
-            'len'      => 50,
+            'type'     => 'json',
         ],
         'bind_attr' => [
             'name'     => 'bind_attr',

@@ -62,3 +62,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['syststatusnetworks'] = [
         ]
     ]
 ];
+
+SpiceDictionaryHandler::getInstance()->dictionary['systcustomstatusnetworks'] = [
+    'table' => 'systcustomstatusnetworks',
+    'fields' => SpiceDictionaryHandler::getInstance()->dictionary['syststatusnetworks']['fields'],
+    'indices' => [
+        [
+            'name' => 'systcustomstatusnetworkspk',
+            'type' => 'primary',
+            'fields' => ['id']
+        ]
+    ]
+
+];
