@@ -281,5 +281,14 @@ if (file_exists("extensions/modules/ServiceOrders")) {
         'vname' => 'LBL_SERVICEORDER',
     ];
 }
+if (file_exists("extensions/modules/ProcurementDocs")) {
+    SpiceDictionaryHandler::getInstance()->dictionary['Note']['relationships']['procurementdocs'] = [
+        'name'         => 'procurementdocs',
+        'type'         => 'link',
+        'relationship' => 'procurementdocs_notes',
+        'source'       => 'non-db',
+        'vname'        => 'LBL_PROCUREMENTDOCS',
+    ];
+}
 
 VardefManager::createVardef('Notes', 'Note', ['assignable', 'default']);
