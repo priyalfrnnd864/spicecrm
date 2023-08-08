@@ -52,6 +52,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['syststatusnetworks'] = [
             'name' => 'required_model_acl_action',
             'type' => 'varchar',
             'len' => 100
+        ],
+        'componentconfig' => [
+            'name' => 'componentconfig',
+            'type' => 'shorttext',
+            'len' => 2000,
+            'comment' => 'config of the item to be rendered in modal (fieldset, componentset etc.)'
         ]
     ],
     'indices' => [
