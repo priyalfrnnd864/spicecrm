@@ -224,6 +224,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments'] = [
             'fields' => ['bean_type', 'bean_id', 'trdate'],
         ],
         [
+            'name' => 'spiceattachments_idx_beanid',
+            'type' => 'index',
+            'fields' => ['bean_id'],
+        ],
+        [
             'name' => 'tatselection_idx',
             'type' => 'index',
             'fields' => ['bean_type', 'bean_id', 'deleted'],
