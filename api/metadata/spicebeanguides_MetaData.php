@@ -50,6 +50,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicebeancustomguides'] = [
             'type' => 'char',
             'len' => '36'
         ],
+        'name' => [
+            'name' => 'name',
+            'type' => 'varchar',
+            'len' => '100'
+        ],
         'module' => [
             'name' => 'module',
             'type' => 'varchar',
@@ -64,6 +69,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicebeancustomguides'] = [
             'name' => 'build_language',
             'type' => 'shorttext',
             'len' => 1000
+        ],
+        'systextid' => [
+            'name' => 'systextid',
+            'type' => 'varchar',
+            'len' => '120'
         ]
     ],
     'indices' => [
