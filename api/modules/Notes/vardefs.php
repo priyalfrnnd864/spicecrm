@@ -157,7 +157,14 @@ SpiceDictionaryHandler::getInstance()->dictionary['Note'] = [
             'reportable' => false,
             'source' => 'non-db',
         ],
-
+        'employees' => [
+            'name'         => 'employees',
+            'type'         => 'link',
+            'relationship' => 'employees_notes',
+            'module'       => 'Employees',
+            'source'       => 'non-db',
+            'vname'        => 'LBL_EMPLOYEES',
+        ],
         'contact' => [
             'name' => 'contact',
             'type' => 'link',
