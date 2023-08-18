@@ -1746,11 +1746,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiroles'] = [
         ],
         'systemdefault' => [
             'name' => 'systemdefault',
-            'type' => 'bool'
+            'type' => 'bool',
+            'default' => 0
         ],
         'portaldefault' => [
             'name' => 'portaldefault',
-            'type' => 'bool'
+            'type' => 'bool',
+            'default' => 0
         ],
         'showsearch' => [
             'name' => 'showsearch',
