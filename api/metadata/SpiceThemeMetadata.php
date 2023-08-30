@@ -280,3 +280,61 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments_categories']
         ]
     ],
 ];
+
+SpiceDictionaryHandler::getInstance()->dictionary['spiceurls'] = [
+    'table' => 'spiceurls',
+    'fields' => [
+        'id' => [
+            'name' => 'id',
+            'type' => 'varchar',
+            'len' => 36,
+        ],
+        'bean_type' => [
+            'name' => 'bean_type',
+            'type' => 'varchar',
+            'len' => 100,
+        ],
+        'bean_id' => [
+            'name' => 'bean_id',
+            'type' => 'varchar',
+            'len' => 36,
+        ],
+        'user_id' => [
+            'name' => 'user_id',
+            'type' => 'varchar',
+            'len' => 36,
+        ],
+        'date_entered' => [
+            'name' => 'date_entered',
+            'type' => 'datetime',
+        ],
+        'url' => [
+            'name' => 'url',
+            'type' => 'text'
+        ],
+        'url_name' => [
+            'name' => 'url_name',
+            'type' => 'varchar',
+            'len' => 150
+        ],
+        'category_ids' => [
+            'name' => 'category_ids',
+            'type' => 'varchar',
+        ],
+        'deleted' => [
+            'name' => 'deleted',
+            'type' => 'bool',
+            'default' => 0
+        ],
+        'external_id' => [
+            'name' => 'external_id',
+            'type' => 'varchar',
+            'len' => 200,
+        ],
+        'description' => [
+            'name' => 'description',
+            'type' => 'text'
+        ],
+    ],
+    'indices' => [],
+];
