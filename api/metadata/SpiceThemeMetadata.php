@@ -317,19 +317,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceurls'] = [
             'type' => 'varchar',
             'len' => 150
         ],
-        'category_ids' => [
-            'name' => 'category_ids',
-            'type' => 'varchar',
-        ],
         'deleted' => [
             'name' => 'deleted',
             'type' => 'bool',
             'default' => 0
-        ],
-        'external_id' => [
-            'name' => 'external_id',
-            'type' => 'varchar',
-            'len' => 200,
         ],
         'description' => [
             'name' => 'description',
