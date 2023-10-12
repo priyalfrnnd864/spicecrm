@@ -57,8 +57,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syswebhooks'] = [
         ],
         'custom_headers' => [
             'name' => 'custom_headers',
-            'type' => 'json',
-            'dbtype' => 'longtext'
+            'dbtype' => 'text'
         ]
     ],
     'indices' => [
