@@ -43,6 +43,12 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = 
 			'len' => '1',
 			'default' => '0'
         ],
+        [
+			'name' => 'unsubscribegroup_status',
+			'type' => 'bool',
+			'len' => '1',
+			'default' => '0'
+        ],
     ],
 
 	'indices' => [
