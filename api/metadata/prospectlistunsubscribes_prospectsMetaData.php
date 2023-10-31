@@ -62,6 +62,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospectlistunsubscribes_pros
             'join_key_rhs' => 'related_id',
             'relationship_role_column' => 'related_type',
             'relationship_role_column_value' => 'Contacts'
-        ]
+        ],
     ]
 ];
