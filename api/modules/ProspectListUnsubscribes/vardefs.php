@@ -21,6 +21,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['ProspectListUnsubscribe'] = [
             'relationship' => 'prospectlistunsubscribes_contacts',
             'source' => 'non-db',
         ],
+        'is_default_sendgrid' => [
+            'name' => 'is_default_sendgrid',
+            'vname' => 'LBL_ISDEFAULT_SENDGRID',
+            'type' => 'bool',
+            'default' => 0,
+        ],
+
     ]
 ];
 
