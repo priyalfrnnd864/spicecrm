@@ -63,3 +63,19 @@ SpiceDictionaryHandler::getInstance()->dictionary['productvariants_resellers'] =
         ]
     ]
 ];
+
+SpiceDictionaryHandler::getInstance()->dictionary['products_accountdeterminations'] = [
+    'table' => 'products_accountdeterminations',
+    'fields' => [
+        'id' => ['name' => 'id', 'type' => 'varchar', 'len' => '36'],
+        'companycode_id' => ['name' => 'companycode_id', 'type' => 'varchar', 'len' => '36'],
+        'account_determination_group' => ['name' => 'account_determination_group', 'type' => 'varchar', 'len' => '30'],
+        'account_determination_params' => ['name' => 'account_determination_params', 'type' => 'varchar', 'len' => '36'],
+        'account_number' => ['name' => 'account_number', 'type' => 'varchar', 'len' => '15']
+    ],
+    'indices' => [
+        ['name' => 'idx_products_accountdeterminations_pk', 'type' =>'unique', 'fields'=> ['id']],
+        ['name' => 'idx_products_accountdeterminations_companycode_id', 'type' =>'index', 'fields'=> ['companycode_id']],
+        ['name' => 'idx_products_accountdeterminations_group_params', 'type' =>'index', 'fields'=> ['account_determination_group', 'account_determination_params']]
+    ]
+];
