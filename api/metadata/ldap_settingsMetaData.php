@@ -133,6 +133,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
             'type'    => 'text',
             'comment' => 'a json string containing an array of key-value pairs LDAP fields to additionally retrieve from LDAP',
         ],
+        'ldap_debug' => [
+            'name'    => 'ldap_debug',
+            'vname'   => 'LBL_DEBUG',
+            'type'    => 'bool',
+            'default' => 0,
+            'comment' => '1 means more LDAP debug ',
+        ],
     ],
     'indices' => [
         [
