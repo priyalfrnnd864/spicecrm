@@ -14,7 +14,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['workflowtasktypes'] = [
         'name' => [
             'name' => 'name',
             'type' => 'varchar',
-            'len' => 16
+            'len' => 50
         ],
         'handler_class' => [
             'name' => 'handler_class',
