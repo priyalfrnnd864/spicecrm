@@ -32,3 +32,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['ProspectListUnsubscribe'] = [
 ];
 
 VardefManager::createVardef('ProspectListUnsubscribes', 'ProspectListUnsubscribe', ['default', 'assignable']);
+SpiceDictionaryHandler::getInstance()->dictionary['ProspectListUnsubscribe']['fields']['description']['required'] = true;
