@@ -164,6 +164,17 @@ SpiceDictionaryHandler::getInstance()->dictionary['Note'] = [
             'reportable' => false,
             'source' => 'non-db',
         ],
+
+        #CR1001177
+        'hcmemployeeobjectives' => [
+            'name'         => 'hcmemployeeobjectives',
+            'type'         => 'link',
+            'relationship' => 'hcmemployeeobjectives_notes',
+            'module'       => 'HCMEmployeeObjectives',
+            'source'       => 'non-db',
+            'vname'        => 'LBL_HCMEMPLOYEE_OBJECTIVES',
+        ],
+
         'employees' => [
             'name'         => 'employees',
             'type'         => 'link',
@@ -302,6 +313,15 @@ if (file_exists("extensions/modules/ProcurementDocs")) {
         'relationship' => 'procurementdocs_notes',
         'source'       => 'non-db',
         'vname'        => 'LBL_PROCUREMENTDOCS',
+    ];
+}
+if (file_exists("extensions/modules/HCMEmployeeObjectives")) {
+    SpiceDictionaryHandler::getInstance()->dictionary['Meeting']['fields']['hcmemployeeobjectives'] = [
+        'name'         => 'hcmemployeeobjectives',
+        'type'         => 'link',
+        'relationship' => 'hcmemployeeobjectives_notes',
+        'source'       => 'non-db',
+        'vname'        => 'LBL_HCMEMPLOYEE_OBJECTIVES',
     ];
 }
 
