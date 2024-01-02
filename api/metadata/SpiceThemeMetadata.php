@@ -238,6 +238,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceattachments'] = [
             'type' => 'index',
             'fields' => ['filemd5', 'deleted'],
         ],
+        [
+            'name' => 'tatselectionbeaniddel_idx',
+            'type' => 'index',
+            'fields' => ['bean_id', 'deleted'],
+        ],
     ],
 ];
 
