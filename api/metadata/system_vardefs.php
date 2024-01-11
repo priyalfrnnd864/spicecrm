@@ -478,11 +478,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = 
             'type' => 'index',
             'fields' => ['status', 'sysdictionary_type']
         ],
-        [
-            'name' => 'idx_sysdictionarydefinition_del_status',
-            'type' => 'index',
-            'fields' => ['deleted', 'status']
-        ],
     ]
 ];
 
@@ -499,12 +494,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionarydefinition
         [
             'name' => 'idx_syscustomdictionarydefinitions_del_status_type',
             'type' => 'index',
-            'fields' => ['deleted', 'status', 'sysdictionary_type']
-        ],
-        [
-            'name' => 'idx_syscustomdictionarydefinitions_del_status',
-            'type' => 'index',
-            'fields' => ['deleted', 'status']
+            'fields' => ['status', 'sysdictionary_type']
         ],
     ]
 ];
