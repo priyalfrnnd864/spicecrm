@@ -676,6 +676,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindices'] = [
             'fields' => ['id']
         ],
         [
+            'name' => 'sysdictionaryindicesname',
+            'type' => 'index',
+            'fields' => ['sysdictionaryname']
+        ],
+        [
             'name' => 'idx_sysdictionaryindices_sysdictionarydef',
             'type' => 'index',
             'fields' => ['sysdictionarydefinition_id']
