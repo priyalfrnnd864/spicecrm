@@ -45,6 +45,14 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysgdprretentions'] = [
             'name' => 'deleted',
             'type' => 'bool',
             'default' => 0
+        ],
+        'include_deleted' => [
+            'name' => 'include_deleted',
+            'type' => 'varchar',
+            'len' => 1,
+            'popupHelp' => 'LBL_INCLUDE_DELETED',
+            'default' => null,
+            'comment' => ''
         ]
     ],
     'indices' => [
