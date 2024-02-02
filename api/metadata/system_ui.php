@@ -1777,6 +1777,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiroles'] = [
             'name' => 'default_dashboardset',
             'type' => 'id'
         ],
+        'rolescope' => [
+            'name' => 'rolescope',
+            'type' => 'varchar',
+            'len' => 1,
+            'default' => 'i',
+            'comment' => 'defines the scope for the role if applied to employees or all other users, a for all, i for internal e for external'
+        ],
         'version' => [
             'name' => 'version',
             'type' => 'varchar',
@@ -1854,6 +1861,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomroles'] = [
         'default_dashboardset' => [
             'name' => 'default_dashboardset',
             'type' => 'id'
+        ],
+        'rolescope' => [
+            'name' => 'rolescope',
+            'type' => 'varchar',
+            'len' => 1,
+            'default' => 'i',
+            'comment' => 'defines the scope for the role if applied to employees or all other users, a for all, i for internal e for external'
         ],
         'version' => [
             'name' => 'version',
