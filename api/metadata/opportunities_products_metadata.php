@@ -13,7 +13,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['opportunities_products'] = [
         'product_id' => ['name' => 'product_id', 'type' => 'char', 'len' => 36],
         'date_modified' => ['name' => 'date_modified', 'type' => 'datetime'],
         'deleted' => ['name' => 'deleted', 'type' => 'bool', 'len' => '1', 'required' => false, 'default' => 0],
-    ],
+        'date_requested' => ['name' => 'date_requested', 'type' => 'date', 'vname' => 'LBL_DATE_REQUESTED'],
+        'quantity' => ['name' => 'quantity','vname' => 'LBL_QUANTITY', 'type' => 'quantity', 'dbtype' => 'double'],
+        ],
     'indices' => [
         ['name' => 'opportunities_productspk', 'type' => 'primary', 'fields' => ['id']],
         ['name' => 'opportunities_productsalt', 'type' => 'alternate_key', 'fields' => ['opportunity_id', 'product_id']],
