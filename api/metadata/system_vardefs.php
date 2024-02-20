@@ -882,7 +882,20 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiptype
             'type' => 'varchar',
             'len' => '255',
             'comment' => 'the component name to edit the relationship'
+        ],
+        'version' => [
+            'name' => 'version',
+            'type' => 'varchar',
+            'len' => 16
+        ],
+        'package' => [
+            'name' => 'package',
+            'type' => 'varchar',
+            'len' => 32
         ]
+    ],
+    'indices' => [
+        ['name' => 'relationshiptypespk', 'type' => 'primary', 'fields' => ['id']],
     ]
 ];
 
