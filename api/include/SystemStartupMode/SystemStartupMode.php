@@ -5,6 +5,7 @@ namespace SpiceCRM\includes\SystemStartupMode;
 use Exception;
 use SpiceCRM\includes\database\DBManagerFactory;
 use SpiceCRM\includes\SpiceCache\SpiceCache;
+use SpiceCRM\includes\SpiceDictionary\SpiceDictionary;
 use SpiceCRM\includes\SpiceSingleton;
 use SpiceCRM\includes\SugarObjects\SpiceConfig;
 
@@ -18,6 +19,26 @@ class SystemStartupMode extends SpiceSingleton
     {
         return SpiceConfig::getInstance()->get('system.startup_mode');
     }
+
+    /**
+     * check if the system has dictionary and set recovery mode
+     * @throws Exception
+     */
+    public static function checkDictionary()
+    {
+        if (SpiceCache::get(SpiceDictionary::cachename)) {
+            return;
+        }
+
+        $db = DBManagerFactory::getInstance();
+
+        $hasDBCache = $db->tableExists(SpiceDictionary::table) && $db->getOne("SELECT id FROM " . SpiceDictionary::table);
+
+        if (!$hasDBCache) {
+            SystemStartupMode::setRecoveryMode(true);
+        }
+    }
+
     /**
      * if the system is in recovery mode
      * @return bool
@@ -42,8 +63,7 @@ class SystemStartupMode extends SpiceSingleton
      */
     public static function setRecoveryMode(bool $value): void
     {
-        $hashEntry = ['category' => 'system', 'name' => 'startup_mode', 'value' => $value ? 'recovery' : 'normal'];
-        self::saveModeValue($hashEntry);
+        SpiceConfig::getInstance()->set('system', 'startup_mode', $value ? 'recovery' : 'normal');
     }
 
     /**
@@ -52,20 +72,6 @@ class SystemStartupMode extends SpiceSingleton
      */
     public static function setMaintenanceMode(bool $value): void
     {
-        $hashEntry = ['category' => 'system', 'name' => 'startup_mode', 'value' => $value ? 'maintenance' : 'normal'];
-        self::saveModeValue($hashEntry);
-    }
-
-    /**
-     * save the mode value to the config table and reload the config
-     * @throws Exception
-     */
-    private static function saveModeValue(array $entry): void
-    {
-        $db = DBManagerFactory::getInstance();
-
-        $db->upsertQuery('config', ['category' => $entry['category'], 'name' => $entry['name']], $entry);
-        SpiceCache::deleteByKey('dbconfig');
-        SpiceConfig::getInstance()->reloadConfig(true);
+        SpiceConfig::getInstance()->set('system', 'startup_mode', $value ? 'maintenance' : 'normal');
     }
 }
