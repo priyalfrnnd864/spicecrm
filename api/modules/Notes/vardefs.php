@@ -143,28 +143,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['Note'] = [
             'vname' => 'LBL_EMAIL_ADDRESS',
             'source' => 'non-db',
         ],
-        'account_id' => [
-            'name' => 'account_id',
-            'vname' => 'LBL_ACCOUNT_ID',
-            'type' => 'id',
-            'reportable' => false,
-            'source' => 'non-db',
-        ],
-        'opportunity_id' => [
-            'name' => 'opportunity_id',
-            'vname' => 'LBL_OPPORTUNITY_ID',
-            'type' => 'id',
-            'reportable' => false,
-            'source' => 'non-db',
-        ],
-        'lead_id' => [
-            'name' => 'lead_id',
-            'vname' => 'LBL_LEAD_ID',
-            'type' => 'id',
-            'reportable' => false,
-            'source' => 'non-db',
-        ],
-
         #CR1001177
         'hcmemployeeobjectives' => [
             'name'         => 'hcmemployeeobjectives',
