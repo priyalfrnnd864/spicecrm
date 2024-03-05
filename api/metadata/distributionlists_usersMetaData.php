@@ -20,16 +20,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['distributionlists_users'] = [
     ],
     'relationships' => [
         'distributionlists_users' => [
-            'lhs_module' => 'DistributionLists',
-            'lhs_table' => 'distributionlists',
+            'lhs_module' => 'Users',
+            'lhs_table' => 'users',
             'lhs_key' => 'id',
-            'rhs_module' => 'Users',
-            'rhs_table' => 'users',
+            'rhs_module' => 'DistributionLists',
+            'rhs_table' => 'distributionlists',
             'rhs_key' => 'id',
             'relationship_type' => 'many-to-many',
             'join_table' => 'distributionlists_users',
-            'join_key_lhs' => 'distributionlist_id',
-            'join_key_rhs' => 'user_id',
+            'join_key_lhs' => 'user_id',
+            'join_key_rhs' => 'distributionlist_id',
         ],
     ],
 ];
