@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysmailboxtransports'] = [
     'table' => 'sysmailboxtransports',
     'fields' => [
@@ -62,3 +63,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustommailboxtransports'] 
         ]
     ]
 ];
+*/

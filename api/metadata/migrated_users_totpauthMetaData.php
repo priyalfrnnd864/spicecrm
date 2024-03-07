@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['users_totp'] = [
     'table' => 'users_totp',
     'fields' => [
@@ -61,3 +62,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['users_totp'] = [
         ]
     ],
 ];
+*/

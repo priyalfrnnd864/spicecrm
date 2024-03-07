@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['syswebhooks'] = [
     'table' => 'syswebhooks',
     'fields' => [
@@ -73,3 +74,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syswebhooks'] = [
         ]
     ]
 ];
+*/

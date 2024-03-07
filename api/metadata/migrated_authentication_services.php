@@ -1,7 +1,7 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['authentication_services'] = [
     'table' => 'authentication_services',
     'fields' => [
@@ -90,3 +90,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysauthconfig'] = [
         ]
     ]
 ];
+*/

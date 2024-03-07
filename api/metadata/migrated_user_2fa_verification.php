@@ -2,6 +2,7 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['user_device_ids'] = [
     'table' => 'user_device_ids',
     'contenttype'   => 'sensitive_data',
@@ -60,3 +61,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['user_2fa_codes'] = [
         ],
     ]
 ];
+*/

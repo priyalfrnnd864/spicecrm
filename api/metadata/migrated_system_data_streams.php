@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysdatastreams'] = [
     'table' => 'sysdatastreams',
     'fields' => [
@@ -31,3 +32,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdatastreams'] = [
         ],
     ]
 ];
+*/
