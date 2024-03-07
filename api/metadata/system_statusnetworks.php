@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['syststatusnetworks'] = [
     'table' => 'syststatusnetworks',
     'fields' => [
@@ -81,3 +82,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['systcustomstatusnetworks'] = 
     ]
 
 ];
+*/

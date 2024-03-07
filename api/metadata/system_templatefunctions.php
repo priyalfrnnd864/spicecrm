@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['systemplatefunctions'] = [
     'table' => 'systemplatefunctions',
     'fields' => [
@@ -95,3 +96,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomtemplatefunctions'] 
         ]
     ]
 ];
+*/

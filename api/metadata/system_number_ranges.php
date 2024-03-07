@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysnumberranges'] = [
     'table' => 'sysnumberranges',
     'fields' => [
@@ -85,3 +86,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysnumberrangeallocation'] = 
             'fields' => ['id']]
     ]
 ];
+*/

@@ -7,6 +7,7 @@ use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
  * CR1000108
  * Tables for Spice variable definitions
  */
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysreservedwords'] = [
     'table' => 'sysreservedwords',
     'comment' => 'contains reserved word for a context like database',
@@ -73,3 +74,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysreservedwords'] = [
         ],
     ]
 ];
+*/
