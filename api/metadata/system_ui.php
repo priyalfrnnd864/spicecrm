@@ -30,6 +30,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiassets'] = [
 ];
 */
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['systextids_modules'] = [
     'table' => 'systextids_modules',
     'audited' => true,
@@ -137,6 +138,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomtextids'] = [
         ]
     ]
 ];
+*/
 
 /* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuipackagerepositories'] = [
@@ -716,6 +718,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentsetscompo
 ];
 */
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldsets'] = [
     'table' => 'sysuifieldsets',
     'changerequests' => [
@@ -846,7 +849,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomfieldsetsitems'] =
             'fields' => ['fieldset_id']]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiactionsets'] = [
     'table' => 'sysuiactionsets',
     'changerequests' => [
@@ -988,7 +993,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomactionsetitems'] =
         ]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiroutes'] = [
     'table' => 'sysuiroutes',
     'changerequests' => [
@@ -1078,8 +1085,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomroutes'] = [
             'fields' => ['id']]
     ]
 ];
+*/
 
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysmodules'] = [
     'table' => 'sysmodules',
     'changerequests' => [
@@ -1257,7 +1265,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustommodules'] = [
             'fields' => ['sysdictionarydefinition_id']],
     ]
 ];
+*/
 
+/* deprecated and no longer used
 SpiceDictionaryHandler::getInstance()->dictionary['sysmodulemenus'] = [
     'table' => 'sysmodulemenus',
     'fields' => [
@@ -1309,7 +1319,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysmodulemenus'] = [
         ]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentdefaultconf'] = [
     'table' => 'sysuicomponentdefaultconf',
     'changerequests' => [
@@ -1503,7 +1515,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentmodulecon
             'fields' => ['module']]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysmodulelists'] = [
     'table' => 'sysmodulelists',
     'changerequests' => [
@@ -1583,8 +1597,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysmodulelists'] = [
             'fields' => ['id']]
     ]
 ];
+*/
 
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuidashboarddashlets'] = [
     'table' => 'sysuidashboarddashlets',
     'changerequests' => [
@@ -1720,7 +1735,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomdashboarddashlets'
             'fields' => ['id']]
     ]
 ];
+*/
 
+/* migratedd
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiroles'] = [
     'table' => 'sysuiroles',
     'changerequests' => [
@@ -2065,7 +2082,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomrolemodules'] = [
         ]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiadmingroups'] = [
     'table' => 'sysuiadmingroups',
     'changerequests' => [
@@ -2287,8 +2306,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomadmincomponents'] 
         ]
     ]
 ];
+*/
 
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldtypemapping'] = [
     'table' => 'sysuifieldtypemapping',
     'changerequests' => [
@@ -2371,8 +2391,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomfieldtypemapping']
         ]
     ]
 ];
+*/
 
-
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicopyrules'] = [
     'table' => 'sysuicopyrules',
     'changerequests' => [
@@ -2506,7 +2527,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcopyrules'] = [
         ]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['spiceimportlogs'] = [
     'table' => 'spiceimportlogs',
     'fields' => [
@@ -2534,12 +2557,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceimportlogs'] = [
             'fields' => ['id']]
     ]
 ];
+*/
 
 /**
  * VALIDATIONs
  */
 
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidations'] = [
     'table' => 'sysuimodelvalidations',
     'changerequests' => [
@@ -2705,7 +2729,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelvalidationactions']
         ],
     ],
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuilibs'] = [
     'table' => 'sysuilibs',
     'changerequests' => [
@@ -2765,7 +2791,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomlibs'] = [
         ]
     ],
 ];
-
+*/
 
 /**
  * managing model states
@@ -2813,6 +2839,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustommodelstates'] = [
     ],
 ];
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlstylesheets'] = [
     'table' => 'sysuihtmlstylesheets',
     'changerequests' => [
@@ -2862,7 +2889,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlstylesheets'] = [
         ],
     ]
 ];
+*/
 
+/* deprecated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlformats'] = [
     'table' => 'sysuihtmlformats',
     'changerequests' => [
@@ -2931,6 +2960,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlformats'] = [
         ],
     ]
 ];
+*/
+
 SpiceDictionaryHandler::getInstance()->dictionary['sysdialogmail_fieldmapping'] = [
     'table' => 'sysdialogmail_fieldmapping',
     'audited' => true,
