@@ -1,7 +1,7 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+/* deprectaed
 SpiceDictionaryHandler::getInstance()->dictionary['AddressBook'] = [
     'table' => 'address_book',
 	'fields' => [
@@ -37,6 +37,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['AddressBook'] = [
 				'bean',
             ]
         ],
-    ], /* end indices */
+    ],
 ];
-
+*/

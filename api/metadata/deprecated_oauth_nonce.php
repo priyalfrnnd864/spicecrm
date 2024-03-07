@@ -4,6 +4,7 @@ use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 /**
  * table storing reports filter information
  */
+/* deprecated
 SpiceDictionaryHandler::getInstance()->dictionary['oauth_nonce'] = [
 	'table' => 'oauth_nonce',
 	'fields' => [
@@ -40,3 +41,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['oauth_nonce'] = [
         ],
     ],
 ];
+*/

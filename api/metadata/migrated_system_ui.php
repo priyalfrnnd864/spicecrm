@@ -298,6 +298,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomloadtaskitems'] = 
 ];
 */
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicalendarcolorconditions'] = [
     'table' => 'sysuicalendarcolorconditions',
     'audited' => true,
@@ -455,6 +456,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcalendaritems'] = 
             'fields' => ['owner']]
     ]
 ];
+*/
 
 /* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodulerepository'] = [
@@ -2796,6 +2798,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomlibs'] = [
 /**
  * managing model states
  */
+
+/* deoprecated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodelstates'] = [
     'table' => 'sysuimodelstates',
     'changerequests' => [
@@ -2838,6 +2842,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustommodelstates'] = [
         ]
     ],
 ];
+*/
 
 /* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlstylesheets'] = [
@@ -2962,6 +2967,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlformats'] = [
 ];
 */
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysdialogmail_fieldmapping'] = [
     'table' => 'sysdialogmail_fieldmapping',
     'audited' => true,
@@ -3129,3 +3135,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syssendinblue_fieldmapping'] 
         ]
     ]
 ];
+*/

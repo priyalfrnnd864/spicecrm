@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
     'table' => 'ldap_settings',
     'fields' => [
@@ -154,3 +155,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['ldap_settings'] = [
         ]
     ],
 ];
+*/
