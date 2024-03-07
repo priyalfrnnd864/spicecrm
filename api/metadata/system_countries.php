@@ -1,7 +1,7 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['syscountries'] = [
     'table' => 'syscountries',
     'comment' => 'holds a list fo all countries for selecttion and translation',
@@ -91,3 +91,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscountrystates'] = [
         ]
     ]
 ];
+*/

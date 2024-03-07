@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migriert
 SpiceDictionaryHandler::getInstance()->dictionary['syslangs'] = [
     'table' => 'syslangs',
     'changerequests' => [
@@ -161,4 +162,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syslanguagecustomtranslations
         ['name' => 'syslanguagecustomlabelidlang_idx', 'type' =>'unique', 'fields' => ['syslanguagelabel_id', 'syslanguage']],
     ],
 ];
-
+    */

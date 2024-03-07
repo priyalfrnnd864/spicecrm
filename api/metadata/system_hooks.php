@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['syshooks'] = [
     'table' => 'syshooks',
     'fields' => [
@@ -89,3 +90,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomhooks'] = [
         ]
     ]
 ];
+*/

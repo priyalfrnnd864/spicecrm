@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysfts'] = [
     'table' => 'sysfts',
     'fields' => [
@@ -45,6 +46,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysfts'] = [
         ['name' => 'sysftsmodule', 'type' => 'unique', 'fields' => ['module']],
     ]
 ];
+*/
 
 /* moved to the api log
 SpiceDictionaryHandler::getInstance()->dictionary['sysftslog'] = [

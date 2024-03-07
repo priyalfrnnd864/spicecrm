@@ -14,6 +14,7 @@
  */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysapilogconfig'] = [
     'table' => 'sysapilogconfig',
     'fields' => [
@@ -211,3 +212,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysapilog'] = [
         ]
     ],
 ];
+*/

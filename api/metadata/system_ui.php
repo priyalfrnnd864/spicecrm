@@ -2,7 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-
+/* migriert
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiassets'] = [
     'table' => 'sysuiassets',
     'audited' => true,
@@ -28,7 +28,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuiassets'] = [
         ]
     ]
 ];
-
+*/
 
 SpiceDictionaryHandler::getInstance()->dictionary['systextids_modules'] = [
     'table' => 'systextids_modules',
@@ -138,6 +138,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomtextids'] = [
     ]
 ];
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuipackagerepositories'] = [
     'table' => 'sysuipackagerepositories',
     'audited' => true,
@@ -169,7 +170,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuipackagerepositories'] = 
             'fields' => ['id']]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuiloadtasks'] = [
     'table' => 'sysuiloadtasks',
     'audited' => true,
@@ -291,6 +294,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomloadtaskitems'] = 
         ]
     ]
 ];
+*/
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicalendarcolorconditions'] = [
     'table' => 'sysuicalendarcolorconditions',
