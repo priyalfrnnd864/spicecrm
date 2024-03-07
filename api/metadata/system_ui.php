@@ -454,6 +454,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcalendaritems'] = 
     ]
 ];
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuimodulerepository'] = [
     'table' => 'sysuimodulerepository',
     'changerequests' => [
@@ -585,7 +586,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomobjectrepository']
             'fields' => ['id']]
     ]
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysuicomponentsets'] = [
     'table' => 'sysuicomponentsets',
     'changerequests' => [
@@ -711,6 +714,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuicustomcomponentsetscompo
             'fields' => ['componentset_id']]
     ]
 ];
+*/
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysuifieldsets'] = [
     'table' => 'sysuifieldsets',
