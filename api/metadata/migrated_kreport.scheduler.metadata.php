@@ -12,6 +12,7 @@
  * ****************************************************************************** */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['kreportschedulers'] = [
 	'table' => 'kreportschedulers',
         'fields' => [
@@ -41,3 +42,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['kreportschedulers'] = [
         ['name' => 'kreportschedulerspk', 'type' => 'primary', 'fields' => ['id']]
     ]
 ];
+*/

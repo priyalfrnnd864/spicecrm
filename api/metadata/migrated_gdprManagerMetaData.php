@@ -2,6 +2,7 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysgdprretentions'] = [
     'table' => 'sysgdprretentions',
     'fields' => [
@@ -63,3 +64,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysgdprretentions'] = [
         ]
     ]
 ];
+*/

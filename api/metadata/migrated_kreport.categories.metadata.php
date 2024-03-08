@@ -13,6 +13,7 @@
  * ****************************************************************************** */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['kreportcategories'] = [
     'table' => 'kreportcategories',
     'fields' => [
@@ -162,3 +163,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['kreportcategories'] = [
         ['name' => 'idx_is_admin', 'type' => 'index', 'fields' => ['is_admin_only', 'deleted']],
     ],
 ];
+*/

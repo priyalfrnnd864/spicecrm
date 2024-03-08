@@ -13,6 +13,7 @@
  * ****************************************************************************** */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['KReportSavedFilter'] = [
     'table' => 'kreportsavedfilters',
     'fields' => [
@@ -165,3 +166,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['KReportSavedFilter'] = [
         ['name' => 'idx_kreport_id_del', 'type' => 'index', 'fields' => ['kreport_id', 'deleted']],
     ],
 ];
+*/

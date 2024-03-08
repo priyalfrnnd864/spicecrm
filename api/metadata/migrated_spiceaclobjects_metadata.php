@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLModuleFields'] = [
     'table' => 'spiceaclmodulefields',
     'fields' => [
@@ -333,3 +334,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['SpiceACLObjects_hash'] = [
         ]
     ]
 ];
+*/

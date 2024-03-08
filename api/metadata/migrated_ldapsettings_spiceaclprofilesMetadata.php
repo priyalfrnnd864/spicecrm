@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_ldap_groups'] = [
     'table' => 'spiceaclprofiles_ldap_groups',
     'fields' => [
@@ -46,3 +47,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceaclprofiles_ldap_groups'
 
     ]
 ];
+*/

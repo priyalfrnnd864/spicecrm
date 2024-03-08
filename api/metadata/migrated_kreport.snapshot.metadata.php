@@ -12,7 +12,7 @@
  * You can contact us at info@kreporter.org
  * ****************************************************************************** */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['KReportSnapshots'] = [
     'table' => 'kreportsnapshots',
     'fields' => [
@@ -45,10 +45,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['KReportSnapshots'] = [
 SpiceDictionaryHandler::getInstance()->dictionary['KReportSnapshotsData'] = [
     'table' => 'kreportsnapshotsdata',
     'fields' => [
-        /* 	   'id' => array(
-          'name' => 'id',
-          'type' => 'id',
-          ), */
         'snapshot_id' => [
             'name' => 'snapshot_id',
             'type' => 'id',
@@ -71,3 +67,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['KReportSnapshotsData'] = [
         ['name' => 'kreportsnapshotsdatapk', 'type' => 'unique', 'fields' => ['snapshot_id', 'record_id']]
     ],
 ];
+*/

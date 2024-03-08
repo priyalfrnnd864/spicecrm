@@ -13,6 +13,7 @@
  * ****************************************************************************** */
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['KReportGroupings'] = [
     'table' => 'kreportgroupings',
     'fields' => [
@@ -54,4 +55,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['KReportGroupings'] = [
         ['name' => 'kreportgroupingspk', 'type' => 'primary', 'fields' => ['id']],
     ],
 ];
-
+    */
