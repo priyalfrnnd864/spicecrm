@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['spicesubscriptions'] = [
     'table'  => 'spicesubscriptions',
     'fields' => [
@@ -33,3 +34,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicesubscriptions'] = [
         ]
     ],
 ];
+*/

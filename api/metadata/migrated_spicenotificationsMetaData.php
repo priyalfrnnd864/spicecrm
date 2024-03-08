@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['spicenotifications'] = [
     'table'  => 'spicenotifications',
     'fields' => [
@@ -72,3 +73,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicenotifications'] = [
         ],
     ],
 ];
+*/

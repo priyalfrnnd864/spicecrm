@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['Administration'] = [
     'table' => 'config',
     'comment' => 'System table containing system-wide definitions',
@@ -32,3 +33,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['Administration'] = [
 
     ], 'indices' => [['name' => 'idx_config_cat', 'type' => 'index', 'fields' => ['category']],]
 ];
+*/
