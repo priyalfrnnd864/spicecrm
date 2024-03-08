@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreenodes'] = [
     'table' => 'syscategorytreenodes',
     'fields' => [
@@ -174,3 +175,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscategorytreelinks'] = [
         ]
     ]
 ];
+*/

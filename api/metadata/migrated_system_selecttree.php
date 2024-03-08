@@ -1,7 +1,7 @@
 <?php
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysselecttree_fields'] = [
     'table' => 'sysselecttree_fields',
     'fields' => [
@@ -75,3 +75,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysselecttree_tree'] = [
         ]
     ]
 ];
+*/
