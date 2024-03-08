@@ -3,6 +3,7 @@
 
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['spicefavorites'] = [
     'table' => 'spicefavorites',
     'fields' => [
@@ -334,3 +335,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['spiceurls'] = [
     ],
     'indices' => [],
 ];
+*/
