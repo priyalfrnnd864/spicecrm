@@ -3,11 +3,8 @@
 
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-/**
- * CR1000108
- * Tables for Spice variable definitions
- */
-SpiceDictionaryHandler::getInstance()->dictionary['sysdomaindefinitions'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdomaindefinitions'] = [
     'table' => 'sysdomaindefinitions',
     'comment' => 'something like sugar var types',
     'audited' => false,
@@ -57,9 +54,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomaindefinitions'] = [
             'fields' => ['id']
         ],
     ]
-];
+]*/;
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomaindefinitions'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomaindefinitions'] = [
     'table' => 'syscustomdomaindefinitions',
     'comment' => 'something like sugar var types',
     'audited' => false,
@@ -71,9 +69,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomaindefinitions'] 
             'fields' => ['id']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields'] = [
     'table' => 'sysdomainfields',
     'audited' => false,
     'comment' => 'something like database var types',
@@ -173,9 +172,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfields'] = [
         ['name' => 'idx_sysdomainfields_sysdodefid', 'type' => 'index', 'fields' => ['sysdomaindefinition_id']],
         ['name' => 'idx_sysdomainfields_sysdofldvalid', 'type' => 'index', 'fields' => ['sysdomainfieldvalidation_id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfields'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfields'] = [
     'table' => 'syscustomdomainfields',
     'audited' => false,
     'comment' => 'something like database var types',
@@ -185,9 +185,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfields'] = [
         ['name' => 'idx_syscustomdomainfields_sysdodefid', 'type' => 'index', 'fields' => ['sysdomaindefinition_id']],
         ['name' => 'idx_syscustomdomainfields_sysdofldvalid', 'type' => 'index', 'fields' => ['sysdomainfieldvalidation_id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations'] = [
     'table' => 'sysdomainfieldvalidations',
     'comment' => 'holding enum values',
     'audited' => false,
@@ -275,9 +276,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations'] =
             'fields' => ['status', 'deleted']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidations'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidations'] = [
     'table' => 'syscustomdomainfieldvalidations',
     'audited' => false,
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidations']['fields'],
@@ -298,9 +300,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidatio
             'fields' => ['status', 'deleted']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalues'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalues'] = [
     'table' => 'sysdomainfieldvalidationvalues',
     'audited' => false,
     'fields' =>
@@ -386,9 +389,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalue
             'fields' => ['sysdomainfieldvalidation_id', 'status', 'deleted']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidationvalues'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidationvalues'] = [
     'table' => 'syscustomdomainfieldvalidationvalues',
     'audited' => false,
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdomainfieldvalidationvalues']['fields'],
@@ -404,7 +408,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdomainfieldvalidatio
             'fields' => ['sysdomainfieldvalidation_id', 'status', 'deleted']
         ],
     ]
-];
+];*/
 
 SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = [
     'table' => 'sysdictionarydefinitions',
