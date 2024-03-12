@@ -410,7 +410,8 @@ use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
     ]
 ];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = [
     'table' => 'sysdictionarydefinitions',
     'audited' => false,
     'fields' =>
@@ -483,9 +484,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions'] = 
             'fields' => ['status', 'sysdictionary_type']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionarydefinitions'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionarydefinitions'] = [
     'table' => 'syscustomdictionarydefinitions',
     'audited' => false,
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarydefinitions']['fields'],
@@ -501,9 +503,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionarydefinition
             'fields' => ['status', 'sysdictionary_type']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
     'table' => 'sysdictionaryitems',
     'audited' => false,
     'fields' =>
@@ -608,9 +611,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems'] = [
         ],
 
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryitems'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryitems'] = [
     'table' => 'syscustomdictionaryitems',
     'audited' => false,
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryitems']['fields'],
@@ -622,9 +626,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryitems'] = 
         ],
 
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindices'] = [
+# deprecated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindices'] = [
     'table' => 'sysdictionaryindices',
     'audited' => false,
     'fields' =>
@@ -690,9 +695,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindices'] = [
             'fields' => ['sysdictionarydefinition_id']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes'] = [
     'table' => 'sysdictionaryindexes',
     'audited' => false,
     'fields' =>
@@ -750,9 +756,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes'] = [
             'fields' => ['sysdictionarydefinition_id']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexes'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexes'] = [
     'table' => 'syscustomdictionaryindexes',
     'audited' => false,
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexes']['fields'],
@@ -768,9 +775,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexes'] 
             'fields' => ['sysdictionarydefinition_id']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems'] = [
     'table' => 'sysdictionaryindexitems',
     'audited' => false,
     'fields' =>
@@ -834,9 +842,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems'] = [
             'fields' => ['id']
         ],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexitems'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexitems'] = [
     'table' => 'syscustomdictionaryindexitems',
     'audited' => false,
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryindexitems']['fields'],
@@ -847,10 +856,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryindexitems
             'fields' => ['id']
         ],
     ]
-];
+];*/
 
-
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiptypes'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiptypes'] = [
     'table' => 'sysdictionaryrelationshiptypes',
     'fields' => [
         'id' => [
@@ -901,9 +910,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiptype
     'indices' => [
         ['name' => 'relationshiptypespk', 'type' => 'primary', 'fields' => ['id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] = [
     'table' => 'sysdictionaryrelationships',
     'fields' => [
         'id' => [
@@ -1104,9 +1114,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships'] 
         ['name' => 'idx_sysdictionaryrelationship_lhs', 'type' => 'index', 'fields' => ['lhs_sysdictionarydefinition_id', 'status', 'deleted']],
         ['name' => 'idx_sysdictionaryrelationship_rhs', 'type' => 'index', 'fields' => ['rhs_sysdictionarydefinition_id', 'status', 'deleted']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationships'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationships'] = [
     'table' => 'syscustomdictionaryrelationships',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationships']['fields'],
     'indices' => [
@@ -1116,9 +1127,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
         ['name' => 'idx_syscustomdictionaryrelationship_lhs', 'type' => 'index', 'fields' => ['lhs_sysdictionarydefinition_id', 'status', 'deleted']],
         ['name' => 'idx_syscustomdictionaryrelationship_rhs', 'type' => 'index', 'fields' => ['rhs_sysdictionarydefinition_id', 'status', 'deleted']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshippolymorphs'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshippolymorphs'] = [
     'table' => 'sysdictionaryrelationshippolymorphs',
     'fields' => [
         'id' => [
@@ -1177,18 +1189,20 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshippoly
         ['name' => 'idx_sysdictionaryrelationshippolymorphs_pk', 'type' => 'unique', 'fields' => ['id']],
         ['name' => 'idx_sysdictionaryrelationshippolymorphs_relid', 'type' => 'index', 'fields' => ['relationship_id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshippolymorphs'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshippolymorphs'] = [
     'table' => 'syscustomdictionaryrelationshippolymorphs',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshippolymorphs']['fields'],
     'indices' => [
         ['name' => 'idx_syscustomdictionaryrelationshippolymorphs_pk', 'type' => 'unique', 'fields' => ['id']],
         ['name' => 'idx_syscustomdictionaryrelationshippolymorphs_relid', 'type' => 'index', 'fields' => ['relationship_id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields'] = [
     'table' => 'sysdictionaryrelationshipfields',
     'comment' => 'represents former rel_fields attribute in link',
     'fields' => [
@@ -1257,7 +1271,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfiel
         ['name' => 'idx_sysdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
         ['name' => 'idx_sysdictionaryrelationshipfields_delpackage', 'type' => 'index', 'fields' => ['deleted', 'package']],
     ]
-];
+];*/
 
 SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshipfields'] = [
     'table' => 'syscustomdictionaryrelationshipfields',
@@ -1269,7 +1283,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
     ]
 ];
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields'] = [
+# deprectated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields'] = [
     'table' => 'sysdictionaryrelationshiprelatefields',
     'comment' => 'represents former db_concat_fields attribute in relate name',
     'fields' => [
@@ -1324,17 +1339,19 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprela
     'indices' => [
         ['name' => 'sysdictionaryrelationshiprelatefieldspk', 'type' => 'primary', 'fields' => ['id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshiprelatefields'] = [
+# deprecated
+/*SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshiprelatefields'] = [
     'table' => 'syscustomdictionaryrelationshiprelatefields',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields']['fields'],
     'indices' => [
         ['name' => 'syscustomdictionaryrelationshiprelatefieldspk', 'type' => 'primary', 'fields' => ['id']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
     'table' => 'sysdictionaryfields',
     'comment' => 'used to cache parsed dictionary field definitions',
     'fields' => [
@@ -1411,9 +1428,10 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryfields'] = [
         ['name' => 'idx_sysdictionaryfields_domid', 'type' => 'index', 'fields' => ['sysdomainfield_id']],
         ['name' => 'idx_sysdictionaryfields_field', 'type' => 'index', 'fields' => ['fieldname']],
     ]
-];
+];*/
 
-SpiceDictionaryHandler::getInstance()->dictionary['Relationship'] =[
+# migrated
+/*SpiceDictionaryHandler::getInstance()->dictionary['Relationship'] =[
     'table' => 'relationships',
     'fields' => [
         'id' => [
@@ -1551,21 +1569,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['Relationship'] =[
         ['name' =>'idx_relationship_rhs_module', 'type' =>'index', 'fields'=>['rhs_module']],
         ['name' =>'idx_relationship_lhsrhsdel', 'type' =>'index', 'fields'=>['lhs_module', 'rhs_module', 'deleted']],
     ]
-];
-
-
-//SpiceDictionaryHandler::getInstance()->dictionary['sysdictionarycache'] = [
-//    'table' => 'sysdictionarycache',
-//    'comment' => 'used to cache full array of dictionary definitions',
-//    'fields' => [
-//        'id' => [
-//            'name' => 'id',
-//            'type' => 'id'
-//        ],
-//        'sysdictionaryfields' => [
-//            'name' => 'sysdictionaryfields',
-//            'type' => 'longtext',
-//            'comment' => 'base64 encoded gzdeflate serialized array'
-//        ]
-//    ]
-//];
+];*/
