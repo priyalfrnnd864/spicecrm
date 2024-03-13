@@ -2896,7 +2896,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlstylesheets'] = [
 ];
 */
 
-/* deprecated
+
 SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlformats'] = [
     'table' => 'sysuihtmlformats',
     'changerequests' => [
@@ -2965,7 +2965,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysuihtmlformats'] = [
         ],
     ]
 ];
-*/
 
 /* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['sysdialogmail_fieldmapping'] = [
