@@ -1273,6 +1273,7 @@ use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
     ]
 ];*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationshipfields'] = [
     'table' => 'syscustomdictionaryrelationshipfields',
     'fields' => SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshipfields']['fields'],
@@ -1281,7 +1282,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscustomdictionaryrelationsh
         ['name' => 'idx_syscustomdictionaryrelationshipfields_delstatus', 'type' => 'index', 'fields' => ['deleted', 'status']],
         ['name' => 'idx_syscustomdictionaryrelationshipfields_delpackage', 'type' => 'index', 'fields' => ['deleted', 'package']],
     ]
-];
+];*/
 
 # deprectated
 /*SpiceDictionaryHandler::getInstance()->dictionary['sysdictionaryrelationshiprelatefields'] = [
