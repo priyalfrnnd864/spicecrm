@@ -76,6 +76,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['systrashcan'] = [
             'name' => 'trashcan_search',
             'type' => 'index',
             'fields' => ['recordname', 'recordmodule', 'user_deleted']
+        ],
+        [
+            'name' => 'trashcan_searchlinked',
+            'type' => 'index',
+            'fields' => ['linkmodule', 'linkid']
         ]
     ]
 ];
