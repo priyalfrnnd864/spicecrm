@@ -101,6 +101,13 @@ SpiceDictionaryHandler::getInstance()->dictionary['Note'] = [
             'default' => 0,
             'comment' => 'Embed flag indicator determines if note embedded in email'
         ],
+        'external_id' => [
+            'name'    => 'external_id',
+            'vname'   => 'LBL_EXTERNALID',
+            'type'    => 'varchar',
+            'len'     => 160,
+            'comment' => 'Call ID for external app API',
+        ],
         'parent_name' => [
             'name' => 'parent_name',
             'parent_type' => 'record_type_display',
@@ -136,27 +143,16 @@ SpiceDictionaryHandler::getInstance()->dictionary['Note'] = [
             'vname' => 'LBL_EMAIL_ADDRESS',
             'source' => 'non-db',
         ],
-        'account_id' => [
-            'name' => 'account_id',
-            'vname' => 'LBL_ACCOUNT_ID',
-            'type' => 'id',
-            'reportable' => false,
-            'source' => 'non-db',
+        #CR1001177
+        'hcmemployeeobjectives' => [
+            'name'         => 'hcmemployeeobjectives',
+            'type'         => 'link',
+            'relationship' => 'hcmemployeeobjectives_notes',
+            'module'       => 'HCMEmployeeObjectives',
+            'source'       => 'non-db',
+            'vname'        => 'LBL_HCMEMPLOYEE_OBJECTIVES',
         ],
-        'opportunity_id' => [
-            'name' => 'opportunity_id',
-            'vname' => 'LBL_OPPORTUNITY_ID',
-            'type' => 'id',
-            'reportable' => false,
-            'source' => 'non-db',
-        ],
-        'lead_id' => [
-            'name' => 'lead_id',
-            'vname' => 'LBL_LEAD_ID',
-            'type' => 'id',
-            'reportable' => false,
-            'source' => 'non-db',
-        ],
+
         'employees' => [
             'name'         => 'employees',
             'type'         => 'link',
@@ -295,6 +291,15 @@ if (file_exists("extensions/modules/ProcurementDocs")) {
         'relationship' => 'procurementdocs_notes',
         'source'       => 'non-db',
         'vname'        => 'LBL_PROCUREMENTDOCS',
+    ];
+}
+if (file_exists("extensions/modules/HCMEmployeeObjectives")) {
+    SpiceDictionaryHandler::getInstance()->dictionary['Meeting']['fields']['hcmemployeeobjectives'] = [
+        'name'         => 'hcmemployeeobjectives',
+        'type'         => 'link',
+        'relationship' => 'hcmemployeeobjectives_notes',
+        'source'       => 'non-db',
+        'vname'        => 'LBL_HCMEMPLOYEE_OBJECTIVES',
     ];
 }
 
