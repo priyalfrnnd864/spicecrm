@@ -88,6 +88,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['syscountrystates'] = [
             'name' => 'idx_syscountrystates',
             'type' => 'primary',
             'fields' => ['id']
+        ],
+        [
+            'name' => 'idx_syscountrystatescc',
+            'type' => 'index',
+            'fields' => ['cc']
         ]
     ]
 ];
