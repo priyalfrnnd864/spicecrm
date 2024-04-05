@@ -159,6 +159,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['kreportcategories'] = [
     ],
     'indices' => [
         ['name' => 'kreportcategoriespk', 'type' => 'primary', 'fields' => ['id']],
+        ['name' => 'idx_kreportcategories_del', 'type' => 'index', 'fields' => ['deleted']],
         ['name' => 'idx_is_admin', 'type' => 'index', 'fields' => ['is_admin_only', 'deleted']],
     ],
 ];
