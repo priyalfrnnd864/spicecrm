@@ -49,6 +49,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = 
 			'len' => '1',
 			'default' => '0'
         ],
+        [
+			'name' => 'email_addr_bean_rel_id',
+            'type' => 'varchar',
+            'len' => '36',
+        ]
     ],
 
 	'indices' => [
