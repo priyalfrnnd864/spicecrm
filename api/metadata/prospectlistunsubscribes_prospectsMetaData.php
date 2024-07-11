@@ -50,7 +50,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospectlistunsubscribes_pros
         [
             'name' => 'idx_prospectlistunsubscribe_prospect',
             'type' => 'alternate_key',
-            'fields' => ['prospectlistunsubscribe_id', 'related_id', 'related_type', 'deleted']
+            'fields' => ['prospectlistunsubscribe_id', 'related_id']
         ],
     ],
     'relationships' => [
