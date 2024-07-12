@@ -52,6 +52,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospectlistunsubscribes_pros
             'type' => 'alternate_key',
             'fields' => ['prospectlistunsubscribe_id', 'related_id']
         ],
+        [
+            'name' => 'idx_prospectlistunsubscribe_prospect_deleted',
+            'type' => 'index',
+            'fields' => ['deleted']
+        ],
     ],
     'relationships' => [
         'prospectlistunsubscribes_contacts' => [
