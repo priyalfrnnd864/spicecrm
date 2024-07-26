@@ -9,7 +9,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['workflowtasktypes'] = [
     'fields' => [
         'id' => [
             'name' => 'id',
-            'type' => 'id'
+            'type' => 'id',
+            'required' => true
         ],
         'name' => [
             'name' => 'name',
@@ -39,6 +40,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['workflowtasktypes'] = [
         'icon' => [
             'name' => 'icon',
             'type' => 'enum',
+            'dbtype' => 'varchar',
+            'len' => 255,
             'options' => 'workflowtasktypes_icon_enum'
         ],
         'assignable' => [
