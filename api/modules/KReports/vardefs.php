@@ -119,6 +119,22 @@ SpiceDictionaryHandler::getInstance()->dictionary['KReport'] = ['table' => 'krep
             'len' => 6,
             'vname' => 'LBL_PRIORITY'
         ],
+        'presentation_export_display' => [
+            'name' => 'presentation_export_display',
+            'type' => 'html',
+            'dbtype' => 'longtext',
+            'vname' => 'LBL_PRESENTATION_EXPORT_DISPLAY',
+            'source' => 'non-db',
+            'comment' => 'to insert in the report output template'
+        ],
+        'visualization_export_display' => [
+            'name' => 'visualization_export_display',
+            'type' => 'html',
+            'dbtype' => 'longtext',
+            'vname' => 'LBL_PRESENTATION_EXPORT_DISPLAY',
+            'source' => 'non-db',
+            'comment' => 'to insert in the report output template'
+        ],
     ],
     'indices' => [
         ['name' => 'idx_reminder_name', 'type' => 'index', 'fields' => ['name']],

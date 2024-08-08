@@ -49,6 +49,11 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = 
 			'len' => '1',
 			'default' => '0'
         ],
+        [
+			'name' => 'email_addr_bean_rel_id',
+            'type' => 'varchar',
+            'len' => '36',
+        ]
     ],
 
 	'indices' => [
@@ -79,7 +84,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = 
 											'rhs_module'=> 'Contacts',
 											'rhs_table'=> 'contacts',
 											'rhs_key' => 'id',
-											'relationship_type'=>'many-to-many',
+											'relationship_type'=>'many-to-many-prospectlists',
 											'join_table'=> 'prospect_lists_prospects',
 											'join_key_lhs'=>'prospect_list_id',
 											'join_key_rhs'=>'related_id',
