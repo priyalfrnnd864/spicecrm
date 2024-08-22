@@ -2,6 +2,7 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = [
 
 	'table' => 'prospect_lists_prospects',
@@ -164,6 +165,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospect_lists_prospects'] = 
 
 ];
 
+
 SpiceDictionaryHandler::getInstance()->dictionary['campaigntask_targets_status'] = [
 
     'table' => 'campaigntask_targets_status',
@@ -204,3 +206,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['campaigntask_targets_status']
         ]
     ],
 ];
+*/
