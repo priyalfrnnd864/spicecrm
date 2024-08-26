@@ -1,7 +1,7 @@
 <?php
 /**
  */
-
+/* migrated
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 use SpiceCRM\includes\SugarObjects\VardefManager;
 
@@ -44,4 +44,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['ProspectListUnsubscribe'] = [
 ];
 
 VardefManager::createVardef('ProspectListUnsubscribes', 'ProspectListUnsubscribe', ['default', 'assignable']);
-SpiceDictionaryHandler::getInstance()->dictionary['ProspectListUnsubscribe']['fields']['description']['required'] = true;
+SpiceDictionaryHandler::getInstance()->dictionary['ProspectListUnsubscribe']['fields']['description']['required'] = true;*/

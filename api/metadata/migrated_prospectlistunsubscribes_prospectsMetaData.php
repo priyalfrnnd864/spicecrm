@@ -1,7 +1,8 @@
 <?php
 
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+#migrated
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['prospectlistunsubscribes_prospects'] = [
     'table' => 'prospectlistunsubscribes_prospects',
     'contenttype' => 'relationdata',
@@ -75,3 +76,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['prospectlistunsubscribes_pros
         ],
     ]
 ];
+*/
