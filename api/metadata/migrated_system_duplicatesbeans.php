@@ -2,7 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
-
+/* migrated to system
 SpiceDictionaryHandler::getInstance()->dictionary['sysduplicatesbeans'] = [
     'table' => 'sysduplicatesbeans',
     'comment' => 'table containing duplicate Bean IDs and their status',
@@ -65,3 +65,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysduplicatesbeans'] = [
         ['name' => 'sysduplicatesbeanspk', 'type' => 'primary', 'fields' => ['id']],
     ],
 ];
+*/
