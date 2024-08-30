@@ -26,24 +26,24 @@ $routes = [
         'options'     => ['noAuth' => false, 'adminOnly' => false, 'validate' => true],
         'parameters'  => [
             'id'      => [
-                'in'          => 'body',
+                'in'          => 'path',
                 'description' => 'Years data',
-                'type'        => ValidationMiddleware::TYPE_OBJECT,
-                'required'    => true,
-                'parameters'  => [
-                    'yearto'           => [
-                        'description' => 'Year to data',
-                        'type'        => ValidationMiddleware::TYPE_DATE,
-                        'required'    => true,
-                    ],
-                    'yearfrom'         => [
-                        'description' => 'Year from data',
-                        'type'        => ValidationMiddleware::TYPE_DATE,
-                        'required'    => true,
-                        'validationOptions' => [
-                            ValidationMiddleware::VOPT_MAX_SIZE => 8,
-                        ],
-                    ],
+                'type'        => ValidationMiddleware::TYPE_GUID,
+                'required'    => true
+                ],
+            'yearto'           => [
+                'in' => 'query',
+                'description' => 'Year to data',
+                'type'        => ValidationMiddleware::TYPE_DATE,
+                'required'    => false,
+            ],
+            'yearfrom'         => [
+                'in' => 'query',
+                'description' => 'Year from data',
+                'type'        => ValidationMiddleware::TYPE_DATE,
+                'required'    => false,
+                'validationOptions' => [
+                    ValidationMiddleware::VOPT_MAX_SIZE => 8,
                 ],
             ],
         ],
