@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* deprecated
 SpiceDictionaryHandler::getInstance()->dictionary['roles_modules'] = [
 
 	'table' => 'roles_modules',
@@ -55,3 +56,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['roles_modules'] = [
         ],
     ],
 ];
+*/

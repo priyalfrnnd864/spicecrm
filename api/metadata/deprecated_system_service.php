@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* deprecated
 SpiceDictionaryHandler::getInstance()->dictionary['sysservicecategories'] = [
     'table' => 'sysservicecategories',
     'fields' => [
@@ -54,3 +55,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['sysservicecategories'] = [
         ],
     ]
 ];
+*/
