@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* deprecated
 SpiceDictionaryHandler::getInstance()->dictionary['queues_beans'] = [
     'table' => 'queues_beans',
     'contenttype'   => 'relationdata',
@@ -71,7 +72,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['queues_beans'] = [
 			'relationship_role_column'		=> 'module_dir',
 			'relationship_role_column_value'=> 'Emails'
         ],
-    ], /* end relationship definitions */
+    ],
 	'indices' => [
 		[
 			'name' => 'queues_itemspk',
@@ -94,5 +95,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['queues_beans'] = [
 			'object_id'
         ]
         ],
-    ], /* end indices */
+    ],
 ];
+*/
