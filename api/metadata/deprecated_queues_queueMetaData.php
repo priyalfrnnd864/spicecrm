@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* deprercated
 SpiceDictionaryHandler::getInstance()->dictionary['queues_queue'] = [
     'table' => 'queues_queue',
     'contenttype'   => 'relationdata',
@@ -78,7 +79,7 @@ SpiceDictionaryHandler::getInstance()->dictionary['queues_queue'] = [
 			'parent_id'
         ],
         ],
-    ], /* end indices */
+    ],
 	'relationships' => [
 		'child_queues_rel'	=> [
 			'lhs_module'		=> 'Queues',
@@ -104,5 +105,6 @@ SpiceDictionaryHandler::getInstance()->dictionary['queues_queue'] = [
 			'join_key_rhs'		=> 'queue_id', 
 			'join_key_lhs'		=> 'parent_id'
         ],
-    ], /* end relationships */
+    ],
 ];
+*/

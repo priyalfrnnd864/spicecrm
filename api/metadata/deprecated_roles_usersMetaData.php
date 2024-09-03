@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* deprecated
 SpiceDictionaryHandler::getInstance()->dictionary['roles_users'] = [
 
 	'table' => 'roles_users',
@@ -54,3 +55,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['roles_users'] = [
 							  'join_table'=> 'roles_users', 'join_key_lhs'=>'role_id', 'join_key_rhs'=>'user_id']],
 
 ];
+*/
