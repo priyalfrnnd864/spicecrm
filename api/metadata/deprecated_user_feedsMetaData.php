@@ -2,6 +2,7 @@
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['users_feeds'] = [
     'table' => 'users_feeds',
     'contenttype'   => 'relationdata',
@@ -17,3 +18,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['users_feeds'] = [
         ['name' =>'idx_ud_user_id', 'type' =>'index', 'fields'=> ['user_id', 'feed_id']]
     ]
 ];
+*/

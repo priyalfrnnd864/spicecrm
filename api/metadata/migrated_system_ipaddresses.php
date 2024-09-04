@@ -1,6 +1,7 @@
 <?php
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['ipaddresses'] = [
     'table' => 'ipaddresses',
     'fields' => [
@@ -61,3 +62,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['ipaddresses'] = [
         ]
     ]
 ];
+*/
