@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['salesdocsflow'] = [
     'table' => 'salesdocsflow',
     'fields' => [
@@ -59,3 +60,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['salesdocsitemsflow'] = [
         ]
     ]
 ];
+*/

@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* deprectaed
 SpiceDictionaryHandler::getInstance()->dictionary['users_password_link'] = [
     'table' => 'users_password_link',
     'fields' => [
@@ -47,7 +48,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['users_password_link'] = [
         ]
     ],
 ];
+*/
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['users_password_tokens'] = [
     'table' => 'users_password_tokens',
     'fields' => [
@@ -86,3 +89,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['users_password_tokens'] = [
         ]
     ],
 ];
+*/

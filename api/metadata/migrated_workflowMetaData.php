@@ -3,7 +3,7 @@
 
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
-
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['workflowtasktypes'] = [
     'table' => 'workflowtasktypes',
     'fields' => [
@@ -89,3 +89,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['workflowtasktypes'] = [
         ]
     ]
 ];
+*/
