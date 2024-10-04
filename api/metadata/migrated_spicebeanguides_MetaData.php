@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['spicebeanguides'] = [
     'table' => 'spicebeanguides',
     'fields' => [
@@ -457,3 +458,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['spicebeancustomguidestages_ch
         ['name' => 'idx_spicebeanguidestageschecktexts_stagecheckid', 'type' => 'index', 'fields' => ['stage_check_id']],
     ]
 ];
+*/
