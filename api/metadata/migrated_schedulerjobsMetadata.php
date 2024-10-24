@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['schedulerjobs_schedulerjobtasks'] = [
     'table' => 'schedulerjobs_schedulerjobtasks',
     'contenttype'   => 'relationdata',
@@ -57,7 +58,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['schedulerjobs_schedulerjobtas
         ]
     ],
 ];
-
+*/
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['SchedulerJobLog'] = [
     'table' => 'schedulerjob_log',
     'comment' => 'Scheduler Job tasks execution log',
@@ -121,3 +123,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['SchedulerJobLog'] = [
         ]
     ],
 ];
+*/
