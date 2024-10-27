@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['mailboxes_users'] = [
     'table' => 'mailboxes_users',
     'contenttype'   => 'relationdata',
@@ -60,3 +61,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['mailboxes_users'] = [
         ]
     ]
 ];
+*/
