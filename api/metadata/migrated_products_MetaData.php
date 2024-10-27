@@ -2,6 +2,7 @@
 /***** SPICE-HEADER-SPACEHOLDER *****/
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 // adding project-to-bugs relationship
+/* migrated
 SpiceDictionaryHandler::getInstance()->dictionary['productgroups_productattributes'] = [
     'table' => 'productgroups_productattributes',
     'contenttype'   => 'relationdata',
@@ -32,7 +33,8 @@ SpiceDictionaryHandler::getInstance()->dictionary['productgroups_productattribut
         ]
     ]
 ];
-
+*/
+/*
 SpiceDictionaryHandler::getInstance()->dictionary['productvariants_resellers'] = [
     'table' => 'productvariants_resellers',
     'contenttype'   => 'relationdata',
@@ -63,7 +65,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['productvariants_resellers'] =
         ]
     ]
 ];
+*/
 
+/* no needed
 SpiceDictionaryHandler::getInstance()->dictionary['products_accountdeterminations'] = [
     'table' => 'products_accountdeterminations',
     'fields' => [
@@ -79,3 +83,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['products_accountdetermination
         ['name' => 'idx_products_accountdeterminations_group_params', 'type' =>'index', 'fields'=> ['account_determination_group', 'account_determination_params']]
     ]
 ];
+*/
