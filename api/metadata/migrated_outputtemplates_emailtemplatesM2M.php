@@ -1,5 +1,6 @@
 <?php
 /***** SPICE-SUGAR-HEADER-SPACEHOLDER *****/
+/** migrated to dictionary manager
 use SpiceCRM\includes\SpiceDictionary\SpiceDictionaryHandler;
 
 SpiceDictionaryHandler::getInstance()->dictionary['outputtemplates_emailtemplates'] = [
@@ -33,3 +34,4 @@ SpiceDictionaryHandler::getInstance()->dictionary['outputtemplates_emailtemplate
         ],
     ],
 ];
+*/
