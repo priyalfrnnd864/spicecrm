@@ -253,9 +253,9 @@ SpiceDictionaryHandler::getInstance()->dictionary['Note'] = [
         ]
     ],
     'indices' => [
-        ['name' => 'idx_note_name', 'type' => 'index', 'fields' => ['name']],
-        ['name' => 'idx_notes_parent', 'type' => 'index', 'fields' => ['parent_id', 'parent_type']],
-        ['name' => 'idx_note_contact', 'type' => 'index', 'fields' => ['contact_id']],
+//        ['name' => 'idx_note_name', 'type' => 'index', 'fields' => ['name']],
+//        ['name' => 'idx_notes_parent', 'type' => 'index', 'fields' => ['parent_id', 'parent_type']],
+//        ['name' => 'idx_note_contact', 'type' => 'index', 'fields' => ['contact_id']],
         ['name' => 'idx_notes_assigned_del', 'type' => 'index', 'fields' => ['deleted', 'assigned_user_id']],
     ]
 ];
