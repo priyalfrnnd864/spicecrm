@@ -27,7 +27,6 @@ import {UserDeactivateButton} from "./components/userdeactivatebutton";
 import {UserDeactivateModal} from "./components/userdeactivatemodal";
 import {UserDeactivateSelectUser} from "./components/userdeactivateselectuser";
 import {UserSignature} from "./components/usersignature";
-import {User2FAConfiguration} from "./components/user2faconfiguration";
 import {UserPreferencesModal} from "./components/userpreferencesmodal";
 import {UserSignatureModal} from "./components/usersignaturemodal";
 import {UserCreateRoles} from "./components/usercreateroles";
@@ -71,7 +70,6 @@ import {UserSecurityPasskeyButton} from "./components/usersecuritypasskeybutton"
         UserDeactivateModal,
         UserDeactivateSelectUser,
         UserSignature,
-        User2FAConfiguration,
         UserSet2FAModal,
         UserSecuritySettingsModal,
         UserSecurityPasskeyButton
